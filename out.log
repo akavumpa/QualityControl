@@ -1,0 +1,4 @@
+DEBUG: User has analytics id. Pushing analytics to Google Analytics.
+DEBUG: Current working directory is /media/aswathymenon/MyFiles/alice/QualityControl
+ERROR: Cannot find alidist recipes under directory "alidist".
+ERROR: Maybe you need to "cd" to the right directory or you forgot to run "aliBuild init"?
