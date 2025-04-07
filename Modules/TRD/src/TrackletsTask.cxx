@@ -285,7 +285,7 @@ void TrackletsTask::reset()
   for (auto h : mLayers) {
     h->Reset();
   }
-  for (auto h : mTrackletQ) {
+  for (auto h : mTrackletQSupermodule) {
     h->Reset();
   }
 }
