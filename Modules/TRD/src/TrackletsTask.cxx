@@ -182,9 +182,9 @@ void TrackletsTask::monitorData(o2::framework::ProcessingContext& ctx) // This f
 
     // Ensure histograms are initialized
     if (!mTrackletQSupermodule[supermodule][0]) {
-      mTrackletQSupermodule[supermodule][0] = std::make_unique<TH1F>(Form("Q0_Sector_%d", supermodule), "Q0 distribution", 100, 0, 1000);
-      mTrackletQSupermodule[supermodule][1] = std::make_unique<TH1F>(Form("Q1_Sector_%d", supermodule), "Q1 distribution", 100, 0, 1000);
-      mTrackletQSupermodule[supermodule][2] = std::make_unique<TH1F>(Form("Q2_Sector_%d", supermodule), "Q2 distribution", 100, 0, 1000);
+      mTrackletQSupermodule[supermodule][0] = std::make_unique<TH1F>(Form("Q0_Sector_%d", supermodule), Form("Q0_Sector_%d", supermodule), 100, 0, 1000);
+      mTrackletQSupermodule[supermodule][1] = std::make_unique<TH1F>(Form("Q1_Sector_%d", supermodule), Form("Q1_Sector_%d", supermodule), 100, 0, 1000);
+      mTrackletQSupermodule[supermodule][2] = std::make_unique<TH1F>(Form("Q2_Sector_%d", supermodule), Form("Q2_Sector_%d", supermodule), 100, 0, 1000);
     }
 
     mTrackletQSupermodule[supermodule][0]->Fill(trklt.getQ0());
