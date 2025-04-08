@@ -176,7 +176,7 @@ void TrackletsTask::monitorData(o2::framework::ProcessingContext& ctx) // This f
     int hcid = trklt.getHCID();
     int supermodule = Helper::getSector(hcid / 2);
     if (supermodule < 0 || supermodule >= 18) {
-      LOG(ERROR) << "Invalid supermodule sector: " << supermodule;
+      LOG(error) << "Invalid supermodule sector: " << supermodule;
       continue;
     }
 
@@ -285,7 +285,8 @@ void TrackletsTask::reset()
   for (auto h : mLayers) {
     h->Reset();
   }
-  for (auto h : mTrackletQSupermodule) {
+  // for (auto h : mTrackletQSupermodule) {
+  for (std::unique_ptr<TH1F>& h : mTrackletQSupermodule) {
     h->Reset();
   }
 }
