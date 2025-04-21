@@ -152,9 +152,6 @@ void TrackletsTask::monitorData(o2::framework::ProcessingContext& ctx)
     mTrackletsPerEventPbPb->Fill(trigger.getNumberOfTracklets());
     for (int currenttracklet = trigger.getFirstTracklet(); currenttracklet < trigger.getFirstTracklet() + trigger.getNumberOfTracklets(); ++currenttracklet) {
       const auto& trklt = tracklets[currenttracklet];
-      if (trklt.getTrackId() < 0){
-	  continue;
-      }
       if (mNoiseMap != nullptr && mRemoveNoise && mNoiseMap->isTrackletFromNoisyMCM(trklt)) {
         continue;
       }
