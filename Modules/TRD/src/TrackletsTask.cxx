@@ -199,10 +199,16 @@ void TrackletsTask::monitorData(o2::framework::ProcessingContext& ctx) // This f
       getObjectsManager()->startPublishing(mTrackletQSupermodule[supermodule][2].get());
     }
 
-    mTrackletQSupermodule[supermodule][0]->Fill(trklt.getQ0());
-    mTrackletQSupermodule[supermodule][1]->Fill(trklt.getQ1());
-    mTrackletQSupermodule[supermodule][2]->Fill(trklt.getQ2());
-  }
+    if (supermodule >= 0 && supermodule < 18) {
+      if (mTrackletQSupermodule[supermodule][0]) {
+        mTrackletQSupermodule[supermodule][0]->Fill(trklt.getQ0());
+        mTrackletQSupermodule[supermodule][1]->Fill(trklt.getQ1());
+        mTrackletQSupermodule[supermodule][2]->Fill(trklt.getQ2());
+      } else {
+        ILOG(Warning, Devel) << "Missing histogram for Supermodule " << supermodule << ENDM;
+      }
+    }
+    }
   auto triggerrecords = ctx.inputs().get<gsl::span<o2::trd::TriggerRecord>>("triggers");
 
   mTrackletsPerTimeFrame->Fill(tracklets.size());     // Number of tracklets in the current timeframe
