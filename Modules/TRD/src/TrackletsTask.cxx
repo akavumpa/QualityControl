@@ -168,6 +168,8 @@ void TrackletsTask::monitorData(o2::framework::ProcessingContext& ctx) // This f
   auto ptr = ctx.inputs().get<std::array<int, MAXCHAMBER>*>("fedChamberStatus");
   auto tracklets = ctx.inputs().get<gsl::span<o2::trd::Tracklet64>>("tracklets");
 
+  ILOG(Info, Devel) << "MonitorData: Number of tracklets = " << tracklets.size() << ENDM;
+
   for (const auto& trklt : tracklets) {
     if (mNoiseMap != nullptr && mRemoveNoise && mNoiseMap->isTrackletFromNoisyMCM(trklt)) {
       continue;
@@ -180,7 +182,12 @@ void TrackletsTask::monitorData(o2::framework::ProcessingContext& ctx) // This f
       continue;
     }
 
-    Ensure histograms are initialized
+    ILOG(Info, Devel) << "Supermodule: " << supermodule
+                      << ", Q0 = " << trklt.getQ0()
+                      << ", Q1 = " << trklt.getQ1()
+                      << ", Q2 = " << trklt.getQ2() << ENDM;
+
+    // Ensure histograms are initialized
     if (!mTrackletQSupermodule[supermodule][0]) {
       mTrackletQSupermodule[supermodule][0] = std::make_unique<TH1F>(Form("Q0_Sector_%d", supermodule), Form("Q0_Sector_%d", supermodule), 100, 0, 1000);
       mTrackletQSupermodule[supermodule][1] = std::make_unique<TH1F>(Form("Q1_Sector_%d", supermodule), Form("Q1_Sector_%d", supermodule), 100, 0, 1000);
