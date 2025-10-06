@@ -1,0 +1,103 @@
+{
+  "qc": {
+    "config": {
+      "modules": [
+        "TRD"
+      ],
+      "database": {
+        "implementation": "CCDB",
+        "host": "ccdb-test.cern.ch:8080"
+      },
+      "conditionDB": {
+        "url": "http://alice-ccdb.cern.ch"
+      },
+      "infologger": {
+        "filterDiscardDebug": false,
+        "filterDiscardLevel": 11
+      }
+    },
+    "tasks": [
+      {
+        "taskName": "TrdTrySkelton",
+        "className": "o2::quality_control_modules::trd::TrdTrySkeltonTask",
+        "moduleName": "TRD",
+        "detectorName": "TRD",
+        "cycleDurationSeconds": 30,
+        "dataSources": [
+          {
+            "type": "DATA_PRODUCER",
+            "name": "tracklets",
+            "query": "TRD/TRACKLET/0"
+          },
+          {
+            "type": "DATA_PRODUCER",
+            "name": "tracks",
+            "query": "TRD/TRACK/0"
+          }
+        ],
+        "taskParameters": {
+          "myOwnKey": "defaultValue"
+        },
+        "location": "local",
+        "saveObjectsToFile": "TrdTrySkeltonOutput.root"
+      }
+    ],
+    "detectors": {
+      "TRD": {
+        "active": true,
+        "taskNames": [
+          "TrdTrySkelton"
+        ]
+      }
+    }
+  }
+}
+// {
+//   "qc": {
+//     "config": {
+//       "database": {
+//         "implementation": "CCDB",
+//         "host": "ccdb-test.cern.ch:8080"
+//       },
+//       "conditionDB": {
+//         "url": "http://alice-ccdb.cern.ch"
+//       },
+//       "infologger": {
+//         "filterDiscardDebug": false,
+//         "filterDiscardLevel": 11
+//       }
+//     },
+//     "tasks": {
+//       "TrdTrySkelton": {
+//         "active": true,
+//         "className": "o2::quality_control_modules::trd::TrdTrySkeltonTask",
+//         "moduleName": "TRD",
+//         "detectorName": "TRD",
+//         "cycleDurationSeconds": 30,
+//         "dataSources": [
+//           {
+//             "type": "DATA_PRODUCER",
+//             "name": "tracklets",
+//             "query": "TRD/TRACKLET/0"
+//           },
+//           {
+//             "type": "DATA_PRODUCER",
+//             "name": "tracks",
+//             "query": "TRD/TRACK/0"
+//           }
+//         ],
+//         "taskParameters": {
+//           "myOwnKey": "defaultValue"
+//         },
+//         "location": "local",
+//         "saveObjectsToFile": "TrdTrySkeltonOutput.root"
+//       }
+//     },
+//     "detectors": {
+//       "TRD": {
+//         "active": true,
+//         "taskNames": ["TrdTrySkeltonTask"]
+//       }
+//     }
+//   }
+// }
