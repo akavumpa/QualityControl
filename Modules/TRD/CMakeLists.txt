@@ -2,7 +2,7 @@
 
 add_library(O2QcTRD)
 
-target_sources(O2QcTRD PRIVATE
+target_sources(O2QcTRD PRIVATE src/TrdTrySkeltonTask.cxx  src/mySubTask.cxx 
               src/CalibReductorTRD.cxx 
               src/TrackletCountCheck.cxx
               src/PulsePositionCheck.cxx
@@ -24,7 +24,7 @@ target_include_directories(
          $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
-target_link_libraries(O2QcTRD PUBLIC O2QualityControl O2QcCommon)
+target_link_libraries(O2QcTRD PUBLIC O2QualityControl O2QcCommon O2::DataFormatsTRD)
 
 install(TARGETS O2QcTRD
         LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
@@ -32,6 +32,8 @@ install(TARGETS O2QcTRD
         RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 
 add_root_dictionary(O2QcTRD HEADERS
+  include/TRD/TrdTrySkeltonTask.h
+  include/TRD/mySubTask.h
                     include/TRD/CalibReductorTRD.h
                     include/TRD/TrackletCountCheck.h
                     include/TRD/PulsePositionCheck.h
