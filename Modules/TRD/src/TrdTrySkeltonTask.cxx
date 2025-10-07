@@ -61,7 +61,12 @@ void TrdTrySkeltonTask::startOfCycle()
 void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
 {
   // Get TRD tracklets
-  auto tracklets = ctx.inputs().get<gsl::span<o2::trd::Tracklet64>>("tracklets");
+  if (ctx.inputs().contains("tracklets")) {
+    auto tracklets = ctx.inputs().get<gsl::span<o2::trd::Tracklet64>>("tracklets");
+    LOG(INFO) << "Number of tracklets: " << tracklets.size();
+  } else {
+    LOG(WARNING) << "No tracklets found in this input!";
+  }
 
   // // Get TRD tracks
   // auto tracks = ctx.inputs().get<gsl::span<o2::trd::TrackTRD>>("tracks");
