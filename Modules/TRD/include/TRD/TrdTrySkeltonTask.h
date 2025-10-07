@@ -48,9 +48,9 @@ class TrdTrySkeltonTask final : public TaskInterface
 
  private:
   std::shared_ptr<TH1F> mHistogramA = nullptr; // Number of TRD tracklets
-  std::shared_ptr<TH1F> mHistogramB = nullptr; // Number of TRD tracks
-  std::shared_ptr<TH1F> mHistogramC = nullptr; // ADC sum of TRD tracklets
-  std::shared_ptr<TH1F> mHistogramD = nullptr; // Number of tracklets per TRD track
+  // std::shared_ptr<TH1F> mHistogramB = nullptr; // Number of TRD tracks
+  // std::shared_ptr<TH1F> mHistogramC = nullptr; // ADC sum of TRD tracklets
+  // std::shared_ptr<TH1F> mHistogramD = nullptr; // Number of tracklets per TRD track
 };
 
 } // namespace o2::quality_control_modules::trd

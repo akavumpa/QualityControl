@@ -28,11 +28,6 @@
             "type": "DATA_PRODUCER",
             "name": "tracklets",
             "query": "TRD/TRACKLET/0"
-          },
-          {
-            "type": "DATA_PRODUCER",
-            "name": "tracks",
-            "query": "TRD/TRACK/0"
           }
         ],
         "taskParameters": {
