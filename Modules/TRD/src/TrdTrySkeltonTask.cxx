@@ -64,23 +64,12 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
   if (ctx.inputs().contains("tracklets")) {
     auto tracklets = ctx.inputs().get<gsl::span<o2::trd::Tracklet64>>("tracklets");
     LOG(INFO) << "Number of tracklets: " << tracklets.size();
+    int nTracklets = tracklets.size();
+    mHistogramA->Fill(nTracklets); // Histogram A: number of tracklets
+
   } else {
     LOG(WARNING) << "No tracklets found in this input!";
   }
-
-  // // Get TRD tracks
-  // auto tracks = ctx.inputs().get<gsl::span<o2::trd::TrackTRD>>("tracks");
-
-  // Count and fill histograms
-  int nTracklets = tracklets.size();
-  // int nTracks = tracks.size();
-  mHistogramA->Fill(nTracklets); // Histogram A: number of tracklets
-  // mHistogramB->Fill(nTracks);
-
-  // for (const auto& trk : tracks) {
-  //   int nTrkl = trk.getNtracklets(); // or size of trk.getTracklets()
-  //   mHistogramD->Fill(nTrkl);        // tracklets per track
-  // }
 }
 
 void TrdTrySkeltonTask::endOfCycle()
