@@ -1,0 +1,49 @@
+{
+  "qc": {
+    "config": {
+      "modules": [
+        "TRD"
+      ],
+      "database": {
+        "implementation": "CCDB",
+        "host": "ccdb-test.cern.ch:8080"
+      },
+      "conditionDB": {
+        "url": "http://alice-ccdb.cern.ch"
+      },
+      "infologger": {
+        "filterDiscardDebug": false,
+        "filterDiscardLevel": 11
+      }
+    },
+    "tasks": [
+      {
+        "taskName": "TrdTrySkelton",
+        "className": "o2::quality_control_modules::trd::TrdTrySkeltonTask",
+        "moduleName": "QcTRD",
+        "detectorName": "TRD",
+        "cycleDurationSeconds": 30,
+        "dataSources": [
+          {
+            "type": "direct",
+            "name": "tracklets",
+            "query": "tracklets:TRD/TRACKLETS/0"
+          }
+        ],
+        "taskParameters": {
+          "myOwnKey": "defaultValue"
+        },
+        "location": "local",
+        "saveObjectsToFile": "TrdTrySkeltonOutput.root"
+      }
+    ],
+    "detectors": {
+      "TRD": {
+        "active": true,
+        "taskNames": [
+          "TrdTrySkelton"
+        ]
+      }
+    }
+  }
+}

@@ -28,7 +28,7 @@
           {
             "type": "direct",
             "name": "tracklets",
-            "query": "TRD/TRACKLET/0"
+            "query": "tracklets:TRD/TRACKLETS/0"
           }
         ],
         "taskParameters": {
