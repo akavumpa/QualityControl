@@ -52,28 +52,28 @@ void TrdTrySkeltonTask::startOfCycle()
   ILOG(Debug, Devel) << "startOfCycle" << ENDM;
 }
 
-// void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
-// {
-//   // Get TRD tracklets
-//   auto tracklets = ctx.inputs().get<gsl::span<o2::trd::Tracklet64>>("tracklets");
-
-//   // Count and fill histograms
-//   int nTracklets = tracklets.size();
-//   mHistogramA->Fill(nTracklets); // Histogram A: number of tracklets
-// }
-
 void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
 {
-    // Check if tracklets input is available
-    if (ctx.inputs().has("tracklets")) {
-        auto tracklets = ctx.inputs().get<gsl::span<o2::trd::Tracklet64>>("tracklets");
+  // Get TRD tracklets
+  auto tracklets = ctx.inputs().get<gsl::span<o2::trd::Tracklet64>>("tracklets");
 
-        int nTracklets = tracklets.size();
-        mHistogramA->Fill(nTracklets); // Histogram A: number of tracklets
-    } else {
-        ILOG(Warning, Support) << "No tracklets input available this cycle" << ENDM;
-    }
+  // Count and fill histograms
+  int nTracklets = tracklets.size();
+  mHistogramA->Fill(nTracklets); // Histogram A: number of tracklets
 }
+
+// void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
+// {
+//     // Check if tracklets input is available
+//     if (ctx.inputs().has("tracklets")) {
+//         auto tracklets = ctx.inputs().get<gsl::span<o2::trd::Tracklet64>>("tracklets");
+
+//         int nTracklets = tracklets.size();
+//         mHistogramA->Fill(nTracklets); // Histogram A: number of tracklets
+//     } else {
+//         ILOG(Warning, Support) << "No tracklets input available this cycle" << ENDM;
+//     }
+// }
 
 
 void TrdTrySkeltonTask::endOfCycle()
