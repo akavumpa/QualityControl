@@ -62,20 +62,6 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
   mHistogramA->Fill(nTracklets); // Histogram A: number of tracklets
 }
 
-// void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
-// {
-//     // Check if tracklets input is available
-//     if (ctx.inputs().has("tracklets")) {
-//         auto tracklets = ctx.inputs().get<gsl::span<o2::trd::Tracklet64>>("tracklets");
-
-//         int nTracklets = tracklets.size();
-//         mHistogramA->Fill(nTracklets); // Histogram A: number of tracklets
-//     } else {
-//         ILOG(Warning, Support) << "No tracklets input available this cycle" << ENDM;
-//     }
-// }
-
-
 void TrdTrySkeltonTask::endOfCycle()
 {
   // THIS FUNCTION BODY IS AN EXAMPLE. PLEASE REMOVE EVERYTHING YOU DO NOT NEED.
