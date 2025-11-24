@@ -47,7 +47,13 @@ class TrdTrySkeltonTask final : public TaskInterface
   void reset() override;
 
  private:
-  std::shared_ptr<TH1F> mHistogramA = nullptr; // Number of TRD tracklets
+  std::unique_ptr<TH1F> histTracklet;  // number of tracklets per event
+  std::unique_ptr<TH1F> histQ0;        // Q0 per tracklet
+  std::unique_ptr<TH1F> histQ1;        // Q1 per tracklet
+  std::unique_ptr<TH1F> histQ2;        // Q2 per tracklet
+  std::unique_ptr<TH1F> histChamber;   // tracklets per chamber
+  std::unique_ptr<TH1F> histPadRow;    // tracklets per padrow
+  std::unique_ptr<TH1F> histMCM;       // tracklets per MCM (non-zero)
 };
 
 } // namespace o2::quality_control_modules::trd

@@ -24,17 +24,33 @@ void TrdTrySkeltonTask::initialize(o2::framework::InitContext& /*ctx*/)
   ILOG(Debug, Support) << "A debug targeted for support" << ENDM;
   ILOG(Info, Ops) << "An Info log targeted for operators" << ENDM;
 
-  ILOG(Info, Ops) << "Initializing histograms" << ENDM;
+  ILOG(Info, Ops) << "Initializing TRD skelton histograms" << ENDM;
 
   // This creates and registers a histogram for publication at the end of each cycle, until the end of the task lifetime
-  mHistogramA = std::make_unique<TH1F>("nTracklets", "Number of TRD Tracklets per Event", 100, 0, 1000);
+  histTracklet = std::make_unique<TH1F>("nTracklets", "Number of TRD Tracklets per Event", 100, 0, 1000);
 
-  getObjectsManager()->startPublishing(mHistogramA.get(), PublicationPolicy::Forever);
+  histQ0 = std::make_unique<TH1F>("Q0", "per TRD Tracklet Q0", 256, -0.5, 255.5);
+  histQ1 = std::make_unique<TH1F>("Q1", "per TRD Tracklet Q1", 256, -0.5, 255.5);
+  histQ2 = std::make_unique<TH1F>("Q2", "per TRD Tracklet Q2", 256, -0.5, 255.5);
+
+  histChamber = std::make_unique<TH1F>("Chamber", "Tracklets per TRD Chamber", 540, 0, 540);
+
+  histPadRow = std::make_unique<TH1F>("PadRow", "Tracklets per PadRow", 16, 0, 16);
+
+  histMCM = std::make_unique<TH1F>("MCM", "Tracklets per MCM (ignore 0)", 160, 0, 160);
+
+  getObjectsManager()->startPublishing(histTracklet.get(), PublicationPolicy::Forever);
+  getObjectsManager()->startPublishing(histQ0.get(), PublicationPolicy::Forever);
+  getObjectsManager()->startPublishing(histQ1.get(), PublicationPolicy::Forever);
+  getObjectsManager()->startPublishing(histQ2.get(), PublicationPolicy::Forever);
+  getObjectsManager()->startPublishing(histChamber.get(), PublicationPolicy::Forever);
+  getObjectsManager()->startPublishing(histPadRow.get(), PublicationPolicy::Forever);
+  getObjectsManager()->startPublishing(histMCM.get(), PublicationPolicy::Forever);
 
   try {
-    getObjectsManager()->addMetadata(mHistogramA->GetName(), "custom", "34");
+    getObjectsManager()->addMetadata(histTracklet->GetName(), "custom", "34");
   } catch (...) {
-    ILOG(Warning, Support) << "Metadata could not be added to " << mHistogramA->GetName() << ENDM;
+    ILOG(Warning, Support) << "Metadata could not be added to " << histTracklet->GetName() << ENDM;
   }
 }
 
@@ -42,8 +58,14 @@ void TrdTrySkeltonTask::startOfActivity(const Activity& activity)
 {
   ILOG(Debug, Devel) << "startOfActivity " << activity.mId << ENDM;
 
-  // We clean any histograms that could have been filled in previous runs.
-  mHistogramA->Reset();
+  // We clean anyhists that could have been filled in previous runs.
+  histTracklet->Reset();
+  histQ0->Reset();
+  histQ1->Reset();
+  histQ2->Reset();
+  histChamber->Reset();
+  histPadRow->Reset();
+  histMCM->Reset();
 }
 
 void TrdTrySkeltonTask::startOfCycle()
@@ -57,9 +79,26 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
   // Get TRD tracklets
   auto tracklets = ctx.inputs().get<gsl::span<o2::trd::Tracklet64>>("tracklets");
 
-  // Count and fill histograms
+  // Count and fillhists
   int nTracklets = tracklets.size();
-  mHistogramA->Fill(nTracklets); // Histogram A: number of tracklets
+  histTracklet->Fill(nTracklets); // hist A: number of tracklets
+
+  // Loop over tracklets
+  for (const auto& trk : tracklets) {
+    // Filling Q values
+    histQ0->Fill(trk.getQ0());
+    histQ1->Fill(trk.getQ1());
+    histQ2->Fill(trk.getQ2());
+    // ChamberIDs (0-539)
+    histChamber->Fill(trk.getDetector());
+    // PadRow (0-15)
+    histPadRow->Fill(trk.getPadRow());
+    // MCM (Zero ignored)
+    int mcm = trk.getMCM();
+    if (mcm > 0) {
+      histMCM->Fill(mcm);
+    }
+  }
 }
 
 void TrdTrySkeltonTask::endOfCycle()
@@ -79,9 +118,21 @@ void TrdTrySkeltonTask::reset()
   // THIS FUNCTION BODY IS AN EXAMPLE. PLEASE REMOVE EVERYTHING YOU DO NOT NEED.
 
   // Clean all the monitor objects here.
-  ILOG(Debug, Devel) << "Resetting the histograms" << ENDM;
-  if (mHistogramA)
-    mHistogramA->Reset();
+  ILOG(Debug, Devel) << "Resetting thehists" << ENDM;
+  if (histTracklet)
+    histTracklet->Reset();
+  if (histQ0)
+    histQ0->Reset();
+  if (histQ1)
+    histQ1->Reset();
+  if (histQ2)
+    histQ2->Reset();
+  if (histChamber)
+    histChamber->Reset();
+  if (histPadRow)
+    histPadRow->Reset();
+  if (histMCM)
+    histMCM->Reset();
 }
 
 } // namespace o2::quality_control_modules::trd
