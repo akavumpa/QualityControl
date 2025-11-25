@@ -49,7 +49,7 @@ class TrdTrySkeltonTask final : public TaskInterface
  private:
   // std::unique_ptr<TH1F> histTracklet;  // number of tracklets per event
   std::unique_ptr<TH1F> histTrackletsTF;     // Tracklets per timeframe
-  // std::unique_ptr<TH1F> histTrackletsEvent;     // Tracklets per event
+  std::unique_ptr<TH1F> histTrackletsEvent;     // Tracklets per event
   std::unique_ptr<TH1F> histQ0;        // Q0 per tracklet
   std::unique_ptr<TH1F> histQ1;        // Q1 per tracklet
   std::unique_ptr<TH1F> histQ2;        // Q2 per tracklet
