@@ -28,6 +28,11 @@
             "type": "direct",
             "name": "tracklets",
             "query": "tracklets:TRD/TRACKLETS/0"
+          },
+          {
+            "type": "direct",
+            "name": "triggers",
+            "query": "triggers:TRD/TRKTRGRD"
           }
         ],
         "taskParameters": {

@@ -30,7 +30,7 @@ void TrdTrySkeltonTask::initialize(o2::framework::InitContext& /*ctx*/)
   // histTrackletsTF = std::make_unique<TH1F>("nTrackletsTF", "Number of TRD Tracklets per Timeframe", 2000, 0, 200000); // pp
   histTrackletsTF = std::make_unique<TH1F>("nTrackletsTF", "Number of TRD Tracklets per Timeframe", 20000, 0, 2000000);
 
-  // histTrackletsEvent = std::make_unique<TH1F>("nTrackletsEVENT", "Number of TRD Tracklets per Event", 5000, 0, 5000);
+  histTrackletsEvent = std::make_unique<TH1F>("nTrackletsEVENT", "Number of TRD Tracklets per Event", 5000, 0, 5000);
 
   histQ0 = std::make_unique<TH1F>("Q0", "per TRD Tracklet Q0", 256, -0.5, 255.5);
   histQ1 = std::make_unique<TH1F>("Q1", "per TRD Tracklet Q1", 256, -0.5, 255.5);
@@ -43,7 +43,7 @@ void TrdTrySkeltonTask::initialize(o2::framework::InitContext& /*ctx*/)
   histMCM = std::make_unique<TH1F>("MCM", "Tracklets per MCM (ignore 0)", 160, 0, 160);
 
   getObjectsManager()->startPublishing(histTrackletsTF.get(), PublicationPolicy::Forever);
-  // getObjectsManager()->startPublishing(histTrackletsEvent.get(), PublicationPolicy::Forever);
+  getObjectsManager()->startPublishing(histTrackletsEvent.get(), PublicationPolicy::Forever);
   getObjectsManager()->startPublishing(histQ0.get(), PublicationPolicy::Forever);
   getObjectsManager()->startPublishing(histQ1.get(), PublicationPolicy::Forever);
   getObjectsManager()->startPublishing(histQ2.get(), PublicationPolicy::Forever);
@@ -64,7 +64,7 @@ void TrdTrySkeltonTask::startOfActivity(const Activity& activity)
 
   // We clean anyhists that could have been filled in previous runs.
   histTrackletsTF->Reset();
-  // histTrackletsEvent->Reset();
+  histTrackletsEvent->Reset();
   histQ0->Reset();
   histQ1->Reset();
   histQ2->Reset();
@@ -83,7 +83,7 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
 {
   // Get TRD tracklets
   auto tracklets = ctx.inputs().get<gsl::span<o2::trd::Tracklet64>>("tracklets");
-  // auto trigRec = ctx.inputs().get<gsl::span<o2::trd::Tracklet64>>("trackletsTR");
+  auto trigRec = ctx.inputs().get<gsl::span<o2::trd::TriggerRecord>>("triggers");
 
   // // Count and fillhists
   // int nTracklets = tracklets.size();
@@ -93,12 +93,12 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
   int nTF = tracklets.size();
   histTrackletsTF->Fill(nTF);
 
-  // // 2. Tracklets per event
-  // for (auto& tr : trigRec) {
-  //   int start = tr.getFirstEntry();
-  //   int n = tr.getNumberOfObjects();
-  //   histTrackletsEvent->Fill(n);
-  // }
+  // 2. Tracklets per event
+  for (auto& tr : trigRec) {
+    int start = tr.getFirstEntry();
+    int n = tr.getNumberOfObjects();
+    histTrackletsEvent->Fill(n);
+  }
 
   // Loop over tracklets
   for (const auto& trk : tracklets) {
@@ -147,8 +147,8 @@ void TrdTrySkeltonTask::reset()
   //   histTracklet->Reset();
   if (histTrackletsTF)
     histTrackletsTF->Reset();
-  // if (histTrackletsEvent)
-  //   histTrackletsEvent->Reset();
+  if (histTrackletsEvent)
+    histTrackletsEvent->Reset();
   if (histQ0)
     histQ0->Reset();
   if (histQ1)
