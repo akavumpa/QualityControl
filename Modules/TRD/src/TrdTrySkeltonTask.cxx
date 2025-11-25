@@ -50,9 +50,9 @@ void TrdTrySkeltonTask::initialize(o2::framework::InitContext& /*ctx*/)
   getObjectsManager()->startPublishing(histMCM.get(), PublicationPolicy::Forever);
 
   try {
-    getObjectsManager()->addMetadata(histTracklet->GetName(), "custom", "34");
+    getObjectsManager()->addMetadata(histTrackletsTF->GetName(), "custom", "34");
   } catch (...) {
-    ILOG(Warning, Support) << "Metadata could not be added to " << histTracklet->GetName() << ENDM;
+    ILOG(Warning, Support) << "Metadata could not be added to " << histTrackletsTF->GetName() << ENDM;
   }
 }
 
@@ -81,7 +81,7 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
 {
   // Get TRD tracklets
   auto tracklets = ctx.inputs().get<gsl::span<o2::trd::Tracklet64>>("tracklets");
-  auto trigRec = ctx.inputs().get<gsl::span<o2::trd::TriggerRecord>>("trackletsTR");
+  auto trigRec = ctx.inputs().get<gsl::span<o2::trd::Tracklet64>>("trackletsTR");
 
   // // Count and fillhists
   // int nTracklets = tracklets.size();
