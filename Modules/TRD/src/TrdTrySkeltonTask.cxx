@@ -97,8 +97,10 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
 
   // 2. Tracklets per event
   for (auto& tr : trigRec) {
-    int start = tr.getFirstEntry();
-    int n = tr.getNumberOfObjects();
+    // int start = tr.getFirstEntry();
+    // int n = tr.getNumberOfObjects();
+    int start = tr.getFirstTracklet();
+    int n = tr.getNumberOfTracklets();
     histTrackletsEvent->Fill(n);
   }
 
