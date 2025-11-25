@@ -34,7 +34,7 @@
           "myOwnKey": "defaultValue"
         },
         "location": "local",
-        "saveObjectsToFile": "TrdTrySkeltonOutput.root"
+        "saveObjectsToFile": "PbPb_TrdTrySkeltonOutput.root"
       }
     ],
     "detectors": {
