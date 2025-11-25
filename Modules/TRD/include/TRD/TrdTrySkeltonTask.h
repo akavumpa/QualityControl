@@ -21,6 +21,7 @@
 #include <memory>
 
 class TH1F;
+class TH2F;
 
 using namespace o2::quality_control::core;
 
@@ -56,6 +57,10 @@ class TrdTrySkeltonTask final : public TaskInterface
   std::unique_ptr<TH1F> histChamber;   // tracklets per chamber
   std::unique_ptr<TH1F> histPadRow;    // tracklets per padrow
   std::unique_ptr<TH1F> histMCM;       // tracklets per MCM (non-zero)
+
+  std::unique_ptr<TH2F> histPadRowVsDet;
+  std::unique_ptr<TH1F> histMCMOccupancy;
+
 };
 
 } // namespace o2::quality_control_modules::trd
