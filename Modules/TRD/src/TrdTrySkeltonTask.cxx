@@ -1,5 +1,7 @@
 #include <TCanvas.h>
 #include <TH1.h>
+#include <TH2.h>
+
 
 #include "QualityControl/QcInfoLogger.h"
 #include "TRD/TrdTrySkeltonTask.h"
