@@ -20,10 +20,9 @@
       {
         "taskName": "TrdTrySkelton",
         "className": "o2::quality_control_modules::trd::TrdTrySkeltonTask",
-        "moduleName": "TRD",
+        "moduleName": "QcTRD",
         "detectorName": "TRD",
         "cycleDurationSeconds": 30,
-        "active": "true",
         "dataSources": [
           {
             "type": "direct",
@@ -35,7 +34,7 @@
           "myOwnKey": "defaultValue"
         },
         "location": "local",
-        "saveObjectsToFile": "TrdTrySkeltonOutput.root"
+        "saveObjectsToFile": "pp_TrdTrySkeltonOutput.root"
       }
     ],
     "detectors": {
