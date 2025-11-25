@@ -27,7 +27,8 @@ void TrdTrySkeltonTask::initialize(o2::framework::InitContext& /*ctx*/)
   ILOG(Info, Ops) << "Initializing TRD skelton histograms" << ENDM;
 
   // This creates and registers a histogram for publication at the end of each cycle, until the end of the task lifetime
-  histTracklet = std::make_unique<TH1F>("nTracklets", "Number of TRD Tracklets per Event", 100, 0, 1000);
+  histTrackletTF = std::make_unique<TH1F>("nTrackletsTF", "Number of TRD Tracklets per Timeframe", 2000, 0, 200000);
+  histTrackletEvent = std::make_unique<TH1F>("nTrackletsEVENT", "Number of TRD Tracklets per Event", 5000, 0, 5000);
 
   histQ0 = std::make_unique<TH1F>("Q0", "per TRD Tracklet Q0", 256, -0.5, 255.5);
   histQ1 = std::make_unique<TH1F>("Q1", "per TRD Tracklet Q1", 256, -0.5, 255.5);
@@ -39,7 +40,8 @@ void TrdTrySkeltonTask::initialize(o2::framework::InitContext& /*ctx*/)
 
   histMCM = std::make_unique<TH1F>("MCM", "Tracklets per MCM (ignore 0)", 160, 0, 160);
 
-  getObjectsManager()->startPublishing(histTracklet.get(), PublicationPolicy::Forever);
+  getObjectsManager()->startPublishing(histTrackletTF.get(), PublicationPolicy::Forever);
+  getObjectsManager()->startPublishing(histTrackletEvent.get(), PublicationPolicy::Forever);
   getObjectsManager()->startPublishing(histQ0.get(), PublicationPolicy::Forever);
   getObjectsManager()->startPublishing(histQ1.get(), PublicationPolicy::Forever);
   getObjectsManager()->startPublishing(histQ2.get(), PublicationPolicy::Forever);
@@ -59,7 +61,8 @@ void TrdTrySkeltonTask::startOfActivity(const Activity& activity)
   ILOG(Debug, Devel) << "startOfActivity " << activity.mId << ENDM;
 
   // We clean anyhists that could have been filled in previous runs.
-  histTracklet->Reset();
+  histTrackletTF->Reset();
+  histTrackletEvent->Reset();
   histQ0->Reset();
   histQ1->Reset();
   histQ2->Reset();
@@ -78,10 +81,22 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
 {
   // Get TRD tracklets
   auto tracklets = ctx.inputs().get<gsl::span<o2::trd::Tracklet64>>("tracklets");
+  auto trigRec = ctx.inputs().get<gsl::span<o2::trd::TriggerRecord>>("trackletsTR");
 
-  // Count and fillhists
-  int nTracklets = tracklets.size();
-  histTracklet->Fill(nTracklets); // hist A: number of tracklets
+  // // Count and fillhists
+  // int nTracklets = tracklets.size();
+  // histTracklet->Fill(nTracklets); // hist A: number of tracklets
+
+  // 1. Tracklets per timeframe (simple count)
+  int nTF = tracklets.size();
+  histTrackletsTF->Fill(nTF);
+
+  // 2. Tracklets per event
+  for (auto& tr : trigRec) {
+    int start = tr.getFirstEntry();
+    int n = tr.getNumberOfObjects();
+    histTrackletsEvent->Fill(n);
+  }
 
   // Loop over tracklets
   for (const auto& trk : tracklets) {
@@ -117,10 +132,21 @@ void TrdTrySkeltonTask::reset()
 {
   // THIS FUNCTION BODY IS AN EXAMPLE. PLEASE REMOVE EVERYTHING YOU DO NOT NEED.
 
+  // ✔ 200,000 bins for timeframe is correct ?
+  // Typical TF has ~50 events × 2k tracklets/event = 100k tracklets.
+
+  // ✔ Per-event histogram should go to around 5000
+  // Highest tracklet multiplicity per event ≈ 2500–3000.
+
   // Clean all the monitor objects here.
-  ILOG(Debug, Devel) << "Resetting thehists" << ENDM;
-  if (histTracklet)
-    histTracklet->Reset();
+  ILOG(Debug, Devel)
+    << "Resetting thehists" << ENDM;
+  // if (histTracklet)
+  //   histTracklet->Reset();
+  if (histTrackletsTF)
+    histTrackletsTF->Reset();
+  if (histTrackletsEvent)
+    histTrackletsEvent->Reset();
   if (histQ0)
     histQ0->Reset();
   if (histQ1)
