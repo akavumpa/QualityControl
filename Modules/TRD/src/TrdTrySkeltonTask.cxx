@@ -2,7 +2,6 @@
 #include <TH1.h>
 #include <TH2.h>
 
-
 #include "QualityControl/QcInfoLogger.h"
 #include "TRD/TrdTrySkeltonTask.h"
 #include <Framework/InputRecordWalker.h>
@@ -97,25 +96,19 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
   auto tracklets = ctx.inputs().get<gsl::span<o2::trd::Tracklet64>>("tracklets");
   auto trigRec = ctx.inputs().get<gsl::span<o2::trd::TriggerRecord>>("triggers");
 
-  // // Count and fillhists
-  // int nTracklets = tracklets.size();
-  // histTracklet->Fill(nTracklets); // hist A: number of tracklets
-
   // 1. Tracklets per timeframe (simple count)
   int nTF = tracklets.size();
   histTrackletsTF->Fill(nTF);
 
   // 2. Tracklets per event
   for (auto& tr : trigRec) {
-    // int start = tr.getFirstEntry();
-    // int n = tr.getNumberOfObjects();
     int start = tr.getFirstTracklet();
     int n = tr.getNumberOfTracklets();
     histTrackletsEvent->Fill(n);
   }
 
   std::unordered_map<int, int> mcmCounts;
-  mcmCounts.reserve(2000);
+  mcmCounts.reserve(160);
 
   // Loop over tracklets
   for (const auto& trk : tracklets) {
@@ -131,16 +124,25 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
     histPadRowVsDet->Fill(trk.getDetector(), trk.getPadRow());
     // MCM (Zero ignored)
     int mcm = trk.getMCM();
+    if (mcm > 0) {
+      histMCM->Fill(mcm);
+    }
 
     if (mcm >= 0 && mcm < 160) {
-      histMCM->Fill(mcm);
-      mcmCounts[mcm]++; // only MCMs that appear are counted
+      mcmCounts[mcm]++;
     }
   }
-
-  for (auto& [mcm, count] : mcmCounts) {
-    histMCMOccupancy->Fill(count);
-  } // This fills how many MCMs produced 0, 1, 2, or 3 tracklets in this TF.
+  // 5. Fill occupancy histogram (includes zero-tracklet MCMs)
+  // ------------------------------------------------------
+  // Iterate over ALL MCMs (0–159)
+  for (int mcm = 0; mcm < 160; mcm++) {
+    int count = 0;
+    if (mcmCounts.find(mcm) != mcmCounts.end()) {
+      count = mcmCounts[mcm];
+    }
+    histMCMOccupancy->Fill(count); // count = 0, 1, 2, 3...
+  }
+  histMCMOccupancy->SetMaximum(200);
 }
 
 void TrdTrySkeltonTask::endOfCycle()
