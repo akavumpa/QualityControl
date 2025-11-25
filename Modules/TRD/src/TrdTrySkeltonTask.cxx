@@ -27,8 +27,9 @@ void TrdTrySkeltonTask::initialize(o2::framework::InitContext& /*ctx*/)
   ILOG(Info, Ops) << "Initializing TRD skelton histograms" << ENDM;
 
   // This creates and registers a histogram for publication at the end of each cycle, until the end of the task lifetime
-  histTrackletsTF = std::make_unique<TH1F>("nTrackletsTF", "Number of TRD Tracklets per Timeframe", 4000, 0, 400000);
-  
+  // histTrackletsTF = std::make_unique<TH1F>("nTrackletsTF", "Number of TRD Tracklets per Timeframe", 2000, 0, 200000); // pp
+  histTrackletsTF = std::make_unique<TH1F>("nTrackletsTF", "Number of TRD Tracklets per Timeframe", 20000, 0, 2000000);
+
   // histTrackletsEvent = std::make_unique<TH1F>("nTrackletsEVENT", "Number of TRD Tracklets per Event", 5000, 0, 5000);
 
   histQ0 = std::make_unique<TH1F>("Q0", "per TRD Tracklet Q0", 256, -0.5, 255.5);
