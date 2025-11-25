@@ -27,8 +27,8 @@ void TrdTrySkeltonTask::initialize(o2::framework::InitContext& /*ctx*/)
   ILOG(Info, Ops) << "Initializing TRD skelton histograms" << ENDM;
 
   // This creates and registers a histogram for publication at the end of each cycle, until the end of the task lifetime
-  histTrackletTF = std::make_unique<TH1F>("nTrackletsTF", "Number of TRD Tracklets per Timeframe", 2000, 0, 200000);
-  histTrackletEvent = std::make_unique<TH1F>("nTrackletsEVENT", "Number of TRD Tracklets per Event", 5000, 0, 5000);
+  histTrackletsTF = std::make_unique<TH1F>("nTrackletsTF", "Number of TRD Tracklets per Timeframe", 2000, 0, 200000);
+  histTrackletsEvent = std::make_unique<TH1F>("nTrackletsEVENT", "Number of TRD Tracklets per Event", 5000, 0, 5000);
 
   histQ0 = std::make_unique<TH1F>("Q0", "per TRD Tracklet Q0", 256, -0.5, 255.5);
   histQ1 = std::make_unique<TH1F>("Q1", "per TRD Tracklet Q1", 256, -0.5, 255.5);
@@ -40,8 +40,8 @@ void TrdTrySkeltonTask::initialize(o2::framework::InitContext& /*ctx*/)
 
   histMCM = std::make_unique<TH1F>("MCM", "Tracklets per MCM (ignore 0)", 160, 0, 160);
 
-  getObjectsManager()->startPublishing(histTrackletTF.get(), PublicationPolicy::Forever);
-  getObjectsManager()->startPublishing(histTrackletEvent.get(), PublicationPolicy::Forever);
+  getObjectsManager()->startPublishing(histTrackletsTF.get(), PublicationPolicy::Forever);
+  getObjectsManager()->startPublishing(histTrackletsEvent.get(), PublicationPolicy::Forever);
   getObjectsManager()->startPublishing(histQ0.get(), PublicationPolicy::Forever);
   getObjectsManager()->startPublishing(histQ1.get(), PublicationPolicy::Forever);
   getObjectsManager()->startPublishing(histQ2.get(), PublicationPolicy::Forever);
@@ -61,8 +61,8 @@ void TrdTrySkeltonTask::startOfActivity(const Activity& activity)
   ILOG(Debug, Devel) << "startOfActivity " << activity.mId << ENDM;
 
   // We clean anyhists that could have been filled in previous runs.
-  histTrackletTF->Reset();
-  histTrackletEvent->Reset();
+  histTrackletsTF->Reset();
+  histTrackletsEvent->Reset();
   histQ0->Reset();
   histQ1->Reset();
   histQ2->Reset();
