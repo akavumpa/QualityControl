@@ -85,7 +85,7 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
 {
   // Get TRD tracklets
   auto tracklets = ctx.inputs().get<gsl::span<o2::trd::Tracklet64>>("tracklets");
-  auto trigRec = ctx.inputs().get<gsl::span<o2::trd::TRDTriggerRecord>>("triggers");
+  auto trigRec = ctx.inputs().get<gsl::span<o2::trd::TriggerRecord>>("triggers");
 
   // // Count and fillhists
   // int nTracklets = tracklets.size();
