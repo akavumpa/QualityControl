@@ -131,7 +131,7 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
       mcmCounts[mcm]++;   // Count for occupancy
     }
 
-    LOG(info) << "Tracklet: detector=" << trk.getDetector() << " Padrow" << trk.getPadRow() << endl;
+    LOG(info) << "Tracklet: detector=" << trk.getDetector() << " Padrow" << trk.getPadRow();
     // << "  chamber=" << trk.getChamber()
     // << "  stack=" << trk.getStack()
     // << "  layer=" << trk.getLayer()
