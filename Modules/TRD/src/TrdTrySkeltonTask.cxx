@@ -43,7 +43,7 @@ void TrdTrySkeltonTask::initialize(o2::framework::InitContext& /*ctx*/)
 
   histPadRow = std::make_unique<TH1F>("PadRow", "Tracklets per PadRow", 16, 0, 16);
 
-  histMCM = std::make_unique<TH1F>("MCM", "Tracklets per MCM (ignore 0)", 16, 0, 16);
+  histMCM = std::make_unique<TH1F>("MCM", "Tracklets per MCM (ignore 0)", 160, 0, 160);
 
   histPadRowVsDet = std::make_unique<TH2F>("PadRowVsDet", "PadRow vs Detector;Detector ID;PadRow", 540, 0, 540, 16, 0, 16);                    // 540 chambers and 16 padrows
   histMCMOccupancy = std::make_unique<TH1F>("MCMTrackletPerMCM", "Number of tracklets per MCM;Tracklets per MCM;Count of MCMs", 4, -0.5, 3.5); // possible values: 0,1,2,3
@@ -108,7 +108,7 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
   }
 
   std::unordered_map<int, int> mcmCounts;
-  mcmCounts.reserve(16);
+  mcmCounts.reserve(160);
 
   // Loop over tracklets
   for (const auto& trk : tracklets) {
@@ -125,13 +125,13 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
     // MCM index (0–15) // 16 MCMs per TRD chamber
     int mcm = trk.getMCM();
     // Fill MCM distribution histogram (all valid IDs)
-    if (mcm >= 0 && mcm < 16) {
+    if (mcm >= 0 && mcm < 160) {
       histMCM->Fill(mcm); // MCM ID seen in data
       mcmCounts[mcm]++;   // Count for occupancy
     }
   }
 
-  for (int mcm = 0; mcm < 16; mcm++) {
+  for (int mcm = 0; mcm < 160; mcm++) {
     int count = 0;
     if (mcmCounts.find(mcm) != mcmCounts.end()) {
       count = mcmCounts[mcm];
