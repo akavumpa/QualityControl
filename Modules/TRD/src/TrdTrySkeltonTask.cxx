@@ -28,22 +28,22 @@ void TrdTrySkeltonTask::initialize(o2::framework::InitContext& /*ctx*/)
   ILOG(Info, Ops) << "An Info log targeted for operators" << ENDM;
 
   ILOG(Info, Ops) << "Initializing TRD skelton histograms" << ENDM;
-
   // This creates and registers a histogram for publication at the end of each cycle, until the end of the task lifetime
+
   // histTrackletsTF = std::make_unique<TH1F>("nTrackletsTF", "Number of TRD Tracklets per Timeframe", 2000, 0, 200000); // pp
   histTrackletsTF = std::make_unique<TH1F>("nTrackletsTF", "Number of TRD Tracklets per Timeframe", 20000, 0, 2000000); // Pb-Pb
 
   histTrackletsEvent = std::make_unique<TH1F>("nTrackletsEVENT", "Number of TRD Tracklets per Event", 5000, 0, 5000);
 
-  histQ0 = std::make_unique<TH1F>("Q0", "per TRD Tracklet Q0", 256, -0.5, 255.5);
-  histQ1 = std::make_unique<TH1F>("Q1", "per TRD Tracklet Q1", 256, -0.5, 255.5);
-  histQ2 = std::make_unique<TH1F>("Q2", "per TRD Tracklet Q2", 256, -0.5, 255.5);
+  histQ0 = std::make_unique<TH1F>("Q0", "Q0 per TRD Tracklet", 256, -0.5, 255.5);
+  histQ1 = std::make_unique<TH1F>("Q1", "Q1 per TRD Tracklet", 256, -0.5, 255.5);
+  histQ2 = std::make_unique<TH1F>("Q2", "Q2 per TRD Tracklet", 256, -0.5, 255.5);
 
   histChamber = std::make_unique<TH1F>("Chamber", "Tracklets per TRD Chamber", 540, 0, 540);
 
   histPadRow = std::make_unique<TH1F>("PadRow", "Tracklets per PadRow", 16, 0, 16);
 
-  histMCM = std::make_unique<TH1F>("MCM", "Tracklets per MCM (ignore 0)", 160, 0, 160);
+  histMCM = std::make_unique<TH1F>("MCM", "Tracklets per MCM (ignore 0)", 16, 0, 16);
 
   histPadRowVsDet = std::make_unique<TH2F>("PadRowVsDet", "PadRow vs Detector;Detector ID;PadRow", 540, 0, 540, 16, 0, 16);                    // 540 chambers and 16 padrows
   histMCMOccupancy = std::make_unique<TH1F>("MCMTrackletPerMCM", "Number of tracklets per MCM;Tracklets per MCM;Count of MCMs", 4, -0.5, 3.5); // possible values: 0,1,2,3
@@ -108,7 +108,7 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
   }
 
   std::unordered_map<int, int> mcmCounts;
-  mcmCounts.reserve(160);
+  mcmCounts.reserve(16);
 
   // Loop over tracklets
   for (const auto& trk : tracklets) {
@@ -122,20 +122,16 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
     histPadRow->Fill(trk.getPadRow());
     // Fill PadRow vs Detector
     histPadRowVsDet->Fill(trk.getDetector(), trk.getPadRow());
-    // MCM (Zero ignored)
+    // MCM index (0–15) // 16 MCMs per TRD chamber
     int mcm = trk.getMCM();
-    if (mcm > 0) {
-      histMCM->Fill(mcm);
-    }
-
-    if (mcm >= 0 && mcm < 160) {
-      mcmCounts[mcm]++;
+    // Fill MCM distribution histogram (all valid IDs)
+    if (mcm >= 0 && mcm < 16) {
+      histMCM->Fill(mcm); // MCM ID seen in data
+      mcmCounts[mcm]++;   // Count for occupancy
     }
   }
-  // 5. Fill occupancy histogram (includes zero-tracklet MCMs)
-  // ------------------------------------------------------
-  // Iterate over ALL MCMs (0–159)
-  for (int mcm = 0; mcm < 160; mcm++) {
+
+  for (int mcm = 0; mcm < 16; mcm++) {
     int count = 0;
     if (mcmCounts.find(mcm) != mcmCounts.end()) {
       count = mcmCounts[mcm];
