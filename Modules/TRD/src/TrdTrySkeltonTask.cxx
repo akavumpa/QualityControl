@@ -116,19 +116,26 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
     histQ0->Fill(trk.getQ0());
     histQ1->Fill(trk.getQ1());
     histQ2->Fill(trk.getQ2());
-    // ChamberIDs (0-539)
-    histChamber->Fill(trk.getDetector());
-    // PadRow (0-15)
-    histPadRow->Fill(trk.getPadRow());
-    // Fill PadRow vs Detector
-    histPadRowVsDet->Fill(trk.getDetector(), trk.getPadRow());
-    // MCM index (0–15) // 16 MCMs per TRD chamber
-    int mcm = trk.getMCM();
+   
+    histChamber->Fill(trk.getDetector());  // ChamberIDs (0-539)
+    
+    histPadRow->Fill(trk.getPadRow()); // PadRow (0-15)
+    
+    histPadRowVsDet->Fill(trk.getDetector(), trk.getPadRow()); // Fill PadRow vs Detector
+    
+    int mcm = trk.getMCM(); // MCM index (0–?) // ? MCMs per TRD chamber
+
     // Fill MCM distribution histogram (all valid IDs)
     if (mcm >= 0 && mcm < 160) {
       histMCM->Fill(mcm); // MCM ID seen in data
       mcmCounts[mcm]++;   // Count for occupancy
     }
+
+    LOG(info) << "Tracklet: detector=" << trk.getDetector()
+              << "  chamber=" << trk.getChamber()
+              << "  stack=" << trk.getStack()
+              << "  layer=" << trk.getLayer()
+              << "  mcm=" << trk.getMCM();
   }
 
   for (int mcm = 0; mcm < 160; mcm++) {
