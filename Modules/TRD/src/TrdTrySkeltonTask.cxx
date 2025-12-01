@@ -50,7 +50,7 @@ void TrdTrySkeltonTask::initialize(o2::framework::InitContext& /*ctx*/)
 
   histMCMOccupancy = std::make_unique<TH1F>("MCMTrackletPerMCM",
                                             "Number of tracklets per MCM;Tracklets per MCM;Count of MCMs",
-                                            16, -0.5, 15.5);
+                                            10, -0.5, 9.5);
 
   getObjectsManager()->startPublishing(histPadRowVsDet.get(), PublicationPolicy::Forever);
   getObjectsManager()->startPublishing(histMCMOccupancy.get(), PublicationPolicy::Forever);
@@ -154,11 +154,8 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
   }
 
   // Fill histogram for "how many MCMs have N tracklets"
-  int maxOcc = 0;
   for (int mcm = 0; mcm < kNMCMTot; mcm++) {
-    if (mcmCounts[mcm] > 0) {
-      histMCMOccupancy->Fill(mcmCounts[mcm]);
-    }
+    histMCMOccupancy->Fill(mcmCounts[mcm]);
   }
 }
 
