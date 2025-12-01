@@ -40,13 +40,17 @@ void TrdTrySkeltonTask::initialize(o2::framework::InitContext& /*ctx*/)
   histQ2 = std::make_unique<TH1F>("Q2", "Q2 per TRD Tracklet", 256, -0.5, 255.5);
 
   histChamber = std::make_unique<TH1F>("Chamber", "Tracklets per TRD Chamber", 540, 0, 540);
-
   histPadRow = std::make_unique<TH1F>("PadRow", "Tracklets per PadRow", 16, 0, 16);
+  histPadRowVsDet = std::make_unique<TH2F>("PadRowVsDet", "PadRow vs Detector;Detector ID;PadRow", 540, 0, 540, 16, 0, 16); // 540 chambers and 16 padrows
 
-  histMCM = std::make_unique<TH1F>("MCM", "Tracklets per MCM (ignore 0)", 160, 0, 160);
+  // 540 chambers × 16 MCMs each = 8640 total MCMs
+  histMCM = std::make_unique<TH1F>("MCM",
+                                   "Tracklets per global MCM;Global MCM ID;Entries",
+                                   8640, 0, 8640);
 
-  histPadRowVsDet = std::make_unique<TH2F>("PadRowVsDet", "PadRow vs Detector;Detector ID;PadRow", 540, 0, 540, 16, 0, 16);                    // 540 chambers and 16 padrows
-  histMCMOccupancy = std::make_unique<TH1F>("MCMTrackletPerMCM", "Number of tracklets per MCM;Tracklets per MCM;Count of MCMs", 4, -0.5, 3.5); // possible values: 0,1,2,3
+  histMCMOccupancy = std::make_unique<TH1F>("MCMTrackletPerMCM",
+                                            "Number of tracklets per MCM;Tracklets per MCM;Count of MCMs",
+                                            10, -0.5, 9.5);
 
   getObjectsManager()->startPublishing(histPadRowVsDet.get(), PublicationPolicy::Forever);
   getObjectsManager()->startPublishing(histMCMOccupancy.get(), PublicationPolicy::Forever);
@@ -107,8 +111,10 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
     histTrackletsEvent->Fill(n);
   }
 
-  std::unordered_map<int, int> mcmCounts;
-  mcmCounts.reserve(160);
+  // One entry per MCM (global MCM ID 0–8639)
+  static constexpr int kNMCMTot = 540 * 16;
+  std::array<int, kNMCMTot> mcmCounts{};
+  mcmCounts.fill(0);
 
   // Loop over tracklets
   for (const auto& trk : tracklets) {
@@ -117,35 +123,40 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
     histQ1->Fill(trk.getQ1());
     histQ2->Fill(trk.getQ2());
 
-    histChamber->Fill(trk.getDetector()); // ChamberIDs (0-539)
-
-    histPadRow->Fill(trk.getPadRow()); // PadRow (0-15)
-
+    histChamber->Fill(trk.getDetector());                      // ChamberIDs (0-539)
+    histPadRow->Fill(trk.getPadRow());                         // PadRow (0-15)
     histPadRowVsDet->Fill(trk.getDetector(), trk.getPadRow()); // Fill PadRow vs Detector
 
-    int mcm = trk.getMCM(); // MCM index (0–?) // ? MCMs per TRD chamber
+    int det = trk.getDetector(); // 0–539
+    int locMCM = trk.getMCM();   // 0–15
 
-    // Fill MCM distribution histogram (all valid IDs)
-    if (mcm >= 0 && mcm < 160) {
-      histMCM->Fill(mcm); // MCM ID seen in data
-      mcmCounts[mcm]++;   // Count for occupancy
+    // Safety check
+    if (det < 0 || det >= 540) {
+      LOG(warn) << "Invalid detector ID: " << det;
+      continue;
+    }
+    if (locMCM < 0 || locMCM >= 16) {
+      LOG(warn) << "Invalid local MCM ID: " << locMCM;
+      continue;
     }
 
-    LOG(info) << "Tracklet: detector=" << trk.getDetector() << " Padrow" << trk.getPadRow();
-    // << "  chamber=" << trk.getChamber()
-    // << "  stack=" << trk.getStack()
-    // << "  layer=" << trk.getLayer()
-    // << "  mcm=" << trk.getMCM();
+    // Global MCM index
+    int globalMCM = det * 16 + locMCM; // 0–8639
+    // Fill histograms
+    histMCM->Fill(globalMCM);
+    mcmCounts[globalMCM]++;
+
+    // LOG(info) << "Tracklet: detector=" << trk.getDetector() << " Padrow" << trk.getPadRow();
+    // // << "  chamber=" << trk.getChamber()
+    // // << "  stack=" << trk.getStack()
+    // // << "  layer=" << trk.getLayer()
+    // // << "  mcm=" << trk.getMCM();
   }
 
-  for (int mcm = 0; mcm < 160; mcm++) {
-    int count = 0;
-    if (mcmCounts.find(mcm) != mcmCounts.end()) {
-      count = mcmCounts[mcm];
-    }
-    histMCMOccupancy->Fill(count); // count = 0, 1, 2, 3...
+  // Fill histogram for "how many MCMs have N tracklets"
+  for (int mcm = 0; mcm < kNMCMTot; mcm++) {
+    histMCMOccupancy->Fill(mcmCounts[mcm]);
   }
-  histMCMOccupancy->SetMaximum(200);
 }
 
 void TrdTrySkeltonTask::endOfCycle()
