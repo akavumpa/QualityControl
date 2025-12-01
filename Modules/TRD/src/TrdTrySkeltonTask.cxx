@@ -50,7 +50,7 @@ void TrdTrySkeltonTask::initialize(o2::framework::InitContext& /*ctx*/)
 
   histMCMOccupancy = std::make_unique<TH1F>("MCMTrackletPerMCM",
                                             "Number of tracklets per MCM;Tracklets per MCM;Count of MCMs",
-                                            10, -0.5, 9.5);
+                                            11, -0.5, 10.5);
 
   getObjectsManager()->startPublishing(histPadRowVsDet.get(), PublicationPolicy::Forever);
   getObjectsManager()->startPublishing(histMCMOccupancy.get(), PublicationPolicy::Forever);
@@ -141,7 +141,7 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
     }
 
     // Global MCM index
-    int globalMCM = det * 16 + locMCM; // 0–8639
+    int globalMCM = (det * 16) + locMCM; // 0–8639
     // Fill histograms
     histMCM->Fill(globalMCM);
     mcmCounts[globalMCM]++;
