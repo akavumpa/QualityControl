@@ -31,9 +31,9 @@ void TrdTrySkeltonTask::initialize(o2::framework::InitContext& /*ctx*/)
   // This creates and registers a histogram for publication at the end of each cycle, until the end of the task lifetime
 
   // histTrackletsTF = std::make_unique<TH1F>("nTrackletsTF", "Number of TRD Tracklets per Timeframe", 2000, 0, 200000); // pp
-  histTrackletsTF = std::make_unique<TH1F>("nTrackletsTF", "Number of TRD Tracklets per Timeframe", 20000, 0, 2000000); // Pb-Pb
+  histTrackletsTF = std::make_unique<TH1F>("nTrackletsTF", "Number of TRD Tracklets per Timeframe", 10000, 0, 1000000); // Pb-Pb
 
-  histTrackletsEvent = std::make_unique<TH1F>("nTrackletsEVENT", "Number of TRD Tracklets per Event", 5000, 0, 5000);
+  histTrackletsEvent = std::make_unique<TH1F>("nTrackletsEVENT", "Number of TRD Tracklets per Event", 10000, 0, 10000);
 
   histQ0 = std::make_unique<TH1F>("Q0", "Q0 per TRD Tracklet", 256, -0.5, 255.5);
   histQ1 = std::make_unique<TH1F>("Q1", "Q1 per TRD Tracklet", 256, -0.5, 255.5);
@@ -99,37 +99,31 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
   // Get TRD tracklets
   auto tracklets = ctx.inputs().get<gsl::span<o2::trd::Tracklet64>>("tracklets");
   auto trigRec = ctx.inputs().get<gsl::span<o2::trd::TriggerRecord>>("triggers");
-
   // 1. Tracklets per timeframe (simple count)
   int nTF = tracklets.size();
   histTrackletsTF->Fill(nTF);
-
   // 2. Tracklets per event
   for (auto& tr : trigRec) {
     int start = tr.getFirstTracklet();
     int n = tr.getNumberOfTracklets();
     histTrackletsEvent->Fill(n);
   }
-
   // One entry per MCM (global MCM ID 0–8639)
   static constexpr int kNMCMTot = 540 * 16;
   std::array<int, kNMCMTot> mcmCounts{};
   mcmCounts.fill(0);
-
   // Loop over tracklets
   for (const auto& trk : tracklets) {
     // Filling Q values
     histQ0->Fill(trk.getQ0());
     histQ1->Fill(trk.getQ1());
     histQ2->Fill(trk.getQ2());
-
     histChamber->Fill(trk.getDetector());                      // ChamberIDs (0-539)
     histPadRow->Fill(trk.getPadRow());                         // PadRow (0-15)
     histPadRowVsDet->Fill(trk.getDetector(), trk.getPadRow()); // Fill PadRow vs Detector
 
     int det = trk.getDetector(); // 0–539
     int locMCM = trk.getMCM();   // 0–15
-
     // Safety check
     if (det < 0 || det >= 540) {
       LOG(warn) << "Invalid detector ID: " << det;
@@ -139,20 +133,12 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
       LOG(warn) << "Invalid local MCM ID: " << locMCM;
       continue;
     }
-
     // Global MCM index
     int globalMCM = (det * 16) + locMCM; // 0–8639
     // Fill histograms
     histMCM->Fill(globalMCM);
     mcmCounts[globalMCM]++;
-
-    // LOG(info) << "Tracklet: detector=" << trk.getDetector() << " Padrow" << trk.getPadRow();
-    // // << "  chamber=" << trk.getChamber()
-    // // << "  stack=" << trk.getStack()
-    // // << "  layer=" << trk.getLayer()
-    // // << "  mcm=" << trk.getMCM();
   }
-
   // Fill histogram for "how many MCMs have N tracklets"
   for (int mcm = 0; mcm < kNMCMTot; mcm++) {
     histMCMOccupancy->Fill(mcmCounts[mcm]);
