@@ -39,7 +39,40 @@
           "myOwnKey": "defaultValue"
         },
         "location": "local",
-        "saveObjectsToFile": "PbPb_TrdTrySkeltonOutput.root"
+        "saveObjectsToFile": "PbPb_TrdTrySkeltonOutput.root",
+        
+        "objects": [
+          {
+            "name": "Q0",
+            "drawOptions": {
+              "logy": true
+            }
+          },
+          {
+            "name": "Q1",
+            "drawOptions": {
+              "logy": true
+            }
+          },
+          {
+            "name": "Q2",
+            "drawOptions": {
+              "logy": true
+            }
+          },
+          {
+            "name": "MCMTrackletPerMCM",
+            "drawOptions": {
+              "logy": true
+            }
+          },
+          {
+            "name": "nTrackletsEVENT",
+            "drawOptions": {
+              "logy": true
+            }
+          }
+        ]
       }
     ],
     "detectors": {
