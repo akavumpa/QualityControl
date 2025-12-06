@@ -19,3 +19,4 @@ gh-md-toc
 .clangd
 /Framework/script/RepoCleaner/build/
 /Framework/script/RepoCleaner/qcrepocleaner.egg-info/
+Modules/TRD/output.log
