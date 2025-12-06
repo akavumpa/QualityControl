@@ -46,11 +46,11 @@ void TrdTrySkeltonTask::initialize(o2::framework::InitContext& /*ctx*/)
   // 540 chambers × 16 MCMs each = 8640 total MCMs
   histMCM = std::make_unique<TH1F>("MCM",
                                    "Tracklets per global MCM;Global MCM ID;Entries",
-                                   8640, 0, 8640);
+                                   86400, 0, 86400);
 
   histMCMOccupancy = std::make_unique<TH1F>("MCMTrackletPerMCM",
                                             "Number of tracklets per MCM;Tracklets per MCM;Count of MCMs",
-                                            11, -0.5, 10.5);
+                                            4, -0.5, 3.5);
 
   getObjectsManager()->startPublishing(histPadRowVsDet.get(), PublicationPolicy::Forever);
   getObjectsManager()->startPublishing(histMCMOccupancy.get(), PublicationPolicy::Forever);
@@ -99,25 +99,25 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
   // Get TRD tracklets
   auto tracklets = ctx.inputs().get<gsl::span<o2::trd::Tracklet64>>("tracklets");
   auto trigRec = ctx.inputs().get<gsl::span<o2::trd::TriggerRecord>>("triggers");
+
   // 1. Tracklets per timeframe (simple count)
   int nTF = tracklets.size();
   histTrackletsTF->Fill(nTF);
+
   // 2. Tracklets per event
   for (auto& tr : trigRec) {
     int start = tr.getFirstTracklet();
     int n = tr.getNumberOfTracklets();
     histTrackletsEvent->Fill(n);
   }
-  // One entry per MCM (global MCM ID 0–8639)
-  static constexpr int kNMCMTot = 540 * 16;
-  std::array<int, kNMCMTot> mcmCounts{};
-  mcmCounts.fill(0);
-  // Loop over tracklets
+
+  // 3. Loop over tracklets
   for (const auto& trk : tracklets) {
     // Filling Q values
     histQ0->Fill(trk.getQ0());
     histQ1->Fill(trk.getQ1());
     histQ2->Fill(trk.getQ2());
+
     histChamber->Fill(trk.getDetector());                      // ChamberIDs (0-539)
     histPadRow->Fill(trk.getPadRow());                         // PadRow (0-15)
     histPadRowVsDet->Fill(trk.getDetector(), trk.getPadRow()); // Fill PadRow vs Detector
@@ -133,15 +133,76 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
       LOG(warn) << "Invalid local MCM ID: " << locMCM;
       continue;
     }
+    // 6: Global MCM
     // Global MCM index
     int globalMCM = (det * 16) + locMCM; // 0–8639
     // Fill histograms
     histMCM->Fill(globalMCM);
-    mcmCounts[globalMCM]++;
+    // mcmCounts[globalMCM]++;
   }
-  // Fill histogram for "how many MCMs have N tracklets"
-  for (int mcm = 0; mcm < kNMCMTot; mcm++) {
-    histMCMOccupancy->Fill(mcmCounts[mcm]);
+
+  // ---------------------------------------------------------------------
+  //   IMPLEMENTING SEAN'S METHOD
+  //   Compute tracklets per MCM using unique indexing and sorting
+  // ---------------------------------------------------------------------
+
+  struct MCMEntry {
+    int uid; // unique MCM ID (0–540*160)
+    int hcid;
+    int rob;
+    int mcm;
+  };
+
+  std::vector<MCMEntry> sorted;     // elements of the empty vector "sorted" has type "MCMEntry"
+  sorted.reserve(tracklets.size()); // pre-allocating memory of how many tracklet entries anticipated
+
+  // --- 4. Build vector with unique MCM index ---
+  for (auto& trk : tracklets) {
+
+    int hcid = trk.getDetector(); // chamber 0–539
+    int rob = trk.getROB();       // 0–7
+    int mcm = trk.getMCM();       // 0–17
+
+    if (hcid < 0 || hcid >= 540)
+      continue;
+    if (rob < 0 || rob >= 8)
+      continue;
+    if (mcm < 0 || mcm >= 18)
+      continue;
+
+    // Safe unique ID
+    int uid = hcid * 160 + rob * 20 + mcm;
+
+    sorted.push_back({ uid, hcid, rob, mcm }); // Every tracklet inserts one entry into the vector.
+    // sorted[0] = { uid=12340 , hcid=12 , rob=3 , mcm=5 }
+    // sorted[1] = { uid=12360 , hcid=12 , rob=3 , mcm=6 } etc...
+  }
+
+  // --- 5. Sort by uid so same MCMs are consecutive ---
+  std::sort(sorted.begin(), sorted.end(),
+            [](const MCMEntry& a, const MCMEntry& b) { return a.uid < b.uid; }); // sorts the vector sorted by the value uid
+
+  // --- 6. Sweep through sorted list and count tracklets per MCM ---
+  int currentUID = -1;
+  int count = 0;
+
+  for (auto& s : sorted) {
+
+    if (s.uid != currentUID) {
+      // New MCM begins → fill previous MCM count
+      if (currentUID != -1) {
+        histMCMOccupancy->Fill(count);
+      }
+      currentUID = s.uid;
+      count = 1; // first tracklet for this MCM
+    } else {
+      count++;
+    }
+  }
+
+  // fill last MCM
+  if (currentUID != -1) {
+    histMCMOccupancy->Fill(count);
   }
 }
 
