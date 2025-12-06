@@ -41,16 +41,16 @@ void TrdTrySkeltonTask::initialize(o2::framework::InitContext& /*ctx*/)
 
   histChamber = std::make_unique<TH1F>("Chamber", "Tracklets per TRD Chamber", 540, 0, 540);
   histPadRow = std::make_unique<TH1F>("PadRow", "Tracklets per PadRow", 16, 0, 16);
-  histPadRowVsDet = std::make_unique<TH2F>("PadRowVsDet", "PadRow vs Detector;Detector ID;PadRow", 540, 0, 540, 16, 0, 16); // 540 chambers and 16 padrows
+  histPadRowVsDet = std::make_unique<TH2F>("PadRowVsDet", "PadRow vs Detector;Detector ID;PadRow", 540, 0, 540, 16, 0, 16); // 540 chambers and 224 MCM each
 
   // 540 chambers × 16 MCMs each = 8640 total MCMs
   histMCM = std::make_unique<TH1F>("MCM",
                                    "Tracklets per global MCM;Global MCM ID;Entries",
-                                   86400, 0, 86400);
+                                   120960, 0, 120960);
 
   histMCMOccupancy = std::make_unique<TH1F>("MCMTrackletPerMCM",
                                             "Number of tracklets per MCM;Tracklets per MCM;Count of MCMs",
-                                            4, -0.5, 3.5);
+                                            5, -0.5, 4.5);
 
   getObjectsManager()->startPublishing(histPadRowVsDet.get(), PublicationPolicy::Forever);
   getObjectsManager()->startPublishing(histMCMOccupancy.get(), PublicationPolicy::Forever);
@@ -123,22 +123,39 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
     histPadRowVsDet->Fill(trk.getDetector(), trk.getPadRow()); // Fill PadRow vs Detector
 
     int det = trk.getDetector(); // 0–539
-    int locMCM = trk.getMCM();   // 0–15
+    int mcm = trk.getMCM();      // 0–15
+    int hcid = trk.getHCID();    // 0–1079
+    int rob = trk.getROB();      // 0..5 (C0) or 0..7 (C1)
+
     // Safety check
+    if (det != hcid / 2) {
+      LOG(warn) << "Detector/HCID mismatch det=" << det << " hcid=" << hcid;
+      continue;
+    }
     if (det < 0 || det >= 540) {
       LOG(warn) << "Invalid detector ID: " << det;
       continue;
     }
-    if (locMCM < 0 || locMCM >= 16) {
-      LOG(warn) << "Invalid local MCM ID: " << locMCM;
+    if (hcid < 0 || hcid >= 1080) {
+      LOG(warn) << "Invalid half-chamber ID: " << hcid;
       continue;
     }
-    // 6: Global MCM
-    // Global MCM index
-    int globalMCM = (det * 16) + locMCM; // 0–8639
-    // Fill histograms
+    if (mcm < 0 || mcm >= 16) {
+      LOG(warn) << "Invalid local MCM ID: " << mcm;
+      continue;
+    }
+    int c = hcid % 2;            // 0 = C0, 1 = C1
+    int nRob = (c == 0 ? 6 : 8); // C0 has 6 ROB, C1 has 8
+    if (rob < 0 || rob >= nRob) {
+      LOG(warn) << "Invalid ROB ID: " << rob << " for C=" << c;
+      continue;
+    }
+
+    int globalMCM = det * 224 + // 224 = 96 in C0 + 128 in C1 [0-95 and 96-127]
+                    (c == 1 ? 96 : 0) +
+                    rob * 16 +
+                    mcm; // mcm index inside rob
     histMCM->Fill(globalMCM);
-    // mcmCounts[globalMCM]++;
   }
 
   // ---------------------------------------------------------------------
@@ -159,19 +176,22 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
   // --- 4. Build vector with unique MCM index ---
   for (auto& trk : tracklets) {
 
-    int hcid = trk.getDetector(); // chamber 0–539
-    int rob = trk.getROB();       // 0–7
-    int mcm = trk.getMCM();       // 0–17
+    int det = trk.getDetector(); // chamber 0–539
+    int rob = trk.getROB();      // 0–5 in C0 or 0-7 in C1
+    int mcm = trk.getMCM();      // 0–15
+    int hcid = trk.getHCID();    // 0–1079
+    int c = hcid % 2;
 
-    if (hcid < 0 || hcid >= 540)
+    if (det < 0 || det >= 540)
       continue;
-    if (rob < 0 || rob >= 8)
+    int maxROB = (c == 0 ? 6 : 8); // C0 has 6, C1 has 8
+    if (rob < 0 || rob >= maxROB)
       continue;
-    if (mcm < 0 || mcm >= 18)
+    if (mcm < 0 || mcm >= 16)
       continue;
 
     // Safe unique ID
-    int uid = hcid * 160 + rob * 20 + mcm;
+    int uid = det * 224 + (c == 1 ? 96 : 0) + rob * 16 + mcm;
 
     sorted.push_back({ uid, hcid, rob, mcm }); // Every tracklet inserts one entry into the vector.
     // sorted[0] = { uid=12340 , hcid=12 , rob=3 , mcm=5 }
