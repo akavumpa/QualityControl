@@ -144,8 +144,10 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
       LOG(warn) << "Invalid local MCM ID: " << mcm;
       continue;
     }
-    int c = hcid % 2;            // 0 = C0, 1 = C1
-    int nRob = (c == 0 ? 6 : 8); // C0 has 6 ROB, C1 has 8
+    int c = hcid % 2; // 0 = C0, 1 = C1
+    // int nRob = (c == 0 ? 6 : 8); // C0 has 6 ROB, C1 has 8
+    
+    int nRob = (c == 0 ? 6 : 8);
     if (rob < 0 || rob >= nRob) {
       LOG(warn) << "Invalid ROB ID: " << rob << " for C=" << c;
       continue;
@@ -184,10 +186,11 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
 
     if (det < 0 || det >= 540)
       continue;
+    if (mcm < 0 || mcm >= 16)
+      continue;
+
     int maxROB = (c == 0 ? 6 : 8); // C0 has 6, C1 has 8
     if (rob < 0 || rob >= maxROB)
-      continue;
-    if (mcm < 0 || mcm >= 16)
       continue;
 
     // Safe unique ID
