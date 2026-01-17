@@ -10,6 +10,7 @@
 #include "DataFormatsTRD/Tracklet64.h"
 #include "QualityControl/MonitorObject.h"
 #include "DataFormatsTRD/TriggerRecord.h"
+#include "DataFormatsTRD/HelperMethods.h"
 
 // #include "DataFormatsTRD/TrackTRD.h"
 
@@ -127,105 +128,69 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
     int hcid = trk.getHCID();    // 0–1079
     int rob = trk.getROB();      // 0..5 (C0) or 0..7 (C1)
 
-    // Safety check
-    if (det != hcid / 2) {
-      LOG(warn) << "Detector/HCID mismatch det=" << det << " hcid=" << hcid;
-      continue;
-    }
-    if (det < 0 || det >= 540) {
-      LOG(warn) << "Invalid detector ID: " << det;
-      continue;
-    }
-    if (hcid < 0 || hcid >= 1080) {
-      LOG(warn) << "Invalid half-chamber ID: " << hcid;
-      continue;
-    }
-    if (mcm < 0 || mcm >= 16) {
-      LOG(warn) << "Invalid local MCM ID: " << mcm;
-      continue;
-    }
-    int c = hcid % 2; // 0 = C0, 1 = C1
-    // int nRob = (c == 0 ? 6 : 8); // C0 has 6 ROB, C1 has 8
-    
-    int nRob = (c == 0 ? 6 : 8);
-    if (rob < 0 || rob >= nRob) {
-      LOG(warn) << "Invalid ROB ID: " << rob << " for C=" << c;
-      continue;
-    }
+    // // Safety check
+    // if (det != hcid / 2) {
+    //   LOG(warn) << "Detector/HCID mismatch det=" << det << " hcid=" << hcid;
+    //   continue;
+    // }
+    // if (det < 0 || det >= 540) {
+    //   LOG(warn) << "Invalid detector ID: " << det;
+    //   continue;
+    // }
+    // if (hcid < 0 || hcid >= 1080) {
+    //   LOG(warn) << "Invalid half-chamber ID: " << hcid;
+    //   continue;
+    // }
+    // if (mcm < 0 || mcm >= 16) {
+    //   LOG(warn) << "Invalid local MCM ID: " << mcm;
+    //   continue;
+    // }
+    // int c = hcid % 2; // 0 = C0, 1 = C1
+    // // int nRob = (c == 0 ? 6 : 8); // C0 has 6 ROB, C1 has 8
 
-    int globalMCM = det * 224 + // 224 = 96 in C0 + 128 in C1 [0-95 and 96-127]
-                    (c == 1 ? 96 : 0) +
-                    rob * 16 +
-                    mcm; // mcm index inside rob
-    histMCM->Fill(globalMCM);
+    // int nRob = (c == 0 ? 6 : 8);
+    // if (rob < 0 || rob >= nRob) {
+    //   LOG(warn) << "Invalid ROB ID: " << rob << " for C=" << c;
+    //   continue;
   }
-
   // ---------------------------------------------------------------------
-  //   IMPLEMENTING SEAN'S METHOD
-  //   Compute tracklets per MCM using unique indexing and sorting
+  //   Tracklets per MCM (Sean's method: streaming unique key)
   // ---------------------------------------------------------------------
 
-  struct MCMEntry {
-    int uid; // unique MCM ID (0–540*160)
-    int hcid;
-    int rob;
-    int mcm;
-  };
+  int lastKey = -1;
+  int trackletCount = 0;
 
-  std::vector<MCMEntry> sorted;     // elements of the empty vector "sorted" has type "MCMEntry"
-  sorted.reserve(tracklets.size()); // pre-allocating memory of how many tracklet entries anticipated
+  // IMPORTANT: tracklets MUST be sorted by MCM key for this to work
+  // In O2 TRD, tracklets are already ordered by detector/ROB/MCM
+  // If this ever changes, we must explicitly sort.
 
-  // --- 4. Build vector with unique MCM index ---
-  for (auto& trk : tracklets) {
+  for (const auto& trk : tracklets) {
 
-    int det = trk.getDetector(); // chamber 0–539
-    int rob = trk.getROB();      // 0–5 in C0 or 0-7 in C1
-    int mcm = trk.getMCM();      // 0–15
-    int hcid = trk.getHCID();    // 0–1079
-    int c = hcid % 2;
+    int det = trk.getDetector();
+    int rob = trk.getROB();
+    int mcm = trk.getMCM();
 
-    if (det < 0 || det >= 540)
-      continue;
-    if (mcm < 0 || mcm >= 16)
-      continue;
+    // Build TEMPORARY unique key (channel = 0 collapses channels)
+    int key = o2::trd::HelperMethods::getGlobalChannelIndex(
+      det, rob, mcm, 0);
 
-    int maxROB = (c == 0 ? 6 : 8); // C0 has 6, C1 has 8
-    if (rob < 0 || rob >= maxROB)
-      continue;
-
-    // Safe unique ID
-    int uid = det * 224 + (c == 1 ? 96 : 0) + rob * 16 + mcm;
-
-    sorted.push_back({ uid, hcid, rob, mcm }); // Every tracklet inserts one entry into the vector.
-    // sorted[0] = { uid=12340 , hcid=12 , rob=3 , mcm=5 }
-    // sorted[1] = { uid=12360 , hcid=12 , rob=3 , mcm=6 } etc...
-  }
-
-  // --- 5. Sort by uid so same MCMs are consecutive ---
-  std::sort(sorted.begin(), sorted.end(),
-            [](const MCMEntry& a, const MCMEntry& b) { return a.uid < b.uid; }); // sorts the vector sorted by the value uid
-
-  // --- 6. Sweep through sorted list and count tracklets per MCM ---
-  int currentUID = -1;
-  int count = 0;
-
-  for (auto& s : sorted) {
-
-    if (s.uid != currentUID) {
-      // New MCM begins → fill previous MCM count
-      if (currentUID != -1) {
-        histMCMOccupancy->Fill(count);
-      }
-      currentUID = s.uid;
-      count = 1; // first tracklet for this MCM
-    } else {
-      count++;
+    if (lastKey == -1) {
+      lastKey = key;
     }
+
+    if (key != lastKey) {
+      // MCM boundary crossed → fill previous MCM
+      histMCMOccupancy->Fill(trackletCount);
+      trackletCount = 0;
+      lastKey = key;
+    }
+
+    trackletCount++;
   }
 
-  // fill last MCM
-  if (currentUID != -1) {
-    histMCMOccupancy->Fill(count);
+  // Flush last MCM
+  if (trackletCount > 0) {
+    histMCMOccupancy->Fill(trackletCount);
   }
 }
 
