@@ -12,7 +12,7 @@ namespace o2::quality_control_modules::trd
 
 void TrackletsTFCheck::configure()
 {
-  // thresholds can later be read from JSON
+  // nothing for now (thresholds are hardcoded)
 }
 
 Quality TrackletsTFCheck::check(
@@ -32,8 +32,7 @@ Quality TrackletsTFCheck::check(
 
   if (mean < mLowerThresholdTF) {
     return Quality::Bad;
-  }
-  if (mean < 5e4) {
+  } else if (mean < mUpperThresholdTF) {
     return Quality::Medium;
   }
 
@@ -43,24 +42,23 @@ Quality TrackletsTFCheck::check(
 void TrackletsTFCheck::beautify(std::shared_ptr<MonitorObject> mo,
                                 Quality checkResult)
 {
-  auto* h = dynamic_cast<TH1*>(mo->getObject());
-  if (!h) {
-    return;
+  if (!mMessage) {
+    mMessage = std::make_shared<TPaveText>(0.15, 0.8, 0.85, 0.9, "NDC");
+    mMessage->SetFillColor(0);
+    mMessage->SetBorderSize(1);
   }
 
-  mMessage = std::make_shared<TPaveText>(0.15, 0.75, 0.85, 0.9, "NDC");
-  mMessage->SetFillColor(0);
-  mMessage->SetBorderSize(0);
+  mMessage->Clear();
 
   if (checkResult == Quality::Good) {
-    mMessage->AddText("Tracklets/TF: OK");
+    mMessage->AddText("nTrackletsTF: OK");
   } else if (checkResult == Quality::Medium) {
-    mMessage->AddText("Tracklets/TF: WARNING");
+    mMessage->AddText("nTrackletsTF: WARNING");
   } else if (checkResult == Quality::Bad) {
-    mMessage->AddText("Tracklets/TF: BAD");
+    mMessage->AddText("nTrackletsTF: BAD");
   }
 
-  h->GetListOfFunctions()->Add(mMessage.get());
+  mo->addDecoration(mMessage);
 }
 
 void TrackletsTFCheck::reset()
