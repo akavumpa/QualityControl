@@ -12,8 +12,7 @@ namespace o2::quality_control_modules::trd
 
 void TrackletsTFCheck::configure()
 {
-  // Nothing for now
-  // Thresholds can later be read from JSON via checkParameters
+  // thresholds can later be read from JSON
 }
 
 Quality TrackletsTFCheck::check(
@@ -31,9 +30,10 @@ Quality TrackletsTFCheck::check(
 
   double mean = h->GetMean();
 
-  if (mean < 1e4) {
+  if (mean < mLowerThresholdTF) {
     return Quality::Bad;
-  } else if (mean < 5e4) {
+  }
+  if (mean < 5e4) {
     return Quality::Medium;
   }
 
@@ -48,13 +48,9 @@ void TrackletsTFCheck::beautify(std::shared_ptr<MonitorObject> mo,
     return;
   }
 
-  if (!mMessage) {
-    mMessage = std::make_shared<TPaveText>(0.15, 0.75, 0.85, 0.88, "NDC");
-    mMessage->SetFillColor(0);
-    mMessage->SetBorderSize(0);
-  }
-
-  mMessage->Clear();
+  mMessage = std::make_shared<TPaveText>(0.15, 0.75, 0.85, 0.9, "NDC");
+  mMessage->SetFillColor(0);
+  mMessage->SetBorderSize(0);
 
   if (checkResult == Quality::Good) {
     mMessage->AddText("Tracklets/TF: OK");
@@ -64,7 +60,7 @@ void TrackletsTFCheck::beautify(std::shared_ptr<MonitorObject> mo,
     mMessage->AddText("Tracklets/TF: BAD");
   }
 
-  mo->addOrReplaceDecoration(mMessage);
+  h->GetListOfFunctions()->Add(mMessage.get());
 }
 
 void TrackletsTFCheck::reset()
