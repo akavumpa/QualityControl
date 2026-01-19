@@ -128,30 +128,6 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
     int hcid = trk.getHCID();    // 0–1079
     int rob = trk.getROB();      // 0..5 (C0) or 0..7 (C1)
 
-    // // Safety check
-    // if (det != hcid / 2) {
-    //   LOG(warn) << "Detector/HCID mismatch det=" << det << " hcid=" << hcid;
-    //   continue;
-    // }
-    // if (det < 0 || det >= 540) {
-    //   LOG(warn) << "Invalid detector ID: " << det;
-    //   continue;
-    // }
-    // if (hcid < 0 || hcid >= 1080) {
-    //   LOG(warn) << "Invalid half-chamber ID: " << hcid;
-    //   continue;
-    // }
-    // if (mcm < 0 || mcm >= 16) {
-    //   LOG(warn) << "Invalid local MCM ID: " << mcm;
-    //   continue;
-    // }
-    // int c = hcid % 2; // 0 = C0, 1 = C1
-    // // int nRob = (c == 0 ? 6 : 8); // C0 has 6 ROB, C1 has 8
-
-    // int nRob = (c == 0 ? 6 : 8);
-    // if (rob < 0 || rob >= nRob) {
-    //   LOG(warn) << "Invalid ROB ID: " << rob << " for C=" << c;
-    //   continue;
   }
   // ---------------------------------------------------------------------
   //   Tracklets per MCM (Sean's method: streaming unique key)
@@ -159,10 +135,6 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
 
   int lastKey = -1;
   int trackletCount = 0;
-
-  // IMPORTANT: tracklets MUST be sorted by MCM key for this to work
-  // In O2 TRD, tracklets are already ordered by detector/ROB/MCM
-  // If this ever changes, we must explicitly sort.
 
   for (const auto& trk : tracklets) {
 
@@ -179,6 +151,7 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
     }
 
     if (key != lastKey) {
+      histMCM->SetBinContent(lastKey + 1, trackletCount);
       // MCM boundary crossed → fill previous MCM
       histMCMOccupancy->Fill(trackletCount);
       trackletCount = 0;
@@ -190,6 +163,7 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
 
   // Flush last MCM
   if (trackletCount > 0) {
+    histMCM->SetBinContent(lastKey + 1, trackletCount);
     histMCMOccupancy->Fill(trackletCount);
   }
 }
@@ -208,12 +182,10 @@ void TrdTrySkeltonTask::endOfActivity(const Activity& /*activity*/)
 
 void TrdTrySkeltonTask::reset()
 {
-  // THIS FUNCTION BODY IS AN EXAMPLE. PLEASE REMOVE EVERYTHING YOU DO NOT NEED.
-
-  // ✔ 200,000 bins for timeframe is correct ?
+  //  200,000 bins for timeframe is correct ?
   // Typical TF has ~50 events × 2k tracklets/event = 100k tracklets.
 
-  // ✔ Per-event histogram should go to around 5000
+  //  Per-event histogram should go to around 5000
   // Highest tracklet multiplicity per event ≈ 2500–3000.
 
   // Clean all the monitor objects here.
