@@ -5,14 +5,14 @@
 
 #include <TH1.h>
 
-using namespace o2::quality_control;
+using namespace o2::quality_control::core;
 
 namespace o2::quality_control_modules::trd
 {
 
 void TrackletsTFCheck::configure()
 {
-  // nothing for now (thresholds are hardcoded)
+  // nothing for now
 }
 
 Quality TrackletsTFCheck::check(
@@ -32,38 +32,23 @@ Quality TrackletsTFCheck::check(
 
   if (mean < mLowerThresholdTF) {
     return Quality::Bad;
-  } else if (mean < mUpperThresholdTF) {
+  }
+  if (mean < mUpperThresholdTF) {
     return Quality::Medium;
   }
 
   return Quality::Good;
 }
 
-void TrackletsTFCheck::beautify(std::shared_ptr<MonitorObject> mo,
-                                Quality checkResult)
+void TrackletsTFCheck::beautify(std::shared_ptr<MonitorObject>,
+                                Quality)
 {
-  if (!mMessage) {
-    mMessage = std::make_shared<TPaveText>(0.15, 0.8, 0.85, 0.9, "NDC");
-    mMessage->SetFillColor(0);
-    mMessage->SetBorderSize(1);
-  }
-
-  mMessage->Clear();
-
-  if (checkResult == Quality::Good) {
-    mMessage->AddText("nTrackletsTF: OK");
-  } else if (checkResult == Quality::Medium) {
-    mMessage->AddText("nTrackletsTF: WARNING");
-  } else if (checkResult == Quality::Bad) {
-    mMessage->AddText("nTrackletsTF: BAD");
-  }
-
-  mo->addDecoration(mMessage);
+  // DO NOTHING (important!)
 }
 
 void TrackletsTFCheck::reset()
 {
-  mMessage.reset();
+  // nothing
 }
 
 } // namespace o2::quality_control_modules::trd
