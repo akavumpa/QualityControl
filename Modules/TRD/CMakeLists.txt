@@ -2,7 +2,7 @@
 
 add_library(O2QcTRD)
 
-target_sources(O2QcTRD PRIVATE src/newtest.cxx  src/TrdTrySkeltonTask.cxx  src/mySubTask.cxx 
+target_sources(O2QcTRD PRIVATE src/newtest.cxx src/TrackletsTFCheck.cxx src/TrdTrySkeltonTask.cxx  src/mySubTask.cxx 
               src/CalibReductorTRD.cxx 
               src/TrackletCountCheck.cxx
               src/PulsePositionCheck.cxx
@@ -33,6 +33,7 @@ install(TARGETS O2QcTRD
 
 add_root_dictionary(O2QcTRD HEADERS
   include/TRD/newtest.h
+  include/TRD/TrackletsTFCheck.h
   include/TRD/TrdTrySkeltonTask.h
   include/TRD/mySubTask.h
                     include/TRD/CalibReductorTRD.h

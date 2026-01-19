@@ -1,0 +1,21 @@
+{
+  "qc": {
+    "checks": {
+      "TrackletsTFCheck": {
+        "active": "true",
+        "className": "o2::quality_control_modules::trd::TrackletsTFCheck",
+        "moduleName": "QcTRD",
+        "policy": "OnAny",
+        "detectorName": "TRD",
+        "dataSource": [
+          {
+            "type": "Task",
+            "name": "TrdTrySkelton",
+            "MOs": [ "nTrackletsTF" ]
+          }
+        ],
+        "checkParameters": {}
+      }
+    }
+  }
+}

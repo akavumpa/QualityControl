@@ -20,5 +20,6 @@
 #pragma link C++ class o2::quality_control_modules::trd::CalibReductorTRD + ;
 #pragma link C++ class o2::quality_control_modules::trd::mySubTask+;
 #pragma link C++ class o2::quality_control_modules::trd::TrdTrySkeltonTask+;
+#pragma link C++ class o2::quality_control_modules::trd::TrackletsTFCheck+;
 #pragma link C++ class o2::quality_control_modules::trd::newtest+;
 #endif
