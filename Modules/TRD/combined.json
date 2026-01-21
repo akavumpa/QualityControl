@@ -1,0 +1,82 @@
+{
+  "qc": {
+    "config": {
+      "modules": ["TRD"],
+      "database": {
+        "implementation": "CCDB",
+        "host": "ccdb-test.cern.ch:8080"
+      },
+      "conditionDB": {
+        "url": "http://alice-ccdb.cern.ch"
+      },
+      "infologger": {
+        "filterDiscardDebug": false,
+        "filterDiscardLevel": 11
+      }
+    },
+
+    "tasks": {
+      "TrdTrySkelton": {
+        "className": "o2::quality_control_modules::trd::TrdTrySkeltonTask",
+        "moduleName": "QcTRD",
+        "detectorName": "TRD",
+        "cycleDurationSeconds": 30,
+
+        "dataSources": [
+          {
+            "type": "direct",
+            "name": "tracklets",
+            "query": "tracklets:TRD/TRACKLETS/0"
+          },
+          {
+            "type": "direct",
+            "name": "triggers",
+            "query": "triggers:TRD/TRKTRGRD"
+          }
+        ],
+
+        "taskParameters": {
+          "myOwnKey": "defaultValue"
+        },
+
+        "location": "local",
+        "saveObjectsToFile": "PbPb_TrdTrySkeltonOutput.root",
+
+        "objects": [
+          { "name": "Q0", "drawOptions": { "logy": true } },
+          { "name": "Q1", "drawOptions": { "logy": true } },
+          { "name": "Q2", "drawOptions": { "logy": true } },
+          { "name": "MCMTrackletPerMCM", "drawOptions": { "logy": true } },
+          { "name": "nTrackletsEVENT", "drawOptions": { "logy": true } }
+        ]
+      }
+    },
+
+    "detectors": {
+      "TRD": {
+        "active": true,
+        "taskNames": ["TrdTrySkelton"]
+      }
+    },
+
+    "checks": {
+      "TrackletsTFCheck": {
+        "active": true,
+        "className": "o2::quality_control_modules::trd::TrackletsTFCheck",
+        "moduleName": "QcTRD",
+        "policy": "OnAny",
+        "detectorName": "TRD",
+
+        "dataSource": [
+          {
+            "type": "Task",
+            "name": "TrdTrySkelton",
+            "MOs": ["nTrackletsTF"]
+          }
+        ],
+
+        "checkParameters": {}
+      }
+    }
+  }
+}
