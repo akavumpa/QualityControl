@@ -47,7 +47,8 @@
           { "name": "Q1", "drawOptions": { "logy": true } },
           { "name": "Q2", "drawOptions": { "logy": true } },
           { "name": "MCMTrackletPerMCM", "drawOptions": { "logy": true } },
-          { "name": "nTrackletsEVENT", "drawOptions": { "logy": true } }
+          { "name": "nTrackletsEVENT", "drawOptions": { "logy": true } },
+          { "name": "nTrackletsTF", "drawOptions": { "logy": true } }
         ]
       }
     },
