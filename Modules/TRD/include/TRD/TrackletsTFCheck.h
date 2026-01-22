@@ -29,8 +29,8 @@ class TrackletsTFCheck : public o2::quality_control::checker::CheckInterface
   void reset() override;
 
  private:
-  float mLowerThresholdTF = 1e3;
-  float mUpperThresholdTF = 5e6;
+  float mLowerThresholdTF = 1e4;
+  float mUpperThresholdTF = 5e5;
 
   ClassDefOverride(TrackletsTFCheck, 1);
 };
