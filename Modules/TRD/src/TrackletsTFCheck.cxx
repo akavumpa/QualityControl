@@ -35,6 +35,12 @@ Quality TrackletsTFCheck::check(
   // 3. Compute mean tracklets per TF
   double mean = h->GetMean();
 
+  ILOG(Info, Ops)
+  << "TrackletsTFCheck DEBUG: mean=" << mean
+  << " lower=" << mLowerThresholdTF
+  << " upper=" << mUpperThresholdTF
+  << ENDM;
+
   // 4. Apply thresholds
   if (mean < mLowerThresholdTF) {
     return Quality::Bad;
