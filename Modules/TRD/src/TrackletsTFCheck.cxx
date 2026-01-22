@@ -21,7 +21,7 @@ Quality TrackletsTFCheck::check(
   std::map<std::string, std::shared_ptr<MonitorObject>>* moMap)
 {
   // 1. Look for the histogram
-  auto it = moMap->find("nTrackletsTF");
+  auto it = moMap->find("TrdTrySkelton/nTrackletsTF");
   if (it == moMap->end()) {
     // DO NOT return Null
     return Quality::Bad;
