@@ -18,27 +18,34 @@ void TrackletsTFCheck::configure()
 Quality TrackletsTFCheck::check(
   std::map<std::string, std::shared_ptr<MonitorObject>>* moMap)
 {
+  Quality q;
+  q.setName("TrackletsTFCheck");
+
   auto it = moMap->find("nTrackletsTF");
   if (it == moMap->end()) {
-    return Quality::Null;
+    q.setLevel(QualityLevel::Bad);
+    return q;
   }
 
   auto* h = dynamic_cast<TH1*>(it->second->getObject());
-  if (!h) {
-    return Quality::Null;
+  if (!h || h->GetEntries() == 0) {
+    q.setLevel(QualityLevel::Medium);
+    return q;
   }
 
   double mean = h->GetMean();
 
   if (mean < mLowerThresholdTF) {
-    return Quality::Bad;
-  }
-  if (mean < mUpperThresholdTF) {
-    return Quality::Medium;
+    q.setLevel(QualityLevel::Bad);
+  } else if (mean < mUpperThresholdTF) {
+    q.setLevel(QualityLevel::Medium);
+  } else {
+    q.setLevel(QualityLevel::Good);
   }
 
-  return Quality::Good;
+  return q;
 }
+
 
 void TrackletsTFCheck::beautify(std::shared_ptr<MonitorObject>,
                                 Quality)
