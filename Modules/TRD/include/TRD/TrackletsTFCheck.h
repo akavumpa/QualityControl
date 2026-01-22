@@ -30,7 +30,7 @@ class TrackletsTFCheck : public o2::quality_control::checker::CheckInterface
 
  private:
   float mLowerThresholdTF = 1e4;
-  float mUpperThresholdTF = 5e4;
+  float mUpperThresholdTF = 5e5;
 
   ClassDefOverride(TrackletsTFCheck, 1);
 };
