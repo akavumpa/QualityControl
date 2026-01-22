@@ -18,34 +18,33 @@ void TrackletsTFCheck::configure()
 Quality TrackletsTFCheck::check(
   std::map<std::string, std::shared_ptr<MonitorObject>>* moMap)
 {
-  Quality q;
-  q.setName("TrackletsTFCheck");
-
+  // 1. Look for the histogram
   auto it = moMap->find("nTrackletsTF");
   if (it == moMap->end()) {
-    q.setLevel(QualityLevel::Bad);
-    return q;
+    // DO NOT return Null
+    return Quality::Bad;
   }
 
+  // 2. Check it is a histogram
   auto* h = dynamic_cast<TH1*>(it->second->getObject());
   if (!h || h->GetEntries() == 0) {
-    q.setLevel(QualityLevel::Medium);
-    return q;
+    // Startup / empty cycles
+    return Quality::Medium;
   }
 
+  // 3. Compute mean tracklets per TF
   double mean = h->GetMean();
 
+  // 4. Apply thresholds
   if (mean < mLowerThresholdTF) {
-    q.setLevel(QualityLevel::Bad);
-  } else if (mean < mUpperThresholdTF) {
-    q.setLevel(QualityLevel::Medium);
-  } else {
-    q.setLevel(QualityLevel::Good);
+    return Quality::Bad;
+  }
+  if (mean < mUpperThresholdTF) {
+    return Quality::Medium;
   }
 
-  return q;
+  return Quality::Good;
 }
-
 
 void TrackletsTFCheck::beautify(std::shared_ptr<MonitorObject>,
                                 Quality)
