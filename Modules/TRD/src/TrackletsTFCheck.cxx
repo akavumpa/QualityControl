@@ -1,9 +1,11 @@
 #include "TRD/TrackletsTFCheck.h"
 
+#include "QualityControl/QcInfoLogger.h"
 #include "QualityControl/Quality.h"
 #include "QualityControl/MonitorObject.h"
 
 #include <TH1.h>
+
 
 using namespace o2::quality_control::core;
 
