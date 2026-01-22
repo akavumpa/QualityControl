@@ -72,11 +72,16 @@
           {
             "type": "Task",
             "name": "TrdTrySkelton",
-            "MOs": ["nTrackletsTF"]
+            "MOs": [
+              "nTrackletsTF"
+            ]
           }
         ],
 
-        "checkParameters": {}
+        "checkParameters": {
+          "mLowerThresholdTF": "1000.0",
+          "mUpperThresholdTF": "5000000"
+        }
       }
     }
   }
