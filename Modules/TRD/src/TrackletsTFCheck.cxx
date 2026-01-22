@@ -6,7 +6,6 @@
 
 #include <TH1.h>
 
-
 using namespace o2::quality_control::core;
 
 namespace o2::quality_control_modules::trd
@@ -38,20 +37,22 @@ Quality TrackletsTFCheck::check(
   double mean = h->GetMean();
 
   ILOG(Info, Ops)
-  << "TrackletsTFCheck DEBUG: mean=" << mean
-  << " lower=" << mLowerThresholdTF
-  << " upper=" << mUpperThresholdTF
-  << ENDM;
+    << "TrackletsTFCheck DEBUG: mean=" << mean
+    << " lower=" << mLowerThresholdTF
+    << " upper=" << mUpperThresholdTF
+    << ENDM;
 
   // 4. Apply thresholds
   if (mean < mLowerThresholdTF) {
     return Quality::Bad;
   }
-  if (mean < mUpperThresholdTF) {
-    return Quality::Medium;
+
+  if (mean <= mUpperThresholdTF) {
+    return Quality::Good;
   }
 
-  return Quality::Good;
+  // mean > upper threshold
+  return Quality::Medium;
 }
 
 void TrackletsTFCheck::beautify(std::shared_ptr<MonitorObject>,
