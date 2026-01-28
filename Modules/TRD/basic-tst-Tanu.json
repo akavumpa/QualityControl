@@ -70,7 +70,6 @@
     "postprocessing": {
       "TrackletsTrending": {
         "active": "true",
-        "taskName": "TrackletsTrending",
         "className": "o2::quality_control::postprocessing::TrackletsTrending",
         "moduleName": "QualityControl",
         "detectorName": "TRD",
@@ -81,16 +80,16 @@
             "path": "qc/TRD/MO/Tracklets/",
             "pathIsRegexp": "true",
             "name": "trackletspertimeframe",
-            "reductorName": "TH1Reductor",
-            "moduleName": "QcCommon"
+            "reductorName": "o2::quality_control_modules::common::TH1Reductor",
+            "moduleName": "QualityControl"
           },
           {
             "type": "repository",
             "path": "qc/TRD/MO/Tracklets/",
             "pathIsRegexp": "true",
             "name": "trackletsperevent",
-            "reductorName": "TH1Reductor",
-            "moduleName": "QcCommon"
+            "reductorName": "o2::quality_control_modules::common::TH1Reductor",
+            "moduleName": "QualityControl"
           }
         ],
 
@@ -125,8 +124,15 @@
           }
         ],
 
-        "initTrigger": [ "once" ],
-        "updateTrigger": [ "20 seconds" ],
+        "initTrigger": [
+          "newobject:ccdb:qc/TRD/MO/Tracklets/trackletspertimeframe",
+          "newobject:ccdb:qc/TRD/MO/Tracklets/trackletsperevent"
+        ],
+        "updateTrigger": [
+          "newobject:ccdb:qc/TRD/MO/Tracklets/trackletspertimeframe",
+          "newobject:ccdb:qc/TRD/MO/Tracklets/trackletsperevent",
+          "20 seconds"
+        ],
         "stopTrigger": [
           "usercontrol"
         ]

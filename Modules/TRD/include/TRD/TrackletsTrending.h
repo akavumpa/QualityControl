@@ -49,7 +49,7 @@ class TrackletsTrending final : public PostProcessingInterface
   // std::map<std::string, TObject*> mPlots;
   std::unordered_map<std::string, std::unique_ptr<Reductor>> mReductors;
   std::map<std::string, std::unique_ptr<TCanvas>> mCanvases;
-  // ClassDef(TrackletsTrending, 1);
+  ClassDef(TrackletsTrending, 1);
 
 };
 
