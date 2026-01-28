@@ -33,6 +33,7 @@ install(TARGETS O2QcTRD
 
 add_root_dictionary(O2QcTRD HEADERS
   include/TRD/newtest.h
+  include/TRD/TrackletsTrending.h
   include/TRD/TrackletsTFCheck.h
   include/TRD/TrdTrySkeltonTask.h
   include/TRD/mySubTask.h
