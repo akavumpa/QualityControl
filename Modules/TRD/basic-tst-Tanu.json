@@ -80,7 +80,7 @@
             "path": "qc/TRD/MO/Tracklets/",
             "pathIsRegexp": "true",
             "name": "trackletspertimeframe",
-            "reductorName": "o2::quality_control_modules::common::TH1Reductor",
+            "reductorName": "TH1Reductor",
             "moduleName": "QualityControl"
           },
           {
@@ -88,7 +88,7 @@
             "path": "qc/TRD/MO/Tracklets/",
             "pathIsRegexp": "true",
             "name": "trackletsperevent",
-            "reductorName": "o2::quality_control_modules::common::TH1Reductor",
+            "reductorName": "TH1Reductor",
             "moduleName": "QualityControl"
           }
         ],
