@@ -71,7 +71,7 @@
       "TrackletsTrending": {
         "active": "true",
         "className": "o2::quality_control::postprocessing::TrackletsTrending",
-        "moduleName": "QualityControl",
+        "moduleName": "QcTRD",
         "detectorName": "TRD",
 
         "dataSources": [
