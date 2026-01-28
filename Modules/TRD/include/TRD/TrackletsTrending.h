@@ -3,7 +3,7 @@
 
 #include "QualityControl/PostProcessingInterface.h"
 #include "QualityControl/Reductor.h"
-#include "QualityControl/TrendingTaskConfigTRD.h"
+#include "TRD/TrendingTaskConfigTRD.h"
 
 #include <memory>
 #include <unordered_map>
