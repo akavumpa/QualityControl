@@ -81,7 +81,7 @@
             "pathIsRegexp": "true",
             "name": "trackletspertimeframe",
             "reductorName": "TH1Reductor",
-            "moduleName": "QualityControl"
+            "moduleName": "QcCommon"
           },
           {
             "type": "repository",
@@ -89,7 +89,7 @@
             "pathIsRegexp": "true",
             "name": "trackletsperevent",
             "reductorName": "TH1Reductor",
-            "moduleName": "QualityControl"
+            "moduleName": "QcCommon"
           }
         ],
 
