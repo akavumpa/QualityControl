@@ -1,6 +1,20 @@
 {
     "internal-dpl-clock": "",
-    "ctf-reader": "",
+    "ctf-reader": {
+        "select-ctf-ids": "",
+        "reverse-select-ctf-ids": "false",
+        "impose-run-start-timstamp": "0",
+        "local-tf-counter": "false",
+        "fetch-failure-threshold": "0",
+        "limit-tf-before-reading": "false",
+        "max-tf": "-1",
+        "max-tf-per-file": "-1",
+        "orbit-offset-enumeration": "0",
+        "orbit-multiplier-enumeration": "0",
+        "start-value-enumeration": "0",
+        "end-value-enumeration": "-1",
+        "step-value-enumeration": "1"
+    },
     "qc-pp-TRD-TrackletsTrending": "",
     "internal-dpl-ccdb-backend": {
         "condition-backend": "http:\/\/alice-ccdb.cern.ch",

@@ -1,3 +1,3 @@
 configfile=$1
-o2-ctf-reader-workflow -b --ctf-input DataPbPb.txt --onlyDet TRD|
+o2-ctf-reader-workflow -b --ctf-input /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root --onlyDet TRD|
 o2-qc -b --config json://"$configfile" &> output.log
