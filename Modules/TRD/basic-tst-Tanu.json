@@ -124,15 +124,8 @@
           }
         ],
 
-        "initTrigger": [
-          "newobject:ccdb:qc/TRD/MO/Tracklets/trackletspertimeframe",
-          "newobject:ccdb:qc/TRD/MO/Tracklets/trackletsperevent"
-        ],
-        "updateTrigger": [
-          "newobject:ccdb:qc/TRD/MO/Tracklets/trackletspertimeframe",
-          "newobject:ccdb:qc/TRD/MO/Tracklets/trackletsperevent",
-          "20 seconds"
-        ],
+        "initTrigger": [ "once" ],
+        "updateTrigger": [ "20 seconds" ],
         "stopTrigger": [
           "usercontrol"
         ]
