@@ -1,0 +1,144 @@
+{
+  "qc": {
+    "config": {
+      "database": {
+        "implementation": "CCDB",
+        "host": "ccdb-test.cern.ch:8080",
+        "username": "not_applicable",
+        "password": "not_applicable",
+        "name": "not_applicable"
+      },
+      "Activity": {
+        "number": "123456",
+        "type": "PHYSICS"
+      },
+      "monitoring": {
+        "url": "infologger:///debug?qc"
+      },
+      "conditionDB": {
+        "url": "http://alice-ccdb.cern.ch"
+      },
+      "infologger": {
+        "filterDiscardDebug": "false",
+        "filterDiscardLevel": "11"
+      }
+    },
+
+    "tasks": {
+      "Tracklets": {
+        "active": "true",
+        "className": "o2::quality_control_modules::trd::TrackletsTask",
+        "moduleName": "QcTRD",
+        "detectorName": "TRD",
+        "cycleDurationSeconds": "15",
+        "dataSource": {
+          "type": "direct",
+          "query": "tracklets:TRD/TRACKLETS;triggers:TRD/TRKTRGRD;noiseMap:TRD/NOISEMAP/0?lifetime=condition&ccdb-path=TRD/Calib/NoiseMapMCM;chamberStatus:TRD/CHSTATUS/0?lifetime=condition&ccdb-path=TRD/Calib/HalfChamberStatusQC;fedChamberStatus:TRD/FEDCHSTATUS/0?lifetime=condition&ccdb-path=TRD/Calib/DCSDPsFedChamberStatus"
+        },
+        "taskParameters": {
+          "detailedQC": "false",
+          "trackSources": "ITS-TPC-TRD"
+        }
+      }
+    },
+
+    "checks": {
+      "TrackletCountCheck": {
+        "active": "true",
+        "className": "o2::quality_control_modules::trd::TrackletCountCheck",
+        "moduleName": "QcTRD",
+        "policy": "OnAny",
+        "detectorName": "TRD",
+        "dataSource": [
+          {
+            "type": "Task",
+            "name": "Tracklets",
+            "MOs": [
+              "trackletsperevent",
+              "trackletspertimeframe"
+            ]
+          }
+        ],
+        "checkParameters": {
+          "LowerthresholdPerTrigger": "500.0",
+          "UpperthresholdPerTrigger": "520.0",
+          "StatThresholdPerTrigger": "100"
+        }
+      }
+    },
+
+    "postprocessing": {
+      "TrackletsTrending": {
+        "active": "true",
+        "className": "o2::quality_control::postprocessing::TrackletsTrending",
+        "moduleName": "QualityControl",
+        "detectorName": "TRD",
+
+        "dataSources": [
+          {
+            "type": "repository",
+            "path": "qc/TRD/MO/Tracklets/",
+            "pathIsRegexp": "true",
+            "name": "trackletspertimeframe",
+            "reductorName": "o2::quality_control_modules::common::TH1Reductor",
+            "moduleName": "QualityControl"
+          },
+          {
+            "type": "repository",
+            "path": "qc/TRD/MO/Tracklets/",
+            "pathIsRegexp": "true",
+            "name": "trackletsperevent",
+            "reductorName": "o2::quality_control_modules::common::TH1Reductor",
+            "moduleName": "QualityControl"
+          }
+        ],
+
+        "plots": [
+          {
+            "name": "mean_distribution_trackletpertimeframe",
+            "title": "Mean distribution of tracklets per timeframe",
+            "varexp": "trackletspertimeframe.mean",
+            "selection": "",
+            "option": ""
+          },
+          {
+            "name": "mean_distribution_trackletperevent",
+            "title": "Mean distribution of tracklets per event",
+            "varexp": "trackletsperevent.mean",
+            "selection": "",
+            "option": ""
+          },
+          {
+            "name": "mean_trend_trackletspertimeframe",
+            "title": "Mean trend of tracklets per timeframe",
+            "varexp": "trackletspertimeframe.mean:time",
+            "selection": "",
+            "option": "PL"
+          },
+          {
+            "name": "mean_trend_trackletperevent",
+            "title": "Mean trend of tracklets per event",
+            "varexp": "trackletsperevent.mean:time",
+            "selection": "",
+            "option": "PL"
+          }
+        ],
+
+        "initTrigger": [
+          "newobject:ccdb:qc/TRD/MO/Tracklets/trackletspertimeframe",
+          "newobject:ccdb:qc/TRD/MO/Tracklets/trackletsperevent"
+        ],
+        "updateTrigger": [
+          "newobject:ccdb:qc/TRD/MO/Tracklets/trackletspertimeframe",
+          "newobject:ccdb:qc/TRD/MO/Tracklets/trackletsperevent",
+          "20 seconds"
+        ],
+        "stopTrigger": [
+          "usercontrol"
+        ]
+      }
+    },
+
+    "dataSamplingPolicies": []
+  }
+}
