@@ -16,38 +16,22 @@
         "filterDiscardLevel": 11
       }
     },
-
-    "tasks": {
-      "PHTrackMatch": {
-        "className": "o2::quality_control_modules::trd::PulseHeightTrackMatchTask",
-        "moduleName": "QcTRD",
-        "detectorName": "TRD",
-        "cycleDurationSeconds": 30,
-        "location": "local"
-      }
-    },
-
-    "detectors": {
-      "TRD": {
-        "active": true,
-        "taskNames": ["PHTrackMatch"]
-      }
-    },
-
+    "tasks": {},
     "checks": {
       "PulseHeightCheck": {
-        "active": true,
+        "active": "true",
         "className": "o2::quality_control_modules::trd::PulseHeightCheck",
         "moduleName": "QcTRD",
         "policy": "OnAny",
         "detectorName": "TRD",
         "dataSource": [
           {
-            "type": "Task",
-            "name": "PHTrackMatch",
-            "MOs": [
-              "PulseHeight/mPulseHeightpro"
-            ]
+            "type": "repository",
+            "path": "TRD/MO/PHTrackMatch/PulseHeight/",
+            "names": [
+              "mPulseHeightpro"
+            ],
+            "moduleName": "QcTRD"
           }
         ],
         "checkParameters": {
@@ -58,6 +42,11 @@
           "pulseheightminsum": "1500",
           "pulseheightratio": "1.1"
         }
+      }
+    },
+    "detectors": {
+      "TRD": {
+        "active": "true"
       }
     }
   }
