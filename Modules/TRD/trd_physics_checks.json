@@ -1,0 +1,51 @@
+{
+  "qc": {
+    "config": {
+      "modules": ["TRD"],
+      "database": {
+        "implementation": "CCDB",
+        "host": "ccdb-test.cern.ch:8080"
+      },
+      "conditionDB": {
+        "url": "http://alice-ccdb.cern.ch"
+      },
+      "infologger": {
+        "filterDiscardDebug": false,
+        "filterDiscardLevel": 11
+      }
+    },
+
+    "detectors": {
+      "TRD": {
+        "active": true
+      }
+    },
+
+    "checks": {
+      "PulseHeightCheck": {
+        "active": true,
+        "className": "o2::quality_control_modules::trd::PulseHeightCheck",
+        "moduleName": "QcTRD",
+        "policy": "OnAny",
+        "detectorName": "TRD",
+
+        "dataSource": [
+          {
+            "type": "QC",
+            "path": "qc/TRD/MO/PHTTrackMatch/PulseHeight/mPulseHeightpro"
+          }
+        ],
+
+        "checkParameters": {
+          "driftregionstart": "7",
+          "driftregionend": "20",
+          "peakregionstart": "1",
+          "peakregionend": "5",
+          "pulseheightminsum": "1500",
+          "pulseheightratio": "1.1"
+        }
+      }
+
+    }
+  }
+}

@@ -15,7 +15,9 @@
         "end-value-enumeration": "-1",
         "step-value-enumeration": "1"
     },
-    "qc-pp-TRD-TrackletsTrending": "",
+    "qc-pp-TRD-TrackletsTrending": {
+        "period-timer-pp-TrackletsTrending": "30000000"
+    },
     "internal-dpl-ccdb-backend": {
         "condition-backend": "http:\/\/alice-ccdb.cern.ch",
         "condition-not-before": "0",
@@ -39,8 +41,15 @@
         "condition-timestamp": "0",
         "ans-version": ""
     },
-    "qc-task-TRD-Tracklets": "",
-    "qc-check-TRD-TrackletCountCheck": "",
+    "qc-task-TRD-Tracklets": {
+        "period-timer-cycle": "15000000",
+        "qcConfiguration": "",
+        "condition-backend": "http:\/\/alice-ccdb.cern.ch",
+        "condition-timestamp": "0"
+    },
+    "qc-check-TRD-TrackletCountCheck": {
+        "qcConfiguration": ""
+    },
     "qc-sink-PTRD_TrackletsTre2993_0": {
         "qcConfiguration": ""
     },
