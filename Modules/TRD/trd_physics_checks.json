@@ -16,9 +16,21 @@
         "filterDiscardLevel": 11
       }
     },
+
+    "tasks": {
+      "PHTrackMatch": {
+        "className": "o2::quality_control_modules::trd::PulseHeightTrackMatchTask",
+        "moduleName": "QcTRD",
+        "detectorName": "TRD",
+        "cycleDurationSeconds": 30,
+        "location": "local"
+      }
+    },
+
     "detectors": {
       "TRD": {
-        "active": true
+        "active": true,
+        "taskNames": ["PHTrackMatch"]
       }
     },
 
@@ -29,7 +41,6 @@
         "moduleName": "QcTRD",
         "policy": "OnAny",
         "detectorName": "TRD",
-
         "dataSource": [
           {
             "type": "Task",
@@ -39,7 +50,6 @@
             ]
           }
         ],
-        
         "checkParameters": {
           "driftregionstart": "7",
           "driftregionend": "20",
