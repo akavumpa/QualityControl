@@ -1,9 +1,7 @@
 {
   "qc": {
     "config": {
-      "modules": [
-        "TRD"
-      ],
+      "modules": ["TRD"],
       "database": {
         "implementation": "CCDB",
         "host": "ccdb-test.cern.ch:8080"
@@ -16,19 +14,21 @@
         "filterDiscardLevel": 11
       }
     },
+
     "tasks": {
-      "PHTrackMatch": {
+      "Digits": {
         "active": "true",
-        "className": "o2::quality_control_modules::trd::PulseHeightTrackMatch",
+        "className": "o2::quality_control_modules::trd::DigitsTask",
         "moduleName": "QcTRD",
         "detectorName": "TRD",
-        "cycleDurationSeconds": "15",
+        "cycleDurationSeconds": "30",
         "dataSource": {
           "type": "direct",
-          "query": "phValues:TRD/PULSEHEIGHT"
+          "query": "digits:TRD/DIGITS;triggers:TRD/TRKTRGRD"
         }
       }
     },
+
     "checks": {
       "PulseHeightCheck": {
         "active": "true",
@@ -36,15 +36,15 @@
         "moduleName": "QcTRD",
         "policy": "OnAny",
         "detectorName": "TRD",
+
         "dataSource": [
           {
             "type": "Task",
-            "name": "PHTrackMatch",
-            "MOs": [
-              "PulseHeight/mPulseHeightpro"
-            ]
+            "name": "Digits",
+            "MOs": ["PulseHeightProfile"]
           }
         ],
+
         "checkParameters": {
           "driftregionstart": "7",
           "driftregionend": "20",
@@ -55,12 +55,11 @@
         }
       }
     },
+
     "detectors": {
       "TRD": {
         "active": "true",
-        "taskNames": [
-          "PHTrackMatch"
-        ]
+        "taskNames": ["Digits"]
       }
     }
   }
