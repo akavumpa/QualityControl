@@ -1,0 +1,25 @@
+
+Thread 2 (Thread 0x7dd06f08d680 (LWP 90954) "o2-qc"):
+#0  0x00007dd075cecadf in clock_nanosleep () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x00007dd075cf9a27 in nanosleep () from /lib/x86_64-linux-gnu/libc.so.6
+#2  0x00007dd075d2975c in usleep () from /lib/x86_64-linux-gnu/libc.so.6
+#3  0x00007dd07b3e0722 in InfoLoggerClient::reconnect (this=0x21c7070) at /local/workspace/DailyBuilds/DailyO2-ubuntu2404/daily-tags.gpc9t7sFIG/SOURCES/libInfoLogger/v2.8.3/v2.8.3/src/InfoLoggerClient.cxx:290
+#4  0x00007dd0760ed0a4 in std::execute_native_thread_routine (__p=0x248db00) at ../../../../../gcc/libstdc++-v3/src/c++11/thread.cc:104
+#5  0x00007dd075c9caa4 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#6  0x00007dd075d29c6c in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+
+Thread 1 (Thread 0x7dd075b44480 (LWP 90953) "o2-qc"):
+#0  0x00007dd075d10813 in wait4 () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x00007dd075c585bb in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#2  0x00007dd0767655fa in TUnixSystem::Exec (this=0x21c5140, shellcmd=<optimized out>) at /local/workspace/DailyBuilds/DailyO2-ubuntu2404/daily-tags.onuiTBKb8d/SOURCES/ROOT/v6-36-04-alice9/v6-36-04-alice9/core/unix/src/TUnixSystem.cxx:2157
+#3  TUnixSystem::StackTrace (this=0x21c5140) at /local/workspace/DailyBuilds/DailyO2-ubuntu2404/daily-tags.onuiTBKb8d/SOURCES/ROOT/v6-36-04-alice9/v6-36-04-alice9/core/unix/src/TUnixSystem.cxx:2448
+#4  0x00007dd07c6a518a in FairLogger::LogFatalMessage () at /local/workspace/DailyBuilds/DailyO2-ubuntu2404/daily-tags.onuiTBKb8d/SOURCES/FairRoot/v18.4.9-alice3/v18.4.9-alice3/fairtools/FairLogger.cxx:195
+#5  0x00007dd078102a88 in std::function<void()>::operator() (this=0x7dd0781145e0 <fair::Logger::fFatalCallback>) at /local/workspace/DailyBuilds/DailyO2-ubuntu2404/daily-tags.cIj4HUXwA9/ubuntu2404_x86-64/GCC-Toolchain/v14.2.0-alice2-1/include/c++/14.2.0/bits/std_function.h:587
+#6  fair::Logger::~Logger (this=0x7ffc6257a4a0, __in_chrg=<optimized out>) at /local/workspace/DailyBuilds/DailyO2-ubuntu2404/daily-tags.cIj4HUXwA9/SOURCES/FairLogger/v2.3.1/v2.3.1/logger/Logger.cxx:279
+#7  0x00007dd07b89ffd7 in doUnknownException (s=..., processName=processName
+entry=0x7ffc6257c715 "o2-qc") at /home/aswathymenon/alice/sw/ubuntu2404_x86-64/GCC-Toolchain/v14.2.0-alice2-1/include/c++/14.2.0/bits/allocator.h:182
+#8  0x00007dd07b56bec7 in callMain (argc=argc
+entry=4, argv=argv
+entry=0x7ffc6257ac88, mainNoCatch=mainNoCatch
+entry=0x418380 <mainNoCatch(int, char**)>) at /home/aswathymenon/alice/sw/SOURCES/O2/dev/0/Framework/Core/src/runDataProcessing.cxx:219
+#9  0x0000000000413539 in main (argc=4, argv=0x7ffc6257ac88) at /home/aswathymenon/alice/sw/ubuntu2404_x86-64/O2/dev-local1/include/Framework/runDataProcessing.h:218
