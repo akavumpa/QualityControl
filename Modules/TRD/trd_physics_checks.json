@@ -1,7 +1,9 @@
 {
   "qc": {
     "config": {
-      "modules": ["TRD"],
+      "modules": [
+        "TRD"
+      ],
       "database": {
         "implementation": "CCDB",
         "host": "ccdb-test.cern.ch:8080"
@@ -14,7 +16,6 @@
         "filterDiscardLevel": 11
       }
     },
-
     "detectors": {
       "TRD": {
         "active": true
@@ -31,11 +32,14 @@
 
         "dataSource": [
           {
-            "type": "QC",
-            "path": "qc/TRD/MO/PHTTrackMatch/PulseHeight/mPulseHeightpro"
+            "type": "Task",
+            "name": "PHTrackMatch",
+            "MOs": [
+              "PulseHeight/mPulseHeightpro"
+            ]
           }
         ],
-
+        
         "checkParameters": {
           "driftregionstart": "7",
           "driftregionend": "20",
@@ -45,7 +49,6 @@
           "pulseheightratio": "1.1"
         }
       }
-
     }
   }
 }
