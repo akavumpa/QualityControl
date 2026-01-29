@@ -1,0 +1,79 @@
+{
+  "qc": {
+    "config": {
+      "modules": ["TRD"],
+      "database": {
+        "implementation": "CCDB",
+        "host": "ccdb-test.cern.ch:8080"
+      },
+      "conditionDB": {
+        "url": "http://alice-ccdb.cern.ch"
+      },
+      "infologger": {
+        "filterDiscardDebug": false,
+        "filterDiscardLevel": 11
+      }
+    },
+
+    "tasks": {
+      "Tracklets": {
+        "active": "true",
+        "className": "o2::quality_control_modules::trd::TrackletsTask",
+        "moduleName": "QcTRD",
+        "detectorName": "TRD",
+        "cycleDurationSeconds": "15",
+        "dataSource": {
+          "type": "direct",
+          "query": "tracklets:TRD/TRACKLETS;triggers:TRD/TRKTRGRD"
+        }
+      }
+    },
+
+    "checks": {
+      "TrackletsPerTFCheck": {
+        "active": "true",
+        "className": "o2::quality_control_modules::trd::TrackletsTFCheck",
+        "moduleName": "QcTRD",
+        "policy": "OnAny",
+        "detectorName": "TRD",
+        "dataSource": [
+          {
+            "type": "Task",
+            "name": "Tracklets",
+            "MOs": ["trackletspertimeframe"]
+          }
+        ],
+        "checkParameters": {
+          "mLowerThresholdTF": "1000",
+          "mUpperThresholdTF": "5000000"
+        }
+      },
+
+      "TrackletsPerEventCheck": {
+        "active": "true",
+        "className": "o2::quality_control_modules::trd::TrackletsTFCheck",
+        "moduleName": "QcTRD",
+        "policy": "OnAny",
+        "detectorName": "TRD",
+        "dataSource": [
+          {
+            "type": "Task",
+            "name": "Tracklets",
+            "MOs": ["trackletsperevent"]
+          }
+        ],
+        "checkParameters": {
+          "mLowerThresholdTF": "10",
+          "mUpperThresholdTF": "10000"
+        }
+      }
+    },
+
+    "detectors": {
+      "TRD": {
+        "active": "true",
+        "taskNames": ["Tracklets"]
+      }
+    }
+  }
+}
