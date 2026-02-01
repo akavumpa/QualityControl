@@ -41,8 +41,8 @@ void TrdTrySkeltonTask::initialize(o2::framework::InitContext& /*ctx*/)
   histQ2 = std::make_unique<TH1F>("Q2", "Q2 per TRD Tracklet", 256, -0.5, 255.5);
 
   histChamber = std::make_unique<TH1F>("Chamber", "Tracklets per TRD Chamber", 540, 0, 540);
-  histPadRow = std::make_unique<TH1F>("PadRow", "Tracklets per PadRow", 16, 0, 16);
-  histPadRowVsDet = std::make_unique<TH2F>("PadRowVsDet", "PadRow vs Detector;Detector ID;PadRow", 540, 0, 540, 16, 0, 16); // 540 chambers and 224 MCM each
+  histPadRow = std::make_unique<TH1F>("PadRow", "Tracklets per PadRow", 17, 0, 17);
+  histPadRowVsDet = std::make_unique<TH2F>("PadRowVsDet", "PadRow vs Detector;Detector ID;PadRow", 540, 0, 540, 17, 0, 17); // 540 chambers and 224 MCM each
 
   // 540 chambers × 16 MCMs each = 8640 total MCMs
   histMCM = std::make_unique<TH1F>("MCM",
@@ -51,11 +51,10 @@ void TrdTrySkeltonTask::initialize(o2::framework::InitContext& /*ctx*/)
 
   histMCMOccupancy = std::make_unique<TH1F>("MCMTrackletPerMCM",
                                             "Number of tracklets per MCM;Tracklets per MCM;Count of MCMs",
-                                            5, -0.5, 4.5);
+                                            5, -1.0, 4.0);
 
   getObjectsManager()->startPublishing(histPadRowVsDet.get(), PublicationPolicy::Forever);
   getObjectsManager()->startPublishing(histMCMOccupancy.get(), PublicationPolicy::Forever);
-
   getObjectsManager()->startPublishing(histTrackletsTF.get(), PublicationPolicy::Forever);
   getObjectsManager()->startPublishing(histTrackletsEvent.get(), PublicationPolicy::Forever);
   getObjectsManager()->startPublishing(histQ0.get(), PublicationPolicy::Forever);
@@ -114,7 +113,7 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
 
   // 3. Loop over tracklets
   for (const auto& trk : tracklets) {
-    // Filling Q values
+    // Filling Q values for tracklet
     histQ0->Fill(trk.getQ0());
     histQ1->Fill(trk.getQ1());
     histQ2->Fill(trk.getQ2());
@@ -143,8 +142,7 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
     int mcm = trk.getMCM();
 
     // Build TEMPORARY unique key (channel = 0 collapses channels)
-    int key = o2::trd::HelperMethods::getGlobalChannelIndex(
-      det, rob, mcm, 0);
+    int key = o2::trd::HelperMethods::getGlobalChannelIndex(det, rob, mcm, 0);
 
     if (lastKey == -1) {
       lastKey = key;
@@ -158,7 +156,7 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
       lastKey = key;
     }
 
-    trackletCount++;
+    trackletCount++; // counting the tracklets belonging to one key, implies with one mcm
   }
 
   // Flush last MCM
