@@ -1,7 +1,6 @@
 {
   "qc": {
     "config": {
-      "modules": ["TRD"],
       "database": {
         "implementation": "CCDB",
         "host": "ccdb-test.cern.ch:8080"
@@ -21,51 +20,39 @@
         "className": "o2::quality_control_modules::trd::TrackletsTask",
         "moduleName": "QcTRD",
         "detectorName": "TRD",
-        "cycleDurationSeconds": "15",
+        "cycleDurationSeconds": "60",
         "dataSource": {
           "type": "direct",
-          "query": "tracklets:TRD/TRACKLETS;triggers:TRD/TRKTRGRD"
+          "query": "tracklets:TRD/TRACKLETS;triggers:TRD/TRKTRGRD;noiseMap:TRD/NOISEMAP/0?lifetime=condition&ccdb-path=TRD/Calib/NoiseMapMCM;chamberStatus:TRD/CHSTATUS/0?lifetime=condition&ccdb-path=TRD/Calib/HalfChamberStatusQC"
         }
       }
     },
 
     "checks": {
-      "TrackletsPerTFCheck": {
-        "active": "true",
-        "className": "o2::quality_control_modules::trd::TrackletsTFCheck",
-        "moduleName": "QcTRD",
-        "policy": "OnAny",
-        "detectorName": "TRD",
-        "dataSource": [
-          {
-            "type": "Task",
-            "name": "Tracklets",
-            "MOs": ["trackletspertimeframe"]
-          }
-        ],
-        "checkParameters": {
-          "mLowerThresholdTF": "1000",
-          "mUpperThresholdTF": "5000000"
-        }
-      },
-
       "TrackletsPerEventCheck": {
         "active": "true",
-        "className": "o2::quality_control_modules::trd::TrackletsTFCheck",
+        "className": "o2::quality_control_modules::trd::TrackletsPerEventCheck",
         "moduleName": "QcTRD",
         "policy": "OnAny",
         "detectorName": "TRD",
-        "dataSource": [
-          {
-            "type": "Task",
-            "name": "Tracklets",
-            "MOs": ["trackletsperevent"]
-          }
-        ],
-        "checkParameters": {
-          "mLowerThresholdTF": "10",
-          "mUpperThresholdTF": "10000"
-        }
+        "dataSource": [{
+          "type": "Task",
+          "name": "Tracklets",
+          "MOs": ["trackletsperevent"]
+        }]
+      },
+
+      "TrackletsPerTFCheck": {
+        "active": "true",
+        "className": "o2::quality_control_modules::trd::TrackletsPerTFCheck",
+        "moduleName": "QcTRD",
+        "policy": "OnAny",
+        "detectorName": "TRD",
+        "dataSource": [{
+          "type": "Task",
+          "name": "Tracklets",
+          "MOs": ["trackletspertimeframe"]
+        }]
       }
     },
 
