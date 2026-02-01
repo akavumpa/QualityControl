@@ -32,7 +32,7 @@ void TrdTrySkeltonTask::initialize(o2::framework::InitContext& /*ctx*/)
   // This creates and registers a histogram for publication at the end of each cycle, until the end of the task lifetime
 
   // histTrackletsTF = std::make_unique<TH1F>("nTrackletsTF", "Number of TRD Tracklets per Timeframe", 2000, 0, 200000); // pp
-  histTrackletsTF = std::make_unique<TH1F>("nTrackletsTF", "Number of TRD Tracklets per Timeframe", 10000, 0, 1000000); // Pb-Pb
+  histTrackletsTF = std::make_unique<TH1F>("nTrackletsTF", "Number of TRD Tracklets per Timeframe", 10000, 0, 600000); // Pb-Pb
 
   histTrackletsEvent = std::make_unique<TH1F>("nTrackletsEVENT", "Number of TRD Tracklets per Event", 10000, 0, 10000);
 
@@ -40,9 +40,9 @@ void TrdTrySkeltonTask::initialize(o2::framework::InitContext& /*ctx*/)
   histQ1 = std::make_unique<TH1F>("Q1", "Q1 per TRD Tracklet", 256, -0.5, 255.5);
   histQ2 = std::make_unique<TH1F>("Q2", "Q2 per TRD Tracklet", 256, -0.5, 255.5);
 
-  histChamber = std::make_unique<TH1F>("Chamber", "Tracklets per TRD Chamber", 540, 0, 540);
+  histChamber = std::make_unique<TH1F>("Chamber", "Tracklets per TRD Chamber", 541, 0, 541);
   histPadRow = std::make_unique<TH1F>("PadRow", "Tracklets per PadRow", 17, 0, 17);
-  histPadRowVsDet = std::make_unique<TH2F>("PadRowVsDet", "PadRow vs Detector;Detector ID;PadRow", 540, 0, 540, 17, 0, 17); // 540 chambers and 224 MCM each
+  histPadRowVsDet = std::make_unique<TH2F>("PadRowVsDet", "PadRow vs Detector;Detector ID;PadRow", 541, 0, 541, 17, 0, 17); // 540 chambers and 224 MCM each
 
   // 540 chambers × 16 MCMs each = 8640 total MCMs
   histMCM = std::make_unique<TH1F>("MCM",
@@ -51,7 +51,7 @@ void TrdTrySkeltonTask::initialize(o2::framework::InitContext& /*ctx*/)
 
   histMCMOccupancy = std::make_unique<TH1F>("MCMTrackletPerMCM",
                                             "Number of tracklets per MCM;Tracklets per MCM;Count of MCMs",
-                                            5, -1.0, 4.0);
+                                            5, 0, 5);
 
   getObjectsManager()->startPublishing(histPadRowVsDet.get(), PublicationPolicy::Forever);
   getObjectsManager()->startPublishing(histMCMOccupancy.get(), PublicationPolicy::Forever);
