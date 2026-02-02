@@ -22,15 +22,34 @@ class TrackletsTFCheck : public o2::quality_control::checker::CheckInterface
 
   void configure() override;
   o2::quality_control::core::Quality
-  check(std::map<std::string,
-        std::shared_ptr<o2::quality_control::core::MonitorObject>>* moMap) override;
+    check(std::map<std::string,
+                   std::shared_ptr<o2::quality_control::core::MonitorObject>>* moMap) override;
   void beautify(std::shared_ptr<o2::quality_control::core::MonitorObject>,
                 o2::quality_control::core::Quality) override;
   void reset() override;
 
  private:
-  float mLowerThresholdTF = 1e4;
-  float mUpperThresholdTF = 5e5;
+  //   float mLowerThresholdTF = 1e4;
+  //   float mUpperThresholdTF = 5e5;
+  // ---------- Global Activity ----------
+  float mTFMeanLow = 1e4;
+  float mTFMeanHigh = 5e5;
+
+  float mEventMeanLow = 100;
+  float mEventMeanHigh = 7e3;
+
+  // ---------- Signal Quality (ADC) ----------
+  float mQEntriesMin = 1000;
+  float mQMeanLow = 10;
+  float mQMeanHigh = 150;
+
+  // ---------- Geometry Coverage ----------
+  float mChamberMaxEmptyFrac = 0.3;
+  float mPadRowMaxEmptyFrac = 0.4;
+
+  // ---------- Electronics Load ----------
+  float mMCMLoadLow = 0.1;
+  float mMCMLoadHigh = 3.0;
 
   ClassDefOverride(TrackletsTFCheck, 1);
 };
