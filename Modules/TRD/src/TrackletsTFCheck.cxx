@@ -64,28 +64,33 @@ Quality checkEmptyBins(TH1* h, double maxFrac, const std::string& name)
 //------------Variables------------
 void TrackletsTFCheck::configure()
 {
-  mTFMeanLow = std::stof(getParameter("mTFMeanLow"));
-  mTFMeanHigh = std::stof(getParameter("mTFMeanHigh"));
+  auto get = [&](const std::string& key, float& var) {
+    if (mCustomParameters.count(key)) {
+      var = std::stof(mCustomParameters.at(key));
+    } else {
+      ILOG(Warning, Ops) << "Parameter " << key << " not provided, using default " << var << ENDM;
+    }
+  };
 
-  mEventMeanLow = std::stof(getParameter("mEventMeanLow"));
-  mEventMeanHigh = std::stof(getParameter("mEventMeanHigh"));
+  get("mTFMeanLow", mTFMeanLow);
+  get("mTFMeanHigh", mTFMeanHigh);
 
-  mQEntriesMin = std::stof(getParameter("mQEntriesMin"));
-  mQMeanLow = std::stof(getParameter("mQMeanLow"));
-  mQMeanHigh = std::stof(getParameter("mQMeanHigh"));
+  get("mEventMeanLow", mEventMeanLow);
+  get("mEventMeanHigh", mEventMeanHigh);
 
-  mChamberMaxEmptyFrac = std::stof(getParameter("mChamberMaxEmptyFrac"));
-  mPadRowMaxEmptyFrac = std::stof(getParameter("mPadRowMaxEmptyFrac"));
+  get("mQEntriesMin", mQEntriesMin);
+  get("mQMeanLow", mQMeanLow);
+  get("mQMeanHigh", mQMeanHigh);
 
-  mMCMLoadLow = std::stof(getParameter("mMCMLoadLow"));
-  mMCMLoadHigh = std::stof(getParameter("mMCMLoadHigh"));
+  get("mChamberMaxEmptyFrac", mChamberMaxEmptyFrac);
+  get("mPadRowMaxEmptyFrac", mPadRowMaxEmptyFrac);
+
+  get("mMCMLoadLow", mMCMLoadLow);
+  get("mMCMLoadHigh", mMCMLoadHigh);
 
   ILOG(Info, Ops)
-    << "TrackletsTFCheck configured: "
-    << "TFMeanLow=" << mTFMeanLow
+    << "TrackletsTFCheck configured with TFMeanLow=" << mTFMeanLow
     << " TFMeanHigh=" << mTFMeanHigh
-    << " QMeanLow=" << mQMeanLow
-    << " QMeanHigh=" << mQMeanHigh
     << ENDM;
 }
 
