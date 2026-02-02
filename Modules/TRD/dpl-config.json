@@ -42,7 +42,7 @@
         "period-timer-cycle": "30000000",
         "qcConfiguration": ""
     },
-    "qc-sink-QTRD_TrdTrySkelton_0": {
+    "qc-check-TRD-TrackletsTFCheck": {
         "qcConfiguration": ""
     },
     "internal-dpl-injected-dummy-sink": ""

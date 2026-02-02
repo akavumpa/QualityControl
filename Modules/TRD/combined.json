@@ -1,7 +1,9 @@
 {
   "qc": {
     "config": {
-      "modules": ["TRD"],
+      "modules": [
+        "TRD"
+      ],
       "database": {
         "implementation": "CCDB",
         "host": "ccdb-test.cern.ch:8080"
@@ -14,14 +16,12 @@
         "filterDiscardLevel": 11
       }
     },
-
     "tasks": {
       "TrdTrySkelton": {
         "className": "o2::quality_control_modules::trd::TrdTrySkeltonTask",
         "moduleName": "QcTRD",
         "detectorName": "TRD",
         "cycleDurationSeconds": 30,
-
         "dataSources": [
           {
             "type": "direct",
@@ -34,32 +34,59 @@
             "query": "triggers:TRD/TRKTRGRD"
           }
         ],
-
         "taskParameters": {
           "myOwnKey": "defaultValue"
         },
-
         "location": "local",
         "saveObjectsToFile": "PbPb_TrdTrySkeltonOutput.root",
-
         "objects": [
-          { "name": "Q0", "drawOptions": { "logy": true } },
-          { "name": "Q1", "drawOptions": { "logy": true } },
-          { "name": "Q2", "drawOptions": { "logy": true } },
-          { "name": "MCMTrackletPerMCM", "drawOptions": { "logy": true } },
-          { "name": "nTrackletsEVENT", "drawOptions": { "logy": true } },
-          { "name": "nTrackletsTF", "drawOptions": { "logy": true } }
+          {
+            "name": "Q0",
+            "drawOptions": {
+              "logy": true
+            }
+          },
+          {
+            "name": "Q1",
+            "drawOptions": {
+              "logy": true
+            }
+          },
+          {
+            "name": "Q2",
+            "drawOptions": {
+              "logy": true
+            }
+          },
+          {
+            "name": "MCMTrackletPerMCM",
+            "drawOptions": {
+              "logy": true
+            }
+          },
+          {
+            "name": "nTrackletsEVENT",
+            "drawOptions": {
+              "logy": true
+            }
+          },
+          {
+            "name": "nTrackletsTF",
+            "drawOptions": {
+              "logy": true
+            }
+          }
         ]
       }
     },
-
     "detectors": {
       "TRD": {
         "active": true,
-        "taskNames": ["TrdTrySkelton"]
+        "taskNames": [
+          "TrdTrySkelton"
+        ]
       }
     },
-
     "checks": {
       "TrackletsTFCheck": {
         "active": true,
@@ -67,20 +94,38 @@
         "moduleName": "QcTRD",
         "policy": "OnAny",
         "detectorName": "TRD",
-
         "dataSource": [
           {
             "type": "Task",
             "name": "TrdTrySkelton",
             "MOs": [
-              "nTrackletsTF"
+              "nTrackletsTF",
+              "nTrackletsEVENT",
+              "Q0",
+              "Q1",
+              "Q2",
+              "Chamber",
+              "PadRow",
+              "MCMTrackletPerMCM"
             ]
           }
         ],
-
         "checkParameters": {
-          "mLowerThresholdTF": "1000.0",
-          "mUpperThresholdTF": "5000000"
+          "mTFMeanLow": "10000",
+          "mTFMeanHigh": "500000",
+
+          "mEventMeanLow": "100",
+          "mEventMeanHigh": "7000",
+
+          "mQEntriesMin": "1000",
+          "mQMeanLow": "10",
+          "mQMeanHigh": "150",
+
+          "mChamberMaxEmptyFrac": "0.3",
+          "mPadRowMaxEmptyFrac": "0.4",
+          
+          "mMCMLoadLow": "0.1",
+          "mMCMLoadHigh": "3.0"
         }
       }
     }
