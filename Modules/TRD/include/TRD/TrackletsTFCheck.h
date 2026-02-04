@@ -33,14 +33,14 @@ class TrackletsTFCheck : public o2::quality_control::checker::CheckInterface
   //   float mUpperThresholdTF = 5e5;
   // ---------- Global Activity ----------
   float mTFMeanLow = 1e4;
-  float mTFMeanHigh = 5e5;
+  float mTFMeanHigh = 5e4;
 
   float mEventMeanLow = 100;
-  float mEventMeanHigh = 7e3;
+  float mEventMeanHigh = 7e2;
 
   // ---------- Signal Quality (ADC) ----------
   float mQEntriesMin = 1000;
-  float mQMeanLow = 10;
+  float mQMeanLow = 60;
   float mQMeanHigh = 150;
 
   // ---------- Geometry Coverage ----------
@@ -48,7 +48,7 @@ class TrackletsTFCheck : public o2::quality_control::checker::CheckInterface
   float mPadRowMaxEmptyFrac = 0.4;
 
   // ---------- Electronics Load ----------
-  float mMCMLoadLow = 0.1;
+  float mMCMLoadLow = 2.0;
   float mMCMLoadHigh = 3.0;
 
   ClassDefOverride(TrackletsTFCheck, 1);
