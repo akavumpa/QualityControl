@@ -59,6 +59,12 @@
             }
           },
           {
+            "name": "trackletsperHC2D",
+            "drawOptions": {
+              "logy": true
+            }
+          },
+          {
             "name": "trackletspertimeframe",
             "drawOptions": {
               "logy": true
@@ -97,20 +103,20 @@
               "trackletspereventPbPb",
               "TrackletQ0",
               "TrackletQ1",
-              "TrackletQ2"
+              "TrackletQ2",
+              "trackletsperHC2D"
             ]
           }
         ],
         "checkParameters": {
           "mTFMeanLow": "50000",
           "mTFMeanHigh": "500000",
-
           "mEventMeanLow": "100",
           "mEventMeanHigh": "100000",
-
           "mQEntriesMin": "1000",
           "mQMeanLow": "20",
-          "mQMeanHigh": "50"
+          "mQMeanHigh": "50",
+          "mChamberMaxEmptyFrac": "0.3"
         }
       }
     }

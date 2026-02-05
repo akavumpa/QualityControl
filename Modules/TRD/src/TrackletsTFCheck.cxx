@@ -67,6 +67,32 @@ Quality checkEmptyBins(TH1* h, double maxFrac, const std::string& name) // // De
   return Quality::Good;
 }
 
+Quality checkEmptyBins2D(TH2* h, double maxFrac, const std::string& name) // // Detects dead detector regions
+{
+  if (!h)
+    return Quality::Bad;
+
+  int empty = 0;
+  int nx = h->GetNbinsX();
+  int ny = h->GetNbinsY();
+  int total = nx * ny;
+  // check for bincontent of each bins of a histogram: frac = #emptyBins/#totalBins
+  for (int ix = 1; ix <= nx; ++ix) {
+    for (int iy = 1; iy <= ny; ++iy) {
+      if (h->GetBinContent(ix, iy) == 0) {
+        empty++;
+      }
+    }
+  }
+  double frac = (double)empty / total;
+
+  ILOG(Info, Ops) << name << " empty fraction=" << frac << ENDM;
+
+  if (frac > maxFrac)
+    return Quality::Bad; // If too many empty → detector coverage problem
+  return Quality::Good;
+}
+
 //------------Variables------------
 void TrackletsTFCheck::configure() // Reads thresholds from JSON
 {
@@ -87,6 +113,8 @@ void TrackletsTFCheck::configure() // Reads thresholds from JSON
   get("mQEntriesMin", mQEntriesMin);
   get("mQMeanLow", mQMeanLow);
   get("mQMeanHigh", mQMeanHigh);
+
+  get("mChamberMaxEmptyFrac", mChamberMaxEmptyFrac);
 
   ILOG(Info, Ops)
     << "TrackletsTFCheck configured with TFMeanLow=" << mTFMeanLow
@@ -148,6 +176,7 @@ Quality TrackletsTFCheck::check(
   // // Detect dead modules/stacks
   // worst(checkEmptyBins(getH("TrdTrySkelton/Chamber"), mChamberMaxEmptyFrac, "Chamber"));
   // worst(checkEmptyBins(getH("TrdTrySkelton/PadRow"), mPadRowMaxEmptyFrac, "PadRow"));
+  worst(checkEmptyBins2D(dynamic_cast<TH2*>(getH("Tracklets/trackletsperHC2D")), mChamberMaxEmptyFrac, "trackletsperHC2D"));
 
   // // ---------- Electronics Load ----------
   // // Detect noisy MCMs
