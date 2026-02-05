@@ -129,35 +129,27 @@ Quality TrackletsTFCheck::check(
 
   // ---------- Global Detector Activity ----------
   // Is TRD producing tracklets?
-  worst(checkMean(getH("Tracklets/trackletspertimeframe"), mTFMeanLow, mTFMeanHigh, "trackletspertimeframe"));
-  worst(checkMean(getH("Tracklets/trackletspereventPbPb"), mEventMeanLow, mEventMeanHigh, "trackletspereventPbPb"));
-  // worst(checkMean(getH("TrdTrySkelton/nTrackletsTF"), mTFMeanLow, mTFMeanHigh, "nTrackletsTF"));
-  // worst(checkMean(getH("TrdTrySkelton/nTrackletsEVENT"), mEventMeanLow, mEventMeanHigh, "nTrackletsEVENT"));
+  worst(checkMean(getH("TrdTrySkelton/nTrackletsTF"), mTFMeanLow, mTFMeanHigh, "nTrackletsTF"));
+  worst(checkMean(getH("TrdTrySkelton/nTrackletsEVENT"), mEventMeanLow, mEventMeanHigh, "nTrackletsEVENT"));
 
-  // // ---------- Signal Quality ----------
-  // // Are ADC histograms filled?
-  // worst(checkEntries(getH("TrdTrySkelton/Q0"), mQEntriesMin, "Q0"));
-  // worst(checkEntries(getH("TrdTrySkelton/Q1"), mQEntriesMin, "Q1"));
-  // worst(checkEntries(getH("TrdTrySkelton/Q2"), mQEntriesMin, "Q2"));
-  worst(checkEntries(getH("Tracklets/TrackeltQ0"), mQEntriesMin, "TrackletQ0"));
-  worst(checkEntries(getH("Tracklets/TrackeltQ1"), mQEntriesMin, "TrackletQ1"));
-  worst(checkEntries(getH("Tracklets/TrackeltQ2"), mQEntriesMin, "TrackletQ2"));
-  // // Are charge values in normal range?
-  // worst(checkMean(getH("TrdTrySkelton/Q0"), mQMeanLow, mQMeanHigh, "Q0 mean"));
-  // worst(checkMean(getH("TrdTrySkelton/Q1"), mQMeanLow, mQMeanHigh, "Q1 mean"));
-  // worst(checkMean(getH("TrdTrySkelton/Q2"), mQMeanLow, mQMeanHigh, "Q2 mean"));
-  worst(checkMean(getH("Tracklets/TrackletQ0"), mQMeanLow, mQMeanHigh, "Q0 mean"));
-  worst(checkMean(getH("Tracklets/TrackletQ1"), mQMeanLow, mQMeanHigh, "Q1 mean"));
-  worst(checkMean(getH("Tracklets/TrackletQ2"), mQMeanLow, mQMeanHigh, "Q2 mean"));
+  // ---------- Signal Quality ----------
+  // Are ADC histograms filled?
+  worst(checkEntries(getH("TrdTrySkelton/Q0"), mQEntriesMin, "Q0"));
+  worst(checkEntries(getH("TrdTrySkelton/Q1"), mQEntriesMin, "Q1"));
+  worst(checkEntries(getH("TrdTrySkelton/Q2"), mQEntriesMin, "Q2"));
+  // Are charge values in normal range?
+  worst(checkMean(getH("TrdTrySkelton/Q0"), mQMeanLow, mQMeanHigh, "Q0 mean"));
+  worst(checkMean(getH("TrdTrySkelton/Q1"), mQMeanLow, mQMeanHigh, "Q1 mean"));
+  worst(checkMean(getH("TrdTrySkelton/Q2"), mQMeanLow, mQMeanHigh, "Q2 mean"));
 
-  // // ---------- Geometry Coverage ----------
-  // // Detect dead modules/stacks
-  // worst(checkEmptyBins(getH("TrdTrySkelton/Chamber"), mChamberMaxEmptyFrac, "Chamber"));
-  // worst(checkEmptyBins(getH("TrdTrySkelton/PadRow"), mPadRowMaxEmptyFrac, "PadRow"));
+  // ---------- Geometry Coverage ----------
+  // Detect dead modules/stacks
+  worst(checkEmptyBins(getH("TrdTrySkelton/Chamber"), mChamberMaxEmptyFrac, "Chamber"));
+  worst(checkEmptyBins(getH("TrdTrySkelton/PadRow"), mPadRowMaxEmptyFrac, "PadRow"));
 
-  // // ---------- Electronics Load ----------
-  // // Detect noisy MCMs
-  // worst(checkMean(getH("TrdTrySkelton/MCMTrackletPerMCM"), mMCMLoadLow, mMCMLoadHigh, "MCMTrackletPerMCM"));
+  // ---------- Electronics Load ----------
+  // Detect noisy MCMs
+  worst(checkMean(getH("TrdTrySkelton/MCMTrackletPerMCM"), mMCMLoadLow, mMCMLoadHigh, "MCMTrackletPerMCM"));
 
   return finalQ;
 }
