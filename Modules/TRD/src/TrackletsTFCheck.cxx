@@ -3,6 +3,7 @@
 #include "QualityControl/Quality.h"
 #include "QualityControl/MonitorObject.h"
 #include <TH1.h>
+#include <TH2.h>
 
 using namespace o2::quality_control::core;
 
