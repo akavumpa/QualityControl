@@ -1,0 +1,118 @@
+{
+  "qc": {
+    "config": {
+      "modules": [
+        "TRD"
+      ],
+      "database": {
+        "implementation": "CCDB",
+        "host": "ccdb-test.cern.ch:8080"
+      },
+      "conditionDB": {
+        "url": "http://alice-ccdb.cern.ch"
+      },
+      "infologger": {
+        "filterDiscardDebug": false,
+        "filterDiscardLevel": 11
+      }
+    },
+    "tasks": {
+      "Tracklets": {
+        "className": "o2::quality_control_modules::trd::TrackletsTask",
+        "moduleName": "QcTRD",
+        "detectorName": "TRD",
+        "cycleDurationSeconds": 30,
+        "dataSources": [
+          {
+            "type": "direct",
+            "name": "tracklets",
+            "query": "tracklets:TRD/TRACKLETS/0"
+          },
+          {
+            "type": "direct",
+            "name": "triggers",
+            "query": "triggers:TRD/TRKTRGRD"
+          }
+        ],
+        "taskParameters": {
+          "myOwnKey": "defaultValue"
+        },
+        "location": "local",
+        "saveObjectsToFile": "PbPb_TrackletsTFCheckOutput.root",
+        "objects": [
+          {
+            "name": "TrackletQ0",
+            "drawOptions": {
+              "logy": true
+            }
+          },
+          {
+            "name": "TrackletQ1",
+            "drawOptions": {
+              "logy": true
+            }
+          },
+          {
+            "name": "TrackletQ2",
+            "drawOptions": {
+              "logy": true
+            }
+          },
+          {
+            "name": "trackletspertimeframe",
+            "drawOptions": {
+              "logy": true
+            }
+          },
+          {
+            "name": "trackletspereventPbPb",
+            "drawOptions": {
+              "logy": true
+            }
+          }
+        ]
+      }
+    },
+    "detectors": {
+      "TRD": {
+        "active": true,
+        "taskNames": [
+          "Tracklets"
+        ]
+      }
+    },
+    "checks": {
+      "TrackletsTFCheck": {
+        "active": true,
+        "className": "o2::quality_control_modules::trd::TrackletsTFCheck",
+        "moduleName": "QcTRD",
+        "policy": "OnAny",
+        "detectorName": "TRD",
+        "dataSource": [
+          {
+            "type": "Task",
+            "name": "Tracklets",
+            "MOs": [
+              "trackletspertimeframe",
+              "trackletspereventPbPb",
+              "TrackletQ0",
+              "TrackletQ1",
+              "TrackletQ2"
+            ]
+          }
+        ],
+        "checkParameters": {
+          "mTFMeanLow": "10000",
+          "mTFMeanHigh": "50000",
+
+          "mEventMeanLow": "100",
+          "mEventMeanHigh": "700",
+
+          "mQEntriesMin": "1000",
+          "mQMeanLow": "60",
+          "mQMeanHigh": "150"
+        }
+      }
+    }
+  }
+}
