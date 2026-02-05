@@ -88,12 +88,6 @@ void TrackletsTFCheck::configure() // Reads thresholds from JSON
   get("mQMeanLow", mQMeanLow);
   get("mQMeanHigh", mQMeanHigh);
 
-  get("mChamberMaxEmptyFrac", mChamberMaxEmptyFrac);
-  get("mPadRowMaxEmptyFrac", mPadRowMaxEmptyFrac);
-
-  get("mMCMLoadLow", mMCMLoadLow);
-  get("mMCMLoadHigh", mMCMLoadHigh);
-
   ILOG(Info, Ops)
     << "TrackletsTFCheck configured with TFMeanLow=" << mTFMeanLow
     << " TFMeanHigh=" << mTFMeanHigh
