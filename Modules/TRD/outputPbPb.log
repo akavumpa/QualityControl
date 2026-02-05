@@ -1,0 +1,271 @@
+[INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@354605 target/Linux_x86_64 init/1770282630893 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/JXgmuOA6 , Host: http://alice-ccdb.cern.ch/, Curl timeouts: upload:20 download:5
+2026-02-05 14:40:30.897372     BookkeepingSink is not being created because we couldn't find any suitable inputs.
+[INFO] Initialising O2 Data Processing Layer. Driver PID: 354605.
+[INFO] Driver listening on port: 32685
+[INFO] Rate limiting set up at 2000 MB and 64 timeframes distributed over 1 readers
+[INFO] O2 Data Processing Layer initialised. We brake for nobody.
+[INFO] Optimised build. O2DEBUG / LOG(debug) / LOGF(debug) / assert statement will not be shown.
+[INFO] Redeployment of configuration asked.
+[INFO] Starting internal-dpl-clock on pid 354616
+[INFO] Starting ctf-reader on pid 354617
+[INFO] Starting internal-dpl-ccdb-backend on pid 354618
+[INFO] Starting trd-entropy-decoder on pid 354619
+[INFO] Starting qc-task-TRD-Tracklets on pid 354620
+[INFO] Starting qc-check-TRD-TrackletsTFCheck on pid 354621
+[INFO] Starting internal-dpl-injected-dummy-sink on pid 354622
+[INFO] Redeployment of configuration done.
+[354620:qc-task-TRD-Tracklets]: [INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@354620 target/Linux_x86_64 init/1770282632350 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/3TpKLyXJ , Host: http://alice-ccdb.cern.ch/, Curl timeouts: upload:20 download:5
+[354620:qc-task-TRD-Tracklets]: 2026-02-05 14:40:32.352314     BookkeepingSink is not being created because we couldn't find any suitable inputs.
+[354621:qc-check-TRD-TrackletsTFCheck]: [INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@354621 target/Linux_x86_64 init/1770282632350 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/MKD2rsMI , Host: http://alice-ccdb.cern.ch/, Curl timeouts: upload:20 download:5
+[354621:qc-check-TRD-TrackletsTFCheck]: 2026-02-05 14:40:32.352314     BookkeepingSink is not being created because we couldn't find any suitable inputs.
+[354617:ctf-reader]: [INFO] Instrumenting crash signals
+[354620:qc-task-TRD-Tracklets]: [INFO] Instrumenting crash signals
+[354621:qc-check-TRD-TrackletsTFCheck]: [INFO] Instrumenting crash signals
+[354617:ctf-reader]: [INFO] Spawning new device ctf-reader in process with pid 354617
+[354620:qc-task-TRD-Tracklets]: [INFO] Spawning new device qc-task-TRD-Tracklets in process with pid 354620
+[354620:qc-task-TRD-Tracklets]: [14:40:32][INFO] 
+[354620:qc-task-TRD-Tracklets]:       ______      _    _______  _________ 
+[354620:qc-task-TRD-Tracklets]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
+[354620:qc-task-TRD-Tracklets]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[354620:qc-task-TRD-Tracklets]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[354620:qc-task-TRD-Tracklets]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[354620:qc-task-TRD-Tracklets]: 
+[354617:ctf-reader]: [14:40:32][INFO] 
+[354617:ctf-reader]:       ______      _    _______  _________ 
+[354617:ctf-reader]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
+[354617:ctf-reader]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[354617:ctf-reader]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[354617:ctf-reader]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[354617:ctf-reader]: 
+[354617:ctf-reader]: [14:40:32][STATE] Starting FairMQ state machine --> IDLE
+[354620:qc-task-TRD-Tracklets]: [14:40:32][STATE] Starting FairMQ state machine --> IDLE
+[354621:qc-check-TRD-TrackletsTFCheck]: [INFO] Spawning new device qc-check-TRD-TrackletsTFCheck in process with pid 354621
+[354621:qc-check-TRD-TrackletsTFCheck]: [14:40:32][INFO] 
+[354621:qc-check-TRD-TrackletsTFCheck]:       ______      _    _______  _________ 
+[354621:qc-check-TRD-TrackletsTFCheck]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
+[354621:qc-check-TRD-TrackletsTFCheck]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[354621:qc-check-TRD-TrackletsTFCheck]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[354621:qc-check-TRD-TrackletsTFCheck]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[354621:qc-check-TRD-TrackletsTFCheck]: 
+[354621:qc-check-TRD-TrackletsTFCheck]: [14:40:32][STATE] Starting FairMQ state machine --> IDLE
+[354617:ctf-reader]: [14:40:32][STATE] IDLE ---> INITIALIZING DEVICE
+[354617:ctf-reader]: [14:40:32][ERROR] Exception caught while in Init: filesystem error: cannot get file size: No such file or directory [DataPbPb.txt]. Exiting with 1.
+[354617:ctf-reader]: Executable is /home/aswathymenon/alice/sw/ubuntu2404_x86-64/O2/dev-local1/bin/o2-ctf-reader-workflow
+[354620:qc-task-TRD-Tracklets]: [14:40:32][STATE] IDLE ---> INITIALIZING DEVICE
+[354621:qc-check-TRD-TrackletsTFCheck]: [14:40:32][STATE] IDLE ---> INITIALIZING DEVICE
+[354621:qc-check-TRD-TrackletsTFCheck]: 2026-02-05 14:40:32.914555     QC infologger initialized : 0 ; 11
+[354621:qc-check-TRD-TrackletsTFCheck]: 2026-02-05 14:40:32.914601  !  [1;33mWarning - No URL provided for Bookkeeping. Nothing will be stored nor retrieved.[0m
+[354621:qc-check-TRD-TrackletsTFCheck]: 2026-02-05 14:40:32.914610     CCDB backend selected
+[354620:qc-task-TRD-Tracklets]: 2026-02-05 14:40:32.914822     QC infologger initialized : 0 ; 11
+[354620:qc-task-TRD-Tracklets]: 2026-02-05 14:40:32.914864  !  [1;33mWarning - No URL provided for Bookkeeping. Nothing will be stored nor retrieved.[0m
+[354621:qc-check-TRD-TrackletsTFCheck]: [14:40:32][INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@354621 target/Linux_x86_64 init/1770282632350 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/34eNSbwJ , Host: ccdb-test.cern.ch:8080, Curl timeouts: upload:20 download:5
+[354617:ctf-reader]:     /home/aswathymenon/alice/sw/ubuntu2404_x86-64/O2/dev-local1/bin/../lib/libO2Framework.so:     ?? ??:0
+[354617:ctf-reader]:     /home/aswathymenon/alice/sw/ubuntu2404_x86-64/FairMQ/v1.10.0-6/lib/libfairmq.so.1.10.0: fair::mq::Device::InitWrapper()
+[354617:ctf-reader]:     /home/aswathymenon/alice/sw/ubuntu2404_x86-64/FairMQ/v1.10.0-6/lib/libfairmq.so.1.10.0: boost::detail::function::void_function_obj_invoker1<std::function<void (fair::mq::State)>, void, fair::mq::State>::invoke(boost::detail::function::function_buffer&, fair::mq::State)
+[354617:ctf-reader]:     /home/aswathymenon/alice/sw/ubuntu2404_x86-64/FairMQ/v1.10.0-6/lib/libfairmq.so.1.10.0: boost::signals2::detail::signal_impl<void (fair::mq::State), boost::signals2::optional_last_value<void>, int, std::less<int>, boost::function<void (fair::mq::State)>, boost::function<void (boost::signals2::connection const&, fair::mq::State)>, boost::signals2::mutex>::operator()(fair::mq::State)
+[354617:ctf-reader]:     /home/aswathymenon/alice/sw/ubuntu2404_x86-64/FairMQ/v1.10.0-6/lib/libfairmq.so.1.10.0: fair::mq::fsm::Machine_::ProcessWork()
+[354617:ctf-reader]:     /home/aswathymenon/alice/sw/ubuntu2404_x86-64/FairMQ/v1.10.0-6/lib/libfairmq.so.1.10.0: fair::mq::StateMachine::ProcessWork()
+[354617:ctf-reader]:     /home/aswathymenon/alice/sw/ubuntu2404_x86-64/FairMQ/v1.10.0-6/lib/libfairmq.so.1.10.0: fair::mq::DeviceRunner::Run()
+[354617:ctf-reader]:     /home/aswathymenon/alice/sw/ubuntu2404_x86-64/O2/dev-local1/bin/../lib/libO2Framework.so: doChild(int, char**, o2::framework::ServiceRegistry&, o2::framework::DanglingEdgesContext&, o2::framework::RunningWorkflowInfo const&, o2::framework::RunningDeviceRef, o2::framework::DriverConfig const&, o2::framework::ProcessingPolicies, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, uv_loop_s*)
+[354617:ctf-reader]:     /home/aswathymenon/alice/sw/ubuntu2404_x86-64/O2/dev-local1/bin/../lib/libO2Framework.so: runStateMachine(std::vector<o2::framework::DataProcessorSpec, std::allocator<o2::framework::DataProcessorSpec> > const&, WorkflowInfo const&, std::vector<o2::framework::DataProcessorInfo, std::allocator<o2::framework::DataProcessorInfo> > const&, o2::framework::CommandInfo const&, o2::framework::DriverControl&, o2::framework::DriverInfo&, o2::framework::DriverConfig&, std::vector<o2::framework::DeviceMetricsInfo, std::allocator<o2::framework::DeviceMetricsInfo> >&, std::vector<o2::framework::ConfigParamSpec, std::allocator<o2::framework::ConfigParamSpec> > const&, boost::program_options::variables_map&, std::vector<o2::framework::ServiceSpec, std::allocator<o2::framework::ServiceSpec> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+[354617:ctf-reader]:     /home/aswathymenon/alice/sw/ubuntu2404_x86-64/O2/dev-local1/bin/../lib/libO2Framework.so: doMain(int, char**, std::vector<o2::framework::DataProcessorSpec, std::allocator<o2::framework::DataProcessorSpec> > const&, std::vector<o2::framework::ChannelConfigurationPolicy, std::allocator<o2::framework::ChannelConfigurationPolicy> > const&, std::vector<o2::framework::CompletionPolicy, std::allocator<o2::framework::CompletionPolicy> > const&, std::vector<o2::framework::DispatchPolicy, std::allocator<o2::framework::DispatchPolicy> > const&, std::vector<o2::framework::ResourcePolicy, std::allocator<o2::framework::ResourcePolicy> > const&, std::vector<o2::framework::CallbacksPolicy, std::allocator<o2::framework::CallbacksPolicy> > const&, std::vector<o2::framework::SendingPolicy, std::allocator<o2::framework::SendingPolicy> > const&, std::vector<o2::framework::ConfigParamSpec, std::allocator<o2::framework::ConfigParamSpec> > const&, std::vector<o2::framework::ConfigParamSpec, std::allocator<o2::framework::ConfigParamSpec> > const&, o2::framework::ConfigContext&)
+[354617:ctf-reader]:     o2-ctf-reader-workflow() [0x415e93]:     std::vector<o2::framework::ChannelConfigurationPolicy, std::allocator<o2::framework::ChannelConfigurationPolicy> >::~vector() at stl_vector.h:735
+[354617:ctf-reader]:     /home/aswathymenon/alice/sw/ubuntu2404_x86-64/O2/dev-local1/bin/../lib/libO2Framework.so: callMain(int, char**, int (*)(int, char**))
+[354619:trd-entropy-decoder]: [INFO] Instrumenting crash signals
+[354619:trd-entropy-decoder]: [INFO] Spawning new device trd-entropy-decoder in process with pid 354619
+[354619:trd-entropy-decoder]: [14:40:33][INFO] 
+[354619:trd-entropy-decoder]:       ______      _    _______  _________ 
+[354619:trd-entropy-decoder]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
+[354619:trd-entropy-decoder]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[354619:trd-entropy-decoder]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[354619:trd-entropy-decoder]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[354619:trd-entropy-decoder]: 
+[354619:trd-entropy-decoder]: [14:40:33][STATE] Starting FairMQ state machine --> IDLE
+[354619:trd-entropy-decoder]: [14:40:33][STATE] IDLE ---> INITIALIZING DEVICE
+[354619:trd-entropy-decoder]: [14:40:33][INFO] Bogus triggers rejection flag: 10
+[354619:trd-entropy-decoder]: [14:40:33][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[354619:trd-entropy-decoder]: [14:40:33][STATE] INITIALIZED ---> BINDING
+[354619:trd-entropy-decoder]: [14:40:33][STATE] BINDING ---> BOUND
+[354619:trd-entropy-decoder]: [14:40:33][STATE] BOUND ---> CONNECTING
+[354619:trd-entropy-decoder]: [14:40:33][STATE] CONNECTING ---> DEVICE READY
+[354619:trd-entropy-decoder]: [14:40:33][STATE] DEVICE READY ---> INITIALIZING TASK
+[354619:trd-entropy-decoder]: [14:40:33][STATE] INITIALIZING TASK ---> READY
+[354619:trd-entropy-decoder]: [14:40:33][STATE] READY ---> RUNNING
+[354619:trd-entropy-decoder]: [14:40:33][INFO] fair::mq::Device running...
+[354619:trd-entropy-decoder]: [14:40:33][INFO] LHCPeriod is not available, using current month FEB
+[354619:trd-entropy-decoder]: [14:40:33][INFO] Correctly handshaken websocket connection.
+[354617:ctf-reader]:     o2-ctf-reader-workflow() [0x40c059]:     main at runDataProcessing.h:220
+[354617:ctf-reader]:     /lib/x86_64-linux-gnu/libc.so.6:     ?? ??:0
+[354617:ctf-reader]:     /lib/x86_64-linux-gnu/libc.so.6:     ?? ??:0
+[354618:internal-dpl-ccdb-backend]: [INFO] Instrumenting crash signals
+[354618:internal-dpl-ccdb-backend]: [INFO] Spawning new device internal-dpl-ccdb-backend in process with pid 354618
+[354618:internal-dpl-ccdb-backend]: [14:40:33][INFO] 
+[354618:internal-dpl-ccdb-backend]:       ______      _    _______  _________ 
+[354618:internal-dpl-ccdb-backend]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
+[354618:internal-dpl-ccdb-backend]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[354618:internal-dpl-ccdb-backend]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[354618:internal-dpl-ccdb-backend]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[354618:internal-dpl-ccdb-backend]: 
+[354618:internal-dpl-ccdb-backend]: [14:40:33][STATE] Starting FairMQ state machine --> IDLE
+[354618:internal-dpl-ccdb-backend]: [14:40:33][STATE] IDLE ---> INITIALIZING DEVICE
+[354618:internal-dpl-ccdb-backend]: [14:40:33][INFO] CCDB Backend at: http://alice-ccdb.cern.ch, validity check for every 2147483647 TF
+[354618:internal-dpl-ccdb-backend]: [14:40:33][INFO] Hook to enable signposts for CCDB messages at 0x2ecb7028
+[354618:internal-dpl-ccdb-backend]: [14:40:33][INFO] Init CcdApi with UserAgentID: o2-ctf-reader-w/o2-ctf-reader-workflow@354618 target/Linux_x86_64 init/1770282633154 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/0f2rITxY , Host: http://alice-ccdb.cern.ch, Curl timeouts: upload:20 download:5
+[354618:internal-dpl-ccdb-backend]: [14:40:33][INFO] Initialised default CCDB host http://alice-ccdb.cern.ch
+[354618:internal-dpl-ccdb-backend]: [14:40:33][INFO] The following route is a condition CTP/Trig_Offset/0
+[354618:internal-dpl-ccdb-backend]: [14:40:33][INFO] - ccdb-path: CTP/Config/TriggerOffsets
+[354618:internal-dpl-ccdb-backend]: [14:40:33][INFO] The following route is a condition TRD/CTFDICT/0
+[354618:internal-dpl-ccdb-backend]: [14:40:33][INFO] - ccdb-path: TRD/Calib/CTFDictionaryTree
+[354618:internal-dpl-ccdb-backend]: [14:40:33][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[354618:internal-dpl-ccdb-backend]: [14:40:33][STATE] INITIALIZED ---> BINDING
+[354616:internal-dpl-clock]: [INFO] Instrumenting crash signals
+[354618:internal-dpl-ccdb-backend]: [14:40:33][STATE] BINDING ---> BOUND
+[354618:internal-dpl-ccdb-backend]: [14:40:33][STATE] BOUND ---> CONNECTING
+[354618:internal-dpl-ccdb-backend]: [14:40:33][STATE] CONNECTING ---> DEVICE READY
+[354618:internal-dpl-ccdb-backend]: [14:40:33][STATE] DEVICE READY ---> INITIALIZING TASK
+[354618:internal-dpl-ccdb-backend]: [14:40:33][STATE] INITIALIZING TASK ---> READY
+[354618:internal-dpl-ccdb-backend]: [14:40:33][STATE] READY ---> RUNNING
+[354618:internal-dpl-ccdb-backend]: [14:40:33][INFO] fair::mq::Device running...
+[354618:internal-dpl-ccdb-backend]: [14:40:33][INFO] LHCPeriod is not available, using current month FEB
+[354618:internal-dpl-ccdb-backend]: [14:40:33][INFO] Correctly handshaken websocket connection.
+[354616:internal-dpl-clock]: [INFO] Spawning new device internal-dpl-clock in process with pid 354616
+[354616:internal-dpl-clock]: [14:40:33][INFO] 
+[354616:internal-dpl-clock]:       ______      _    _______  _________ 
+[354616:internal-dpl-clock]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
+[354616:internal-dpl-clock]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[354616:internal-dpl-clock]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[354616:internal-dpl-clock]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[354616:internal-dpl-clock]: 
+[354616:internal-dpl-clock]: [14:40:33][STATE] Starting FairMQ state machine --> IDLE
+[354616:internal-dpl-clock]: [14:40:33][STATE] IDLE ---> INITIALIZING DEVICE
+[354616:internal-dpl-clock]: [14:40:33][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[354616:internal-dpl-clock]: [14:40:33][STATE] INITIALIZED ---> BINDING
+[354616:internal-dpl-clock]: [14:40:33][STATE] BINDING ---> BOUND
+[354616:internal-dpl-clock]: [14:40:33][STATE] BOUND ---> CONNECTING
+[354616:internal-dpl-clock]: [14:40:33][STATE] CONNECTING ---> DEVICE READY
+[354616:internal-dpl-clock]: [14:40:33][STATE] DEVICE READY ---> INITIALIZING TASK
+[354616:internal-dpl-clock]: [14:40:33][STATE] INITIALIZING TASK ---> READY
+[354616:internal-dpl-clock]: [14:40:33][STATE] READY ---> RUNNING
+[354616:internal-dpl-clock]: [14:40:33][INFO] fair::mq::Device running...
+[354616:internal-dpl-clock]: [14:40:33][INFO] LHCPeriod is not available, using current month FEB
+[354616:internal-dpl-clock]: [14:40:33][INFO] Correctly handshaken websocket connection.
+[354617:ctf-reader]:     o2-ctf-reader-workflow() [0x40c315]:     _start at ??:?
+[354622:internal-dpl-injected-dummy-sink]: [INFO] Instrumenting crash signals
+[354622:internal-dpl-injected-dummy-sink]: [INFO] Spawning new device internal-dpl-injected-dummy-sink in process with pid 354622
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][INFO] 
+[354622:internal-dpl-injected-dummy-sink]:       ______      _    _______  _________ 
+[354622:internal-dpl-injected-dummy-sink]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
+[354622:internal-dpl-injected-dummy-sink]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[354622:internal-dpl-injected-dummy-sink]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[354622:internal-dpl-injected-dummy-sink]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[354622:internal-dpl-injected-dummy-sink]: 
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][STATE] Starting FairMQ state machine --> IDLE
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][STATE] IDLE ---> INITIALIZING DEVICE
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][STATE] INITIALIZED ---> BINDING
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][STATE] BINDING ---> BOUND
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][STATE] BOUND ---> CONNECTING
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][STATE] CONNECTING ---> DEVICE READY
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][STATE] DEVICE READY ---> INITIALIZING TASK
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][STATE] INITIALIZING TASK ---> READY
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][STATE] READY ---> RUNNING
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][INFO] fair::mq::Device running...
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][INFO] LHCPeriod is not available, using current month FEB
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][INFO] Correctly handshaken websocket connection.
+[ERROR] Workflow crashed - PID 354617 (ctf-reader) did not exit correctly however it's not clear why. Exit code forced to 128.
+[INFO] Quit requested at Thu Feb  5 14:40:33 2026
+
+[354619:trd-entropy-decoder]: [14:40:33][INFO] Received device shutdown request (signal 15).
+[354619:trd-entropy-decoder]: [14:40:33][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[354619:trd-entropy-decoder]: [14:40:33][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[354619:trd-entropy-decoder]: [14:40:33][STATE] RUNNING ---> READY
+[354619:trd-entropy-decoder]: [14:40:33][STATE] READY ---> RESETTING TASK
+[354619:trd-entropy-decoder]: [14:40:33][STATE] RESETTING TASK ---> DEVICE READY
+[354619:trd-entropy-decoder]: [14:40:33][STATE] DEVICE READY ---> RESETTING DEVICE
+[354619:trd-entropy-decoder]: [14:40:33][STATE] RESETTING DEVICE ---> IDLE
+[354619:trd-entropy-decoder]: [14:40:33][STATE] IDLE ---> EXITING
+[354619:trd-entropy-decoder]: [14:40:33][STATE] Exiting FairMQ state machine
+[354618:internal-dpl-ccdb-backend]: [14:40:33][INFO] Received device shutdown request (signal 15).
+[354618:internal-dpl-ccdb-backend]: [14:40:33][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[354618:internal-dpl-ccdb-backend]: [14:40:33][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[354618:internal-dpl-ccdb-backend]: [14:40:33][INFO] CCDB cache miss/hit ratio:
+[354618:internal-dpl-ccdb-backend]: [14:40:33][STATE] RUNNING ---> READY
+[354618:internal-dpl-ccdb-backend]: [14:40:33][STATE] READY ---> RESETTING TASK
+[354618:internal-dpl-ccdb-backend]: [14:40:33][STATE] RESETTING TASK ---> DEVICE READY
+[354618:internal-dpl-ccdb-backend]: [14:40:33][STATE] DEVICE READY ---> RESETTING DEVICE
+[354618:internal-dpl-ccdb-backend]: [14:40:33][STATE] RESETTING DEVICE ---> IDLE
+[354618:internal-dpl-ccdb-backend]: [14:40:33][STATE] IDLE ---> EXITING
+[354618:internal-dpl-ccdb-backend]: [14:40:33][STATE] Exiting FairMQ state machine
+[354616:internal-dpl-clock]: [14:40:33][INFO] Received device shutdown request (signal 15).
+[354616:internal-dpl-clock]: [14:40:33][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[354616:internal-dpl-clock]: [14:40:33][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[354620:qc-task-TRD-Tracklets]: [14:40:33][INFO] Received device shutdown request (signal 15).
+[354620:qc-task-TRD-Tracklets]: [14:40:33][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[354620:qc-task-TRD-Tracklets]: [14:40:33][STATE] Transition COMPLETE INIT incoming, but another state transition is already ongoing.
+[354621:qc-check-TRD-TrackletsTFCheck]: [14:40:33][INFO] Received device shutdown request (signal 15).
+[354621:qc-check-TRD-TrackletsTFCheck]: [14:40:33][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[354621:qc-check-TRD-TrackletsTFCheck]: [14:40:33][STATE] Transition COMPLETE INIT incoming, but another state transition is already ongoing.
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][INFO] Received device shutdown request (signal 15).
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][STATE] RUNNING ---> READY
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][STATE] READY ---> RESETTING TASK
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][STATE] RESETTING TASK ---> DEVICE READY
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][STATE] DEVICE READY ---> RESETTING DEVICE
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][STATE] RESETTING DEVICE ---> IDLE
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][STATE] IDLE ---> EXITING
+[354622:internal-dpl-injected-dummy-sink]: [14:40:33][STATE] Exiting FairMQ state machine
+[354616:internal-dpl-clock]: [14:40:33][INFO] Sending end-of-stream message to channel from_internal-dpl-clock_to_ctf-reader
+[354616:internal-dpl-clock]: [14:40:33][INFO] Sending end-of-stream message to channel from_internal-dpl-clock_to_qc-task-TRD-Tracklets
+[354616:internal-dpl-clock]: [14:40:33][STATE] RUNNING ---> READY
+[354616:internal-dpl-clock]: [14:40:33][STATE] READY ---> RESETTING TASK
+[354616:internal-dpl-clock]: [14:40:33][STATE] RESETTING TASK ---> DEVICE READY
+[354616:internal-dpl-clock]: [14:40:33][STATE] DEVICE READY ---> RESETTING DEVICE
+[354616:internal-dpl-clock]: [14:40:33][INFO] Cleaning up for shared memory id '073e68d9'...
+[354616:internal-dpl-clock]: [14:40:33][INFO] Found 0 unmanaged regions...
+[354616:internal-dpl-clock]: [14:40:33][INFO] Found 1 managed segments...
+[354616:internal-dpl-clock]: [14:40:33][INFO] Successfully removed 'fmq_073e68d9_m_0'.
+[354616:internal-dpl-clock]: [14:40:33][INFO] Successfully removed 'fmq_073e68d9_mng'.
+[354616:internal-dpl-clock]: [14:40:33][STATE] RESETTING DEVICE ---> IDLE
+[354616:internal-dpl-clock]: [14:40:33][STATE] IDLE ---> EXITING
+[354616:internal-dpl-clock]: [14:40:33][STATE] Exiting FairMQ state machine
+[354621:qc-check-TRD-TrackletsTFCheck]: 2026-02-05 14:40:33.951851     CCDB backend selected
+[354621:qc-check-TRD-TrackletsTFCheck]: [14:40:33][INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@354621 target/Linux_x86_64 init/1770282632350 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/Wu0hvoJ8 , Host: ccdb-test.cern.ch:8080, Curl timeouts: upload:20 download:5
+[354621:qc-check-TRD-TrackletsTFCheck]: 2026-02-05 14:40:33.952141     TrackletsTFCheck configured with TFMeanLow=10000 TFMeanHigh=50000
+[354621:qc-check-TRD-TrackletsTFCheck]: [14:40:33][INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@354621 target/Linux_x86_64 init/1770282632350 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/MKD2rsMI , Host: http://alice-ccdb.cern.ch, Curl timeouts: upload:20 download:5
+[354621:qc-check-TRD-TrackletsTFCheck]: [14:40:33][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[354621:qc-check-TRD-TrackletsTFCheck]: [14:40:33][STATE] INITIALIZED ---> RESETTING DEVICE
+[354621:qc-check-TRD-TrackletsTFCheck]: [14:40:33][INFO] Cleaning up for shared memory id '073e68d9'...
+[354621:qc-check-TRD-TrackletsTFCheck]: [14:40:33][INFO] Found 0 unmanaged regions...
+[354621:qc-check-TRD-TrackletsTFCheck]: [14:40:33][INFO] Found 1 managed segments...
+[354621:qc-check-TRD-TrackletsTFCheck]: [14:40:33][INFO] Successfully removed 'fmq_073e68d9_m_0'.
+[354621:qc-check-TRD-TrackletsTFCheck]: [14:40:33][INFO] Successfully removed 'fmq_073e68d9_mng'.
+[354621:qc-check-TRD-TrackletsTFCheck]: [14:40:33][STATE] RESETTING DEVICE ---> IDLE
+[354621:qc-check-TRD-TrackletsTFCheck]: [14:40:33][STATE] IDLE ---> EXITING
+[354621:qc-check-TRD-TrackletsTFCheck]: [14:40:33][STATE] Exiting FairMQ state machine
+[354620:qc-task-TRD-Tracklets]: [14:40:33][INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@354620 target/Linux_x86_64 init/1770282632350 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/3TpKLyXJ , Host: http://alice-ccdb.cern.ch, Curl timeouts: upload:20 download:5
+[354620:qc-task-TRD-Tracklets]: 2026-02-05 14:40:33.993239     CCDB backend selected
+[354620:qc-task-TRD-Tracklets]: [14:40:33][INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@354620 target/Linux_x86_64 init/1770282632350 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/ULcQ4i6N , Host: ccdb-test.cern.ch:8080, Curl timeouts: upload:20 download:5
+[354620:qc-task-TRD-Tracklets]: [14:40:33][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[354620:qc-task-TRD-Tracklets]: [14:40:33][STATE] INITIALIZED ---> RESETTING DEVICE
+[354620:qc-task-TRD-Tracklets]: [14:40:33][INFO] Cleaning up for shared memory id '073e68d9'...
+[354620:qc-task-TRD-Tracklets]: [14:40:33][INFO] Found 0 unmanaged regions...
+[354620:qc-task-TRD-Tracklets]: [14:40:33][INFO] Found 1 managed segments...
+[354620:qc-task-TRD-Tracklets]: [14:40:33][INFO] Successfully removed 'fmq_073e68d9_m_0'.
+[354620:qc-task-TRD-Tracklets]: [14:40:33][INFO] Successfully removed 'fmq_073e68d9_mng'.
+[354620:qc-task-TRD-Tracklets]: [14:40:33][STATE] RESETTING DEVICE ---> IDLE
+[354620:qc-task-TRD-Tracklets]: [14:40:33][STATE] IDLE ---> EXITING
+[354620:qc-task-TRD-Tracklets]: [14:40:33][STATE] Exiting FairMQ state machine
+[INFO] ## Processes completed. Run summary:
+[INFO] ### Devices started: 7
+[INFO]  - Device internal-dpl-clock: pid 354616 (exit 0)
+[ERROR]  - Device ctf-reader: pid 354617 (exit 128)
+[INFO]    - First error:       ______      _    _______  _________ 
+[INFO]    - Last error:     o2-ctf-reader-workflow() [0x40c315]:     _start at ??:?
+[INFO]  - Device internal-dpl-ccdb-backend: pid 354618 (exit 0)
+[INFO]  - Device trd-entropy-decoder: pid 354619 (exit 0)
+[INFO]  - Device qc-task-TRD-Tracklets: pid 354620 (exit 0)
+[INFO]  - Device qc-check-TRD-TrackletsTFCheck: pid 354621 (exit 0)
+[INFO]  - Device internal-dpl-injected-dummy-sink: pid 354622 (exit 0)
+[INFO] Dumping used configuration in dpl-config.json
+[ERROR] SEVERE: Device ctf-reader (354617) returned with 128
