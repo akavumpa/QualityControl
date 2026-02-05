@@ -102,15 +102,15 @@
           }
         ],
         "checkParameters": {
-          "mTFMeanLow": "10000",
-          "mTFMeanHigh": "50000",
+          "mTFMeanLow": "50000",
+          "mTFMeanHigh": "500000",
 
           "mEventMeanLow": "100",
-          "mEventMeanHigh": "700",
+          "mEventMeanHigh": "100000",
 
           "mQEntriesMin": "1000",
-          "mQMeanLow": "60",
-          "mQMeanHigh": "150"
+          "mQMeanLow": "20",
+          "mQMeanHigh": "50"
         }
       }
     }
