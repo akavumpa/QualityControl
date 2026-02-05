@@ -133,12 +133,12 @@ void TrackletsTask::buildHistograms()
 void TrackletsTask::monitorData(o2::framework::ProcessingContext& ctx)
 {
   // Load CCDB objects (needs to be done only once)
-  if (!mNoiseMap) {
-    auto ptr = ctx.inputs().get<o2::trd::NoiseStatusMCM*>("noiseMap");
-    mNoiseMap = ptr.get();
-  }
+  // if (!mNoiseMap) {
+  //   auto ptr = ctx.inputs().get<o2::trd::NoiseStatusMCM*>("noiseMap");
+  //   mNoiseMap = ptr.get();
+  // }
 
-  auto ptr = ctx.inputs().get<std::array<int, MAXCHAMBER>*>("fedChamberStatus");
+  // auto ptr = ctx.inputs().get<std::array<int, MAXCHAMBER>*>("fedChamberStatus");
 
   // Fill histograms
   auto tracklets = ctx.inputs().get<gsl::span<o2::trd::Tracklet64>>("tracklets");
@@ -152,9 +152,9 @@ void TrackletsTask::monitorData(o2::framework::ProcessingContext& ctx)
     mTrackletsPerEventPbPb->Fill(trigger.getNumberOfTracklets());
     for (int currenttracklet = trigger.getFirstTracklet(); currenttracklet < trigger.getFirstTracklet() + trigger.getNumberOfTracklets(); ++currenttracklet) {
       const auto& trklt = tracklets[currenttracklet];
-      if (mNoiseMap != nullptr && mRemoveNoise && mNoiseMap->isTrackletFromNoisyMCM(trklt)) {
-        continue;
-      }
+      // if (mNoiseMap != nullptr && mRemoveNoise && mNoiseMap->isTrackletFromNoisyMCM(trklt)) {
+      //   continue;
+      // }
       int hcid = trklt.getHCID();
       int layer = Helper::getLayer(hcid / 2);
       int stack = Helper::getStack(hcid / 2);

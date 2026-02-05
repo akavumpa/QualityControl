@@ -133,9 +133,9 @@ Quality TrackletsTFCheck::check(
   // worst(checkEntries(getH("TrdTrySkelton/Q0"), mQEntriesMin, "Q0"));
   // worst(checkEntries(getH("TrdTrySkelton/Q1"), mQEntriesMin, "Q1"));
   // worst(checkEntries(getH("TrdTrySkelton/Q2"), mQEntriesMin, "Q2"));
-  worst(checkEntries(getH("Tracklets/TrackeltQ0"), mQEntriesMin, "TrackletQ0"));
-  worst(checkEntries(getH("Tracklets/TrackeltQ1"), mQEntriesMin, "TrackletQ1"));
-  worst(checkEntries(getH("Tracklets/TrackeltQ2"), mQEntriesMin, "TrackletQ2"));
+  worst(checkEntries(getH("Tracklets/TrackletQ0"), mQEntriesMin, "TrackletQ0"));
+  worst(checkEntries(getH("Tracklets/TrackletQ1"), mQEntriesMin, "TrackletQ1"));
+  worst(checkEntries(getH("Tracklets/TrackletQ2"), mQEntriesMin, "TrackletQ2"));
   // // Are charge values in normal range?
   // worst(checkMean(getH("TrdTrySkelton/Q0"), mQMeanLow, mQMeanHigh, "Q0 mean"));
   // worst(checkMean(getH("TrdTrySkelton/Q1"), mQMeanLow, mQMeanHigh, "Q1 mean"));
