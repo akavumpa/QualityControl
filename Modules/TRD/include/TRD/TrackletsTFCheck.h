@@ -44,7 +44,7 @@ class TrackletsTFCheck : public o2::quality_control::checker::CheckInterface
   float mQMeanHigh = 50;
 
   // // ---------- Geometry Coverage ----------
-  // float mChamberMaxEmptyFrac = 0.3;
+  float mChamberMaxEmptyFrac = 0.3;
   // float mPadRowMaxEmptyFrac = 0.4;
 
   // // ---------- Electronics Load ----------
