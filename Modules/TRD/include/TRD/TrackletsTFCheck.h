@@ -6,6 +6,7 @@
 #include "QualityControl/Quality.h"
 
 #include <TH1.h>
+#include <TH2.h>
 #include <TPaveText.h>
 #include <map>
 #include <memory>
