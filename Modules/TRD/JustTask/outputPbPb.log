@@ -1,617 +1,679 @@
-[INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@394839 target/Linux_x86_64 init/1770532917350 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/YWE5PKwL , Host: http://alice-ccdb.cern.ch/, Curl timeouts: upload:20 download:5
-2026-02-08 12:11:57.353571     BookkeepingSink is not being created because we couldn't find any suitable inputs.
-[INFO] Initialising O2 Data Processing Layer. Driver PID: 394839.
-[INFO] Driver listening on port: 12919
+[INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@397378 target/Linux_x86_64 init/1770533363584 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/OwTWEeEj , Host: http://alice-ccdb.cern.ch/, Curl timeouts: upload:20 download:5
+2026-02-08 12:19:23.586702     BookkeepingSink is not being created because we couldn't find any suitable inputs.
+[INFO] Initialising O2 Data Processing Layer. Driver PID: 397378.
+[INFO] Driver listening on port: 15458
 [INFO] Rate limiting set up at 2000 MB and 64 timeframes distributed over 1 readers
 [INFO] O2 Data Processing Layer initialised. We brake for nobody.
 [INFO] Optimised build. O2DEBUG / LOG(debug) / LOGF(debug) / assert statement will not be shown.
 [INFO] Redeployment of configuration asked.
-[INFO] Starting internal-dpl-clock on pid 394850
-[INFO] Starting ctf-reader on pid 394851
-[INFO] Starting internal-dpl-ccdb-backend on pid 394852
-[INFO] Starting trd-entropy-decoder on pid 394853
-[INFO] Starting qc-task-TRD-TrdTrySkelton on pid 394854
-[INFO] Starting qc-sink-QTRD_TrdTrySkelton_0 on pid 394855
-[INFO] Starting internal-dpl-injected-dummy-sink on pid 394856
+[INFO] Starting internal-dpl-clock on pid 397388
+[INFO] Starting ctf-reader on pid 397389
+[INFO] Starting internal-dpl-ccdb-backend on pid 397390
+[INFO] Starting trd-entropy-decoder on pid 397391
+[INFO] Starting qc-task-TRD-TrdTrySkelton on pid 397392
+[INFO] Starting qc-sink-QTRD_TrdTrySkelton_0 on pid 397393
+[INFO] Starting internal-dpl-injected-dummy-sink on pid 397394
 [INFO] Redeployment of configuration done.
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@394855 target/Linux_x86_64 init/1770532918699 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/PJsxACHe , Host: http://alice-ccdb.cern.ch/, Curl timeouts: upload:20 download:5
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:11:58.701114     BookkeepingSink is not being created because we couldn't find any suitable inputs.
-[394854:qc-task-TRD-TrdTrySkelton]: [INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@394854 target/Linux_x86_64 init/1770532918796 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/qnvfxKGJ , Host: http://alice-ccdb.cern.ch/, Curl timeouts: upload:20 download:5
-[394854:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:11:58.798038     BookkeepingSink is not being created because we couldn't find any suitable inputs.
-[394850:internal-dpl-clock]: [INFO] Instrumenting crash signals
-[394854:qc-task-TRD-TrdTrySkelton]: [INFO] Instrumenting crash signals
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [INFO] Instrumenting crash signals
-[394850:internal-dpl-clock]: [INFO] Spawning new device internal-dpl-clock in process with pid 394850
-[394854:qc-task-TRD-TrdTrySkelton]: [INFO] Spawning new device qc-task-TRD-TrdTrySkelton in process with pid 394854
-[394850:internal-dpl-clock]: [12:11:59][INFO] 
-[394850:internal-dpl-clock]:       ______      _    _______  _________ 
-[394850:internal-dpl-clock]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
-[394850:internal-dpl-clock]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
-[394850:internal-dpl-clock]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
-[394850:internal-dpl-clock]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
-[394850:internal-dpl-clock]: 
-[394850:internal-dpl-clock]: [12:11:59][STATE] Starting FairMQ state machine --> IDLE
-[394854:qc-task-TRD-TrdTrySkelton]: [12:11:59][INFO] 
-[394854:qc-task-TRD-TrdTrySkelton]:       ______      _    _______  _________ 
-[394854:qc-task-TRD-TrdTrySkelton]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
-[394854:qc-task-TRD-TrdTrySkelton]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
-[394854:qc-task-TRD-TrdTrySkelton]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
-[394854:qc-task-TRD-TrdTrySkelton]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
-[394854:qc-task-TRD-TrdTrySkelton]: 
-[394854:qc-task-TRD-TrdTrySkelton]: [12:11:59][STATE] Starting FairMQ state machine --> IDLE
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [INFO] Spawning new device qc-sink-QTRD_TrdTrySkelton_0 in process with pid 394855
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:11:59][INFO] 
-[394855:qc-sink-QTRD_TrdTrySkelton_0]:       ______      _    _______  _________ 
-[394855:qc-sink-QTRD_TrdTrySkelton_0]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
-[394855:qc-sink-QTRD_TrdTrySkelton_0]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
-[394855:qc-sink-QTRD_TrdTrySkelton_0]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
-[394855:qc-sink-QTRD_TrdTrySkelton_0]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:11:59][STATE] Starting FairMQ state machine --> IDLE
-[394850:internal-dpl-clock]: [12:11:59][STATE] IDLE ---> INITIALIZING DEVICE
-[394854:qc-task-TRD-TrdTrySkelton]: [12:11:59][STATE] IDLE ---> INITIALIZING DEVICE
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:11:59][STATE] IDLE ---> INITIALIZING DEVICE
-[394854:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:11:59.442347     QC infologger initialized : 0 ; 11
-[394854:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:11:59.442392  !  [1;33mWarning - No URL provided for Bookkeeping. Nothing will be stored nor retrieved.[0m
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:11:59.442347     QC infologger initialized : 0 ; 11
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:11:59.442391  !  [1;33mWarning - No URL provided for Bookkeeping. Nothing will be stored nor retrieved.[0m
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:11:59.442400     CCDB backend selected
-[394850:internal-dpl-clock]: [12:11:59][STATE] INITIALIZING DEVICE ---> INITIALIZED
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:11:59][INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@394855 target/Linux_x86_64 init/1770532918699 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/0xNxS3Mb , Host: ccdb-test.cern.ch:8080, Curl timeouts: upload:20 download:5
-[394850:internal-dpl-clock]: [12:11:59][STATE] INITIALIZED ---> BINDING
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:11:59][STATE] INITIALIZING DEVICE ---> INITIALIZED
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:11:59][STATE] INITIALIZED ---> BINDING
-[394850:internal-dpl-clock]: [12:11:59][STATE] BINDING ---> BOUND
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:11:59][STATE] BINDING ---> BOUND
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:11:59][STATE] BOUND ---> CONNECTING
-[394850:internal-dpl-clock]: [12:11:59][STATE] BOUND ---> CONNECTING
-[394850:internal-dpl-clock]: [12:11:59][STATE] CONNECTING ---> DEVICE READY
-[394850:internal-dpl-clock]: [12:11:59][STATE] DEVICE READY ---> INITIALIZING TASK
-[394850:internal-dpl-clock]: [12:11:59][STATE] INITIALIZING TASK ---> READY
-[394850:internal-dpl-clock]: [12:11:59][STATE] READY ---> RUNNING
-[394850:internal-dpl-clock]: [12:11:59][INFO] fair::mq::Device running...
-[394850:internal-dpl-clock]: [12:11:59][INFO] LHCPeriod is not available, using current month FEB
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:11:59][STATE] CONNECTING ---> DEVICE READY
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:11:59][STATE] DEVICE READY ---> INITIALIZING TASK
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:11:59][STATE] INITIALIZING TASK ---> READY
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:11:59][STATE] READY ---> RUNNING
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:11:59][INFO] fair::mq::Device running...
-[394850:internal-dpl-clock]: [12:11:59][INFO] Correctly handshaken websocket connection.
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:11:59][INFO] LHCPeriod is not available, using current month FEB
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:11:59.445867     Starting run 0:
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:11:59][INFO] Correctly handshaken websocket connection.
-[394851:ctf-reader]: [INFO] Instrumenting crash signals
-[394852:internal-dpl-ccdb-backend]: [INFO] Instrumenting crash signals
-[394851:ctf-reader]: [INFO] Spawning new device ctf-reader in process with pid 394851
-[394851:ctf-reader]: [12:11:59][INFO] 
-[394851:ctf-reader]:       ______      _    _______  _________ 
-[394851:ctf-reader]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
-[394851:ctf-reader]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
-[394851:ctf-reader]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
-[394851:ctf-reader]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
-[394851:ctf-reader]: 
-[394852:internal-dpl-ccdb-backend]: [INFO] Spawning new device internal-dpl-ccdb-backend in process with pid 394852
-[394851:ctf-reader]: [12:11:59][STATE] Starting FairMQ state machine --> IDLE
-[394852:internal-dpl-ccdb-backend]: [12:11:59][INFO] 
-[394852:internal-dpl-ccdb-backend]:       ______      _    _______  _________ 
-[394852:internal-dpl-ccdb-backend]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
-[394852:internal-dpl-ccdb-backend]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
-[394852:internal-dpl-ccdb-backend]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
-[394852:internal-dpl-ccdb-backend]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
-[394852:internal-dpl-ccdb-backend]: 
-[394852:internal-dpl-ccdb-backend]: [12:11:59][STATE] Starting FairMQ state machine --> IDLE
-[394851:ctf-reader]: [12:11:59][STATE] IDLE ---> INITIALIZING DEVICE
-[394851:ctf-reader]: [12:11:59][INFO] Input contains 1 files, 0 remote
-[394852:internal-dpl-ccdb-backend]: [12:11:59][STATE] IDLE ---> INITIALIZING DEVICE
-[394851:ctf-reader]: [12:11:59][STATE] INITIALIZING DEVICE ---> INITIALIZED
-[394851:ctf-reader]: [12:11:59][STATE] INITIALIZED ---> BINDING
-[394851:ctf-reader]: [12:11:59][INFO] Finished file fetching: 1 of 1 files fetched successfully in 0 iterations
-[394851:ctf-reader]: [12:11:59][STATE] BINDING ---> BOUND
-[394851:ctf-reader]: [12:11:59][STATE] BOUND ---> CONNECTING
-[394851:ctf-reader]: [12:11:59][STATE] CONNECTING ---> DEVICE READY
-[394851:ctf-reader]: [12:11:59][STATE] DEVICE READY ---> INITIALIZING TASK
-[394851:ctf-reader]: [12:11:59][STATE] INITIALIZING TASK ---> READY
-[394851:ctf-reader]: [12:11:59][STATE] READY ---> RUNNING
-[394851:ctf-reader]: [12:11:59][INFO] fair::mq::Device running...
-[394851:ctf-reader]: [12:11:59][INFO] LHCPeriod is not available, using current month FEB
-[394851:ctf-reader]: [12:11:59][INFO] Correctly handshaken websocket connection.
-[394851:ctf-reader]: [12:11:59][INFO] Reading CTF input  /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root
-[394852:internal-dpl-ccdb-backend]: [12:11:59][INFO] CCDB Backend at: http://alice-ccdb.cern.ch, validity check for every 2147483647 TF
-[394852:internal-dpl-ccdb-backend]: [12:11:59][INFO] Hook to enable signposts for CCDB messages at 0xf421028
-[394852:internal-dpl-ccdb-backend]: [12:11:59][INFO] Init CcdApi with UserAgentID: o2-ctf-reader-w/o2-ctf-reader-workflow@394852 target/Linux_x86_64 init/1770532919513 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/EFNhfJIz , Host: http://alice-ccdb.cern.ch, Curl timeouts: upload:20 download:5
-[394852:internal-dpl-ccdb-backend]: [12:11:59][INFO] Initialised default CCDB host http://alice-ccdb.cern.ch
-[394852:internal-dpl-ccdb-backend]: [12:11:59][INFO] The following route is a condition CTP/Trig_Offset/0
-[394852:internal-dpl-ccdb-backend]: [12:11:59][INFO] - ccdb-path: CTP/Config/TriggerOffsets
-[394852:internal-dpl-ccdb-backend]: [12:11:59][INFO] The following route is a condition TRD/CTFDICT/0
-[394852:internal-dpl-ccdb-backend]: [12:11:59][INFO] - ccdb-path: TRD/Calib/CTFDictionaryTree
-[394852:internal-dpl-ccdb-backend]: [12:11:59][STATE] INITIALIZING DEVICE ---> INITIALIZED
-[394852:internal-dpl-ccdb-backend]: [12:11:59][STATE] INITIALIZED ---> BINDING
-[394852:internal-dpl-ccdb-backend]: [12:11:59][STATE] BINDING ---> BOUND
-[394852:internal-dpl-ccdb-backend]: [12:11:59][STATE] BOUND ---> CONNECTING
-[394852:internal-dpl-ccdb-backend]: [12:11:59][STATE] CONNECTING ---> DEVICE READY
-[394852:internal-dpl-ccdb-backend]: [12:11:59][STATE] DEVICE READY ---> INITIALIZING TASK
-[394852:internal-dpl-ccdb-backend]: [12:11:59][STATE] INITIALIZING TASK ---> READY
-[394852:internal-dpl-ccdb-backend]: [12:11:59][STATE] READY ---> RUNNING
-[394852:internal-dpl-ccdb-backend]: [12:11:59][INFO] fair::mq::Device running...
-[394852:internal-dpl-ccdb-backend]: [12:11:59][INFO] LHCPeriod is not available, using current month FEB
-[394852:internal-dpl-ccdb-backend]: [12:11:59][INFO] Correctly handshaken websocket connection.
-[394853:trd-entropy-decoder]: [INFO] Instrumenting crash signals
-[394853:trd-entropy-decoder]: [INFO] Spawning new device trd-entropy-decoder in process with pid 394853
-[394853:trd-entropy-decoder]: [12:11:59][INFO] 
-[394853:trd-entropy-decoder]:       ______      _    _______  _________ 
-[394853:trd-entropy-decoder]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
-[394853:trd-entropy-decoder]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
-[394853:trd-entropy-decoder]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
-[394853:trd-entropy-decoder]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
-[394853:trd-entropy-decoder]: 
-[394853:trd-entropy-decoder]: [12:11:59][STATE] Starting FairMQ state machine --> IDLE
-[394853:trd-entropy-decoder]: [12:11:59][STATE] IDLE ---> INITIALIZING DEVICE
-[394853:trd-entropy-decoder]: [12:11:59][INFO] Bogus triggers rejection flag: 10
-[394853:trd-entropy-decoder]: [12:11:59][STATE] INITIALIZING DEVICE ---> INITIALIZED
-[394853:trd-entropy-decoder]: [12:11:59][STATE] INITIALIZED ---> BINDING
-[394853:trd-entropy-decoder]: [12:11:59][STATE] BINDING ---> BOUND
-[394853:trd-entropy-decoder]: [12:11:59][STATE] BOUND ---> CONNECTING
-[394853:trd-entropy-decoder]: [12:11:59][STATE] CONNECTING ---> DEVICE READY
-[394853:trd-entropy-decoder]: [12:11:59][STATE] DEVICE READY ---> INITIALIZING TASK
-[394853:trd-entropy-decoder]: [12:11:59][STATE] INITIALIZING TASK ---> READY
-[394853:trd-entropy-decoder]: [12:11:59][STATE] READY ---> RUNNING
-[394853:trd-entropy-decoder]: [12:11:59][INFO] fair::mq::Device running...
-[394853:trd-entropy-decoder]: [12:11:59][INFO] LHCPeriod is not available, using current month FEB
-[394853:trd-entropy-decoder]: [12:11:59][INFO] Correctly handshaken websocket connection.
-[394856:internal-dpl-injected-dummy-sink]: [INFO] Instrumenting crash signals
-[394856:internal-dpl-injected-dummy-sink]: [INFO] Spawning new device internal-dpl-injected-dummy-sink in process with pid 394856
-[394856:internal-dpl-injected-dummy-sink]: [12:11:59][INFO] 
-[394856:internal-dpl-injected-dummy-sink]:       ______      _    _______  _________ 
-[394856:internal-dpl-injected-dummy-sink]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
-[394856:internal-dpl-injected-dummy-sink]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
-[394856:internal-dpl-injected-dummy-sink]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
-[394856:internal-dpl-injected-dummy-sink]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
-[394856:internal-dpl-injected-dummy-sink]: 
-[394856:internal-dpl-injected-dummy-sink]: [12:11:59][STATE] Starting FairMQ state machine --> IDLE
-[394856:internal-dpl-injected-dummy-sink]: [12:11:59][STATE] IDLE ---> INITIALIZING DEVICE
-[394856:internal-dpl-injected-dummy-sink]: [12:11:59][STATE] INITIALIZING DEVICE ---> INITIALIZED
-[394856:internal-dpl-injected-dummy-sink]: [12:11:59][STATE] INITIALIZED ---> BINDING
-[394856:internal-dpl-injected-dummy-sink]: [12:11:59][STATE] BINDING ---> BOUND
-[394856:internal-dpl-injected-dummy-sink]: [12:11:59][STATE] BOUND ---> CONNECTING
-[394856:internal-dpl-injected-dummy-sink]: [12:11:59][STATE] CONNECTING ---> DEVICE READY
-[394856:internal-dpl-injected-dummy-sink]: [12:11:59][STATE] DEVICE READY ---> INITIALIZING TASK
-[394856:internal-dpl-injected-dummy-sink]: [12:11:59][STATE] INITIALIZING TASK ---> READY
-[394856:internal-dpl-injected-dummy-sink]: [12:11:59][STATE] READY ---> RUNNING
-[394856:internal-dpl-injected-dummy-sink]: [12:11:59][INFO] fair::mq::Device running...
-[394856:internal-dpl-injected-dummy-sink]: [12:11:59][INFO] LHCPeriod is not available, using current month FEB
-[394856:internal-dpl-injected-dummy-sink]: [12:11:59][INFO] Correctly handshaken websocket connection.
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:00][INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@394854 target/Linux_x86_64 init/1770532918796 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/qnvfxKGJ , Host: http://alice-ccdb.cern.ch, Curl timeouts: upload:20 download:5
-[394854:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:12:00.344069     CCDB backend selected
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:00][INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@394854 target/Linux_x86_64 init/1770532918796 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/Q7sKgnhz , Host: ccdb-test.cern.ch:8080, Curl timeouts: upload:20 download:5
-[394854:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:12:00.344253     A debug targeted for support
-[394854:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:12:00.344257     An Info log targeted for operators
-[394854:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:12:00.344261     Initializing TRD skelton histograms
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:00][STATE] INITIALIZING DEVICE ---> INITIALIZED
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:00][STATE] INITIALIZED ---> BINDING
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:00][STATE] BINDING ---> BOUND
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:00][STATE] BOUND ---> CONNECTING
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:00][STATE] CONNECTING ---> DEVICE READY
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:00][STATE] DEVICE READY ---> INITIALIZING TASK
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:00][STATE] INITIALIZING TASK ---> READY
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:00][STATE] READY ---> RUNNING
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:00][INFO] fair::mq::Device running...
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:00][INFO] LHCPeriod is not available, using current month FEB
-[394854:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:12:00.348830     Starting run 0
-[394854:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:12:00.348899     Start cycle 0
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:00][INFO] Correctly handshaken websocket connection.
-[394851:ctf-reader]: [12:12:01][INFO] Run:0560355 TF:2394204 Orbit:261755616 CreationTime:1732265281044 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 0 (0 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 1.070 s, 0.0000 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2394856 Orbit:261776480 CreationTime:1732265282896 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 1 (1 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0039 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2395508 Orbit:261797344 CreationTime:1732265284753 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 2 (2 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0025 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2396160 Orbit:261818208 CreationTime:1732265286610 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 3 (3 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0033 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2396812 Orbit:261839072 CreationTime:1732265288465 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 4 (4 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0038 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2397464 Orbit:261859936 CreationTime:1732265290319 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 5 (5 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0042 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2398116 Orbit:261880800 CreationTime:1732265292175 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 6 (6 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0023 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2398768 Orbit:261901664 CreationTime:1732265294030 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 7 (7 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0058 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2399420 Orbit:261922528 CreationTime:1732265295884 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 8 (8 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0030 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2400072 Orbit:261943392 CreationTime:1732265297740 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 9 (9 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0026 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2400724 Orbit:261964256 CreationTime:1732265299597 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 10 (10 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0028 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2401376 Orbit:261985120 CreationTime:1732265301451 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 11 (11 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0040 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2402028 Orbit:262005984 CreationTime:1732265303307 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 12 (12 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0056 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2402680 Orbit:262026848 CreationTime:1732265305164 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 13 (13 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0036 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2403332 Orbit:262047712 CreationTime:1732265307016 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 14 (14 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0068 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2403984 Orbit:262068576 CreationTime:1732265308871 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 15 (15 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0039 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2404636 Orbit:262089440 CreationTime:1732265310729 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 16 (16 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0026 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2405288 Orbit:262110304 CreationTime:1732265312583 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 17 (17 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0084 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2405940 Orbit:262131168 CreationTime:1732265314438 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 18 (18 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0027 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2406592 Orbit:262152032 CreationTime:1732265316295 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 19 (19 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0021 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2407244 Orbit:262172896 CreationTime:1732265318149 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 20 (20 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0030 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2407896 Orbit:262193760 CreationTime:1732265320004 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 21 (21 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0032 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2408548 Orbit:262214624 CreationTime:1732265321860 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 22 (22 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0027 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2409200 Orbit:262235488 CreationTime:1732265323715 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 23 (23 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0029 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2409852 Orbit:262256352 CreationTime:1732265325571 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 24 (24 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0031 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2410504 Orbit:262277216 CreationTime:1732265327426 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 25 (25 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0029 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2411156 Orbit:262298080 CreationTime:1732265329280 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 26 (26 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0039 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2411808 Orbit:262318944 CreationTime:1732265331135 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 27 (27 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0084 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2412460 Orbit:262339808 CreationTime:1732265332992 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 28 (28 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0073 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2413112 Orbit:262360672 CreationTime:1732265334847 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 29 (29 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0029 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2413764 Orbit:262381536 CreationTime:1732265336702 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 30 (30 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0024 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2414416 Orbit:262402400 CreationTime:1732265338558 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 31 (31 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0031 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2415068 Orbit:262423264 CreationTime:1732265340414 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 32 (32 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0031 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2415720 Orbit:262444128 CreationTime:1732265342269 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 33 (33 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0027 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2416372 Orbit:262464992 CreationTime:1732265344125 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 34 (34 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0034 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2417024 Orbit:262485856 CreationTime:1732265345979 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 35 (35 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0026 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2417676 Orbit:262506720 CreationTime:1732265347834 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 36 (36 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0029 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2418328 Orbit:262527584 CreationTime:1732265349690 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 37 (37 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0026 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2418980 Orbit:262548448 CreationTime:1732265351544 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 38 (38 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0044 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2419632 Orbit:262569312 CreationTime:1732265353400 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 39 (39 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0016 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2420284 Orbit:262590176 CreationTime:1732265355257 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 40 (40 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0033 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2420936 Orbit:262611040 CreationTime:1732265357110 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 41 (41 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0026 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2421588 Orbit:262631904 CreationTime:1732265358967 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 42 (42 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0026 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2422240 Orbit:262652768 CreationTime:1732265360822 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 43 (43 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0028 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2422892 Orbit:262673632 CreationTime:1732265362676 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 44 (44 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0023 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2423544 Orbit:262694496 CreationTime:1732265364533 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 45 (45 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0026 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2424196 Orbit:262715360 CreationTime:1732265366389 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 46 (46 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0031 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2424848 Orbit:262736224 CreationTime:1732265368243 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 47 (47 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0027 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2425500 Orbit:262757088 CreationTime:1732265370100 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 48 (48 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0039 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2426152 Orbit:262777952 CreationTime:1732265371953 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 49 (49 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0023 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2426804 Orbit:262798816 CreationTime:1732265373809 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 50 (50 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0050 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2427456 Orbit:262819680 CreationTime:1732265375664 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 51 (51 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0022 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2428108 Orbit:262840544 CreationTime:1732265377518 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 52 (52 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0022 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2428760 Orbit:262861408 CreationTime:1732265379374 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 53 (53 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0024 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2429412 Orbit:262882272 CreationTime:1732265381230 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 54 (54 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.020 s, 0.0024 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2430064 Orbit:262903136 CreationTime:1732265383086 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 55 (55 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0032 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2430716 Orbit:262924000 CreationTime:1732265384940 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 56 (56 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0025 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2431368 Orbit:262944864 CreationTime:1732265386796 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 57 (57 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0019 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2432020 Orbit:262965728 CreationTime:1732265388652 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 58 (58 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0033 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2432672 Orbit:262986592 CreationTime:1732265390506 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 59 (59 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0032 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2433324 Orbit:263007456 CreationTime:1732265392362 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 60 (60 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0023 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] Run:0560355 TF:2433976 Orbit:263028320 CreationTime:1732265394217 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
-[394851:ctf-reader]: [12:12:02][INFO] Read CTF 61 (61 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0055 s elapsed from previous CTF
-[394851:ctf-reader]: [12:12:02][INFO] CTFReader stops processing, 1 files read, 0 files failed
-[394851:ctf-reader]: [12:12:02][INFO] CTF reading total timing: Cpu: 1.210 Real: 1.532 s for 62 TFs (62 accepted) in 1 loops, spent 0 s in 0 data waiting states
-[394851:ctf-reader]: [12:12:02][INFO] Sending end-of-stream message to channel from_ctf-reader_to_internal-dpl-ccdb-backend
-[394851:ctf-reader]: [12:12:02][INFO] Sending end-of-stream message to channel from_ctf-reader_to_trd-entropy-decoder
-[394851:ctf-reader]: [12:12:02][INFO] Sending end-of-stream message to channel from_ctf-reader_to_internal-dpl-injected-dummy-sink
-[394852:internal-dpl-ccdb-backend]: DN >>> C=ch/O=AliEn2/CN=Users/CN=akavumpa/OU=akavumpa
-[394852:internal-dpl-ccdb-backend]: ISSUER >>> C=ch/O=AliEn2/CN=AliEn CA
-[394852:internal-dpl-ccdb-backend]: BEGIN >>> 2026-02-08 04:41:48
-[394852:internal-dpl-ccdb-backend]: EXPIRE >>> 2026-03-11 06:41:48
-[394852:internal-dpl-ccdb-backend]: Info in <TJAlienConnectionManager>: Opening connection to JCentral. Please wait
-[394852:internal-dpl-ccdb-backend]: Info in <TJAlienConnectionManager>: Opening connection to 128.142.249.33
-[394852:internal-dpl-ccdb-backend]: Info in <TJAlienConnectionManager>: Successfully connected to 128.142.249.33
-[394852:internal-dpl-ccdb-backend]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/14/31305/48e7c17a-a878-11ef-8140-0aa140641b9a in SE <ALICE::LBL_HPCS::EOS>
-[394852:internal-dpl-ccdb-backend]: [12:12:17][INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1732242004051/48e7c17a-a878-11ef-8140-0aa140641b9a for 1732265281044 (load to memory, agent_id: o2-ctf-reader-w/o2-ctf-reader-workflow@394852 target/Linux_x86_64 init/1770532919513 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/EFNhfJIz ), 
-[394852:internal-dpl-ccdb-backend]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Config/TriggerOffsets/06/49287/56b4c228-70dc-11ee-bc26-2a010e0a0b16 in SE <ALICE::LBL_HPCS::EOS>
-[394854:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:12:20.590251     Finish cycle 0
-[394854:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:12:20.590732     Publishing 10 MonitorObjects
-[394854:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:12:20.637830     Save data to file PbPb_TrdTrySkeltonOutput.root
-[394854:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:12:20.644791     Start cycle 1
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:12:21.370748     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/PadRowVsDet
-[394852:internal-dpl-ccdb-backend]: [12:12:22][INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Config/TriggerOffsets/1696975200000/56b4c228-70dc-11ee-bc26-2a010e0a0b16 for 1732265280563 (load to memory, agent_id: o2-ctf-reader-w/o2-ctf-reader-workflow@394852 target/Linux_x86_64 init/1770532919513 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/EFNhfJIz ), 
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:12:22.732921     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/MCMTrackletPerMCM
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:12:23.359132     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/nTrackletsTF
-[394852:internal-dpl-ccdb-backend]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/TRD/Calib/CTFDictionaryTree/14/38726/b277557d-06d8-11ee-b4d8-200114580201 in SE <ALICE::LBL_HPCS::EOS>
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:12:24.066072     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/nTrackletsEVENT
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:12:24.726569     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/Q0
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:12:25.404880     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/Q1
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:12:26.029638     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/Q2
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:12:26.651586     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/Chamber
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:12:27.312042     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/PadRow
-[394852:internal-dpl-ccdb-backend]: [12:12:27][INFO] ccdb reads http://alice-ccdb.cern.ch/TRD/Calib/CTFDictionaryTree/1546300800000/b277557d-06d8-11ee-b4d8-200114580201 for 1732265280563 (load to memory, agent_id: o2-ctf-reader-w/o2-ctf-reader-workflow@394852 target/Linux_x86_64 init/1770532919513 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/EFNhfJIz ), 
-[394852:internal-dpl-ccdb-backend]: [12:12:27][INFO] Sending end-of-stream message to channel from_internal-dpl-ccdb-backend_to_trd-entropy-decoder
-[394852:internal-dpl-ccdb-backend]: [12:12:27][INFO] Sending end-of-stream message to channel from_internal-dpl-ccdb-backend_to_internal-dpl-injected-dummy-sink
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:12:27.936734     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/MCM
-[394853:trd-entropy-decoder]: [12:12:29][INFO] Caching in 130141439850304 ptr to CTP/Trig_Offset/0 (0x765d845faee0)
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Loaded TRD CTF dictionary v1.0.1626472048 (16/07/21 21:47:28 UTC) from CCDB
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Caching in 130141442970912 ptr to TRD/CTFDICT/0 (0x24fe4f70)
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 3042152, output size: 1429408 NDictWords: 26336 NDataWords: 330517 NLiteralWords: 103
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 276516 TRD tracklets and 0 digits in 34 triggers, (raw input:2212944/input to encode:3042152/ctf size:1427824 bytes) in 2.58 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 3230441, output size: 1511952 NDictWords: 26258 NDataWords: 351285 NLiteralWords: 53
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 293623 TRD tracklets and 0 digits in 42 triggers, (raw input:2349992/input to encode:3230441/ctf size:1510384 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 3465642, output size: 1618640 NDictWords: 26566 NDataWords: 377562 NLiteralWords: 140
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 315010 TRD tracklets and 0 digits in 38 triggers, (raw input:2520992/input to encode:3465642/ctf size:1617072 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 4457063, output size: 2066672 NDictWords: 29992 NDataWords: 486169 NLiteralWords: 112
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 405143 TRD tracklets and 0 digits in 35 triggers, (raw input:3241984/input to encode:4457063/ctf size:2065092 bytes) in 0.03 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 4300658, output size: 1991360 NDictWords: 28633 NDataWords: 468691 NLiteralWords: 127
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 390918 TRD tracklets and 0 digits in 40 triggers, (raw input:3128304/input to encode:4300658/ctf size:1989804 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 3987045, output size: 1848864 NDictWords: 27640 NDataWords: 434075 NLiteralWords: 107
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 362409 TRD tracklets and 0 digits in 39 triggers, (raw input:2900208/input to encode:3987045/ctf size:1847288 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 3046654, output size: 1428368 NDictWords: 26124 NDataWords: 330468 NLiteralWords: 109
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 276924 TRD tracklets and 0 digits in 35 triggers, (raw input:2216232/input to encode:3046654/ctf size:1426804 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 5018716, output size: 2315536 NDictWords: 30783 NDataWords: 547604 NLiteralWords: 104
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 456196 TRD tracklets and 0 digits in 40 triggers, (raw input:3650528/input to encode:5018716/ctf size:2313964 bytes) in 0.03 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 3530628, output size: 1643136 NDictWords: 26122 NDataWords: 384149 NLiteralWords: 122
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 320914 TRD tracklets and 0 digits in 41 triggers, (raw input:2568296/input to encode:3530628/ctf size:1641572 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 3229587, output size: 1511920 NDictWords: 26347 NDataWords: 351148 NLiteralWords: 92
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 293553 TRD tracklets and 0 digits in 36 triggers, (raw input:2349288/input to encode:3229587/ctf size:1510348 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 3367497, output size: 1571072 NDictWords: 25989 NDataWords: 366269 NLiteralWords: 118
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 306089 TRD tracklets and 0 digits in 37 triggers, (raw input:2449600/input to encode:3367497/ctf size:1569504 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 3984465, output size: 1852192 NDictWords: 28391 NDataWords: 434134 NLiteralWords: 124
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 362177 TRD tracklets and 0 digits in 37 triggers, (raw input:2898304/input to encode:3984465/ctf size:1850596 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 8262188, output size: 3336192 NDictWords: 28158 NDataWords: 805342 NLiteralWords: 154
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 370813 TRD tracklets and 64349 digits in 40 triggers, (raw input:7214498/input to encode:8262188/ctf size:3334616 bytes) in 0.03 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 3511140, output size: 1636912 NDictWords: 26510 NDataWords: 382216 NLiteralWords: 105
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 319150 TRD tracklets and 0 digits in 35 triggers, (raw input:2554040/input to encode:3511140/ctf size:1635324 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 5072953, output size: 2346608 NDictWords: 32023 NDataWords: 554060 NLiteralWords: 172
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 461133 TRD tracklets and 0 digits in 35 triggers, (raw input:3689904/input to encode:5072953/ctf size:2345020 bytes) in 0.03 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 5204303, output size: 2403504 NDictWords: 31952 NDataWords: 568392 NLiteralWords: 142
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 473065 TRD tracklets and 0 digits in 42 triggers, (raw input:3785528/input to encode:5204303/ctf size:2401944 bytes) in 0.03 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 4572088, output size: 1841024 NDictWords: 25964 NDataWords: 433773 NLiteralWords: 127
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 267372 TRD tracklets and 25086 digits in 29 triggers, (raw input:3795348/input to encode:4572088/ctf size:1839456 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 2411923, output size: 1131376 NDictWords: 20711 NDataWords: 261687 NLiteralWords: 53
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 219225 TRD tracklets and 0 digits in 32 triggers, (raw input:1754568/input to encode:2411923/ctf size:1129804 bytes) in 0.01 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 3794700, output size: 1763088 NDictWords: 27427 NDataWords: 412853 NLiteralWords: 101
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 344932 TRD tracklets and 0 digits in 32 triggers, (raw input:2760224/input to encode:3794700/ctf size:1761524 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 2813046, output size: 1315472 NDictWords: 22645 NDataWords: 305773 NLiteralWords: 54
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 255692 TRD tracklets and 0 digits in 31 triggers, (raw input:2046280/input to encode:2813046/ctf size:1313888 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 4734432, output size: 2191504 NDictWords: 30586 NDataWords: 516766 NLiteralWords: 132
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 430352 TRD tracklets and 0 digits in 40 triggers, (raw input:3443776/input to encode:4734432/ctf size:2189936 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 5487487, output size: 2528240 NDictWords: 32311 NDataWords: 599251 NLiteralWords: 109
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 498809 TRD tracklets and 0 digits in 42 triggers, (raw input:3991480/input to encode:5487487/ctf size:2526684 bytes) in 0.03 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 2896421, output size: 1365424 NDictWords: 26113 NDataWords: 314791 NLiteralWords: 60
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 263269 TRD tracklets and 0 digits in 33 triggers, (raw input:2106944/input to encode:2896421/ctf size:1363856 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 4102193, output size: 1904128 NDictWords: 28375 NDataWords: 447155 NLiteralWords: 108
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 372877 TRD tracklets and 0 digits in 39 triggers, (raw input:2983952/input to encode:4102193/ctf size:1902552 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 4364652, output size: 2020640 NDictWords: 29014 NDataWords: 475656 NLiteralWords: 93
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 396742 TRD tracklets and 0 digits in 35 triggers, (raw input:3174776/input to encode:4364652/ctf size:2019052 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 4329562, output size: 2007488 NDictWords: 29347 NDataWords: 472024 NLiteralWords: 107
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 393552 TRD tracklets and 0 digits in 35 triggers, (raw input:3149256/input to encode:4329562/ctf size:2005912 bytes) in 0.04 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 4392683, output size: 2035136 NDictWords: 29358 NDataWords: 478911 NLiteralWords: 126
-[394853:trd-entropy-decoder]: [12:12:30][INFO] Decoded 399289 TRD tracklets and 0 digits in 36 triggers, (raw input:3195176/input to encode:4392683/ctf size:2033580 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:30][INFO] TRD_CTF: 15 blocks, input size: 21060581, output size: 8157504 NDictWords: 26669 NDataWords: 2012156 NLiteralWords: 150
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 321497 TRD tracklets and 269594 digits in 36 triggers, (raw input:20366044/input to encode:21060581/ctf size:8155900 bytes) in 0.08 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 5788574, output size: 2667376 NDictWords: 33736 NDataWords: 632572 NLiteralWords: 148
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 526178 TRD tracklets and 0 digits in 44 triggers, (raw input:4210480/input to encode:5788574/ctf size:2665824 bytes) in 0.03 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 4577640, output size: 2117968 NDictWords: 29766 NDataWords: 499208 NLiteralWords: 124
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 416102 TRD tracklets and 0 digits in 37 triggers, (raw input:3329704/input to encode:4577640/ctf size:2116392 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 2846101, output size: 1332352 NDictWords: 23134 NDataWords: 309503 NLiteralWords: 63
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 258697 TRD tracklets and 0 digits in 31 triggers, (raw input:2070320/input to encode:2846101/ctf size:1330800 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 5128086, output size: 2368400 NDictWords: 31620 NDataWords: 559935 NLiteralWords: 151
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 466140 TRD tracklets and 0 digits in 39 triggers, (raw input:3730056/input to encode:5128086/ctf size:2366824 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 4634227, output size: 2144400 NDictWords: 29868 NDataWords: 505717 NLiteralWords: 123
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 421245 TRD tracklets and 0 digits in 38 triggers, (raw input:3370872/input to encode:4634227/ctf size:2142832 bytes) in 0.03 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 3952869, output size: 1829520 NDictWords: 27467 NDataWords: 429427 NLiteralWords: 90
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 359311 TRD tracklets and 0 digits in 32 triggers, (raw input:2875256/input to encode:3952869/ctf size:1827936 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 4852847, output size: 2239120 NDictWords: 30199 NDataWords: 529068 NLiteralWords: 121
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 441117 TRD tracklets and 0 digits in 40 triggers, (raw input:3529896/input to encode:4852847/ctf size:2237552 bytes) in 0.03 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 3270412, output size: 1520816 NDictWords: 25321 NDataWords: 354422 NLiteralWords: 74
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 297258 TRD tracklets and 0 digits in 41 triggers, (raw input:2379048/input to encode:3270412/ctf size:1519268 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 4106467, output size: 1906512 NDictWords: 28433 NDataWords: 447672 NLiteralWords: 134
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 373263 TRD tracklets and 0 digits in 41 triggers, (raw input:2987088/input to encode:4106467/ctf size:1904956 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 3508429, output size: 1633904 NDictWords: 26309 NDataWords: 381682 NLiteralWords: 95
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 318901 TRD tracklets and 0 digits in 37 triggers, (raw input:2552096/input to encode:3508429/ctf size:1632344 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 4664352, output size: 2144032 NDictWords: 28538 NDataWords: 506929 NLiteralWords: 144
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 423976 TRD tracklets and 0 digits in 44 triggers, (raw input:3392864/input to encode:4664352/ctf size:2142444 bytes) in 0.03 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 2318085, output size: 1086160 NDictWords: 20174 NDataWords: 250871 NLiteralWords: 101
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 210693 TRD tracklets and 0 digits in 33 triggers, (raw input:1686336/input to encode:2318085/ctf size:1084584 bytes) in 0.01 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 5146834, output size: 2373760 NDictWords: 31177 NDataWords: 561744 NLiteralWords: 124
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 467838 TRD tracklets and 0 digits in 44 triggers, (raw input:3743760/input to encode:5146834/ctf size:2372180 bytes) in 0.03 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 3488988, output size: 1626240 NDictWords: 26418 NDataWords: 379645 NLiteralWords: 103
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 317140 TRD tracklets and 0 digits in 32 triggers, (raw input:2537888/input to encode:3488988/ctf size:1624664 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 3107675, output size: 1456944 NDictWords: 25771 NDataWords: 338004 NLiteralWords: 72
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 282465 TRD tracklets and 0 digits in 40 triggers, (raw input:2260680/input to encode:3107675/ctf size:1455388 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 3497239, output size: 1627888 NDictWords: 26198 NDataWords: 380267 NLiteralWords: 113
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 317885 TRD tracklets and 0 digits in 36 triggers, (raw input:2543944/input to encode:3497239/ctf size:1626312 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 3447364, output size: 1605760 NDictWords: 25907 NDataWords: 375062 NLiteralWords: 75
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 313342 TRD tracklets and 0 digits in 43 triggers, (raw input:2507768/input to encode:3447364/ctf size:1604176 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 3229597, output size: 1510944 NDictWords: 26257 NDataWords: 350969 NLiteralWords: 116
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 293559 TRD tracklets and 0 digits in 32 triggers, (raw input:2349240/input to encode:3229597/ctf size:1509368 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 3856831, output size: 1794912 NDictWords: 27936 NDataWords: 420276 NLiteralWords: 125
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 350579 TRD tracklets and 0 digits in 33 triggers, (raw input:2805424/input to encode:3856831/ctf size:1793348 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 4148625, output size: 1921168 NDictWords: 27929 NDataWords: 451831 NLiteralWords: 132
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 377093 TRD tracklets and 0 digits in 43 triggers, (raw input:3017776/input to encode:4148625/ctf size:1919568 bytes) in 0.03 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 5140819, output size: 2362848 NDictWords: 30668 NDataWords: 559527 NLiteralWords: 121
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 467295 TRD tracklets and 0 digits in 41 triggers, (raw input:3739344/input to encode:5140819/ctf size:2361264 bytes) in 0.03 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 3376748, output size: 1569104 NDictWords: 25305 NDataWords: 366470 NLiteralWords: 109
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 306930 TRD tracklets and 0 digits in 37 triggers, (raw input:2456328/input to encode:3376748/ctf size:1567536 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 14634430, output size: 5678016 NDictWords: 26730 NDataWords: 1392215 NLiteralWords: 162
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 332249 TRD tracklets and 168911 digits in 34 triggers, (raw input:13806934/input to encode:14634430/ctf size:5676428 bytes) in 0.05 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 2528469, output size: 1178800 NDictWords: 20501 NDataWords: 273714 NLiteralWords: 96
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 229815 TRD tracklets and 0 digits in 36 triggers, (raw input:1839384/input to encode:2528469/ctf size:1177244 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 3291324, output size: 1541568 NDictWords: 26670 NDataWords: 358216 NLiteralWords: 109
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 299168 TRD tracklets and 0 digits in 34 triggers, (raw input:2394160/input to encode:3291324/ctf size:1539980 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 3326191, output size: 1554496 NDictWords: 26531 NDataWords: 361594 NLiteralWords: 104
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 302339 TRD tracklets and 0 digits in 33 triggers, (raw input:2419504/input to encode:3326191/ctf size:1552916 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 3170679, output size: 1486032 NDictWords: 26181 NDataWords: 344842 NLiteralWords: 93
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 288199 TRD tracklets and 0 digits in 35 triggers, (raw input:2306432/input to encode:3170679/ctf size:1484464 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 4367190, output size: 2017360 NDictWords: 28724 NDataWords: 475105 NLiteralWords: 116
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 396974 TRD tracklets and 0 digits in 34 triggers, (raw input:3176608/input to encode:4367190/ctf size:2015780 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 2996971, output size: 1409200 NDictWords: 26402 NDataWords: 325408 NLiteralWords: 99
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 272415 TRD tracklets and 0 digits in 29 triggers, (raw input:2180016/input to encode:2996971/ctf size:1407636 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 1655070, output size: 790496 NDictWords: 18200 NDataWords: 178985 NLiteralWords: 45
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 150424 TRD tracklets and 0 digits in 29 triggers, (raw input:1204088/input to encode:1655070/ctf size:788920 bytes) in 0.01 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 3465430, output size: 1610640 NDictWords: 25768 NDataWords: 376399 NLiteralWords: 105
-[394854:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:12:31.725149  !  [1;33mWarning - High MCM occupancy detected: globalKey=670718 tracklets=4[0m
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 314992 TRD tracklets and 0 digits in 37 triggers, (raw input:2520824/input to encode:3465430/ctf size:1609088 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 4514724, output size: 2070208 NDictWords: 27569 NDataWords: 489466 NLiteralWords: 125
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 410376 TRD tracklets and 0 digits in 42 triggers, (raw input:3284016/input to encode:4514724/ctf size:2068640 bytes) in 0.03 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 3209515, output size: 1502016 NDictWords: 26111 NDataWords: 348895 NLiteralWords: 105
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 291727 TRD tracklets and 0 digits in 37 triggers, (raw input:2334704/input to encode:3209515/ctf size:1500444 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD_CTF: 15 blocks, input size: 4759506, output size: 2194272 NDictWords: 29921 NDataWords: 518146 NLiteralWords: 110
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Decoded 432634 TRD tracklets and 0 digits in 38 triggers, (raw input:3461984/input to encode:4759506/ctf size:2192708 bytes) in 0.02 s
-[394853:trd-entropy-decoder]: [12:12:31][INFO] TRD Entropy Decoding total timing: Cpu: 4.020e+00 Real: 4.115e+00 s in 62 slots
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Sending end-of-stream message to channel from_trd-entropy-decoder_to_qc-task-TRD-TrdTrySkelton
-[394853:trd-entropy-decoder]: [12:12:31][INFO] Sending end-of-stream message to channel from_trd-entropy-decoder_to_internal-dpl-injected-dummy-sink
-[394854:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:12:31.824818     Finish cycle 1
-[394854:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:12:31.824842     Publishing 10 MonitorObjects
-[394854:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:12:31.825181     Save data to file PbPb_TrdTrySkeltonOutput.root
-[394854:qc-task-TRD-TrdTrySkelton]: [qc] qc_data_received messages_in_cycle=0 messages_per_second=0.000000 data_in_cycle=0 data_per_second=0.000000 1770532940644 subsystem=QC,TaskName=TrdTrySkelton,DetectorName=TRD
-[394854:qc-task-TRD-TrdTrySkelton]: [qc] qc_duration module_cycle=20.295791 publication=0.047050 activity_whole_run=20.295871 1770532940644 subsystem=QC,TaskName=TrdTrySkelton,DetectorName=TRD
-[394854:qc-task-TRD-TrdTrySkelton]: [qc] qc_objects_published in_cycle=10 per_second=0.491573 whole_run=10 per_second_whole_run=0.492711 1770532940644 subsystem=QC,TaskName=TrdTrySkelton,DetectorName=TRD
-[394854:qc-task-TRD-TrdTrySkelton]: [qc] qc_data_received messages_in_cycle=62 messages_per_second=5.541976 data_in_cycle=172671152 data_per_second=15434507.273397 1770532951831 subsystem=QC,TaskName=TrdTrySkelton,DetectorName=TRD
-[394854:qc-task-TRD-TrdTrySkelton]: [qc] qc_duration module_cycle=11.187014 publication=0.000330 activity_whole_run=31.482992 1770532951831 subsystem=QC,TaskName=TrdTrySkelton,DetectorName=TRD
-[394854:qc-task-TRD-TrdTrySkelton]: [qc] qc_objects_published in_cycle=10 per_second=0.893867 whole_run=20 per_second_whole_run=0.635264 1770532951831 subsystem=QC,TaskName=TrdTrySkelton,DetectorName=TRD
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:31][INFO] Sending end-of-stream message to channel from_qc-task-TRD-TrdTrySkelton_to_qc-sink-QTRD_TrdTrySkelton_0
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:12:31.832595     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/PadRowVsDet
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:12:32.562516     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/MCMTrackletPerMCM
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:12:33.383993     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/nTrackletsTF
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:12:34.092470     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/nTrackletsEVENT
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:12:34.910533     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/Q0
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:12:35.533661     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/Q1
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:12:36.244392     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/Q2
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:12:36.937930     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/Chamber
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:12:37.676030     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/PadRow
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:12:38.398181     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/MCM
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@397393 target/Linux_x86_64 init/1770533364443 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/npf74mUy , Host: http://alice-ccdb.cern.ch/, Curl timeouts: upload:20 download:5
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:19:24.445057     BookkeepingSink is not being created because we couldn't find any suitable inputs.
+[397392:qc-task-TRD-TrdTrySkelton]: [INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@397392 target/Linux_x86_64 init/1770533364487 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/VhEAxai1 , Host: http://alice-ccdb.cern.ch/, Curl timeouts: upload:20 download:5
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:19:24.488631     BookkeepingSink is not being created because we couldn't find any suitable inputs.
+[397390:internal-dpl-ccdb-backend]: [INFO] Instrumenting crash signals
+[397392:qc-task-TRD-TrdTrySkelton]: [INFO] Instrumenting crash signals
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [INFO] Instrumenting crash signals
+[397392:qc-task-TRD-TrdTrySkelton]: [INFO] Spawning new device qc-task-TRD-TrdTrySkelton in process with pid 397392
+[397390:internal-dpl-ccdb-backend]: [INFO] Spawning new device internal-dpl-ccdb-backend in process with pid 397390
+[397392:qc-task-TRD-TrdTrySkelton]: [12:19:25][INFO] 
+[397392:qc-task-TRD-TrdTrySkelton]:       ______      _    _______  _________ 
+[397392:qc-task-TRD-TrdTrySkelton]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
+[397392:qc-task-TRD-TrdTrySkelton]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[397392:qc-task-TRD-TrdTrySkelton]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[397392:qc-task-TRD-TrdTrySkelton]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[397392:qc-task-TRD-TrdTrySkelton]: 
+[397392:qc-task-TRD-TrdTrySkelton]: [12:19:25][STATE] Starting FairMQ state machine --> IDLE
+[397390:internal-dpl-ccdb-backend]: [12:19:25][INFO] 
+[397390:internal-dpl-ccdb-backend]:       ______      _    _______  _________ 
+[397390:internal-dpl-ccdb-backend]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
+[397390:internal-dpl-ccdb-backend]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[397390:internal-dpl-ccdb-backend]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[397390:internal-dpl-ccdb-backend]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[397390:internal-dpl-ccdb-backend]: 
+[397390:internal-dpl-ccdb-backend]: [12:19:25][STATE] Starting FairMQ state machine --> IDLE
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [INFO] Spawning new device qc-sink-QTRD_TrdTrySkelton_0 in process with pid 397393
+[397392:qc-task-TRD-TrdTrySkelton]: [12:19:25][STATE] IDLE ---> INITIALIZING DEVICE
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:19:25][INFO] 
+[397393:qc-sink-QTRD_TrdTrySkelton_0]:       ______      _    _______  _________ 
+[397393:qc-sink-QTRD_TrdTrySkelton_0]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
+[397393:qc-sink-QTRD_TrdTrySkelton_0]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[397393:qc-sink-QTRD_TrdTrySkelton_0]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[397393:qc-sink-QTRD_TrdTrySkelton_0]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:19:25][STATE] Starting FairMQ state machine --> IDLE
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:19:25.027663     QC infologger initialized : 0 ; 11
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:19:25.027706  !  [1;33mWarning - No URL provided for Bookkeeping. Nothing will be stored nor retrieved.[0m
+[397390:internal-dpl-ccdb-backend]: [12:19:25][STATE] IDLE ---> INITIALIZING DEVICE
+[397390:internal-dpl-ccdb-backend]: [12:19:25][INFO] CCDB Backend at: http://alice-ccdb.cern.ch, validity check for every 2147483647 TF
+[397390:internal-dpl-ccdb-backend]: [12:19:25][INFO] Hook to enable signposts for CCDB messages at 0x3fc00028
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:19:25][STATE] IDLE ---> INITIALIZING DEVICE
+[397390:internal-dpl-ccdb-backend]: [12:19:25][INFO] Init CcdApi with UserAgentID: o2-ctf-reader-w/o2-ctf-reader-workflow@397390 target/Linux_x86_64 init/1770533365031 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/aIOyxRV0 , Host: http://alice-ccdb.cern.ch, Curl timeouts: upload:20 download:5
+[397390:internal-dpl-ccdb-backend]: [12:19:25][INFO] Initialised default CCDB host http://alice-ccdb.cern.ch
+[397390:internal-dpl-ccdb-backend]: [12:19:25][INFO] The following route is a condition CTP/Trig_Offset/0
+[397390:internal-dpl-ccdb-backend]: [12:19:25][INFO] - ccdb-path: CTP/Config/TriggerOffsets
+[397390:internal-dpl-ccdb-backend]: [12:19:25][INFO] The following route is a condition TRD/CTFDICT/0
+[397390:internal-dpl-ccdb-backend]: [12:19:25][INFO] - ccdb-path: TRD/Calib/CTFDictionaryTree
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:19:25.033727     QC infologger initialized : 0 ; 11
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:19:25.033839  !  [1;33mWarning - No URL provided for Bookkeeping. Nothing will be stored nor retrieved.[0m
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:19:25.033851     CCDB backend selected
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:19:25][INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@397393 target/Linux_x86_64 init/1770533364443 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/2GCUQRmD , Host: ccdb-test.cern.ch:8080, Curl timeouts: upload:20 download:5
+[397390:internal-dpl-ccdb-backend]: [12:19:25][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[397390:internal-dpl-ccdb-backend]: [12:19:25][STATE] INITIALIZED ---> BINDING
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:19:25][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:19:25][STATE] INITIALIZED ---> BINDING
+[397390:internal-dpl-ccdb-backend]: [12:19:25][STATE] BINDING ---> BOUND
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:19:25][STATE] BINDING ---> BOUND
+[397390:internal-dpl-ccdb-backend]: [12:19:25][STATE] BOUND ---> CONNECTING
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:19:25][STATE] BOUND ---> CONNECTING
+[397390:internal-dpl-ccdb-backend]: [12:19:25][STATE] CONNECTING ---> DEVICE READY
+[397390:internal-dpl-ccdb-backend]: [12:19:25][STATE] DEVICE READY ---> INITIALIZING TASK
+[397390:internal-dpl-ccdb-backend]: [12:19:25][STATE] INITIALIZING TASK ---> READY
+[397390:internal-dpl-ccdb-backend]: [12:19:25][STATE] READY ---> RUNNING
+[397390:internal-dpl-ccdb-backend]: [12:19:25][INFO] fair::mq::Device running...
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:19:25][STATE] CONNECTING ---> DEVICE READY
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:19:25][STATE] DEVICE READY ---> INITIALIZING TASK
+[397390:internal-dpl-ccdb-backend]: [12:19:25][INFO] LHCPeriod is not available, using current month FEB
+[397390:internal-dpl-ccdb-backend]: [12:19:25][INFO] Correctly handshaken websocket connection.
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:19:25][STATE] INITIALIZING TASK ---> READY
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:19:25][STATE] READY ---> RUNNING
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:19:25][INFO] fair::mq::Device running...
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:19:25][INFO] LHCPeriod is not available, using current month FEB
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:19:25.036686     Starting run 0:
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:19:25][INFO] Correctly handshaken websocket connection.
+[397388:internal-dpl-clock]: [INFO] Instrumenting crash signals
+[397394:internal-dpl-injected-dummy-sink]: [INFO] Instrumenting crash signals
+[397388:internal-dpl-clock]: [INFO] Spawning new device internal-dpl-clock in process with pid 397388
+[397394:internal-dpl-injected-dummy-sink]: [INFO] Spawning new device internal-dpl-injected-dummy-sink in process with pid 397394
+[397394:internal-dpl-injected-dummy-sink]: [12:19:25][INFO] 
+[397394:internal-dpl-injected-dummy-sink]:       ______      _    _______  _________ 
+[397394:internal-dpl-injected-dummy-sink]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
+[397394:internal-dpl-injected-dummy-sink]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[397394:internal-dpl-injected-dummy-sink]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[397394:internal-dpl-injected-dummy-sink]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[397394:internal-dpl-injected-dummy-sink]: 
+[397388:internal-dpl-clock]: [12:19:25][INFO] 
+[397388:internal-dpl-clock]:       ______      _    _______  _________ 
+[397388:internal-dpl-clock]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
+[397388:internal-dpl-clock]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[397388:internal-dpl-clock]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[397388:internal-dpl-clock]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[397388:internal-dpl-clock]: 
+[397388:internal-dpl-clock]: [12:19:25][STATE] Starting FairMQ state machine --> IDLE
+[397394:internal-dpl-injected-dummy-sink]: [12:19:25][STATE] Starting FairMQ state machine --> IDLE
+[397388:internal-dpl-clock]: [12:19:25][STATE] IDLE ---> INITIALIZING DEVICE
+[397394:internal-dpl-injected-dummy-sink]: [12:19:25][STATE] IDLE ---> INITIALIZING DEVICE
+[397388:internal-dpl-clock]: [12:19:25][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[397388:internal-dpl-clock]: [12:19:25][STATE] INITIALIZED ---> BINDING
+[397394:internal-dpl-injected-dummy-sink]: [12:19:25][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[397394:internal-dpl-injected-dummy-sink]: [12:19:25][STATE] INITIALIZED ---> BINDING
+[397394:internal-dpl-injected-dummy-sink]: [12:19:25][STATE] BINDING ---> BOUND
+[397394:internal-dpl-injected-dummy-sink]: [12:19:25][STATE] BOUND ---> CONNECTING
+[397394:internal-dpl-injected-dummy-sink]: [12:19:25][STATE] CONNECTING ---> DEVICE READY
+[397394:internal-dpl-injected-dummy-sink]: [12:19:25][STATE] DEVICE READY ---> INITIALIZING TASK
+[397388:internal-dpl-clock]: [12:19:25][STATE] BINDING ---> BOUND
+[397388:internal-dpl-clock]: [12:19:25][STATE] BOUND ---> CONNECTING
+[397388:internal-dpl-clock]: [12:19:25][STATE] CONNECTING ---> DEVICE READY
+[397388:internal-dpl-clock]: [12:19:25][STATE] DEVICE READY ---> INITIALIZING TASK
+[397388:internal-dpl-clock]: [12:19:25][STATE] INITIALIZING TASK ---> READY
+[397388:internal-dpl-clock]: [12:19:25][STATE] READY ---> RUNNING
+[397394:internal-dpl-injected-dummy-sink]: [12:19:25][STATE] INITIALIZING TASK ---> READY
+[397388:internal-dpl-clock]: [12:19:25][INFO] fair::mq::Device running...
+[397394:internal-dpl-injected-dummy-sink]: [12:19:25][STATE] READY ---> RUNNING
+[397394:internal-dpl-injected-dummy-sink]: [12:19:25][INFO] fair::mq::Device running...
+[397388:internal-dpl-clock]: [12:19:25][INFO] LHCPeriod is not available, using current month FEB
+[397394:internal-dpl-injected-dummy-sink]: [12:19:25][INFO] LHCPeriod is not available, using current month FEB
+[397388:internal-dpl-clock]: [12:19:25][INFO] Correctly handshaken websocket connection.
+[397394:internal-dpl-injected-dummy-sink]: [12:19:25][INFO] Correctly handshaken websocket connection.
+[397392:qc-task-TRD-TrdTrySkelton]: [12:19:25][INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@397392 target/Linux_x86_64 init/1770533364487 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/VhEAxai1 , Host: http://alice-ccdb.cern.ch, Curl timeouts: upload:20 download:5
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:19:25.853766     CCDB backend selected
+[397392:qc-task-TRD-TrdTrySkelton]: [12:19:25][INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@397392 target/Linux_x86_64 init/1770533364487 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/wS41MIsJ , Host: ccdb-test.cern.ch:8080, Curl timeouts: upload:20 download:5
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:19:25.853973     A debug targeted for support
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:19:25.853977     An Info log targeted for operators
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:19:25.853980     Initializing TRD skelton histograms
+[397392:qc-task-TRD-TrdTrySkelton]: [12:19:25][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[397392:qc-task-TRD-TrdTrySkelton]: [12:19:25][STATE] INITIALIZED ---> BINDING
+[397392:qc-task-TRD-TrdTrySkelton]: [12:19:25][STATE] BINDING ---> BOUND
+[397392:qc-task-TRD-TrdTrySkelton]: [12:19:25][STATE] BOUND ---> CONNECTING
+[397392:qc-task-TRD-TrdTrySkelton]: [12:19:25][STATE] CONNECTING ---> DEVICE READY
+[397392:qc-task-TRD-TrdTrySkelton]: [12:19:25][STATE] DEVICE READY ---> INITIALIZING TASK
+[397392:qc-task-TRD-TrdTrySkelton]: [12:19:25][STATE] INITIALIZING TASK ---> READY
+[397392:qc-task-TRD-TrdTrySkelton]: [12:19:25][STATE] READY ---> RUNNING
+[397392:qc-task-TRD-TrdTrySkelton]: [12:19:25][INFO] fair::mq::Device running...
+[397392:qc-task-TRD-TrdTrySkelton]: [12:19:25][INFO] LHCPeriod is not available, using current month FEB
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:19:25.858501     Starting run 0
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:19:25.858676     Start cycle 0
+[397392:qc-task-TRD-TrdTrySkelton]: [12:19:25][INFO] Correctly handshaken websocket connection.
+[397389:ctf-reader]: [INFO] Instrumenting crash signals
+[397391:trd-entropy-decoder]: [INFO] Instrumenting crash signals
+[397389:ctf-reader]: [INFO] Spawning new device ctf-reader in process with pid 397389
+[397391:trd-entropy-decoder]: [INFO] Spawning new device trd-entropy-decoder in process with pid 397391
+[397389:ctf-reader]: [12:19:30][INFO] 
+[397389:ctf-reader]:       ______      _    _______  _________ 
+[397389:ctf-reader]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
+[397389:ctf-reader]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[397389:ctf-reader]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[397389:ctf-reader]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[397389:ctf-reader]: 
+[397389:ctf-reader]: [12:19:30][STATE] Starting FairMQ state machine --> IDLE
+[397391:trd-entropy-decoder]: [12:19:30][INFO] 
+[397391:trd-entropy-decoder]:       ______      _    _______  _________ 
+[397391:trd-entropy-decoder]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
+[397391:trd-entropy-decoder]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[397391:trd-entropy-decoder]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[397391:trd-entropy-decoder]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[397391:trd-entropy-decoder]: 
+[397391:trd-entropy-decoder]: [12:19:30][STATE] Starting FairMQ state machine --> IDLE
+[397389:ctf-reader]: [12:19:30][STATE] IDLE ---> INITIALIZING DEVICE
+[397391:trd-entropy-decoder]: [12:19:30][STATE] IDLE ---> INITIALIZING DEVICE
+[397389:ctf-reader]: [12:19:30][INFO] Input contains 1 files, 0 remote
+[397391:trd-entropy-decoder]: [12:19:30][INFO] Bogus triggers rejection flag: 10
+[397389:ctf-reader]: [12:19:30][INFO] Finished file fetching: 1 of 1 files fetched successfully in 0 iterations
+[397389:ctf-reader]: [12:19:30][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[397389:ctf-reader]: [12:19:30][STATE] INITIALIZED ---> BINDING
+[397391:trd-entropy-decoder]: [12:19:30][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[397391:trd-entropy-decoder]: [12:19:30][STATE] INITIALIZED ---> BINDING
+[397391:trd-entropy-decoder]: [12:19:30][STATE] BINDING ---> BOUND
+[397391:trd-entropy-decoder]: [12:19:30][STATE] BOUND ---> CONNECTING
+[397389:ctf-reader]: [12:19:30][STATE] BINDING ---> BOUND
+[397389:ctf-reader]: [12:19:30][STATE] BOUND ---> CONNECTING
+[397389:ctf-reader]: [12:19:30][STATE] CONNECTING ---> DEVICE READY
+[397391:trd-entropy-decoder]: [12:19:30][STATE] CONNECTING ---> DEVICE READY
+[397391:trd-entropy-decoder]: [12:19:30][STATE] DEVICE READY ---> INITIALIZING TASK
+[397389:ctf-reader]: [12:19:30][STATE] DEVICE READY ---> INITIALIZING TASK
+[397391:trd-entropy-decoder]: [12:19:30][STATE] INITIALIZING TASK ---> READY
+[397391:trd-entropy-decoder]: [12:19:30][STATE] READY ---> RUNNING
+[397391:trd-entropy-decoder]: [12:19:30][INFO] fair::mq::Device running...
+[397389:ctf-reader]: [12:19:30][STATE] INITIALIZING TASK ---> READY
+[397389:ctf-reader]: [12:19:30][STATE] READY ---> RUNNING
+[397389:ctf-reader]: [12:19:30][INFO] fair::mq::Device running...
+[397389:ctf-reader]: [12:19:30][INFO] LHCPeriod is not available, using current month FEB
+[397391:trd-entropy-decoder]: [12:19:30][INFO] LHCPeriod is not available, using current month FEB
+[397389:ctf-reader]: [12:19:30][INFO] Correctly handshaken websocket connection.
+[397391:trd-entropy-decoder]: [12:19:30][INFO] Correctly handshaken websocket connection.
+[397389:ctf-reader]: [12:19:30][INFO] Reading CTF input  /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root
+[397389:ctf-reader]: [12:19:31][INFO] Run:0560355 TF:2394204 Orbit:261755616 CreationTime:1732265281044 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 0 (0 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 1.020 s, 0.0000 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2394856 Orbit:261776480 CreationTime:1732265282896 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 1 (1 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0040 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2395508 Orbit:261797344 CreationTime:1732265284753 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 2 (2 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0026 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2396160 Orbit:261818208 CreationTime:1732265286610 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 3 (3 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0034 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2396812 Orbit:261839072 CreationTime:1732265288465 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 4 (4 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0042 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2397464 Orbit:261859936 CreationTime:1732265290319 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 5 (5 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.020 s, 0.0049 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2398116 Orbit:261880800 CreationTime:1732265292175 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 6 (6 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0022 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2398768 Orbit:261901664 CreationTime:1732265294030 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 7 (7 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0050 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2399420 Orbit:261922528 CreationTime:1732265295884 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 8 (8 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0025 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2400072 Orbit:261943392 CreationTime:1732265297740 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 9 (9 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0023 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2400724 Orbit:261964256 CreationTime:1732265299597 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 10 (10 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0024 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2401376 Orbit:261985120 CreationTime:1732265301451 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 11 (11 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0027 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2402028 Orbit:262005984 CreationTime:1732265303307 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 12 (12 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0047 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2402680 Orbit:262026848 CreationTime:1732265305164 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 13 (13 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0034 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2403332 Orbit:262047712 CreationTime:1732265307016 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 14 (14 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0076 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2403984 Orbit:262068576 CreationTime:1732265308871 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 15 (15 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0049 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2404636 Orbit:262089440 CreationTime:1732265310729 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 16 (16 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0024 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2405288 Orbit:262110304 CreationTime:1732265312583 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 17 (17 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0093 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2405940 Orbit:262131168 CreationTime:1732265314438 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 18 (18 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0030 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2406592 Orbit:262152032 CreationTime:1732265316295 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 19 (19 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0023 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2407244 Orbit:262172896 CreationTime:1732265318149 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 20 (20 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0028 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2407896 Orbit:262193760 CreationTime:1732265320004 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 21 (21 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0049 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2408548 Orbit:262214624 CreationTime:1732265321860 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 22 (22 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0023 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2409200 Orbit:262235488 CreationTime:1732265323715 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 23 (23 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0026 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2409852 Orbit:262256352 CreationTime:1732265325571 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 24 (24 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0028 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2410504 Orbit:262277216 CreationTime:1732265327426 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 25 (25 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0030 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2411156 Orbit:262298080 CreationTime:1732265329280 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 26 (26 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0034 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2411808 Orbit:262318944 CreationTime:1732265331135 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 27 (27 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0086 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2412460 Orbit:262339808 CreationTime:1732265332992 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 28 (28 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0096 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2413112 Orbit:262360672 CreationTime:1732265334847 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 29 (29 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0036 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2413764 Orbit:262381536 CreationTime:1732265336702 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 30 (30 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0031 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2414416 Orbit:262402400 CreationTime:1732265338558 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 31 (31 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0037 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2415068 Orbit:262423264 CreationTime:1732265340414 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 32 (32 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0031 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2415720 Orbit:262444128 CreationTime:1732265342269 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 33 (33 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0028 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2416372 Orbit:262464992 CreationTime:1732265344125 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 34 (34 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0031 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2417024 Orbit:262485856 CreationTime:1732265345979 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 35 (35 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0024 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2417676 Orbit:262506720 CreationTime:1732265347834 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 36 (36 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0039 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2418328 Orbit:262527584 CreationTime:1732265349690 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 37 (37 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0024 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2418980 Orbit:262548448 CreationTime:1732265351544 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 38 (38 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0035 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2419632 Orbit:262569312 CreationTime:1732265353400 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 39 (39 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0021 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2420284 Orbit:262590176 CreationTime:1732265355257 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 40 (40 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0032 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2420936 Orbit:262611040 CreationTime:1732265357110 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 41 (41 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0024 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2421588 Orbit:262631904 CreationTime:1732265358967 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 42 (42 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0030 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2422240 Orbit:262652768 CreationTime:1732265360822 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 43 (43 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0025 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2422892 Orbit:262673632 CreationTime:1732265362676 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 44 (44 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0028 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2423544 Orbit:262694496 CreationTime:1732265364533 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 45 (45 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0024 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2424196 Orbit:262715360 CreationTime:1732265366389 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 46 (46 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0030 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2424848 Orbit:262736224 CreationTime:1732265368243 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 47 (47 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0026 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2425500 Orbit:262757088 CreationTime:1732265370100 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 48 (48 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0115 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2426152 Orbit:262777952 CreationTime:1732265371953 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 49 (49 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0037 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2426804 Orbit:262798816 CreationTime:1732265373809 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 50 (50 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0050 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2427456 Orbit:262819680 CreationTime:1732265375664 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 51 (51 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0024 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2428108 Orbit:262840544 CreationTime:1732265377518 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 52 (52 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0022 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2428760 Orbit:262861408 CreationTime:1732265379374 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 53 (53 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0024 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2429412 Orbit:262882272 CreationTime:1732265381230 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 54 (54 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0029 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2430064 Orbit:262903136 CreationTime:1732265383086 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 55 (55 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0032 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2430716 Orbit:262924000 CreationTime:1732265384940 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 56 (56 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0024 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2431368 Orbit:262944864 CreationTime:1732265386796 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 57 (57 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0017 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2432020 Orbit:262965728 CreationTime:1732265388652 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 58 (58 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0026 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2432672 Orbit:262986592 CreationTime:1732265390506 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 59 (59 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0031 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2433324 Orbit:263007456 CreationTime:1732265392362 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 60 (60 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.000 s, 0.0029 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] Run:0560355 TF:2433976 Orbit:263028320 CreationTime:1732265394217 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,ZDC,FT0,FV0,FDD,CTP
+[397389:ctf-reader]: [12:19:32][INFO] Read CTF 61 (61 of 62 in /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root) in 0.010 s, 0.0050 s elapsed from previous CTF
+[397389:ctf-reader]: [12:19:32][INFO] CTFReader stops processing, 1 files read, 0 files failed
+[397389:ctf-reader]: [12:19:32][INFO] CTF reading total timing: Cpu: 1.160 Real: 1.257 s for 62 TFs (62 accepted) in 1 loops, spent 0 s in 0 data waiting states
+[397389:ctf-reader]: [12:19:32][INFO] Sending end-of-stream message to channel from_ctf-reader_to_internal-dpl-ccdb-backend
+[397389:ctf-reader]: [12:19:32][INFO] Sending end-of-stream message to channel from_ctf-reader_to_trd-entropy-decoder
+[397389:ctf-reader]: [12:19:32][INFO] Sending end-of-stream message to channel from_ctf-reader_to_internal-dpl-injected-dummy-sink
+[397390:internal-dpl-ccdb-backend]: DN >>> C=ch/O=AliEn2/CN=Users/CN=akavumpa/OU=akavumpa
+[397390:internal-dpl-ccdb-backend]: ISSUER >>> C=ch/O=AliEn2/CN=AliEn CA
+[397390:internal-dpl-ccdb-backend]: BEGIN >>> 2026-02-08 04:41:48
+[397390:internal-dpl-ccdb-backend]: EXPIRE >>> 2026-03-11 06:41:48
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:19:35.814224     Finish cycle 0
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:19:35.814275     Publishing 10 MonitorObjects
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:19:35.861839     Save data to file PbPb_TrdTrySkeltonOutput.root
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:19:35.877425     Start cycle 1
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:19:36.620211     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/PadRowVsDet
+[397390:internal-dpl-ccdb-backend]: Info in <TJAlienConnectionManager>: Opening connection to JCentral. Please wait
+[397390:internal-dpl-ccdb-backend]: Info in <TJAlienConnectionManager>: Opening connection to 128.142.249.54
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:19:37.117884     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/MCMTrackletPerMCM
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:19:37.880390     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/nTrackletsTF
+[397390:internal-dpl-ccdb-backend]: Info in <TJAlienConnectionManager>: Successfully connected to 128.142.249.54
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:19:38.505086     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/nTrackletsEVENT
+[397390:internal-dpl-ccdb-backend]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/14/31305/48e7c17a-a878-11ef-8140-0aa140641b9a in SE <ALICE::LBL_HPCS::EOS>
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:19:39.324466     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/Q0
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:19:40.107877     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/Q1
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:19:40.878053     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/Q2
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:19:41.579749     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/Chamber
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:19:42.206940     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/PadRow
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:19:43.026660     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/MCM
+[397390:internal-dpl-ccdb-backend]: [12:19:48][INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1732242004051/48e7c17a-a878-11ef-8140-0aa140641b9a for 1732265281044 (load to memory, agent_id: o2-ctf-reader-w/o2-ctf-reader-workflow@397390 target/Linux_x86_64 init/1770533365031 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/aIOyxRV0 ), 
+[397390:internal-dpl-ccdb-backend]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Config/TriggerOffsets/06/49287/56b4c228-70dc-11ee-bc26-2a010e0a0b16 in SE <ALICE::LBL_HPCS::EOS>
+[397390:internal-dpl-ccdb-backend]: [12:19:54][INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Config/TriggerOffsets/1696975200000/56b4c228-70dc-11ee-bc26-2a010e0a0b16 for 1732265280563 (load to memory, agent_id: o2-ctf-reader-w/o2-ctf-reader-workflow@397390 target/Linux_x86_64 init/1770533365031 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/aIOyxRV0 ), 
+[397390:internal-dpl-ccdb-backend]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/TRD/Calib/CTFDictionaryTree/14/38726/b277557d-06d8-11ee-b4d8-200114580201 in SE <ALICE::LBL_HPCS::EOS>
+[397390:internal-dpl-ccdb-backend]: [12:19:59][INFO] ccdb reads http://alice-ccdb.cern.ch/TRD/Calib/CTFDictionaryTree/1546300800000/b277557d-06d8-11ee-b4d8-200114580201 for 1732265280563 (load to memory, agent_id: o2-ctf-reader-w/o2-ctf-reader-workflow@397390 target/Linux_x86_64 init/1770533365031 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/aIOyxRV0 ), 
+[397390:internal-dpl-ccdb-backend]: [12:19:59][INFO] Sending end-of-stream message to channel from_internal-dpl-ccdb-backend_to_trd-entropy-decoder
+[397390:internal-dpl-ccdb-backend]: [12:19:59][INFO] Sending end-of-stream message to channel from_internal-dpl-ccdb-backend_to_internal-dpl-injected-dummy-sink
+[397391:trd-entropy-decoder]: [12:20:01][INFO] Caching in 126394942064448 ptr to CTP/Trig_Offset/0 (0x72f537bfaee0)
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Loaded TRD CTF dictionary v1.0.1626472048 (16/07/21 21:47:28 UTC) from CCDB
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Caching in 126394944164576 ptr to TRD/CTFDICT/0 (0x83a6d40)
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 3042152, output size: 1429408 NDictWords: 26336 NDataWords: 330517 NLiteralWords: 103
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 276516 TRD tracklets and 0 digits in 34 triggers, (raw input:2212944/input to encode:3042152/ctf size:1427824 bytes) in 2.55 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 3230441, output size: 1511952 NDictWords: 26258 NDataWords: 351285 NLiteralWords: 53
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.328417  !  [1;33mWarning - last globalKey=1378859 tracklets=2[0m
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 293623 TRD tracklets and 0 digits in 42 triggers, (raw input:2349992/input to encode:3230441/ctf size:1510384 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 3465642, output size: 1618640 NDictWords: 26566 NDataWords: 377562 NLiteralWords: 140
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.348222  !  [1;33mWarning - last globalKey=1378754 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 315010 TRD tracklets and 0 digits in 38 triggers, (raw input:2520992/input to encode:3465642/ctf size:1617072 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 4457063, output size: 2066672 NDictWords: 29992 NDataWords: 486169 NLiteralWords: 112
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.370040  !  [1;33mWarning - last globalKey=1378880 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 405143 TRD tracklets and 0 digits in 35 triggers, (raw input:3241984/input to encode:4457063/ctf size:2065092 bytes) in 0.03 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 4300658, output size: 1991360 NDictWords: 28633 NDataWords: 468691 NLiteralWords: 127
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 390918 TRD tracklets and 0 digits in 40 triggers, (raw input:3128304/input to encode:4300658/ctf size:1989804 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 3987045, output size: 1848864 NDictWords: 27640 NDataWords: 434075 NLiteralWords: 107
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.399071  !  [1;33mWarning - last globalKey=1378943 tracklets=2[0m
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 362409 TRD tracklets and 0 digits in 39 triggers, (raw input:2900208/input to encode:3987045/ctf size:1847288 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 3046654, output size: 1428368 NDictWords: 26124 NDataWords: 330468 NLiteralWords: 109
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.422748  !  [1;33mWarning - last globalKey=1378628 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 276924 TRD tracklets and 0 digits in 35 triggers, (raw input:2216232/input to encode:3046654/ctf size:1426804 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 5018716, output size: 2315536 NDictWords: 30783 NDataWords: 547604 NLiteralWords: 104
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.444991  !  [1;33mWarning - last globalKey=1327703 tracklets=1[0m
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.462374  !  [1;33mWarning - last globalKey=1378901 tracklets=2[0m
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 456196 TRD tracklets and 0 digits in 40 triggers, (raw input:3650528/input to encode:5018716/ctf size:2313964 bytes) in 0.03 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 3530628, output size: 1643136 NDictWords: 26122 NDataWords: 384149 NLiteralWords: 122
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 320914 TRD tracklets and 0 digits in 41 triggers, (raw input:2568296/input to encode:3530628/ctf size:1641572 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 3229587, output size: 1511920 NDictWords: 26347 NDataWords: 351148 NLiteralWords: 92
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.494080  !  [1;33mWarning - last globalKey=1375520 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 293553 TRD tracklets and 0 digits in 36 triggers, (raw input:2349288/input to encode:3229587/ctf size:1510348 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 3367497, output size: 1571072 NDictWords: 25989 NDataWords: 366269 NLiteralWords: 118
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.513886  !  [1;33mWarning - last globalKey=1378943 tracklets=2[0m
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 306089 TRD tracklets and 0 digits in 37 triggers, (raw input:2449600/input to encode:3367497/ctf size:1569504 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 3984465, output size: 1852192 NDictWords: 28391 NDataWords: 434134 NLiteralWords: 124
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.532599  !  [1;33mWarning - last globalKey=1378880 tracklets=1[0m
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.551667  !  [1;33mWarning - last globalKey=1378733 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 362177 TRD tracklets and 0 digits in 37 triggers, (raw input:2898304/input to encode:3984465/ctf size:1850596 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 8262188, output size: 3336192 NDictWords: 28158 NDataWords: 805342 NLiteralWords: 154
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.574941  !  [1;33mWarning - last globalKey=1378922 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 370813 TRD tracklets and 64349 digits in 40 triggers, (raw input:7214498/input to encode:8262188/ctf size:3334616 bytes) in 0.04 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 3511140, output size: 1636912 NDictWords: 26510 NDataWords: 382216 NLiteralWords: 105
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 319150 TRD tracklets and 0 digits in 35 triggers, (raw input:2554040/input to encode:3511140/ctf size:1635324 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 5072953, output size: 2346608 NDictWords: 32023 NDataWords: 554060 NLiteralWords: 172
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.609901  !  [1;33mWarning - last globalKey=1378418 tracklets=1[0m
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.629314  !  [1;33mWarning - last globalKey=1378691 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 461133 TRD tracklets and 0 digits in 35 triggers, (raw input:3689904/input to encode:5072953/ctf size:2345020 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 5204303, output size: 2403504 NDictWords: 31952 NDataWords: 568392 NLiteralWords: 142
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 473065 TRD tracklets and 0 digits in 42 triggers, (raw input:3785528/input to encode:5204303/ctf size:2401944 bytes) in 0.03 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 4572088, output size: 1841024 NDictWords: 25964 NDataWords: 433773 NLiteralWords: 127
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.663102  !  [1;33mWarning - last globalKey=1378943 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 267372 TRD tracklets and 25086 digits in 29 triggers, (raw input:3795348/input to encode:4572088/ctf size:1839456 bytes) in 0.03 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 2411923, output size: 1131376 NDictWords: 20711 NDataWords: 261687 NLiteralWords: 53
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.692517  !  [1;33mWarning - last globalKey=1377032 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 219225 TRD tracklets and 0 digits in 32 triggers, (raw input:1754568/input to encode:2411923/ctf size:1129804 bytes) in 0.01 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 3794700, output size: 1763088 NDictWords: 27427 NDataWords: 412853 NLiteralWords: 101
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.709305  !  [1;33mWarning - last globalKey=1378124 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 344932 TRD tracklets and 0 digits in 32 triggers, (raw input:2760224/input to encode:3794700/ctf size:1761524 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 2813046, output size: 1315472 NDictWords: 22645 NDataWords: 305773 NLiteralWords: 54
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.723217  !  [1;33mWarning - last globalKey=1378922 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 255692 TRD tracklets and 0 digits in 31 triggers, (raw input:2046280/input to encode:2813046/ctf size:1313888 bytes) in 0.01 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 4734432, output size: 2191504 NDictWords: 30586 NDataWords: 516766 NLiteralWords: 132
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.744475  !  [1;33mWarning - last globalKey=1378943 tracklets=1[0m
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.760620  !  [1;33mWarning - last globalKey=1378901 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 430352 TRD tracklets and 0 digits in 40 triggers, (raw input:3443776/input to encode:4734432/ctf size:2189936 bytes) in 0.03 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 5487487, output size: 2528240 NDictWords: 32311 NDataWords: 599251 NLiteralWords: 109
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.788096  !  [1;33mWarning - last globalKey=1378880 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 498809 TRD tracklets and 0 digits in 42 triggers, (raw input:3991480/input to encode:5487487/ctf size:2526684 bytes) in 0.03 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 2896421, output size: 1365424 NDictWords: 26113 NDataWords: 314791 NLiteralWords: 60
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 263269 TRD tracklets and 0 digits in 33 triggers, (raw input:2106944/input to encode:2896421/ctf size:1363856 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 4102193, output size: 1904128 NDictWords: 28375 NDataWords: 447155 NLiteralWords: 108
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.821008  !  [1;33mWarning - last globalKey=1378565 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 372877 TRD tracklets and 0 digits in 39 triggers, (raw input:2983952/input to encode:4102193/ctf size:1902552 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 4364652, output size: 2020640 NDictWords: 29014 NDataWords: 475656 NLiteralWords: 93
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.837752  !  [1;33mWarning - last globalKey=1378943 tracklets=2[0m
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 396742 TRD tracklets and 0 digits in 35 triggers, (raw input:3174776/input to encode:4364652/ctf size:2019052 bytes) in 0.03 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 4329562, output size: 2007488 NDictWords: 29347 NDataWords: 472024 NLiteralWords: 107
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.861203  !  [1;33mWarning - last globalKey=1378628 tracklets=2[0m
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 393552 TRD tracklets and 0 digits in 35 triggers, (raw input:3149256/input to encode:4329562/ctf size:2005912 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 4392683, output size: 2035136 NDictWords: 29358 NDataWords: 478911 NLiteralWords: 126
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.885934  !  [1;33mWarning - last globalKey=1378901 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 399289 TRD tracklets and 0 digits in 36 triggers, (raw input:3195176/input to encode:4392683/ctf size:2033580 bytes) in 0.03 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 21060581, output size: 8157504 NDictWords: 26669 NDataWords: 2012156 NLiteralWords: 150
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.910474  !  [1;33mWarning - last globalKey=1378292 tracklets=1[0m
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.935653  !  [1;33mWarning - last globalKey=1378712 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:02][INFO] Decoded 321497 TRD tracklets and 269594 digits in 36 triggers, (raw input:20366044/input to encode:21060581/ctf size:8155900 bytes) in 0.07 s
+[397391:trd-entropy-decoder]: [12:20:02][INFO] TRD_CTF: 15 blocks, input size: 5788574, output size: 2667376 NDictWords: 33736 NDataWords: 632572 NLiteralWords: 148
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:02.999754  !  [1;33mWarning - last globalKey=1378880 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 526178 TRD tracklets and 0 digits in 44 triggers, (raw input:4210480/input to encode:5788574/ctf size:2665824 bytes) in 0.03 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 4577640, output size: 2117968 NDictWords: 29766 NDataWords: 499208 NLiteralWords: 124
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 416102 TRD tracklets and 0 digits in 37 triggers, (raw input:3329704/input to encode:4577640/ctf size:2116392 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 2846101, output size: 1332352 NDictWords: 23134 NDataWords: 309503 NLiteralWords: 63
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.040073  !  [1;33mWarning - last globalKey=1378838 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 258697 TRD tracklets and 0 digits in 31 triggers, (raw input:2070320/input to encode:2846101/ctf size:1330800 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 5128086, output size: 2368400 NDictWords: 31620 NDataWords: 559935 NLiteralWords: 151
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.066126  !  [1;33mWarning - last globalKey=1378544 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 466140 TRD tracklets and 0 digits in 39 triggers, (raw input:3730056/input to encode:5128086/ctf size:2366824 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 4634227, output size: 2144400 NDictWords: 29868 NDataWords: 505717 NLiteralWords: 123
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.082305  !  [1;33mWarning - last globalKey=1378922 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 421245 TRD tracklets and 0 digits in 38 triggers, (raw input:3370872/input to encode:4634227/ctf size:2142832 bytes) in 0.03 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 3952869, output size: 1829520 NDictWords: 27467 NDataWords: 429427 NLiteralWords: 90
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.111350  !  [1;33mWarning - last globalKey=1378670 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 359311 TRD tracklets and 0 digits in 32 triggers, (raw input:2875256/input to encode:3952869/ctf size:1827936 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 4852847, output size: 2239120 NDictWords: 30199 NDataWords: 529068 NLiteralWords: 121
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.137828  !  [1;33mWarning - last globalKey=1378943 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 441117 TRD tracklets and 0 digits in 40 triggers, (raw input:3529896/input to encode:4852847/ctf size:2237552 bytes) in 0.03 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 3270412, output size: 1520816 NDictWords: 25321 NDataWords: 354422 NLiteralWords: 74
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.160588  !  [1;33mWarning - last globalKey=1378712 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 297258 TRD tracklets and 0 digits in 41 triggers, (raw input:2379048/input to encode:3270412/ctf size:1519268 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 4106467, output size: 1906512 NDictWords: 28433 NDataWords: 447672 NLiteralWords: 134
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.188035  !  [1;33mWarning - last globalKey=1378334 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 373263 TRD tracklets and 0 digits in 41 triggers, (raw input:2987088/input to encode:4106467/ctf size:1904956 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 3508429, output size: 1633904 NDictWords: 26309 NDataWords: 381682 NLiteralWords: 95
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.206672  !  [1;33mWarning - last globalKey=1378754 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 318901 TRD tracklets and 0 digits in 37 triggers, (raw input:2552096/input to encode:3508429/ctf size:1632344 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 4664352, output size: 2144032 NDictWords: 28538 NDataWords: 506929 NLiteralWords: 144
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.230028  !  [1;33mWarning - last globalKey=1378292 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 423976 TRD tracklets and 0 digits in 44 triggers, (raw input:3392864/input to encode:4664352/ctf size:2142444 bytes) in 0.04 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 2318085, output size: 1086160 NDictWords: 20174 NDataWords: 250871 NLiteralWords: 101
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.250210  !  [1;33mWarning - last globalKey=1377557 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 210693 TRD tracklets and 0 digits in 33 triggers, (raw input:1686336/input to encode:2318085/ctf size:1084584 bytes) in 0.01 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 5146834, output size: 2373760 NDictWords: 31177 NDataWords: 561744 NLiteralWords: 124
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.277524  !  [1;33mWarning - last globalKey=1378124 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 467838 TRD tracklets and 0 digits in 44 triggers, (raw input:3743760/input to encode:5146834/ctf size:2372180 bytes) in 0.03 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 3488988, output size: 1626240 NDictWords: 26418 NDataWords: 379645 NLiteralWords: 103
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.290715  !  [1;33mWarning - last globalKey=1378649 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 317140 TRD tracklets and 0 digits in 32 triggers, (raw input:2537888/input to encode:3488988/ctf size:1624664 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 3107675, output size: 1456944 NDictWords: 25771 NDataWords: 338004 NLiteralWords: 72
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.319800  !  [1;33mWarning - last globalKey=1378922 tracklets=3[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 282465 TRD tracklets and 0 digits in 40 triggers, (raw input:2260680/input to encode:3107675/ctf size:1455388 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 3497239, output size: 1627888 NDictWords: 26198 NDataWords: 380267 NLiteralWords: 113
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.339811  !  [1;33mWarning - last globalKey=1378901 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 317885 TRD tracklets and 0 digits in 36 triggers, (raw input:2543944/input to encode:3497239/ctf size:1626312 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 3447364, output size: 1605760 NDictWords: 25907 NDataWords: 375062 NLiteralWords: 75
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.357598  !  [1;33mWarning - last globalKey=1378922 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 313342 TRD tracklets and 0 digits in 43 triggers, (raw input:2507768/input to encode:3447364/ctf size:1604176 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 3229597, output size: 1510944 NDictWords: 26257 NDataWords: 350969 NLiteralWords: 116
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.377397  !  [1;33mWarning - last globalKey=1378943 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 293559 TRD tracklets and 0 digits in 32 triggers, (raw input:2349240/input to encode:3229597/ctf size:1509368 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 3856831, output size: 1794912 NDictWords: 27936 NDataWords: 420276 NLiteralWords: 125
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.396854  !  [1;33mWarning - last globalKey=1378922 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 350579 TRD tracklets and 0 digits in 33 triggers, (raw input:2805424/input to encode:3856831/ctf size:1793348 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 4148625, output size: 1921168 NDictWords: 27929 NDataWords: 451831 NLiteralWords: 132
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.415422  !  [1;33mWarning - last globalKey=1375121 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 377093 TRD tracklets and 0 digits in 43 triggers, (raw input:3017776/input to encode:4148625/ctf size:1919568 bytes) in 0.03 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 5140819, output size: 2362848 NDictWords: 30668 NDataWords: 559527 NLiteralWords: 121
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.437522  !  [1;33mWarning - last globalKey=1378943 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 467295 TRD tracklets and 0 digits in 41 triggers, (raw input:3739344/input to encode:5140819/ctf size:2361264 bytes) in 0.03 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 3376748, output size: 1569104 NDictWords: 25305 NDataWords: 366470 NLiteralWords: 109
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.461747  !  [1;33mWarning - last globalKey=1327409 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 306930 TRD tracklets and 0 digits in 37 triggers, (raw input:2456328/input to encode:3376748/ctf size:1567536 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 14634430, output size: 5678016 NDictWords: 26730 NDataWords: 1392215 NLiteralWords: 162
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.490616  !  [1;33mWarning - last globalKey=1378607 tracklets=1[0m
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.509852  !  [1;33mWarning - last globalKey=1378880 tracklets=2[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 332249 TRD tracklets and 168911 digits in 34 triggers, (raw input:13806934/input to encode:14634430/ctf size:5676428 bytes) in 0.05 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 2528469, output size: 1178800 NDictWords: 20501 NDataWords: 273714 NLiteralWords: 96
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 229815 TRD tracklets and 0 digits in 36 triggers, (raw input:1839384/input to encode:2528469/ctf size:1177244 bytes) in 0.01 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 3291324, output size: 1541568 NDictWords: 26670 NDataWords: 358216 NLiteralWords: 109
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.556193  !  [1;33mWarning - last globalKey=1378943 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 299168 TRD tracklets and 0 digits in 34 triggers, (raw input:2394160/input to encode:3291324/ctf size:1539980 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 3326191, output size: 1554496 NDictWords: 26531 NDataWords: 361594 NLiteralWords: 104
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.569876  !  [1;33mWarning - last globalKey=1378922 tracklets=1[0m
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.587638  !  [1;33mWarning - last globalKey=1378943 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 302339 TRD tracklets and 0 digits in 33 triggers, (raw input:2419504/input to encode:3326191/ctf size:1552916 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 3170679, output size: 1486032 NDictWords: 26181 NDataWords: 344842 NLiteralWords: 93
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.607379  !  [1;33mWarning - last globalKey=1378901 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 288199 TRD tracklets and 0 digits in 35 triggers, (raw input:2306432/input to encode:3170679/ctf size:1484464 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 4367190, output size: 2017360 NDictWords: 28724 NDataWords: 475105 NLiteralWords: 116
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.625810  !  [1;33mWarning - last globalKey=1327115 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 396974 TRD tracklets and 0 digits in 34 triggers, (raw input:3176608/input to encode:4367190/ctf size:2015780 bytes) in 0.03 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 2996971, output size: 1409200 NDictWords: 26402 NDataWords: 325408 NLiteralWords: 99
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 272415 TRD tracklets and 0 digits in 29 triggers, (raw input:2180016/input to encode:2996971/ctf size:1407636 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 1655070, output size: 790496 NDictWords: 18200 NDataWords: 178985 NLiteralWords: 45
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.655367  !  [1;33mWarning - last globalKey=1378880 tracklets=2[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 150424 TRD tracklets and 0 digits in 29 triggers, (raw input:1204088/input to encode:1655070/ctf size:788920 bytes) in 0.01 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 3465430, output size: 1610640 NDictWords: 25768 NDataWords: 376399 NLiteralWords: 105
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.672534  !  [1;33mWarning - last globalKey=1378901 tracklets=1[0m
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.680562  !  [1;33mWarning - High MCM occupancy detected: globalKey=670718 tracklets=4[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 314992 TRD tracklets and 0 digits in 37 triggers, (raw input:2520824/input to encode:3465430/ctf size:1609088 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 4514724, output size: 2070208 NDictWords: 27569 NDataWords: 489466 NLiteralWords: 125
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.681747  !  [1;33mWarning - last globalKey=1378439 tracklets=1[0m
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.699855  !  [1;33mWarning - last globalKey=1378922 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 410376 TRD tracklets and 0 digits in 42 triggers, (raw input:3284016/input to encode:4514724/ctf size:2068640 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 3209515, output size: 1502016 NDictWords: 26111 NDataWords: 348895 NLiteralWords: 105
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 291727 TRD tracklets and 0 digits in 37 triggers, (raw input:2334704/input to encode:3209515/ctf size:1500444 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD_CTF: 15 blocks, input size: 4759506, output size: 2194272 NDictWords: 29921 NDataWords: 518146 NLiteralWords: 110
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.729505  !  [1;33mWarning - last globalKey=1378922 tracklets=1[0m
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.746401  !  [1;33mWarning - last globalKey=1378859 tracklets=1[0m
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Decoded 432634 TRD tracklets and 0 digits in 38 triggers, (raw input:3461984/input to encode:4759506/ctf size:2192708 bytes) in 0.02 s
+[397391:trd-entropy-decoder]: [12:20:03][INFO] TRD Entropy Decoding total timing: Cpu: 3.990e+00 Real: 4.067e+00 s in 62 slots
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Sending end-of-stream message to channel from_trd-entropy-decoder_to_qc-task-TRD-TrdTrySkelton
+[397391:trd-entropy-decoder]: [12:20:03][INFO] Sending end-of-stream message to channel from_trd-entropy-decoder_to_internal-dpl-injected-dummy-sink
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.774897  !  [1;33mWarning - last globalKey=1326443 tracklets=1[0m
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.775059     Finish cycle 1
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.775075     Publishing 10 MonitorObjects
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:03.776752     Save data to file PbPb_TrdTrySkeltonOutput.root
+[397392:qc-task-TRD-TrdTrySkelton]: [qc] qc_data_received messages_in_cycle=0 messages_per_second=0.000000 data_in_cycle=0 data_per_second=0.000000 1770533375877 subsystem=QC,TaskName=TrdTrySkelton,DetectorName=TRD
+[397392:qc-task-TRD-TrdTrySkelton]: [qc] qc_duration module_cycle=10.018658 publication=0.047531 activity_whole_run=10.018844 1770533375877 subsystem=QC,TaskName=TrdTrySkelton,DetectorName=TRD
+[397392:qc-task-TRD-TrdTrySkelton]: [qc] qc_objects_published in_cycle=10 per_second=0.993425 whole_run=10 per_second_whole_run=0.998119 1770533375877 subsystem=QC,TaskName=TrdTrySkelton,DetectorName=TRD
+[397392:qc-task-TRD-TrdTrySkelton]: [qc] qc_data_received messages_in_cycle=62 messages_per_second=2.220420 data_in_cycle=172671152 data_per_second=6183910.965763 1770533403798 subsystem=QC,TaskName=TrdTrySkelton,DetectorName=TRD
+[397392:qc-task-TRD-TrdTrySkelton]: [qc] qc_duration module_cycle=27.920983 publication=0.001663 activity_whole_run=37.939921 1770533403798 subsystem=QC,TaskName=TrdTrySkelton,DetectorName=TRD
+[397392:qc-task-TRD-TrdTrySkelton]: [qc] qc_objects_published in_cycle=10 per_second=0.358132 whole_run=20 per_second_whole_run=0.527149 1770533403798 subsystem=QC,TaskName=TrdTrySkelton,DetectorName=TRD
+[397392:qc-task-TRD-TrdTrySkelton]: [12:20:03][INFO] Sending end-of-stream message to channel from_qc-task-TRD-TrdTrySkelton_to_qc-sink-QTRD_TrdTrySkelton_0
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:20:03.801636     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/PadRowVsDet
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:20:04.428808     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/MCMTrackletPerMCM
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:20:04.905994     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/nTrackletsTF
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:20:05.561720     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/nTrackletsEVENT
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:20:06.247684     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/Q0
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:20:07.274519     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/Q1
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:20:07.827689     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/Q2
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:20:08.454486     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/Chamber
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:20:09.212269     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/PadRow
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:20:09.932737     Storing MonitorObject qc/TRD/MO/TrdTrySkelton/MCM
 [INFO] Quitting
-[INFO] Quit requested at Sun Feb  8 12:12:39 2026
+[INFO] Quit requested at Sun Feb  8 12:20:10 2026
 
-[394853:trd-entropy-decoder]: [12:12:39][INFO] Received device shutdown request (signal 15).
-[394853:trd-entropy-decoder]: [12:12:39][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
-[394853:trd-entropy-decoder]: [12:12:39][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
-[394853:trd-entropy-decoder]: [12:12:39][STATE] RUNNING ---> READY
-[394853:trd-entropy-decoder]: [12:12:39][STATE] READY ---> RESETTING TASK
-[394853:trd-entropy-decoder]: [12:12:39][STATE] RESETTING TASK ---> DEVICE READY
-[394853:trd-entropy-decoder]: [12:12:39][STATE] DEVICE READY ---> RESETTING DEVICE
-[394853:trd-entropy-decoder]: [12:12:39][STATE] RESETTING DEVICE ---> IDLE
-[394853:trd-entropy-decoder]: [12:12:39][STATE] IDLE ---> EXITING
-[394853:trd-entropy-decoder]: [12:12:39][STATE] Exiting FairMQ state machine
-[394851:ctf-reader]: [12:12:39][INFO] Received device shutdown request (signal 15).
-[394851:ctf-reader]: [12:12:39][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
-[394856:internal-dpl-injected-dummy-sink]: [12:12:39][INFO] Received device shutdown request (signal 15).
-[394856:internal-dpl-injected-dummy-sink]: [12:12:39][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
-[394851:ctf-reader]: [12:12:39][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
-[394851:ctf-reader]: [12:12:39][STATE] RUNNING ---> READY
-[394856:internal-dpl-injected-dummy-sink]: [12:12:39][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
-[394851:ctf-reader]: [12:12:39][STATE] READY ---> RESETTING TASK
-[394856:internal-dpl-injected-dummy-sink]: [12:12:39][STATE] RUNNING ---> READY
-[394851:ctf-reader]: [12:12:39][STATE] RESETTING TASK ---> DEVICE READY
-[394851:ctf-reader]: [12:12:39][STATE] DEVICE READY ---> RESETTING DEVICE
-[394856:internal-dpl-injected-dummy-sink]: [12:12:39][STATE] READY ---> RESETTING TASK
-[394856:internal-dpl-injected-dummy-sink]: [12:12:39][STATE] RESETTING TASK ---> DEVICE READY
-[394852:internal-dpl-ccdb-backend]: [12:12:39][INFO] Received device shutdown request (signal 15).
-[394852:internal-dpl-ccdb-backend]: [12:12:39][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
-[394856:internal-dpl-injected-dummy-sink]: [12:12:39][STATE] DEVICE READY ---> RESETTING DEVICE
-[394852:internal-dpl-ccdb-backend]: [12:12:39][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
-[394852:internal-dpl-ccdb-backend]: [12:12:39][INFO] CCDB cache miss/hit ratio:
-[394852:internal-dpl-ccdb-backend]: [12:12:39][INFO]   TRD/Calib/CTFDictionaryTree: 1/61 (2097152-2097152 bytes)
-[394852:internal-dpl-ccdb-backend]: [12:12:39][INFO]   CTP/Config/TriggerOffsets: 1/61 (2048-2048 bytes)
-[394852:internal-dpl-ccdb-backend]: [12:12:39][INFO]   CTP/Calib/OrbitReset: 1/62 (563-563 bytes)
-[394852:internal-dpl-ccdb-backend]: [12:12:39][STATE] RUNNING ---> READY
-[394852:internal-dpl-ccdb-backend]: [12:12:39][STATE] READY ---> RESETTING TASK
-[394852:internal-dpl-ccdb-backend]: [12:12:39][STATE] RESETTING TASK ---> DEVICE READY
-[394852:internal-dpl-ccdb-backend]: [12:12:39][STATE] DEVICE READY ---> RESETTING DEVICE
-[394856:internal-dpl-injected-dummy-sink]: [12:12:39][STATE] RESETTING DEVICE ---> IDLE
-[394856:internal-dpl-injected-dummy-sink]: [12:12:39][STATE] IDLE ---> EXITING
-[394856:internal-dpl-injected-dummy-sink]: [12:12:39][STATE] Exiting FairMQ state machine
-[394852:internal-dpl-ccdb-backend]: [12:12:39][STATE] RESETTING DEVICE ---> IDLE
-[394852:internal-dpl-ccdb-backend]: [12:12:39][STATE] IDLE ---> EXITING
-[394852:internal-dpl-ccdb-backend]: [12:12:39][STATE] Exiting FairMQ state machine
-[394851:ctf-reader]: [12:12:39][STATE] RESETTING DEVICE ---> IDLE
-[394851:ctf-reader]: [12:12:39][STATE] IDLE ---> EXITING
-[394851:ctf-reader]: [12:12:39][STATE] Exiting FairMQ state machine
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [qc] qc_checkrunner_objects_received,0 10 1770532948667 subsystem=QC,CheckRunnerName=qc-sink-QTRD_TrdTrySkelton_0
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [qc] qc_checkrunner_checks_executed,0 0 1770532948667 subsystem=QC,CheckRunnerName=qc-sink-QTRD_TrdTrySkelton_0
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [qc] qc_checkrunner_stored mos=10 mos_per_second=0.342179 qos=0 qos_per_second=0.000000 1770532948667 subsystem=QC,CheckRunnerName=qc-sink-QTRD_TrdTrySkelton_0
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [qc] qc_checkrunner_qo_sent,0 0 1770532948667 subsystem=QC,CheckRunnerName=qc-sink-QTRD_TrdTrySkelton_0
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [qc] qc_checkrunner_duration,2 29.222070 1770532948667 subsystem=QC,CheckRunnerName=qc-sink-QTRD_TrdTrySkelton_0
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [qc] qc_checkrunner_objects_received,0 20 1770532959109 subsystem=QC,CheckRunnerName=qc-sink-QTRD_TrdTrySkelton_0
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [qc] qc_checkrunner_checks_executed,0 0 1770532959109 subsystem=QC,CheckRunnerName=qc-sink-QTRD_TrdTrySkelton_0
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [qc] qc_checkrunner_stored mos=20 mos_per_second=0.957696 qos=0 qos_per_second=0.000000 1770532959109 subsystem=QC,CheckRunnerName=qc-sink-QTRD_TrdTrySkelton_0
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [qc] qc_checkrunner_qo_sent,0 0 1770532959109 subsystem=QC,CheckRunnerName=qc-sink-QTRD_TrdTrySkelton_0
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [qc] qc_checkrunner_duration,2 39.663705 1770532959109 subsystem=QC,CheckRunnerName=qc-sink-QTRD_TrdTrySkelton_0
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:12:39][INFO] Received device shutdown request (signal 15).
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:12:39][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:12:39][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:12:39.180178     Stopping run 0
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:12:39][STATE] RUNNING ---> READY
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:39][INFO] Received device shutdown request (signal 15).
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:39][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:12:39][STATE] READY ---> RESETTING TASK
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:12:39][STATE] RESETTING TASK ---> DEVICE READY
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:12:39][STATE] DEVICE READY ---> RESETTING DEVICE
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:39][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
-[394850:internal-dpl-clock]: [12:12:39][INFO] Received device shutdown request (signal 15).
-[394850:internal-dpl-clock]: [12:12:39][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
-[394854:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:12:39.180968     Stopping run 0
-[394850:internal-dpl-clock]: [12:12:39][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
-[394854:qc-task-TRD-TrdTrySkelton]: [qc] qc_objects_published,2 0.515037 1770532959181 subsystem=QC,TaskName=TrdTrySkelton,DetectorName=TRD
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:39][STATE] RUNNING ---> READY
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:39][STATE] READY ---> RESETTING TASK
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:39][STATE] RESETTING TASK ---> DEVICE READY
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:39][STATE] DEVICE READY ---> RESETTING DEVICE
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:12:39][STATE] RESETTING DEVICE ---> IDLE
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:39][STATE] RESETTING DEVICE ---> IDLE
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:12:39][STATE] IDLE ---> EXITING
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:39][STATE] IDLE ---> EXITING
-[394855:qc-sink-QTRD_TrdTrySkelton_0]: [12:12:39][STATE] Exiting FairMQ state machine
-[394854:qc-task-TRD-TrdTrySkelton]: [12:12:39][STATE] Exiting FairMQ state machine
-[394850:internal-dpl-clock]: [12:12:39][INFO] Sending end-of-stream message to channel from_internal-dpl-clock_to_ctf-reader
-[394850:internal-dpl-clock]: [12:12:39][INFO] Sending end-of-stream message to channel from_internal-dpl-clock_to_qc-task-TRD-TrdTrySkelton
-[394850:internal-dpl-clock]: [12:12:39][STATE] RUNNING ---> READY
-[394850:internal-dpl-clock]: [12:12:39][STATE] READY ---> RESETTING TASK
-[394850:internal-dpl-clock]: [12:12:39][STATE] RESETTING TASK ---> DEVICE READY
-[394850:internal-dpl-clock]: [12:12:39][STATE] DEVICE READY ---> RESETTING DEVICE
-[394850:internal-dpl-clock]: [12:12:39][INFO] Cleaning up for shared memory id 'ff56739c'...
-[394850:internal-dpl-clock]: [12:12:39][INFO] Found 0 unmanaged regions...
-[394850:internal-dpl-clock]: [12:12:39][INFO] Found 1 managed segments...
-[394850:internal-dpl-clock]: [12:12:39][INFO] Successfully removed 'fmq_ff56739c_m_0'.
-[394850:internal-dpl-clock]: [12:12:39][INFO] Successfully removed 'fmq_ff56739c_mng'.
-[394850:internal-dpl-clock]: [12:12:39][STATE] RESETTING DEVICE ---> IDLE
-[394850:internal-dpl-clock]: [12:12:39][STATE] IDLE ---> EXITING
-[394850:internal-dpl-clock]: [12:12:39][STATE] Exiting FairMQ state machine
+[397389:ctf-reader]: [12:20:10][INFO] Received device shutdown request (signal 15).
+[397389:ctf-reader]: [12:20:10][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[397390:internal-dpl-ccdb-backend]: [12:20:10][INFO] Received device shutdown request (signal 15).
+[397390:internal-dpl-ccdb-backend]: [12:20:10][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [qc] qc_checkrunner_objects_received,0 10 1770533383669 subsystem=QC,CheckRunnerName=qc-sink-QTRD_TrdTrySkelton_0
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [qc] qc_checkrunner_checks_executed,0 0 1770533383670 subsystem=QC,CheckRunnerName=qc-sink-QTRD_TrdTrySkelton_0
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [qc] qc_checkrunner_stored mos=10 mos_per_second=0.536612 qos=0 qos_per_second=0.000000 1770533383670 subsystem=QC,CheckRunnerName=qc-sink-QTRD_TrdTrySkelton_0
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [qc] qc_checkrunner_qo_sent,0 0 1770533383670 subsystem=QC,CheckRunnerName=qc-sink-QTRD_TrdTrySkelton_0
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [qc] qc_checkrunner_duration,2 18.633387 1770533383670 subsystem=QC,CheckRunnerName=qc-sink-QTRD_TrdTrySkelton_0
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [qc] qc_checkrunner_objects_received,0 20 1770533410648 subsystem=QC,CheckRunnerName=qc-sink-QTRD_TrdTrySkelton_0
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [qc] qc_checkrunner_checks_executed,0 0 1770533410648 subsystem=QC,CheckRunnerName=qc-sink-QTRD_TrdTrySkelton_0
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [qc] qc_checkrunner_stored mos=20 mos_per_second=0.370663 qos=0 qos_per_second=0.000000 1770533410648 subsystem=QC,CheckRunnerName=qc-sink-QTRD_TrdTrySkelton_0
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [qc] qc_checkrunner_qo_sent,0 0 1770533410648 subsystem=QC,CheckRunnerName=qc-sink-QTRD_TrdTrySkelton_0
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [qc] qc_checkrunner_duration,2 45.611904 1770533410648 subsystem=QC,CheckRunnerName=qc-sink-QTRD_TrdTrySkelton_0
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:20:10][INFO] Received device shutdown request (signal 15).
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:20:10][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[397391:trd-entropy-decoder]: [12:20:10][INFO] Received device shutdown request (signal 15).
+[397391:trd-entropy-decoder]: [12:20:10][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[397392:qc-task-TRD-TrdTrySkelton]: [12:20:10][INFO] Received device shutdown request (signal 15).
+[397392:qc-task-TRD-TrdTrySkelton]: [12:20:10][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[397389:ctf-reader]: [12:20:10][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[397390:internal-dpl-ccdb-backend]: [12:20:10][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[397391:trd-entropy-decoder]: [12:20:10][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[397392:qc-task-TRD-TrdTrySkelton]: [12:20:10][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:20:10][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[397390:internal-dpl-ccdb-backend]: [12:20:10][INFO] CCDB cache miss/hit ratio:
+[397389:ctf-reader]: [12:20:10][STATE] RUNNING ---> READY
+[397390:internal-dpl-ccdb-backend]: [12:20:10][INFO]   TRD/Calib/CTFDictionaryTree: 1/61 (2097152-2097152 bytes)
+[397391:trd-entropy-decoder]: [12:20:10][STATE] RUNNING ---> READY
+[397390:internal-dpl-ccdb-backend]: [12:20:10][INFO]   CTP/Config/TriggerOffsets: 1/61 (2048-2048 bytes)
+[397390:internal-dpl-ccdb-backend]: [12:20:10][INFO]   CTP/Calib/OrbitReset: 1/62 (563-563 bytes)
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: 2026-02-08 12:20:10.675480     Stopping run 0
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:20:10][STATE] RUNNING ---> READY
+[397390:internal-dpl-ccdb-backend]: [12:20:10][STATE] RUNNING ---> READY
+[397389:ctf-reader]: [12:20:10][STATE] READY ---> RESETTING TASK
+[397389:ctf-reader]: [12:20:10][STATE] RESETTING TASK ---> DEVICE READY
+[397391:trd-entropy-decoder]: [12:20:10][STATE] READY ---> RESETTING TASK
+[397391:trd-entropy-decoder]: [12:20:10][STATE] RESETTING TASK ---> DEVICE READY
+[397392:qc-task-TRD-TrdTrySkelton]: 2026-02-08 12:20:10.675598     Stopping run 0
+[397390:internal-dpl-ccdb-backend]: [12:20:10][STATE] READY ---> RESETTING TASK
+[397390:internal-dpl-ccdb-backend]: [12:20:10][STATE] RESETTING TASK ---> DEVICE READY
+[397391:trd-entropy-decoder]: [12:20:10][STATE] DEVICE READY ---> RESETTING DEVICE
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:20:10][STATE] READY ---> RESETTING TASK
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:20:10][STATE] RESETTING TASK ---> DEVICE READY
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:20:10][STATE] DEVICE READY ---> RESETTING DEVICE
+[397389:ctf-reader]: [12:20:10][STATE] DEVICE READY ---> RESETTING DEVICE
+[397390:internal-dpl-ccdb-backend]: [12:20:10][STATE] DEVICE READY ---> RESETTING DEVICE
+[397392:qc-task-TRD-TrdTrySkelton]: [qc] qc_objects_published,2 0.446258 1770533410675 subsystem=QC,TaskName=TrdTrySkelton,DetectorName=TRD
+[397392:qc-task-TRD-TrdTrySkelton]: [12:20:10][STATE] RUNNING ---> READY
+[397392:qc-task-TRD-TrdTrySkelton]: [12:20:10][STATE] READY ---> RESETTING TASK
+[397392:qc-task-TRD-TrdTrySkelton]: [12:20:10][STATE] RESETTING TASK ---> DEVICE READY
+[397392:qc-task-TRD-TrdTrySkelton]: [12:20:10][STATE] DEVICE READY ---> RESETTING DEVICE
+[397390:internal-dpl-ccdb-backend]: [12:20:10][STATE] RESETTING DEVICE ---> IDLE
+[397390:internal-dpl-ccdb-backend]: [12:20:10][STATE] IDLE ---> EXITING
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:20:10][STATE] RESETTING DEVICE ---> IDLE
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:20:10][STATE] IDLE ---> EXITING
+[397390:internal-dpl-ccdb-backend]: [12:20:10][STATE] Exiting FairMQ state machine
+[397393:qc-sink-QTRD_TrdTrySkelton_0]: [12:20:10][STATE] Exiting FairMQ state machine
+[397389:ctf-reader]: [12:20:10][STATE] RESETTING DEVICE ---> IDLE
+[397392:qc-task-TRD-TrdTrySkelton]: [12:20:10][STATE] RESETTING DEVICE ---> IDLE
+[397389:ctf-reader]: [12:20:10][STATE] IDLE ---> EXITING
+[397391:trd-entropy-decoder]: [12:20:10][STATE] RESETTING DEVICE ---> IDLE
+[397392:qc-task-TRD-TrdTrySkelton]: [12:20:10][STATE] IDLE ---> EXITING
+[397391:trd-entropy-decoder]: [12:20:10][STATE] IDLE ---> EXITING
+[397389:ctf-reader]: [12:20:10][STATE] Exiting FairMQ state machine
+[397391:trd-entropy-decoder]: [12:20:10][STATE] Exiting FairMQ state machine
+[397392:qc-task-TRD-TrdTrySkelton]: [12:20:10][STATE] Exiting FairMQ state machine
+[397388:internal-dpl-clock]: [12:20:10][INFO] Received device shutdown request (signal 15).
+[397388:internal-dpl-clock]: [12:20:10][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[397394:internal-dpl-injected-dummy-sink]: [12:20:10][INFO] Received device shutdown request (signal 15).
+[397394:internal-dpl-injected-dummy-sink]: [12:20:10][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[397394:internal-dpl-injected-dummy-sink]: [12:20:10][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[397388:internal-dpl-clock]: [12:20:10][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[397394:internal-dpl-injected-dummy-sink]: [12:20:10][STATE] RUNNING ---> READY
+[397394:internal-dpl-injected-dummy-sink]: [12:20:10][STATE] READY ---> RESETTING TASK
+[397394:internal-dpl-injected-dummy-sink]: [12:20:10][STATE] RESETTING TASK ---> DEVICE READY
+[397394:internal-dpl-injected-dummy-sink]: [12:20:10][STATE] DEVICE READY ---> RESETTING DEVICE
+[397394:internal-dpl-injected-dummy-sink]: [12:20:10][STATE] RESETTING DEVICE ---> IDLE
+[397394:internal-dpl-injected-dummy-sink]: [12:20:10][STATE] IDLE ---> EXITING
+[397394:internal-dpl-injected-dummy-sink]: [12:20:10][STATE] Exiting FairMQ state machine
+[397388:internal-dpl-clock]: [12:20:10][INFO] Sending end-of-stream message to channel from_internal-dpl-clock_to_ctf-reader
+[397388:internal-dpl-clock]: [12:20:10][INFO] Sending end-of-stream message to channel from_internal-dpl-clock_to_qc-task-TRD-TrdTrySkelton
+[397388:internal-dpl-clock]: [12:20:10][STATE] RUNNING ---> READY
+[397388:internal-dpl-clock]: [12:20:10][STATE] READY ---> RESETTING TASK
+[397388:internal-dpl-clock]: [12:20:10][STATE] RESETTING TASK ---> DEVICE READY
+[397388:internal-dpl-clock]: [12:20:10][STATE] DEVICE READY ---> RESETTING DEVICE
+[397388:internal-dpl-clock]: [12:20:10][INFO] Cleaning up for shared memory id '89f054dc'...
+[397388:internal-dpl-clock]: [12:20:10][INFO] Found 0 unmanaged regions...
+[397388:internal-dpl-clock]: [12:20:10][INFO] Found 1 managed segments...
+[397388:internal-dpl-clock]: [12:20:10][INFO] Successfully removed 'fmq_89f054dc_m_0'.
+[397388:internal-dpl-clock]: [12:20:10][INFO] Successfully removed 'fmq_89f054dc_mng'.
+[397388:internal-dpl-clock]: [12:20:10][STATE] RESETTING DEVICE ---> IDLE
+[397388:internal-dpl-clock]: [12:20:10][STATE] IDLE ---> EXITING
+[397388:internal-dpl-clock]: [12:20:10][STATE] Exiting FairMQ state machine
 [INFO] ## Processes completed. Run summary:
 [INFO] ### Devices started: 7
-[INFO]  - Device internal-dpl-clock: pid 394850 (exit 0)
-[INFO]  - Device ctf-reader: pid 394851 (exit 0)
-[INFO]  - Device internal-dpl-ccdb-backend: pid 394852 (exit 0)
-[INFO]  - Device trd-entropy-decoder: pid 394853 (exit 0)
-[INFO]  - Device qc-task-TRD-TrdTrySkelton: pid 394854 (exit 0)
-[INFO]  - Device qc-sink-QTRD_TrdTrySkelton_0: pid 394855 (exit 0)
-[INFO]  - Device internal-dpl-injected-dummy-sink: pid 394856 (exit 0)
+[INFO]  - Device internal-dpl-clock: pid 397388 (exit 0)
+[INFO]  - Device ctf-reader: pid 397389 (exit 0)
+[INFO]  - Device internal-dpl-ccdb-backend: pid 397390 (exit 0)
+[INFO]  - Device trd-entropy-decoder: pid 397391 (exit 0)
+[INFO]  - Device qc-task-TRD-TrdTrySkelton: pid 397392 (exit 0)
+[INFO]  - Device qc-sink-QTRD_TrdTrySkelton_0: pid 397393 (exit 0)
+[INFO]  - Device internal-dpl-injected-dummy-sink: pid 397394 (exit 0)
 [INFO] Dumping used configuration in dpl-config.json
