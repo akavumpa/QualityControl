@@ -47,7 +47,7 @@ void TrdTrySkeltonTask::initialize(o2::framework::InitContext& /*ctx*/)
   // 540 chambers × 16 MCMs each = 8640 total MCMs
   histMCM = std::make_unique<TH1F>("MCM",
                                    "Tracklets per global MCM;Global MCM ID;Entries",
-                                   130000, 0, 130000); // 120960
+                                   1000000, 0, 1000000); // 120960
 
   histMCMOccupancy = std::make_unique<TH1F>("MCMTrackletPerMCM",
                                             "Number of tracklets per MCM;Tracklets per MCM;Count of MCMs",
@@ -171,6 +171,11 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
   if (trackletCount > 0) {
     histMCM->SetBinContent(lastKey + 1, trackletCount);
     histMCMOccupancy->Fill(trackletCount);
+
+    ILOG(Warning, Ops)
+      << "last globalKey=" << lastKey
+      << " tracklets=" << trackletCount
+      << ENDM;
 
     if (trackletCount > 3) {
       ILOG(Warning, Ops)
