@@ -148,8 +148,8 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
     }
 
     if (key != lastKey) {
+
       histMCM->SetBinContent(lastKey + 1, trackletCount);
-      // MCM boundary crossed → fill previous MCM
       histMCMOccupancy->Fill(trackletCount);
 
       if (trackletCount > 3) {
@@ -158,72 +158,75 @@ void TrdTrySkeltonTask::monitorData(o2::framework::ProcessingContext& ctx)
           << "globalKey=" << lastKey
           << " tracklets=" << trackletCount
           << ENDM;
-        trackletCount = 0;
-        lastKey = key;
       }
 
-      trackletCount++; // counting the tracklets belonging to one key, implies with one mcm
+      trackletCount = 0;
+      lastKey = key;
     }
 
-    // Flush last MCM
-    if (trackletCount > 0) {
-      histMCM->SetBinContent(lastKey + 1, trackletCount);
-      histMCMOccupancy->Fill(trackletCount);
-      if (trackletCount > 3) {
-        ILOG(Warning, Ops)
-          << "High MCM occupancy detected (last): "
-          << "globalKey=" << lastKey
-          << " tracklets=" << trackletCount
-          << ENDM;
-      }
+    trackletCount++; // counting the tracklets belonging to one key, implies with one mcm
+  }
+
+  // Flush last MCM
+  if (trackletCount > 0) {
+    histMCM->SetBinContent(lastKey + 1, trackletCount);
+    histMCMOccupancy->Fill(trackletCount);
+
+    if (trackletCount > 3) {
+      ILOG(Warning, Ops)
+        << "High MCM occupancy detected (last): "
+        << "globalKey=" << lastKey
+        << " tracklets=" << trackletCount
+        << ENDM;
     }
   }
+}
 
-  void TrdTrySkeltonTask::endOfCycle()
-  {
-    // THIS FUNCTION BODY IS AN EXAMPLE. PLEASE REMOVE EVERYTHING YOU DO NOT NEED.
-    ILOG(Debug, Devel) << "endOfCycle" << ENDM;
-  }
+void TrdTrySkeltonTask::endOfCycle()
+{
+  // THIS FUNCTION BODY IS AN EXAMPLE. PLEASE REMOVE EVERYTHING YOU DO NOT NEED.
+  ILOG(Debug, Devel) << "endOfCycle" << ENDM;
+}
 
-  void TrdTrySkeltonTask::endOfActivity(const Activity& /*activity*/)
-  {
-    // THIS FUNCTION BODY IS AN EXAMPLE. PLEASE REMOVE EVERYTHING YOU DO NOT NEED.
-    ILOG(Debug, Devel) << "endOfActivity" << ENDM;
-  }
+void TrdTrySkeltonTask::endOfActivity(const Activity& /*activity*/)
+{
+  // THIS FUNCTION BODY IS AN EXAMPLE. PLEASE REMOVE EVERYTHING YOU DO NOT NEED.
+  ILOG(Debug, Devel) << "endOfActivity" << ENDM;
+}
 
-  void TrdTrySkeltonTask::reset()
-  {
-    //  200,000 bins for timeframe is correct ?
-    // Typical TF has ~50 events × 2k tracklets/event = 100k tracklets.
+void TrdTrySkeltonTask::reset()
+{
+  //  200,000 bins for timeframe is correct ?
+  // Typical TF has ~50 events × 2k tracklets/event = 100k tracklets.
 
-    //  Per-event histogram should go to around 5000
-    // Highest tracklet multiplicity per event ≈ 2500–3000.
+  //  Per-event histogram should go to around 5000
+  // Highest tracklet multiplicity per event ≈ 2500–3000.
 
-    // Clean all the monitor objects here.
-    ILOG(Debug, Devel)
-      << "Resetting thehists" << ENDM;
-    // if (histTracklet)
-    //   histTracklet->Reset();
-    if (histTrackletsTF)
-      histTrackletsTF->Reset();
-    if (histTrackletsEvent)
-      histTrackletsEvent->Reset();
-    if (histQ0)
-      histQ0->Reset();
-    if (histQ1)
-      histQ1->Reset();
-    if (histQ2)
-      histQ2->Reset();
-    if (histChamber)
-      histChamber->Reset();
-    if (histPadRow)
-      histPadRow->Reset();
-    if (histMCM)
-      histMCM->Reset();
-    if (histPadRowVsDet)
-      histPadRowVsDet->Reset();
-    if (histMCMOccupancy)
-      histMCMOccupancy->Reset();
-  }
+  // Clean all the monitor objects here.
+  ILOG(Debug, Devel)
+    << "Resetting thehists" << ENDM;
+  // if (histTracklet)
+  //   histTracklet->Reset();
+  if (histTrackletsTF)
+    histTrackletsTF->Reset();
+  if (histTrackletsEvent)
+    histTrackletsEvent->Reset();
+  if (histQ0)
+    histQ0->Reset();
+  if (histQ1)
+    histQ1->Reset();
+  if (histQ2)
+    histQ2->Reset();
+  if (histChamber)
+    histChamber->Reset();
+  if (histPadRow)
+    histPadRow->Reset();
+  if (histMCM)
+    histMCM->Reset();
+  if (histPadRowVsDet)
+    histPadRowVsDet->Reset();
+  if (histMCMOccupancy)
+    histMCMOccupancy->Reset();
+}
 
 } // namespace o2::quality_control_modules::trd
