@@ -1,0 +1,2 @@
+/home/aswathymenon/cernbox/o2_ctf_run00557926*.root
+

@@ -39,7 +39,7 @@
           "myOwnKey": "defaultValue"
         },
         "location": "local",
-        "saveObjectsToFile": "pp_TrdTrySkeltonOutput.root"
+        "saveObjectsToFile": "ppALL_TrdTrySkeltonOutput.root"
       }
     ],
     "detectors": {
