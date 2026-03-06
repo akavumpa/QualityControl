@@ -1,2 +1,2 @@
-/home/aswathymenon/cernbox/o2_ctf_run00557926*.root
+/home/aswathymenon/cernbox/o2_ctf_run00557926_orbit1262465888_tf0005717579_epn094.root
 

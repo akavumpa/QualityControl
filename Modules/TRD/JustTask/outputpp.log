@@ -1,0 +1,289 @@
+[INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@78018 target/Linux_x86_64 init/1772775912130 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/YP9XmgSu , Host: http://alice-ccdb.cern.ch/, Curl timeouts: upload:20 download:5
+2026-03-06 11:15:12.131758     BookkeepingSink is not being created because we couldn't find any suitable inputs.
+[INFO] Initialising O2 Data Processing Layer. Driver PID: 78018.
+[INFO] Driver listening on port: 26098
+[INFO] Rate limiting set up at 2000 MB and 64 timeframes distributed over 1 readers
+[INFO] O2 Data Processing Layer initialised. We brake for nobody.
+[INFO] Optimised build. O2DEBUG / LOG(debug) / LOGF(debug) / assert statement will not be shown.
+[INFO] Redeployment of configuration asked.
+[INFO] Starting internal-dpl-clock on pid 78028
+[INFO] Starting ctf-reader on pid 78029
+[INFO] Starting internal-dpl-ccdb-backend on pid 78030
+[INFO] Starting trd-entropy-decoder on pid 78031
+[INFO] Starting qc-task-TRD-TrdTrySkelton on pid 78032
+[INFO] Starting qc-sink-QTRD_TrdTrySkelton_0 on pid 78033
+[INFO] Starting internal-dpl-injected-dummy-sink on pid 78034
+[INFO] Redeployment of configuration done.
+[78032:qc-task-TRD-TrdTrySkelton]: [INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@78032 target/Linux_x86_64 init/1772775912848 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/3eRgXxWh , Host: http://alice-ccdb.cern.ch/, Curl timeouts: upload:20 download:5
+[78032:qc-task-TRD-TrdTrySkelton]: 2026-03-06 11:15:12.850462     BookkeepingSink is not being created because we couldn't find any suitable inputs.
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@78033 target/Linux_x86_64 init/1772775912936 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/CaIDHqty , Host: http://alice-ccdb.cern.ch/, Curl timeouts: upload:20 download:5
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: 2026-03-06 11:15:12.937974     BookkeepingSink is not being created because we couldn't find any suitable inputs.
+[78029:ctf-reader]: [INFO] Instrumenting crash signals
+[78032:qc-task-TRD-TrdTrySkelton]: [INFO] Instrumenting crash signals
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [INFO] Instrumenting crash signals
+[78029:ctf-reader]: [INFO] Spawning new device ctf-reader in process with pid 78029
+[78032:qc-task-TRD-TrdTrySkelton]: [INFO] Spawning new device qc-task-TRD-TrdTrySkelton in process with pid 78032
+[78032:qc-task-TRD-TrdTrySkelton]: [11:15:13][INFO] 
+[78032:qc-task-TRD-TrdTrySkelton]:       ______      _    _______  _________ 
+[78032:qc-task-TRD-TrdTrySkelton]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
+[78032:qc-task-TRD-TrdTrySkelton]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[78032:qc-task-TRD-TrdTrySkelton]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[78032:qc-task-TRD-TrdTrySkelton]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[78032:qc-task-TRD-TrdTrySkelton]: 
+[78029:ctf-reader]: [11:15:13][INFO] 
+[78029:ctf-reader]:       ______      _    _______  _________ 
+[78029:ctf-reader]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
+[78029:ctf-reader]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[78029:ctf-reader]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[78029:ctf-reader]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[78029:ctf-reader]: 
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [INFO] Spawning new device qc-sink-QTRD_TrdTrySkelton_0 in process with pid 78033
+[78032:qc-task-TRD-TrdTrySkelton]: [11:15:13][STATE] Starting FairMQ state machine --> IDLE
+[78029:ctf-reader]: [11:15:13][STATE] Starting FairMQ state machine --> IDLE
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:13][INFO] 
+[78033:qc-sink-QTRD_TrdTrySkelton_0]:       ______      _    _______  _________ 
+[78033:qc-sink-QTRD_TrdTrySkelton_0]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
+[78033:qc-sink-QTRD_TrdTrySkelton_0]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[78033:qc-sink-QTRD_TrdTrySkelton_0]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[78033:qc-sink-QTRD_TrdTrySkelton_0]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: 
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:13][STATE] Starting FairMQ state machine --> IDLE
+[78032:qc-task-TRD-TrdTrySkelton]: [11:15:13][STATE] IDLE ---> INITIALIZING DEVICE
+[78029:ctf-reader]: [11:15:13][STATE] IDLE ---> INITIALIZING DEVICE
+[78032:qc-task-TRD-TrdTrySkelton]: 2026-03-06 11:15:13.512999     QC infologger initialized : 0 ; 11
+[78032:qc-task-TRD-TrdTrySkelton]: 2026-03-06 11:15:13.513057  !  [1;33mWarning - No URL provided for Bookkeeping. Nothing will be stored nor retrieved.[0m
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:13][STATE] IDLE ---> INITIALIZING DEVICE
+[78029:ctf-reader]: [11:15:13][INFO] Input contains 1 files, 0 remote
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: 2026-03-06 11:15:13.514527     QC infologger initialized : 0 ; 11
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: 2026-03-06 11:15:13.514582  !  [1;33mWarning - No URL provided for Bookkeeping. Nothing will be stored nor retrieved.[0m
+[78029:ctf-reader]: [11:15:13][INFO] Finished file fetching: 1 of 1 files fetched successfully in 0 iterations
+[78029:ctf-reader]: [11:15:13][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[78029:ctf-reader]: [11:15:13][STATE] INITIALIZED ---> BINDING
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: 2026-03-06 11:15:13.514724     CCDB backend selected
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:13][INFO] Init CcdApi with UserAgentID: o2-qc/o2-qc@78033 target/Linux_x86_64 init/1772775912936 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/Fk4h213e , Host: ccdb-test.cern.ch:8080, Curl timeouts: upload:20 download:5
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:13][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:13][STATE] INITIALIZED ---> BINDING
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:13][STATE] BINDING ---> BOUND
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:13][STATE] BOUND ---> CONNECTING
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:13][STATE] CONNECTING ---> DEVICE READY
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:13][STATE] DEVICE READY ---> INITIALIZING TASK
+[78029:ctf-reader]: [11:15:13][STATE] BINDING ---> BOUND
+[78029:ctf-reader]: [11:15:13][STATE] BOUND ---> CONNECTING
+[78029:ctf-reader]: [11:15:13][STATE] CONNECTING ---> DEVICE READY
+[78029:ctf-reader]: [11:15:13][STATE] DEVICE READY ---> INITIALIZING TASK
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:13][STATE] INITIALIZING TASK ---> READY
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:13][STATE] READY ---> RUNNING
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:13][INFO] fair::mq::Device running...
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:13][INFO] LHCPeriod is not available, using current month MAR
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: 2026-03-06 11:15:13.517400     Starting run 0:
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:13][INFO] Correctly handshaken websocket connection.
+[78029:ctf-reader]: [11:15:13][STATE] INITIALIZING TASK ---> READY
+[78029:ctf-reader]: [11:15:13][STATE] READY ---> RUNNING
+[78029:ctf-reader]: [11:15:13][INFO] fair::mq::Device running...
+[78029:ctf-reader]: [11:15:13][INFO] LHCPeriod is not available, using current month MAR
+[78029:ctf-reader]: [11:15:13][INFO] Correctly handshaken websocket connection.
+[78029:ctf-reader]: [11:15:13][INFO] Reading CTF input  /home/aswathymenon/cernbox/o2_ctf_run00557926_orbit1261686496_tf0005693223_epn028.root
+[78028:internal-dpl-clock]: [INFO] Instrumenting crash signals
+[78028:internal-dpl-clock]: [INFO] Spawning new device internal-dpl-clock in process with pid 78028
+[78028:internal-dpl-clock]: [11:15:13][INFO] 
+[78028:internal-dpl-clock]:       ______      _    _______  _________ 
+[78028:internal-dpl-clock]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
+[78028:internal-dpl-clock]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[78028:internal-dpl-clock]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[78028:internal-dpl-clock]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[78028:internal-dpl-clock]: 
+[78028:internal-dpl-clock]: [11:15:13][STATE] Starting FairMQ state machine --> IDLE
+[78028:internal-dpl-clock]: [11:15:13][STATE] IDLE ---> INITIALIZING DEVICE
+[78028:internal-dpl-clock]: [11:15:13][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[78028:internal-dpl-clock]: [11:15:13][STATE] INITIALIZED ---> BINDING
+[78028:internal-dpl-clock]: [11:15:13][STATE] BINDING ---> BOUND
+[78028:internal-dpl-clock]: [11:15:13][STATE] BOUND ---> CONNECTING
+[78028:internal-dpl-clock]: [11:15:13][STATE] CONNECTING ---> DEVICE READY
+[78028:internal-dpl-clock]: [11:15:13][STATE] DEVICE READY ---> INITIALIZING TASK
+[78028:internal-dpl-clock]: [11:15:13][STATE] INITIALIZING TASK ---> READY
+[78028:internal-dpl-clock]: [11:15:13][STATE] READY ---> RUNNING
+[78028:internal-dpl-clock]: [11:15:13][INFO] fair::mq::Device running...
+[78028:internal-dpl-clock]: [11:15:13][INFO] LHCPeriod is not available, using current month MAR
+[78028:internal-dpl-clock]: [11:15:13][INFO] Correctly handshaken websocket connection.
+[78030:internal-dpl-ccdb-backend]: [INFO] Instrumenting crash signals
+[78030:internal-dpl-ccdb-backend]: [INFO] Spawning new device internal-dpl-ccdb-backend in process with pid 78030
+[78030:internal-dpl-ccdb-backend]: [11:15:13][INFO] 
+[78030:internal-dpl-ccdb-backend]:       ______      _    _______  _________ 
+[78030:internal-dpl-ccdb-backend]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
+[78030:internal-dpl-ccdb-backend]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[78030:internal-dpl-ccdb-backend]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[78030:internal-dpl-ccdb-backend]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[78030:internal-dpl-ccdb-backend]: 
+[78030:internal-dpl-ccdb-backend]: [11:15:13][STATE] Starting FairMQ state machine --> IDLE
+[78030:internal-dpl-ccdb-backend]: [11:15:13][STATE] IDLE ---> INITIALIZING DEVICE
+[78030:internal-dpl-ccdb-backend]: [11:15:13][INFO] CCDB Backend at: http://alice-ccdb.cern.ch, validity check for every 2147483647 TF
+[78030:internal-dpl-ccdb-backend]: [11:15:13][INFO] Hook to enable signposts for CCDB messages at 0x1619e018
+[78030:internal-dpl-ccdb-backend]: [11:15:13][INFO] Init CcdApi with UserAgentID: o2-ctf-reader-w/o2-ctf-reader-workflow@78030 target/Linux_x86_64 init/1772775913597 id/aswathymenon@aswathymenon-Inspiron-14-5410-2-in-1 session/UzVhJAHi , Host: http://alice-ccdb.cern.ch, Curl timeouts: upload:20 download:5
+[78030:internal-dpl-ccdb-backend]: [11:15:13][INFO] Initialised default CCDB host http://alice-ccdb.cern.ch
+[78030:internal-dpl-ccdb-backend]: [11:15:13][INFO] The following route is a condition CTP/Trig_Offset/0
+[78030:internal-dpl-ccdb-backend]: [11:15:13][INFO] - ccdb-path: CTP/Config/TriggerOffsets
+[78030:internal-dpl-ccdb-backend]: [11:15:13][INFO] The following route is a condition TRD/CTFDICT/0
+[78030:internal-dpl-ccdb-backend]: [11:15:13][INFO] - ccdb-path: TRD/Calib/CTFDictionaryTree
+[78030:internal-dpl-ccdb-backend]: [11:15:13][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[78030:internal-dpl-ccdb-backend]: [11:15:13][STATE] INITIALIZED ---> BINDING
+[78030:internal-dpl-ccdb-backend]: [11:15:13][STATE] BINDING ---> BOUND
+[78030:internal-dpl-ccdb-backend]: [11:15:13][STATE] BOUND ---> CONNECTING
+[78030:internal-dpl-ccdb-backend]: [11:15:13][STATE] CONNECTING ---> DEVICE READY
+[78030:internal-dpl-ccdb-backend]: [11:15:13][STATE] DEVICE READY ---> INITIALIZING TASK
+[78030:internal-dpl-ccdb-backend]: [11:15:13][STATE] INITIALIZING TASK ---> READY
+[78030:internal-dpl-ccdb-backend]: [11:15:13][STATE] READY ---> RUNNING
+[78030:internal-dpl-ccdb-backend]: [11:15:13][INFO] fair::mq::Device running...
+[78030:internal-dpl-ccdb-backend]: [11:15:13][INFO] LHCPeriod is not available, using current month MAR
+[78030:internal-dpl-ccdb-backend]: [11:15:13][INFO] Correctly handshaken websocket connection.
+[78031:trd-entropy-decoder]: [INFO] Instrumenting crash signals
+[78031:trd-entropy-decoder]: [INFO] Spawning new device trd-entropy-decoder in process with pid 78031
+[78031:trd-entropy-decoder]: [11:15:13][INFO] 
+[78031:trd-entropy-decoder]:       ______      _    _______  _________ 
+[78031:trd-entropy-decoder]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
+[78031:trd-entropy-decoder]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[78031:trd-entropy-decoder]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[78031:trd-entropy-decoder]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[78031:trd-entropy-decoder]: 
+[78031:trd-entropy-decoder]: [11:15:13][STATE] Starting FairMQ state machine --> IDLE
+[78031:trd-entropy-decoder]: [11:15:13][STATE] IDLE ---> INITIALIZING DEVICE
+[78031:trd-entropy-decoder]: [11:15:13][INFO] Bogus triggers rejection flag: 10
+[78031:trd-entropy-decoder]: [11:15:13][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[78031:trd-entropy-decoder]: [11:15:13][STATE] INITIALIZED ---> BINDING
+[78031:trd-entropy-decoder]: [11:15:13][STATE] BINDING ---> BOUND
+[78031:trd-entropy-decoder]: [11:15:13][STATE] BOUND ---> CONNECTING
+[78031:trd-entropy-decoder]: [11:15:13][STATE] CONNECTING ---> DEVICE READY
+[78031:trd-entropy-decoder]: [11:15:13][STATE] DEVICE READY ---> INITIALIZING TASK
+[78031:trd-entropy-decoder]: [11:15:13][STATE] INITIALIZING TASK ---> READY
+[78031:trd-entropy-decoder]: [11:15:13][STATE] READY ---> RUNNING
+[78031:trd-entropy-decoder]: [11:15:13][INFO] fair::mq::Device running...
+[78031:trd-entropy-decoder]: [11:15:13][INFO] LHCPeriod is not available, using current month MAR
+[78031:trd-entropy-decoder]: [11:15:13][INFO] Correctly handshaken websocket connection.
+[78034:internal-dpl-injected-dummy-sink]: [INFO] Instrumenting crash signals
+[78034:internal-dpl-injected-dummy-sink]: [INFO] Spawning new device internal-dpl-injected-dummy-sink in process with pid 78034
+[78034:internal-dpl-injected-dummy-sink]: [11:15:13][INFO] 
+[78034:internal-dpl-injected-dummy-sink]:       ______      _    _______  _________ 
+[78034:internal-dpl-injected-dummy-sink]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.0
+[78034:internal-dpl-injected-dummy-sink]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[78034:internal-dpl-injected-dummy-sink]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[78034:internal-dpl-injected-dummy-sink]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[78034:internal-dpl-injected-dummy-sink]: 
+[78034:internal-dpl-injected-dummy-sink]: [11:15:13][STATE] Starting FairMQ state machine --> IDLE
+[78034:internal-dpl-injected-dummy-sink]: [11:15:13][STATE] IDLE ---> INITIALIZING DEVICE
+[78034:internal-dpl-injected-dummy-sink]: [11:15:13][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[78034:internal-dpl-injected-dummy-sink]: [11:15:13][STATE] INITIALIZED ---> BINDING
+[78034:internal-dpl-injected-dummy-sink]: [11:15:13][STATE] BINDING ---> BOUND
+[78034:internal-dpl-injected-dummy-sink]: [11:15:13][STATE] BOUND ---> CONNECTING
+[78034:internal-dpl-injected-dummy-sink]: [11:15:13][STATE] CONNECTING ---> DEVICE READY
+[78034:internal-dpl-injected-dummy-sink]: [11:15:13][STATE] DEVICE READY ---> INITIALIZING TASK
+[78034:internal-dpl-injected-dummy-sink]: [11:15:13][STATE] INITIALIZING TASK ---> READY
+[78034:internal-dpl-injected-dummy-sink]: [11:15:13][STATE] READY ---> RUNNING
+[78034:internal-dpl-injected-dummy-sink]: [11:15:13][INFO] fair::mq::Device running...
+[78034:internal-dpl-injected-dummy-sink]: [11:15:13][INFO] LHCPeriod is not available, using current month MAR
+[78034:internal-dpl-injected-dummy-sink]: [11:15:13][INFO] Correctly handshaken websocket connection.
+[78032:qc-task-TRD-TrdTrySkelton]: [11:15:14][ERROR] Exception caught while in Init: AliceO2::Common::Exception. Exiting with 1.
+[78032:qc-task-TRD-TrdTrySkelton]: Executable is /home/aswathymenon/alice/sw/ubuntu2404_x86-64/QualityControl/v1.186.0-local1/bin/o2-qc
+[78032:qc-task-TRD-TrdTrySkelton]:     /home/aswathymenon/alice/sw/ubuntu2404_x86-64/O2/dev-local1/lib/libO2Framework.so:     ?? ??:0
+[78032:qc-task-TRD-TrdTrySkelton]:     /home/aswathymenon/alice/sw/ubuntu2404_x86-64/FairMQ/v1.10.0-6/lib/libfairmq.so.1.10.0: fair::mq::Device::InitWrapper()
+[78032:qc-task-TRD-TrdTrySkelton]:     /home/aswathymenon/alice/sw/ubuntu2404_x86-64/FairMQ/v1.10.0-6/lib/libfairmq.so.1.10.0: boost::detail::function::void_function_obj_invoker1<std::function<void (fair::mq::State)>, void, fair::mq::State>::invoke(boost::detail::function::function_buffer&, fair::mq::State)
+[78032:qc-task-TRD-TrdTrySkelton]:     /home/aswathymenon/alice/sw/ubuntu2404_x86-64/FairMQ/v1.10.0-6/lib/libfairmq.so.1.10.0: boost::signals2::detail::signal_impl<void (fair::mq::State), boost::signals2::optional_last_value<void>, int, std::less<int>, boost::function<void (fair::mq::State)>, boost::function<void (boost::signals2::connection const&, fair::mq::State)>, boost::signals2::mutex>::operator()(fair::mq::State)
+[78032:qc-task-TRD-TrdTrySkelton]:     /home/aswathymenon/alice/sw/ubuntu2404_x86-64/FairMQ/v1.10.0-6/lib/libfairmq.so.1.10.0: fair::mq::fsm::Machine_::ProcessWork()
+[78032:qc-task-TRD-TrdTrySkelton]:     /home/aswathymenon/alice/sw/ubuntu2404_x86-64/FairMQ/v1.10.0-6/lib/libfairmq.so.1.10.0: fair::mq::StateMachine::ProcessWork()
+[78032:qc-task-TRD-TrdTrySkelton]:     /home/aswathymenon/alice/sw/ubuntu2404_x86-64/FairMQ/v1.10.0-6/lib/libfairmq.so.1.10.0: fair::mq::DeviceRunner::Run()
+[78032:qc-task-TRD-TrdTrySkelton]:     /home/aswathymenon/alice/sw/ubuntu2404_x86-64/O2/dev-local1/lib/libO2Framework.so: doChild(int, char**, o2::framework::ServiceRegistry&, o2::framework::DanglingEdgesContext&, o2::framework::RunningWorkflowInfo const&, o2::framework::RunningDeviceRef, o2::framework::DriverConfig const&, o2::framework::ProcessingPolicies, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, uv_loop_s*)
+[78032:qc-task-TRD-TrdTrySkelton]:     /home/aswathymenon/alice/sw/ubuntu2404_x86-64/O2/dev-local1/lib/libO2Framework.so: runStateMachine(std::vector<o2::framework::DataProcessorSpec, std::allocator<o2::framework::DataProcessorSpec> > const&, WorkflowInfo const&, std::vector<o2::framework::DataProcessorInfo, std::allocator<o2::framework::DataProcessorInfo> > const&, o2::framework::CommandInfo const&, o2::framework::DriverControl&, o2::framework::DriverInfo&, o2::framework::DriverConfig&, std::vector<o2::framework::DeviceMetricsInfo, std::allocator<o2::framework::DeviceMetricsInfo> >&, std::vector<o2::framework::ConfigParamSpec, std::allocator<o2::framework::ConfigParamSpec> > const&, boost::program_options::variables_map&, std::vector<o2::framework::ServiceSpec, std::allocator<o2::framework::ServiceSpec> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+[78032:qc-task-TRD-TrdTrySkelton]:     /home/aswathymenon/alice/sw/ubuntu2404_x86-64/O2/dev-local1/lib/libO2Framework.so: doMain(int, char**, std::vector<o2::framework::DataProcessorSpec, std::allocator<o2::framework::DataProcessorSpec> > const&, std::vector<o2::framework::ChannelConfigurationPolicy, std::allocator<o2::framework::ChannelConfigurationPolicy> > const&, std::vector<o2::framework::CompletionPolicy, std::allocator<o2::framework::CompletionPolicy> > const&, std::vector<o2::framework::DispatchPolicy, std::allocator<o2::framework::DispatchPolicy> > const&, std::vector<o2::framework::ResourcePolicy, std::allocator<o2::framework::ResourcePolicy> > const&, std::vector<o2::framework::CallbacksPolicy, std::allocator<o2::framework::CallbacksPolicy> > const&, std::vector<o2::framework::SendingPolicy, std::allocator<o2::framework::SendingPolicy> > const&, std::vector<o2::framework::ConfigParamSpec, std::allocator<o2::framework::ConfigParamSpec> > const&, std::vector<o2::framework::ConfigParamSpec, std::allocator<o2::framework::ConfigParamSpec> > const&, o2::framework::ConfigContext&)
+[78032:qc-task-TRD-TrdTrySkelton]:     o2-qc() [0x4186d4]:     std::vector<o2::framework::ChannelConfigurationPolicy, std::allocator<o2::framework::ChannelConfigurationPolicy> >::~vector() at stl_vector.h:735
+[78032:qc-task-TRD-TrdTrySkelton]:     /home/aswathymenon/alice/sw/ubuntu2404_x86-64/O2/dev-local1/lib/libO2Framework.so: callMain(int, char**, int (*)(int, char**))
+[78032:qc-task-TRD-TrdTrySkelton]:     o2-qc() [0x413539]:     main at runDataProcessing.h:220
+[78032:qc-task-TRD-TrdTrySkelton]:     /lib/x86_64-linux-gnu/libc.so.6:     ?? ??:0
+[78032:qc-task-TRD-TrdTrySkelton]:     /lib/x86_64-linux-gnu/libc.so.6:     ?? ??:0
+[78032:qc-task-TRD-TrdTrySkelton]:     o2-qc() [0x4135f5]:     _start at ??:?
+[ERROR] Workflow crashed - PID 78032 (qc-task-TRD-TrdTrySkelton) did not exit correctly however it's not clear why. Exit code forced to 128.
+[INFO] Quit requested at Fri Mar  6 11:15:14 2026
+
+[78034:internal-dpl-injected-dummy-sink]: [11:15:14][INFO] Received device shutdown request (signal 15).
+[78034:internal-dpl-injected-dummy-sink]: [11:15:14][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[78034:internal-dpl-injected-dummy-sink]: [11:15:14][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[78034:internal-dpl-injected-dummy-sink]: [11:15:14][STATE] RUNNING ---> READY
+[78034:internal-dpl-injected-dummy-sink]: [11:15:14][STATE] READY ---> RESETTING TASK
+[78034:internal-dpl-injected-dummy-sink]: [11:15:14][STATE] RESETTING TASK ---> DEVICE READY
+[78034:internal-dpl-injected-dummy-sink]: [11:15:14][STATE] DEVICE READY ---> RESETTING DEVICE
+[78034:internal-dpl-injected-dummy-sink]: [11:15:14][STATE] RESETTING DEVICE ---> IDLE
+[78034:internal-dpl-injected-dummy-sink]: [11:15:14][STATE] IDLE ---> EXITING
+[78034:internal-dpl-injected-dummy-sink]: [11:15:14][STATE] Exiting FairMQ state machine
+[78028:internal-dpl-clock]: [11:15:14][INFO] Received device shutdown request (signal 15).
+[78028:internal-dpl-clock]: [11:15:14][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[78028:internal-dpl-clock]: [11:15:14][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[78028:internal-dpl-clock]: [11:15:14][INFO] Sending end-of-stream message to channel from_internal-dpl-clock_to_ctf-reader
+[78031:trd-entropy-decoder]: [11:15:14][INFO] Received device shutdown request (signal 15).
+[78031:trd-entropy-decoder]: [11:15:14][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[78031:trd-entropy-decoder]: [11:15:14][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[78031:trd-entropy-decoder]: [11:15:14][STATE] RUNNING ---> READY
+[78031:trd-entropy-decoder]: [11:15:14][STATE] READY ---> RESETTING TASK
+[78031:trd-entropy-decoder]: [11:15:14][STATE] RESETTING TASK ---> DEVICE READY
+[78031:trd-entropy-decoder]: [11:15:14][STATE] DEVICE READY ---> RESETTING DEVICE
+[78031:trd-entropy-decoder]: [11:15:14][STATE] RESETTING DEVICE ---> IDLE
+[78031:trd-entropy-decoder]: [11:15:14][STATE] IDLE ---> EXITING
+[78031:trd-entropy-decoder]: [11:15:14][STATE] Exiting FairMQ state machine
+[78030:internal-dpl-ccdb-backend]: [11:15:14][INFO] Received device shutdown request (signal 15).
+[78030:internal-dpl-ccdb-backend]: [11:15:14][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[78030:internal-dpl-ccdb-backend]: [11:15:14][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[78030:internal-dpl-ccdb-backend]: [11:15:14][INFO] CCDB cache miss/hit ratio:
+[78030:internal-dpl-ccdb-backend]: [11:15:14][STATE] RUNNING ---> READY
+[78030:internal-dpl-ccdb-backend]: [11:15:14][STATE] READY ---> RESETTING TASK
+[78030:internal-dpl-ccdb-backend]: [11:15:14][STATE] RESETTING TASK ---> DEVICE READY
+[78030:internal-dpl-ccdb-backend]: [11:15:14][STATE] DEVICE READY ---> RESETTING DEVICE
+[78030:internal-dpl-ccdb-backend]: [11:15:14][STATE] RESETTING DEVICE ---> IDLE
+[78030:internal-dpl-ccdb-backend]: [11:15:14][STATE] IDLE ---> EXITING
+[78030:internal-dpl-ccdb-backend]: [11:15:14][STATE] Exiting FairMQ state machine
+[78029:ctf-reader]: [11:15:14][INFO] Received device shutdown request (signal 15).
+[78029:ctf-reader]: [11:15:14][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:14][INFO] Received device shutdown request (signal 15).
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:14][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:14][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: 2026-03-06 11:15:14.614885     Stopping run 0
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:14][STATE] RUNNING ---> READY
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:14][STATE] READY ---> RESETTING TASK
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:14][STATE] RESETTING TASK ---> DEVICE READY
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:14][STATE] DEVICE READY ---> RESETTING DEVICE
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:14][STATE] RESETTING DEVICE ---> IDLE
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:14][STATE] IDLE ---> EXITING
+[78033:qc-sink-QTRD_TrdTrySkelton_0]: [11:15:14][STATE] Exiting FairMQ state machine
+[78028:internal-dpl-clock]: [11:15:14][INFO] Sending end-of-stream message to channel from_internal-dpl-clock_to_qc-task-TRD-TrdTrySkelton
+[78028:internal-dpl-clock]: [11:15:14][STATE] RUNNING ---> READY
+[78028:internal-dpl-clock]: [11:15:14][STATE] READY ---> RESETTING TASK
+[78028:internal-dpl-clock]: [11:15:14][STATE] RESETTING TASK ---> DEVICE READY
+[78028:internal-dpl-clock]: [11:15:14][STATE] DEVICE READY ---> RESETTING DEVICE
+[78028:internal-dpl-clock]: [11:15:14][STATE] RESETTING DEVICE ---> IDLE
+[78028:internal-dpl-clock]: [11:15:14][STATE] IDLE ---> EXITING
+[78028:internal-dpl-clock]: [11:15:14][STATE] Exiting FairMQ state machine
+[78029:ctf-reader]: [11:15:15][INFO] Run:0557926 TF:5693223 Orbit:1261686496 CreationTime:1727384384937 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,FT0,FV0,FDD,CTP
+[78029:ctf-reader]: [11:15:16][INFO] Read CTF 0 (0 of 109 in /home/aswathymenon/cernbox/o2_ctf_run00557926_orbit1261686496_tf0005693223_epn028.root) in 0.880 s, 0.0000 s elapsed from previous CTF
+[78029:ctf-reader]: [11:15:16][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[78029:ctf-reader]: [11:15:16][INFO] Run:0557926 TF:5693425 Orbit:1261692960 CreationTime:1727384385513 Detectors: ITS,TPC,TRD,TOF,PHS,CPV,EMC,HMP,MFT,MCH,MID,FT0,FV0,FDD,CTP
+[78029:ctf-reader]: [11:15:16][INFO] Read CTF 1 (1 of 109 in /home/aswathymenon/cernbox/o2_ctf_run00557926_orbit1261686496_tf0005693223_epn028.root) in 0.010 s, 0.5500 s elapsed from previous CTF
+[78029:ctf-reader]: [11:15:17][STATE] RUNNING ---> READY
+[78029:ctf-reader]: [11:15:17][STATE] READY ---> RESETTING TASK
+[78029:ctf-reader]: [11:15:17][STATE] RESETTING TASK ---> DEVICE READY
+[78029:ctf-reader]: [11:15:17][STATE] DEVICE READY ---> RESETTING DEVICE
+[78029:ctf-reader]: [11:15:17][INFO] Cleaning up for shared memory id '85698e5b'...
+[78029:ctf-reader]: [11:15:17][INFO] Found 0 unmanaged regions...
+[78029:ctf-reader]: [11:15:17][INFO] Found 1 managed segments...
+[78029:ctf-reader]: [11:15:17][INFO] Successfully removed 'fmq_85698e5b_m_0'.
+[78029:ctf-reader]: [11:15:17][INFO] Successfully removed 'fmq_85698e5b_mng'.
+[78029:ctf-reader]: [11:15:17][STATE] RESETTING DEVICE ---> IDLE
+[78029:ctf-reader]: [11:15:17][STATE] IDLE ---> EXITING
+[78029:ctf-reader]: [11:15:17][STATE] Exiting FairMQ state machine
+[INFO] ## Processes completed. Run summary:
+[INFO] ### Devices started: 7
+[INFO]  - Device internal-dpl-clock: pid 78028 (exit 0)
+[INFO]  - Device ctf-reader: pid 78029 (exit 0)
+[INFO]  - Device internal-dpl-ccdb-backend: pid 78030 (exit 0)
+[INFO]  - Device trd-entropy-decoder: pid 78031 (exit 0)
+[ERROR]  - Device qc-task-TRD-TrdTrySkelton: pid 78032 (exit 128)
+[INFO]    - First error: 2026-03-06 11:15:12.850462     BookkeepingSink is not being created because we couldn't find any suitable inputs.
+[INFO]    - Last error:     o2-qc() [0x4135f5]:     _start at ??:?
+[INFO]  - Device qc-sink-QTRD_TrdTrySkelton_0: pid 78033 (exit 0)
+[INFO]  - Device internal-dpl-injected-dummy-sink: pid 78034 (exit 0)
+[INFO] Dumping used configuration in dpl-config.json
+[ERROR] SEVERE: Device qc-task-TRD-TrdTrySkelton (78032) returned with 128
