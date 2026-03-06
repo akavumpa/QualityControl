@@ -112,19 +112,19 @@
         ],
         "checkParameters": {
           "mTFMeanLow": "10000",
-          "mTFMeanHigh": "50000",
+          "mTFMeanHigh": "500000",
 
           "mEventMeanLow": "100",
-          "mEventMeanHigh": "700",
+          "mEventMeanHigh": "7000",
 
           "mQEntriesMin": "1000",
-          "mQMeanLow": "60",
-          "mQMeanHigh": "150",
+          "mQMeanLow": "20",
+          "mQMeanHigh": "50",
 
           "mChamberMaxEmptyFrac": "0.3",
           "mPadRowMaxEmptyFrac": "0.4",
           
-          "mMCMLoadLow": "2.0",
+          "mMCMLoadLow": "1.0",
           "mMCMLoadHigh": "3.0"
         }
       }
