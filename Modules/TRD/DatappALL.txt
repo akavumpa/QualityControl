@@ -1,6 +1,0 @@
-/home/aswathymenon/cernbox/o2_ctf_run00557926_orbit1261686496_tf0005693223_epn028.root  
-/home/aswathymenon/cernbox/o2_ctf_run00557926_orbit1263006272_tf0005734466_epn284.root  
-/home/aswathymenon/cernbox/o2_ctf_run00557926_orbit1263114528_tf0005737849_epn259.root
-/home/aswathymenon/cernbox/o2_ctf_run00557926_orbit1262465888_tf0005717579_epn094.root  
-/home/aswathymenon/cernbox/o2_ctf_run00557926_orbit1263072224_tf0005736527_epn295.root
-
