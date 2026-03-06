@@ -38,11 +38,11 @@
         "condition-timestamp": "0",
         "ans-version": ""
     },
-    "qc-task-TRD-Tracklets": {
+    "qc-task-TRD-TrdTrySkelton": {
         "period-timer-cycle": "30000000",
         "qcConfiguration": ""
     },
-    "qc-check-TRD-TrackletsTFCheck": {
+    "qc-sink-QTRD_TrdTrySkelton_0": {
         "qcConfiguration": ""
     },
     "internal-dpl-injected-dummy-sink": ""
