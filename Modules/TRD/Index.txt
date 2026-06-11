@@ -1,0 +1,28 @@
+aswathyPbPb.json --> "Taskname: TrdTrySkelton" & "Classname: TrdTrySkeltonTask" --> PbPb_TrdTrySkeltonOutput.root // MOs created
+aswathypp.json --> "Taskname: TrdTrySkelton" & "Classname: TrdTrySkeltonTask" --> pp_TrdTrySkeltonOutput.root
+CheckSkeltonPbPb.json --> "tasks: TrdTrySkelton" + "checks: TrackletsTFCheck" --> PbPb_Check_TrdTrySkeltonOutput.root // Created MOs checked
+CheckSkeltonpp.json --> "tasks: TrdTrySkelton" + "checks: TrackletsTFCheck" --> pp_Check_TrdTrySkeltonOutput.root
+combinedOFF1.json --> "tasks: Tracklets" & "Classname: TrackletsTask" + "checks: TrackletsTFCheck" --> PbPb_TrackletsTFCheckOutput.root // Checking existing MOs in original TRD
+combinedOFF1pp.json -->  "tasks: Tracklets" & "Classname: TrackletsTask" + "checks: TrackletsTFCheck" --> pp_TrackletsTFCheckOutput.root
+
+TrackletPerTriggerCheck.json --> "tasks: DTrackletsTask & Classname: TrackletsTask" + "checks: DTrackletPerTriggerCheck & Classname: TrackletPerTriggerCheck" --> TrackletPerTriggerCheck.root
+TRDpostprocessing.json -->
+TRDQC.json -->
+
+
+
+DataPbPb.txt --> /home/aswathymenon/cernbox/o2_ctf_run00560355_orbit0261755616_tf0002394204_epn165.root
+Datapp.txt --> 5 such root files
+
+6-1 root files coz of 1 mistake\
+
+
+runPbPb.sh --> 
+configfile=$1
+o2-ctf-reader-workflow --ctf-input DataPbPb.txt --onlyDet TRD |
+o2-qc -b --config json://"$configfile" &> outputPbPbSkeltonCheck.log
+
+runpp.sh -->
+configfile=$1
+o2-ctf-reader-workflow --ctf-input Datapp.txt --onlyDet TRD |
+o2-qc -b --config json://"$configfile" &> outputppSkeltonCheck.log 

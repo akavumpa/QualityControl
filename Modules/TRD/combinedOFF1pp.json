@@ -38,7 +38,7 @@
           "myOwnKey": "defaultValue"
         },
         "location": "local",
-        "saveObjectsToFile": "PbPb_TrackletsTFCheckOutput.root",
+        "saveObjectsToFile": "pp_TrackletsTFCheckOutput.root",
         "objects": [
           {
             "name": "TrackletQ0",
