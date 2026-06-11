@@ -19,7 +19,7 @@
 #include <DataFormatsITS/TrackITS.h>
 #include <DataFormatsITSMFT/ROFRecord.h>
 #include <Framework/InputRecord.h>
-#include "DataFormatsITS/Vertex.h"
+#include "ReconstructionDataFormats/Vertex.h"
 #include "ITStracking/IOUtils.h"
 #include <DataFormatsITSMFT/ClusterTopology.h>
 #include "Common/Utils.h"
