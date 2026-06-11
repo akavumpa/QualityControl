@@ -23,7 +23,7 @@
 #include <TH2.h>
 #include <TPaveText.h>
 // O2
-#include <DataFormatsITSMFT/DPLAlpideParam.h>
+#include <ITSMFTBase/DPLAlpideParam.h>
 // Quality Control
 #include "MFT/QcMFTTrackCheck.h"
 #include "QualityControl/MonitorObject.h"
