@@ -30,11 +30,11 @@ void TrackletsTFPostProcessing::update(
   framework::ServiceRegistryRef services)
 {
   auto& qcdb = services.get<DatabaseInterface>();
-
+  long ts = 1708707000000;
   auto mo = qcdb.retrieveMO(
     "TRD/MO/Tracklets",
     "TrackletQ0",
-    t.timestamp);
+    ts);
 
   if (!mo) {
     ILOG(Warning, Devel)
