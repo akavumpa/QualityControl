@@ -22,5 +22,6 @@
 #pragma link C++ class o2::quality_control_modules::trd::TrdTrySkeltonTask+;
 #pragma link C++ class o2::quality_control_modules::trd::TrackletsTFCheck+;
 #pragma link C++ class o2::quality_control::postprocessing::TrackletsTrending+;
+#pragma link C++ class o2::quality_control::postprocessing::TrackletsTFPostProcessing+;
 #pragma link C++ class o2::quality_control_modules::trd::newtest+;
 #endif

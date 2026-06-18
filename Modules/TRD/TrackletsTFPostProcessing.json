@@ -1,0 +1,33 @@
+{
+    "qc": {
+        "config": {
+            "database": {
+                "implementation": "CCDB",
+                "host": "localhost:8083"
+            },
+            "conditionDB": {
+                "url": "http://localhost:8083"
+            },
+            "postprocessing": {
+                "periodSeconds": "60"
+            }
+        },
+        "postprocessing": {
+            "TrackletsTFPostProcessing": {
+                "active": "true",
+                "className": "o2::quality_control::postprocessing::TrackletsTFPostProcessing",
+                "moduleName": "QualityControl",
+                "detectorName": "TRD",
+                "initTrigger": [
+                    "usercontrol"
+                ],
+                "updateTrigger": [
+                    "10 seconds"
+                ],
+                "stopTrigger": [
+                    "usercontrol"
+                ]
+            }
+        }
+    }
+}
