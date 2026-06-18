@@ -1,5 +1,5 @@
 #include "TRD/TrackletsTFPostProcessing.h"
-
+#include "QualityControl/QcInfoLogger.h"
 #include "QualityControl/DatabaseInterface.h"
 #include "QualityControl/MonitorObject.h"
 
@@ -27,12 +27,37 @@ void TrackletsTFPostProcessing::initialize(
 
 void TrackletsTFPostProcessing::update(
   Trigger t,
-  framework::ServiceRegistryRef)
+  framework::ServiceRegistryRef services)
 {
-  auto& qcdb =
-    t.services().get<repository::DatabaseInterface>();
+  auto& qcdb = services.get<DatabaseInterface>();
 
-  retrieveObjects(t, qcdb);
+  auto mo = qcdb.retrieveMO(
+    "TRD/MO/Tracklets",
+    "TrackletQ0",
+    t.timestamp);
+
+  if (!mo) {
+    ILOG(Warning, Devel)
+      << "Could not retrieve TrackletQ0"
+      << ENDM;
+    return;
+  }
+
+  auto* h = dynamic_cast<TH1*>(mo->getObject());
+
+  if (!h) {
+    ILOG(Warning, Devel)
+      << "TrackletQ0 is not a TH1"
+      << ENDM;
+    return;
+  }
+
+  ILOG(Info, Support)
+    << "TrackletQ0 entries = "
+    << h->GetEntries()
+    << ", mean = "
+    << h->GetMean()
+    << ENDM;
 }
 
 void TrackletsTFPostProcessing::finalize(
