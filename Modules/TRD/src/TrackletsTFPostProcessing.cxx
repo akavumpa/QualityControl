@@ -30,34 +30,7 @@ void TrackletsTFPostProcessing::update(
   framework::ServiceRegistryRef services)
 {
   auto& qcdb = services.get<DatabaseInterface>();
-  long ts = 1708707000000;
-  auto mo = qcdb.retrieveMO(
-    "TRD/MO/Tracklets",
-    "TrackletQ0",
-    ts);
-
-  if (!mo) {
-    ILOG(Warning, Devel)
-      << "Could not retrieve TrackletQ0"
-      << ENDM;
-    return;
-  }
-
-  auto* h = dynamic_cast<TH1*>(mo->getObject());
-
-  if (!h) {
-    ILOG(Warning, Devel)
-      << "TrackletQ0 is not a TH1"
-      << ENDM;
-    return;
-  }
-
-  ILOG(Info, Support)
-    << "TrackletQ0 entries = "
-    << h->GetEntries()
-    << ", mean = "
-    << h->GetMean()
-    << ENDM;
+  retrieveObjects(t, qcdb);
 }
 
 void TrackletsTFPostProcessing::finalize(
@@ -70,7 +43,7 @@ void TrackletsTFPostProcessing::retrieveObjects(
   const Trigger& t,
   repository::DatabaseInterface& qcdb)
 {
-  std::vector<std::string> names = {
+  std::vector<std::string> monitorObjectNames = {
     "TrackletQ0",
     "TrackletQ1",
     "TrackletQ2",
@@ -79,13 +52,15 @@ void TrackletsTFPostProcessing::retrieveObjects(
     "trackletspereventPbPb"
   };
 
-  for (auto const& name : names) {
+  const long long ts = 1708707000000;
 
+  for (auto const& name : monitorObjectNames) {
     auto mo =
       qcdb.retrieveMO(
         "TRD/MO/Tracklets",
         name,
-        t.timestamp);
+        ts);
+    // t.timestamp);
 
     if (!mo) {
       ILOG(Warning, Support)
@@ -114,6 +89,10 @@ void TrackletsTFPostProcessing::retrieveObjects(
       << h->GetMean()
       << ENDM;
   }
+
+  ILOG(Info, Support)
+    << "Finished retrieving Tracklets Monitor Objects from QCDB in postprocessing"
+    << ENDM;
 }
 
 } // namespace o2::quality_control::postprocessing
