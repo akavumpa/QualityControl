@@ -53,6 +53,7 @@ void TrackletsTFPostProcessing::retrieveObjects(
   };
 
   const long long ts = 1708707000000;
+  mMonitorObjects.clear();
 
   for (auto const& name : monitorObjectNames) {
     auto mo =
@@ -69,6 +70,8 @@ void TrackletsTFPostProcessing::retrieveObjects(
         << ENDM;
       continue;
     }
+
+    mMonitorObjects.emplace(name, mo);
 
     auto h =
       dynamic_cast<TH1*>(mo->getObject());
@@ -91,7 +94,9 @@ void TrackletsTFPostProcessing::retrieveObjects(
   }
 
   ILOG(Info, Support)
-    << "Finished retrieving Tracklets Monitor Objects from QCDB in postprocessing"
+    << "Retrieved "
+    << mMonitorObjects.size()
+    << " MonitorObjects from QCDB"
     << ENDM;
 }
 

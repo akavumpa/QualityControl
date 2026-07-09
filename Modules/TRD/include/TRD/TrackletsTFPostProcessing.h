@@ -2,6 +2,11 @@
 #define QUALITYCONTROL_TRACKLETSTFPOSTPROCESSING_H
 
 #include "QualityControl/PostProcessingInterface.h"
+#include "QualityControl/MonitorObject.h"
+
+#include <map>
+#include <memory>
+#include <string>
 
 namespace o2::quality_control::repository
 {
@@ -25,6 +30,10 @@ class TrackletsTFPostProcessing final : public PostProcessingInterface
  private:
   void retrieveObjects(const Trigger& t,
                        repository::DatabaseInterface& qcdb);
+
+  std::map<std::string,
+           std::shared_ptr<o2::quality_control::core::MonitorObject>>
+    mMonitorObjects;
 };
 
 } // namespace o2::quality_control::postprocessing

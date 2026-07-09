@@ -1,9 +1,0 @@
-{
-    "internal-dpl-clock": "",
-    "qc-pp-TRD-TrackletsTFPostProcessing": {
-        "period-timer-pp-TrackletsTFPostProcessing": "60000000"
-    },
-    "qc-sink-PTRD_TrackletsTFPcbe9_0": {
-        "qcConfiguration": ""
-    }
-}
