@@ -104,12 +104,11 @@ void TrackletsTFPostProcessing::retrieveObjects(
 
   checker.setCustomParameters(mCustomParameters);
 
-  checker.configure();
-
   auto quality = checker.check(&mMonitorObjects);
 
   ILOG(Info, Support)
-    << "TrackletsTFCheck finished."
+    << "TrackletsTFCheck finished. Quality = "
+    << quality.getName()
     << ENDM;
 }
 
