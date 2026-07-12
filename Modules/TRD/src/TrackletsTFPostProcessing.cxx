@@ -102,6 +102,8 @@ void TrackletsTFPostProcessing::retrieveObjects(
 
   o2::quality_control_modules::trd::TrackletsTFCheck checker;
 
+  checker.setCustomParameters(mCustomParameters);
+
   checker.configure();
 
   auto quality = checker.check(&mMonitorObjects);
