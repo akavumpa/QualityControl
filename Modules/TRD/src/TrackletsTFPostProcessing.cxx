@@ -24,6 +24,20 @@ void TrackletsTFPostProcessing::initialize(
   ILOG(Info, Support)
     << "TrackletsTFPostProcessing initialized"
     << ENDM;
+
+  const auto& defaults = mCustomParameters.getAllDefaults();
+
+  ILOG(Info, Support)
+    << "PostProcessing received "
+    << defaults.size()
+    << " default custom parameters"
+    << ENDM;
+
+  for (const auto& [key, value] : defaults) {
+    ILOG(Info, Support)
+      << key << " = " << value
+      << ENDM;
+  }
 }
 
 void TrackletsTFPostProcessing::update(
