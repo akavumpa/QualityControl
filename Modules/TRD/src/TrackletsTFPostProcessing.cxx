@@ -2,6 +2,7 @@
 #include "QualityControl/QcInfoLogger.h"
 #include "QualityControl/DatabaseInterface.h"
 #include "QualityControl/MonitorObject.h"
+#include "TRD/TrackletsTFCheck.h"
 
 #include <TH1.h>
 
@@ -71,7 +72,7 @@ void TrackletsTFPostProcessing::retrieveObjects(
       continue;
     }
 
-    mMonitorObjects.emplace(name, mo);
+    mMonitorObjects.emplace(mo->getFullName(), mo);
 
     auto h =
       dynamic_cast<TH1*>(mo->getObject());
@@ -97,6 +98,16 @@ void TrackletsTFPostProcessing::retrieveObjects(
     << "Retrieved "
     << mMonitorObjects.size()
     << " MonitorObjects from QCDB"
+    << ENDM;
+
+  o2::quality_control_modules::trd::TrackletsTFCheck checker;
+
+  checker.configure();
+
+  auto quality = checker.check(&mMonitorObjects);
+
+  ILOG(Info, Support)
+    << "TrackletsTFCheck finished."
     << ENDM;
 }
 
