@@ -120,6 +120,10 @@ void TrackletsTFPostProcessing::retrieveObjects(
 
   auto quality = checker.check(&mMonitorObjects);
 
+  for (auto& [name, mo] : mMonitorObjects) {
+    checker.beautify(mo, quality);
+  }
+
   ILOG(Info, Support)
     << "TrackletsTFCheck finished. Quality = "
     << quality.getName()
