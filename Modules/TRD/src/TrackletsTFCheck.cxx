@@ -251,7 +251,39 @@ Quality TrackletsTFCheck::check(
   return finalQ;
 }
 
-void TrackletsTFCheck::beautify(std::shared_ptr<MonitorObject>, Quality) {}
+void TrackletsTFCheck::beautify(std::shared_ptr<MonitorObject> mo,
+                                Quality checkResult)
+{
+  auto* h = dynamic_cast<TH1*>(mo->getObject());
+  if (!h) {
+    return;
+  }
+
+  TPaveText* msg = new TPaveText(0.15, 0.80, 0.45, 0.90, "NDC");
+
+  if (checkResult == Quality::Good) {
+    h->SetLineColor(kGreen + 2);
+    msg->AddText("Quality : GOOD");
+    msg->SetFillColor(kGreen);
+  } else if (checkResult == Quality::Medium) {
+    h->SetLineColor(kOrange + 7);
+    msg->AddText("Quality : MEDIUM");
+    msg->SetFillColor(kOrange);
+  } else if (checkResult == Quality::Bad) {
+    h->SetLineColor(kRed);
+    msg->AddText("Quality : BAD");
+    msg->SetFillColor(kRed);
+  } else {
+    msg->AddText("Quality : UNKNOWN");
+    msg->SetFillColor(kGray);
+  }
+
+  msg->SetBorderSize(1);
+  msg->SetTextColor(kBlack);
+
+  h->GetListOfFunctions()->Add(msg);
+}
+
 void TrackletsTFCheck::reset() {}
 
 } // namespace o2::quality_control_modules::trd
