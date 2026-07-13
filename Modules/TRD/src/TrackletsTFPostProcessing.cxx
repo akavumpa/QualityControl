@@ -58,22 +58,32 @@ void TrackletsTFPostProcessing::retrieveObjects(
   const Trigger& t,
   repository::DatabaseInterface& qcdb)
 {
-  std::vector<std::string> monitorObjectNames = {
-    "TrackletQ0",
-    "TrackletQ1",
-    "TrackletQ2",
-    "trackletsperHC2D",
-    "trackletspertimeframe",
-    "trackletspereventPbPb"
+  std::vector<std::pair<std::string, std::string>> monitorObjectNames = {
+    { "Tracklets", "TrackletQ0" },
+    { "Tracklets", "TrackletQ1" },
+    { "Tracklets", "TrackletQ2" },
+    { "Tracklets", "trackletsperHC2D" },
+    { "Tracklets", "trackletspertimeframe" },
+    { "Tracklets", "trackletspereventPbPb" },
+
+    { "PulseHeight", "mPulseHeight" },
+    { "PulseHeight", "mPulseHeightpro" }
   };
 
   const long long ts = 1708707000000;
   mMonitorObjects.clear();
 
-  for (auto const& name : monitorObjectNames) {
+  // for (auto const& name : monitorObjectNames) {
+  //   auto mo =
+  //     qcdb.retrieveMO(
+  //       "TRD/MO/Tracklets",
+  //       name,
+  //       ts);
+  for (auto const& [folder, name] : monitorObjectNames) {
+
     auto mo =
       qcdb.retrieveMO(
-        "TRD/MO/Tracklets",
+        "TRD/MO/" + folder,
         name,
         ts);
     // t.timestamp);

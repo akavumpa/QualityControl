@@ -52,6 +52,16 @@ class TrackletsTFCheck : public o2::quality_control::checker::CheckInterface
   float mMCMLoadLow = 1.0;
   float mMCMLoadHigh = 3.0;
 
+  // ------------- PulseHeight ----------
+  // ---------- Pulse Height ----------
+  float mDriftRegionStart = 7;
+  float mDriftRegionEnd = 20;
+
+  float mPeakRegionStart = 1;
+  float mPeakRegionEnd = 5;
+
+  float mPulseHeightRatio = 1.1;
+
   // ---------- Helper functions ----------
   void checkGlobalActivity(
     std::map<std::string,
@@ -64,6 +74,11 @@ class TrackletsTFCheck : public o2::quality_control::checker::CheckInterface
     o2::quality_control::core::Quality& finalQ);
 
   void checkGeometry(
+    std::map<std::string,
+             std::shared_ptr<o2::quality_control::core::MonitorObject>>* moMap,
+    o2::quality_control::core::Quality& finalQ);
+
+  void checkPulseHeight(
     std::map<std::string,
              std::shared_ptr<o2::quality_control::core::MonitorObject>>* moMap,
     o2::quality_control::core::Quality& finalQ);

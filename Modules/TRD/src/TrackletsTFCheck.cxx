@@ -117,6 +117,14 @@ void TrackletsTFCheck::configure() // Reads thresholds from JSON
 
   get("mChamberMaxEmptyFrac", mChamberMaxEmptyFrac);
 
+  get("mDriftRegionStart", mDriftRegionStart);
+  get("mDriftRegionEnd", mDriftRegionEnd);
+
+  get("mPeakRegionStart", mPeakRegionStart);
+  get("mPeakRegionEnd", mPeakRegionEnd);
+
+  get("mPulseHeightRatio", mPulseHeightRatio);
+
   ILOG(Info, Ops)
     << "TrackletsTFCheck configured with TFMeanLow=" << mTFMeanLow
     << " TFMeanHigh=" << mTFMeanHigh
@@ -235,6 +243,59 @@ void TrackletsTFCheck::checkGeometry(
     "trackletsperHC2D"));
 }
 
+void TrackletsTFCheck::checkPulseHeight(
+  std::map<std::string,
+           std::shared_ptr<MonitorObject>>* moMap,
+  Quality& finalQ)
+{
+  auto it = moMap->find("PulseHeight/mPulseHeight");
+
+  if (it == moMap->end()) {
+    ILOG(Warning, Ops) << "PulseHeight histogram missing" << ENDM;
+    return;
+  }
+
+  auto* h = dynamic_cast<TH1*>(it->second->getObject());
+
+  if (!h) {
+    finalQ = Quality::Bad;
+    return;
+  }
+
+  double peak = h->GetMaximum();
+  int peakBin = h->GetMaximumBin();
+
+  double driftAverage = 0;
+
+  for (int i = (int)mDriftRegionStart;
+       i <= (int)mDriftRegionEnd;
+       i++) {
+    driftAverage += h->GetBinContent(i);
+  }
+
+  driftAverage /= (mDriftRegionEnd - mDriftRegionStart + 1);
+
+  ILOG(Info, Ops)
+    << "PulseHeight peak bin = "
+    << peakBin
+    << " ratio = "
+    << peak / driftAverage
+    << ENDM;
+
+  if (peakBin < mPeakRegionStart ||
+      peakBin > mPeakRegionEnd) {
+    finalQ = Quality::Bad;
+    return;
+  }
+
+  if (driftAverage > 0 &&
+      peak / driftAverage < mPulseHeightRatio) {
+
+    if (finalQ == Quality::Good)
+      finalQ = Quality::Medium;
+  }
+}
+
 // ---------- MAIN CHECK ----------
 
 Quality TrackletsTFCheck::check(
@@ -247,6 +308,8 @@ Quality TrackletsTFCheck::check(
   checkCharge(moMap, finalQ);
 
   checkGeometry(moMap, finalQ);
+
+  checkPulseHeight(moMap, finalQ);
 
   return finalQ;
 }
