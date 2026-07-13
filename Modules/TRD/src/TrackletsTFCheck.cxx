@@ -251,6 +251,13 @@ Quality TrackletsTFCheck::check(
   return finalQ;
 }
 
+ILOG(Info, Ops)
+  << "Beautifying "
+  << mo->getName()
+  << " with quality "
+  << checkResult.getName()
+  << ENDM;
+
 void TrackletsTFCheck::beautify(std::shared_ptr<MonitorObject> mo,
                                 Quality checkResult)
 {
