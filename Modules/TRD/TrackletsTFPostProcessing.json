@@ -28,7 +28,12 @@
                             "mQEntriesMin": "1000",
                             "mQMeanLow": "20",
                             "mQMeanHigh": "100",
-                            "mChamberMaxEmptyFrac": "0.30"
+                            "mChamberMaxEmptyFrac": "0.30",
+                            "mDriftRegionStart": "7",
+                            "mDriftRegionEnd": "20",
+                            "mPeakRegionStart": "1",
+                            "mPeakRegionEnd": "7",
+                            "mPulseHeightRatio": "1.05"
                         }
                     }
                 },
