@@ -19,14 +19,18 @@
                 "moduleName": "QualityControl",
                 "detectorName": "TRD",
                 "extendedTaskParameters": {
-                    "mTFMeanLow": "10000",
-                    "mTFMeanHigh": "500000",
-                    "mEventMeanLow": "50",
-                    "mEventMeanHigh": "7000",
-                    "mQEntriesMin": "1000",
-                    "mQMeanLow": "20",
-                    "mQMeanHigh": "100",
-                    "mChamberMaxEmptyFrac": "0.30"
+                    "default": {
+                        "default": {
+                            "mTFMeanLow": "10000",
+                            "mTFMeanHigh": "500000",
+                            "mEventMeanLow": "50",
+                            "mEventMeanHigh": "7000",
+                            "mQEntriesMin": "1000",
+                            "mQMeanLow": "20",
+                            "mQMeanHigh": "100",
+                            "mChamberMaxEmptyFrac": "0.30"
+                        }
+                    }
                 },
                 "initTrigger": [
                     "usercontrol"

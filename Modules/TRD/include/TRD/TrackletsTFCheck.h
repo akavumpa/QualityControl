@@ -52,6 +52,22 @@ class TrackletsTFCheck : public o2::quality_control::checker::CheckInterface
   float mMCMLoadLow = 1.0;
   float mMCMLoadHigh = 3.0;
 
+  // ---------- Helper functions ----------
+  void checkGlobalActivity(
+    std::map<std::string,
+             std::shared_ptr<o2::quality_control::core::MonitorObject>>* moMap,
+    o2::quality_control::core::Quality& finalQ);
+
+  void checkCharge(
+    std::map<std::string,
+             std::shared_ptr<o2::quality_control::core::MonitorObject>>* moMap,
+    o2::quality_control::core::Quality& finalQ);
+
+  void checkGeometry(
+    std::map<std::string,
+             std::shared_ptr<o2::quality_control::core::MonitorObject>>* moMap,
+    o2::quality_control::core::Quality& finalQ);
+
   ClassDefOverride(TrackletsTFCheck, 1);
 };
 

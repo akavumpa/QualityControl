@@ -123,23 +123,20 @@ void TrackletsTFCheck::configure() // Reads thresholds from JSON
     << ENDM;
 }
 
-// ---------- MAIN CHECK ----------
+// ---------- Global Detector Activity ----------
 
-Quality TrackletsTFCheck::check(
-  std::map<std::string, std::shared_ptr<MonitorObject>>* moMap)
+void TrackletsTFCheck::checkGlobalActivity(
+  std::map<std::string,
+           std::shared_ptr<MonitorObject>>* moMap,
+  Quality& finalQ)
 {
-  Quality finalQ = Quality::Good;
-  // Function to keep worst result
   auto worst = [&](Quality q) {
     if (q == Quality::Bad)
       finalQ = Quality::Bad;
     else if (q == Quality::Medium && finalQ == Quality::Good)
       finalQ = Quality::Medium;
   };
-  // If any check returns Bad → final = Bad
-  // Else if Medium appears → final = Medium
 
-  // Looks up histogram in MO map
   auto getH = [&](const std::string& name) -> TH1* {
     auto it = moMap->find(name);
     if (it == moMap->end()) {
@@ -150,38 +147,106 @@ Quality TrackletsTFCheck::check(
     return dynamic_cast<TH1*>(it->second->getObject());
   };
 
-  // ---------- Global Detector Activity ----------
-  // Is TRD producing tracklets?
-  worst(checkMean(getH("Tracklets/trackletspertimeframe"), mTFMeanLow, mTFMeanHigh, "trackletspertimeframe"));
-  worst(checkMean(getH("Tracklets/trackletspereventPbPb"), mEventMeanLow, mEventMeanHigh, "trackletspereventPbPb"));
-  // worst(checkMean(getH("TrdTrySkelton/nTrackletsTF"), mTFMeanLow, mTFMeanHigh, "nTrackletsTF"));
-  // worst(checkMean(getH("TrdTrySkelton/nTrackletsEVENT"), mEventMeanLow, mEventMeanHigh, "nTrackletsEVENT"));
+  worst(checkMean(getH("Tracklets/trackletspertimeframe"),
+                  mTFMeanLow, mTFMeanHigh,
+                  "trackletspertimeframe"));
 
-  // // ---------- Signal Quality ----------
-  // // Are ADC histograms filled?
-  // worst(checkEntries(getH("TrdTrySkelton/Q0"), mQEntriesMin, "Q0"));
-  // worst(checkEntries(getH("TrdTrySkelton/Q1"), mQEntriesMin, "Q1"));
-  // worst(checkEntries(getH("TrdTrySkelton/Q2"), mQEntriesMin, "Q2"));
-  worst(checkEntries(getH("Tracklets/TrackletQ0"), mQEntriesMin, "TrackletQ0"));
-  worst(checkEntries(getH("Tracklets/TrackletQ1"), mQEntriesMin, "TrackletQ1"));
-  worst(checkEntries(getH("Tracklets/TrackletQ2"), mQEntriesMin, "TrackletQ2"));
-  // // Are charge values in normal range?
-  // worst(checkMean(getH("TrdTrySkelton/Q0"), mQMeanLow, mQMeanHigh, "Q0 mean"));
-  // worst(checkMean(getH("TrdTrySkelton/Q1"), mQMeanLow, mQMeanHigh, "Q1 mean"));
-  // worst(checkMean(getH("TrdTrySkelton/Q2"), mQMeanLow, mQMeanHigh, "Q2 mean"));
-  worst(checkMean(getH("Tracklets/TrackletQ0"), mQMeanLow, mQMeanHigh, "Q0 mean"));
-  worst(checkMean(getH("Tracklets/TrackletQ1"), mQMeanLow, mQMeanHigh, "Q1 mean"));
-  worst(checkMean(getH("Tracklets/TrackletQ2"), mQMeanLow, mQMeanHigh, "Q2 mean"));
+  worst(checkMean(getH("Tracklets/trackletspereventPbPb"),
+                  mEventMeanLow, mEventMeanHigh,
+                  "trackletspereventPbPb"));
+}
 
-  // // ---------- Geometry Coverage ----------
-  // // Detect dead modules/stacks
-  // worst(checkEmptyBins(getH("TrdTrySkelton/Chamber"), mChamberMaxEmptyFrac, "Chamber"));
-  // worst(checkEmptyBins(getH("TrdTrySkelton/PadRow"), mPadRowMaxEmptyFrac, "PadRow"));
-  worst(checkEmptyBins2D(dynamic_cast<TH2*>(getH("Tracklets/trackletsperHC2D")), mChamberMaxEmptyFrac, "trackletsperHC2D"));
+// ---------- Signal Quality ----------
 
-  // // ---------- Electronics Load ----------
-  // // Detect noisy MCMs
-  // worst(checkMean(getH("TrdTrySkelton/MCMTrackletPerMCM"), mMCMLoadLow, mMCMLoadHigh, "MCMTrackletPerMCM"));
+void TrackletsTFCheck::checkCharge(
+  std::map<std::string,
+           std::shared_ptr<MonitorObject>>* moMap,
+  Quality& finalQ)
+{
+  auto worst = [&](Quality q) {
+    if (q == Quality::Bad)
+      finalQ = Quality::Bad;
+    else if (q == Quality::Medium && finalQ == Quality::Good)
+      finalQ = Quality::Medium;
+  };
+
+  auto getH = [&](const std::string& name) -> TH1* {
+    auto it = moMap->find(name);
+    if (it == moMap->end()) {
+      ILOG(Error, Ops) << "Missing MO: " << name << ENDM;
+      finalQ = Quality::Bad;
+      return nullptr;
+    }
+    return dynamic_cast<TH1*>(it->second->getObject());
+  };
+
+  worst(checkEntries(getH("Tracklets/TrackletQ0"),
+                     mQEntriesMin,
+                     "TrackletQ0"));
+
+  worst(checkEntries(getH("Tracklets/TrackletQ1"),
+                     mQEntriesMin,
+                     "TrackletQ1"));
+
+  worst(checkEntries(getH("Tracklets/TrackletQ2"),
+                     mQEntriesMin,
+                     "TrackletQ2"));
+
+  worst(checkMean(getH("Tracklets/TrackletQ0"),
+                  mQMeanLow, mQMeanHigh,
+                  "Q0 mean"));
+
+  worst(checkMean(getH("Tracklets/TrackletQ1"),
+                  mQMeanLow, mQMeanHigh,
+                  "Q1 mean"));
+
+  worst(checkMean(getH("Tracklets/TrackletQ2"),
+                  mQMeanLow, mQMeanHigh,
+                  "Q2 mean"));
+}
+
+// ---------- Geometry Coverage ----------
+
+void TrackletsTFCheck::checkGeometry(
+  std::map<std::string,
+           std::shared_ptr<MonitorObject>>* moMap,
+  Quality& finalQ)
+{
+  auto worst = [&](Quality q) {
+    if (q == Quality::Bad)
+      finalQ = Quality::Bad;
+    else if (q == Quality::Medium && finalQ == Quality::Good)
+      finalQ = Quality::Medium;
+  };
+
+  auto getH = [&](const std::string& name) -> TH1* {
+    auto it = moMap->find(name);
+    if (it == moMap->end()) {
+      ILOG(Error, Ops) << "Missing MO: " << name << ENDM;
+      finalQ = Quality::Bad;
+      return nullptr;
+    }
+    return dynamic_cast<TH1*>(it->second->getObject());
+  };
+
+  worst(checkEmptyBins2D(
+    dynamic_cast<TH2*>(getH("Tracklets/trackletsperHC2D")),
+    mChamberMaxEmptyFrac,
+    "trackletsperHC2D"));
+}
+
+// ---------- MAIN CHECK ----------
+
+Quality TrackletsTFCheck::check(
+  std::map<std::string, std::shared_ptr<MonitorObject>>* moMap)
+{
+  Quality finalQ = Quality::Good;
+
+  checkGlobalActivity(moMap, finalQ);
+
+  checkCharge(moMap, finalQ);
+
+  checkGeometry(moMap, finalQ);
 
   return finalQ;
 }
