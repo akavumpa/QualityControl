@@ -70,46 +70,23 @@ void TrackletsTFPostProcessing::retrieveObjects(
     { "PulseHeight", "mPulseHeightpro" }
   };
 
-  // const long long ts = 1708707000000;
+  const long long ts = 1708707000000;
   mMonitorObjects.clear();
 
-  //============================================
-  ILOG(Info, Support)
-    << "Timestamp : " << t.timestamp
-    << ENDM;
-
-  // ILOG(Info, Support)
-  //   << "Run : " << t.activity.mId
-  //   << ENDM;
-
-  // ILOG(Info, Support)
-  //   << "Pass : " << t.activity.mPassName
-  //   << ENDM;
-
-  // ILOG(Info, Support)
-  //   << "Period : " << t.activity.mPeriodName
-  //   << ENDM;
-
-  // ILOG(Info, Support)
-  //   << "Provenance : " << t.activity.mProvenance
-  //   << ENDM;
-  //===============================================
-
+  // for (auto const& name : monitorObjectNames) {
+  //   auto mo =
+  //     qcdb.retrieveMO(
+  //       "TRD/MO/Tracklets",
+  //       name,
+  //       ts);
   for (auto const& [folder, name] : monitorObjectNames) {
-
-    //   auto mo =
-    //     qcdb.retrieveMO(
-    //       "TRD/MO/" + folder,
-    //       name,
-    //       ts);
-    //   // t.timestamp);
 
     auto mo =
       qcdb.retrieveMO(
         "TRD/MO/" + folder,
         name,
-        t.timestamp,
-        t.activity);
+        ts);
+    // t.timestamp);
 
     if (!mo) {
       ILOG(Warning, Support)
