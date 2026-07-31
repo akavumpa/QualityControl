@@ -248,7 +248,7 @@ void TrackletsTFCheck::checkPulseHeight(
            std::shared_ptr<MonitorObject>>* moMap,
   Quality& finalQ)
 {
-  auto it = moMap->find("PulseHeight/mPulseHeight");
+  auto it = moMap->find("PHTrackMatch/PulseHeight/mPulseHeightpro");
 
   if (it == moMap->end()) {
     ILOG(Warning, Ops) << "PulseHeight histogram missing" << ENDM;

@@ -66,8 +66,8 @@ void TrackletsTFPostProcessing::retrieveObjects(
     { "Tracklets", "trackletspertimeframe" },
     { "Tracklets", "trackletspereventPbPb" },
 
-    { "PulseHeight", "mPulseHeight" },
-    { "PulseHeight", "mPulseHeightpro" }
+    { "PHTrackMatch/PulseHeight", "mPulseHeightperchamber" },
+    { "PHTrackMatch/PulseHeight", "mPulseHeightpro" }
   };
 
   // const long long ts = 1708707000000;
