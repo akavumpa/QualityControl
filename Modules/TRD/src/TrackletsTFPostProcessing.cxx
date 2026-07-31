@@ -157,6 +157,14 @@ void TrackletsTFPostProcessing::retrieveObjects(
     checker.beautify(mo, quality);
   }
 
+  for (auto& [name, mo] : mMonitorObjects) {
+    ILOG(Info, Support)
+      << "Storing MO : "
+      << mo->getFullName()
+      << ENDM;
+
+    qcdb.storeMO(mo);
+  }
   ILOG(Info, Support)
     << "TrackletsTFCheck finished. Quality = "
     << quality.getName()
