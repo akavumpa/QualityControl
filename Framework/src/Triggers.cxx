@@ -269,8 +269,23 @@ TriggerFcn ForEachObject(const std::string& databaseUrl, const std::string& data
       ? activity_helpers::asDatabaseMetadata(activity, false)
       : std::map<std::string, std::string>{};
 
-  auto listing =
-    db->getListingAsPtree(fullObjectPath, metadata);
+  auto listing = db->getListingAsPtree(fullObjectPath, metadata);
+
+  if (listing.count("objects") == 0) {
+    ILOG(Error, Support)
+      << "No valid object listing returned for path "
+      << fullObjectPath << ENDM;
+
+    return [activity, config]() mutable -> Trigger {
+      return { TriggerType::No,
+               true,
+               activity,
+               Trigger::msSinceEpoch(),
+               config };
+    };
+  }
+
+  auto objects = listing.get_child("objects");
   // Changed for qc_async .. till above.
 
   ILOG(Info, Support) << "Got " << objects.size() << " objects for the path '" << fullObjectPath << "'" << ENDM;
