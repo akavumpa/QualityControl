@@ -5,6 +5,15 @@
                 "implementation": "CCDB",
                 "host": "localhost:8083"
             },
+            "Activity": {
+                "number": "567939",
+                "type": "PHYSICS",
+                "passName": "apass1_test_ALIX_2026_V10N_ptag",
+                "periodName": "LHC25an",
+                "provenance": "qc_async",
+                "start": "1763173028131",
+                "end": "1763178818880"
+            },
             "conditionDB": {
                 "url": "http://localhost:8083"
             },
@@ -41,7 +50,7 @@
                     "usercontrol"
                 ],
                 "updateTrigger": [
-                    "10 seconds"
+                    "foreachobject:qcdb:TRD/MO/Tracklets/trackletspertimeframe"
                 ],
                 "stopTrigger": [
                     "usercontrol"

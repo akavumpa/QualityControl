@@ -263,7 +263,16 @@ TriggerFcn ForEachObject(const std::string& databaseUrl, const std::string& data
   auto db = std::make_shared<repository::CcdbDatabase>();
   db->connect(databaseUrl, "", "", "");
 
-  auto objects = db->getListingAsPtree(fullObjectPath).get_child("objects");
+  // Changed for qc_async --> auto objects = db->getListingAsPtree(fullObjectPath).get_child("objects");
+  auto metadata =
+    databaseType == "qcdb"
+      ? activity_helpers::asDatabaseMetadata(activity, false)
+      : std::map<std::string, std::string>{};
+
+  auto listing =
+    db->getListingAsPtree(fullObjectPath, metadata);
+  // Changed for qc_async .. till above.
+
   ILOG(Info, Support) << "Got " << objects.size() << " objects for the path '" << fullObjectPath << "'" << ENDM;
   auto filteredObjects = std::make_shared<std::vector<boost::property_tree::ptree>>();
   const auto filter = databaseType == "qcdb" ? activity : Activity();

@@ -78,21 +78,21 @@ void TrackletsTFPostProcessing::retrieveObjects(
     << "Timestamp : " << t.timestamp
     << ENDM;
 
-  // ILOG(Info, Support)
-  //   << "Run : " << t.activity.mId
-  //   << ENDM;
+  ILOG(Info, Support)
+    << "Run : " << t.activity.mId
+    << ENDM;
 
-  // ILOG(Info, Support)
-  //   << "Pass : " << t.activity.mPassName
-  //   << ENDM;
+  ILOG(Info, Support)
+    << "Pass : " << t.activity.mPassName
+    << ENDM;
 
-  // ILOG(Info, Support)
-  //   << "Period : " << t.activity.mPeriodName
-  //   << ENDM;
+  ILOG(Info, Support)
+    << "Period : " << t.activity.mPeriodName
+    << ENDM;
 
-  // ILOG(Info, Support)
-  //   << "Provenance : " << t.activity.mProvenance
-  //   << ENDM;
+  ILOG(Info, Support)
+    << "Provenance : " << t.activity.mProvenance
+    << ENDM;
   //===============================================
 
   for (auto const& [folder, name] : monitorObjectNames) {
