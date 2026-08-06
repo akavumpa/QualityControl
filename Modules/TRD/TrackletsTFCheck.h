@@ -33,24 +33,55 @@ class TrackletsTFCheck : public o2::quality_control::checker::CheckInterface
   //   float mLowerThresholdTF = 1e4;
   //   float mUpperThresholdTF = 5e5;
   // ---------- Global Activity ----------
-  float mTFMeanLow = 5e4;
+  float mTFMeanLow = 1e4;
   float mTFMeanHigh = 5e5;
 
   float mEventMeanLow = 100;
-  float mEventMeanHigh = 1e5;
+  float mEventMeanHigh = 7e3;
 
   // ---------- Signal Quality (ADC) ----------
   float mQEntriesMin = 1000;
   float mQMeanLow = 20;
   float mQMeanHigh = 50;
 
-  // // ---------- Geometry Coverage ----------
+  // ---------- Geometry Coverage ----------
   float mChamberMaxEmptyFrac = 0.3;
-  // float mPadRowMaxEmptyFrac = 0.4;
+  float mPadRowMaxEmptyFrac = 0.4;
 
-  // // ---------- Electronics Load ----------
-  // float mMCMLoadLow = 2.0;
-  // float mMCMLoadHigh = 3.0;
+  // ---------- Electronics Load ----------
+  float mMCMLoadLow = 1.0;
+  float mMCMLoadHigh = 3.0;
+
+  // ------------- PulseHeight ----------
+  // ---------- Pulse Height ----------
+  float mDriftRegionStart = 7;
+  float mDriftRegionEnd = 20;
+
+  float mPeakRegionStart = 1;
+  float mPeakRegionEnd = 5;
+
+  float mPulseHeightRatio = 1.1;
+
+  // ---------- Helper functions ----------
+  void checkGlobalActivity(
+    std::map<std::string,
+             std::shared_ptr<o2::quality_control::core::MonitorObject>>* moMap,
+    o2::quality_control::core::Quality& finalQ);
+
+  void checkCharge(
+    std::map<std::string,
+             std::shared_ptr<o2::quality_control::core::MonitorObject>>* moMap,
+    o2::quality_control::core::Quality& finalQ);
+
+  void checkGeometry(
+    std::map<std::string,
+             std::shared_ptr<o2::quality_control::core::MonitorObject>>* moMap,
+    o2::quality_control::core::Quality& finalQ);
+
+  void checkPulseHeight(
+    std::map<std::string,
+             std::shared_ptr<o2::quality_control::core::MonitorObject>>* moMap,
+    o2::quality_control::core::Quality& finalQ);
 
   ClassDefOverride(TrackletsTFCheck, 1);
 };

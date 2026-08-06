@@ -3,7 +3,6 @@
 
 #include "QualityControl/PostProcessingInterface.h"
 #include "QualityControl/MonitorObject.h"
-#include <TH1.h>
 
 #include <map>
 #include <memory>
@@ -35,10 +34,6 @@ class TrackletsTFPostProcessing final : public PostProcessingInterface
   std::map<std::string,
            std::shared_ptr<o2::quality_control::core::MonitorObject>>
     mMonitorObjects;
-    
-  std::map<std::string,
-           std::shared_ptr<TH1>>
-    mPublishedHistograms;
 };
 
 } // namespace o2::quality_control::postprocessing

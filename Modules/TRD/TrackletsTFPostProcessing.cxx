@@ -64,29 +64,53 @@ void TrackletsTFPostProcessing::retrieveObjects(
     { "Tracklets", "TrackletQ2" },
     { "Tracklets", "trackletsperHC2D" },
     { "Tracklets", "trackletspertimeframe" },
-    { "Tracklets", "trackletspereventPbPb" },
+    { "Tracklets", "trackletspereventPbPb" }
+    // { "Tracklets", "trackletspereventPbPb" },
 
-    { "PulseHeight", "mPulseHeight" },
-    { "PulseHeight", "mPulseHeightpro" }
+    // { "PHTrackMatch/PulseHeight", "mPulseHeightperchamber" },
+    // { "PHTrackMatch/PulseHeight", "mPulseHeightpro" }
   };
 
-  const long long ts = 1708707000000;
+  // const long long ts = 1708707000000;
   mMonitorObjects.clear();
 
-  // for (auto const& name : monitorObjectNames) {
-  //   auto mo =
-  //     qcdb.retrieveMO(
-  //       "TRD/MO/Tracklets",
-  //       name,
-  //       ts);
+  //============================================
+  ILOG(Info, Support)
+    << "Timestamp : " << t.timestamp
+    << ENDM;
+
+  ILOG(Info, Support)
+    << "Run : " << t.activity.mId
+    << ENDM;
+
+  ILOG(Info, Support)
+    << "Pass : " << t.activity.mPassName
+    << ENDM;
+
+  ILOG(Info, Support)
+    << "Period : " << t.activity.mPeriodName
+    << ENDM;
+
+  ILOG(Info, Support)
+    << "Provenance : " << t.activity.mProvenance
+    << ENDM;
+  //===============================================
+
   for (auto const& [folder, name] : monitorObjectNames) {
+
+    //   auto mo =
+    //     qcdb.retrieveMO(
+    //       "TRD/MO/" + folder,
+    //       name,
+    //       ts);
+    //   // t.timestamp);
 
     auto mo =
       qcdb.retrieveMO(
         "TRD/MO/" + folder,
         name,
-        ts);
-    // t.timestamp);
+        t.timestamp,
+        t.activity);
 
     if (!mo) {
       ILOG(Warning, Support)
@@ -134,6 +158,14 @@ void TrackletsTFPostProcessing::retrieveObjects(
     checker.beautify(mo, quality);
   }
 
+  for (auto& [name, mo] : mMonitorObjects) {
+    ILOG(Info, Support)
+      << "Storing MO : "
+      << mo->getFullName()
+      << ENDM;
+
+    qcdb.storeMO(mo);
+  }
   ILOG(Info, Support)
     << "TrackletsTFCheck finished. Quality = "
     << quality.getName()
