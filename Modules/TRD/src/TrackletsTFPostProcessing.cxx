@@ -5,6 +5,9 @@
 #include "TRD/TrackletsTFCheck.h"
 
 #include <TH1.h>
+#include <TFile.h>
+#include <TCanvas.h>
+#include <TNamed.h>
 
 using namespace o2::quality_control::repository;
 using namespace o2::quality_control::core;
@@ -153,19 +156,52 @@ void TrackletsTFPostProcessing::retrieveObjects(
   checker.setCustomParameters(mCustomParameters);
 
   auto quality = checker.check(&mMonitorObjects);
-
+  // Beautify all retrieved MOs
   for (auto& [name, mo] : mMonitorObjects) {
     checker.beautify(mo, quality);
   }
 
-  for (auto& [name, mo] : mMonitorObjects) {
-    ILOG(Info, Support)
-      << "Storing MO : "
-      << mo->getFullName()
-      << ENDM;
+  TFile outputFile("Beauti.root", "RECREATE");
 
-    qcdb.storeMO(mo);
+  // Save overall quality
+  TNamed overallQuality("OverallQuality", quality.getName().c_str());
+  overallQuality.Write();
+
+  // Save beautified histograms and canvases
+  for (auto& [name, mo] : mMonitorObjects) {
+
+    if (!mo || !mo->getObject()) {
+      continue;
+    }
+
+    TObject* obj = mo->getObject();
+
+    // Save the histogram/object itself
+    obj->Write(obj->GetName());
+
+    // Create a canvas so the beautification is directly visible
+    TCanvas canvas(
+      Form("c_%s", obj->GetName()),
+      obj->GetName(),
+      800,
+      600);
+
+    obj->Draw("hist");
+    canvas.Modified();
+    canvas.Update();
+    canvas.Write();
   }
+
+  outputFile.Close();
+
+  // for (auto& [name, mo] : mMonitorObjects) {
+  //   ILOG(Info, Support)
+  //     << "Storing MO : "
+  //     << mo->getFullName()
+  //     << ENDM;
+
+  //   // qcdb.storeMO(mo);
+  // }
   ILOG(Info, Support)
     << "TrackletsTFCheck finished. Quality = "
     << quality.getName()
