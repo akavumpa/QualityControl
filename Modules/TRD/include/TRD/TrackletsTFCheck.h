@@ -37,7 +37,7 @@ class TrackletsTFCheck : public o2::quality_control::checker::CheckInterface
   float mTFMeanHigh = 5e5;
 
   float mEventMeanLow = 100;
-  float mEventMeanHigh = 7e3;
+  float mEventMeanHigh = 10e3;
 
   // ---------- Signal Quality (ADC) ----------
   float mQEntriesMin = 1000;

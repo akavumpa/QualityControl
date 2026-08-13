@@ -33,16 +33,16 @@
                             "mTFMeanLow": "10000",
                             "mTFMeanHigh": "500000",
                             "mEventMeanLow": "50",
-                            "mEventMeanHigh": "7000",
+                            "mEventMeanHigh": "10000",
                             "mQEntriesMin": "1000",
                             "mQMeanLow": "20",
-                            "mQMeanHigh": "100",
-                            "mChamberMaxEmptyFrac": "0.30",
+                            "mQMeanHigh": "50",
+                            "mChamberMaxEmptyFrac": "0.35",
                             "mDriftRegionStart": "7",
                             "mDriftRegionEnd": "20",
                             "mPeakRegionStart": "1",
                             "mPeakRegionEnd": "7",
-                            "mPulseHeightRatio": "1.05"
+                            "mPulseHeightRatio": "1.35"
                         }
                     }
                 },
