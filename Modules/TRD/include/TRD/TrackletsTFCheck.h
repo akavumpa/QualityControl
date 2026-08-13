@@ -62,26 +62,57 @@ class TrackletsTFCheck : public o2::quality_control::checker::CheckInterface
 
   float mPulseHeightRatio = 1.1;
 
-  // ---------- Helper functions ----------
-  void checkGlobalActivity(
-    std::map<std::string,
-             std::shared_ptr<o2::quality_control::core::MonitorObject>>* moMap,
-    o2::quality_control::core::Quality& finalQ);
+  // // ---------- Helper functions ----------
+  // void checkGlobalActivity(
+  //   std::map<std::string,
+  //            std::shared_ptr<o2::quality_control::core::MonitorObject>>* moMap,
+  //   o2::quality_control::core::Quality& finalQ);
 
-  void checkCharge(
-    std::map<std::string,
-             std::shared_ptr<o2::quality_control::core::MonitorObject>>* moMap,
-    o2::quality_control::core::Quality& finalQ);
+  // void checkCharge(
+  //   std::map<std::string,
+  //            std::shared_ptr<o2::quality_control::core::MonitorObject>>* moMap,
+  //   o2::quality_control::core::Quality& finalQ);
 
-  void checkGeometry(
-    std::map<std::string,
-             std::shared_ptr<o2::quality_control::core::MonitorObject>>* moMap,
-    o2::quality_control::core::Quality& finalQ);
+  // void checkGeometry(
+  //   std::map<std::string,
+  //            std::shared_ptr<o2::quality_control::core::MonitorObject>>* moMap,
+  //   o2::quality_control::core::Quality& finalQ);
 
-  void checkPulseHeight(
+  // void checkPulseHeight(
+  //   std::map<std::string,
+  //            std::shared_ptr<o2::quality_control::core::MonitorObject>>* moMap,
+  //   o2::quality_control::core::Quality& finalQ);
+
+  // ---------- Individual quality checks ----------
+
+  o2::quality_control::core::Quality checkGlobalActivity(
     std::map<std::string,
-             std::shared_ptr<o2::quality_control::core::MonitorObject>>* moMap,
-    o2::quality_control::core::Quality& finalQ);
+             std::shared_ptr<o2::quality_control::core::MonitorObject>>* moMap);
+
+  o2::quality_control::core::Quality checkCharge(
+    std::map<std::string,
+             std::shared_ptr<o2::quality_control::core::MonitorObject>>* moMap);
+
+  o2::quality_control::core::Quality checkGeometry(
+    std::map<std::string,
+             std::shared_ptr<o2::quality_control::core::MonitorObject>>* moMap);
+
+  o2::quality_control::core::Quality checkPulseHeight(
+    std::map<std::string,
+             std::shared_ptr<o2::quality_control::core::MonitorObject>>* moMap);
+
+  // ---------- Individual quality results ----------
+  o2::quality_control::core::Quality mGlobalActivityQuality =
+    o2::quality_control::core::Quality::Good;
+
+  o2::quality_control::core::Quality mChargeQuality =
+    o2::quality_control::core::Quality::Good;
+
+  o2::quality_control::core::Quality mGeometryQuality =
+    o2::quality_control::core::Quality::Good;
+
+  o2::quality_control::core::Quality mPulseHeightQuality =
+    o2::quality_control::core::Quality::Good;
 
   ClassDefOverride(TrackletsTFCheck, 1);
 };
