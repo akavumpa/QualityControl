@@ -6,13 +6,13 @@
                 "host": "localhost:8083"
             },
             "Activity": {
-                "number": "567939",
+                "number": "568338",
                 "type": "PHYSICS",
-                "passName": "apass1_test_ALIX_2026_V10N_ptag",
-                "periodName": "LHC25an",
+                "passName": "apass3",
+                "periodName": "LHC25ao",
                 "provenance": "qc_async",
-                "start": "1763173028131",
-                "end": "1763178818880"
+                "start": "1764245905532",
+                "end": "1764248778597"
             },
             "conditionDB": {
                 "url": "http://localhost:8083"
