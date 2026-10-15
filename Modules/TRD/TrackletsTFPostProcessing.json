@@ -42,7 +42,14 @@
                             "mDriftRegionEnd": "20",
                             "mPeakRegionStart": "1",
                             "mPeakRegionEnd": "7",
-                            "mPulseHeightRatio": "1.05"
+                            "mPulseHeightRatio": "1.05",
+                            "mQ0ReferenceFile": "Reference_Q0.root",
+                            "mQ1ReferenceFile": "Reference_Q1.root",
+                            "mQ2ReferenceFile": "Reference_Q2.root",
+                            "mPulseHeightReferenceFile": "Reference_PulseHeight.root",
+                            "mTolerance": "0.10",
+                            "mMediumFraction": "0.05",
+                            "mBadFraction": "0.20"
                         }
                     }
                 },

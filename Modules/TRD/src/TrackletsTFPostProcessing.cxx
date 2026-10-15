@@ -3,6 +3,7 @@
 #include "QualityControl/DatabaseInterface.h"
 #include "QualityControl/MonitorObject.h"
 #include "TRD/TrackletsTFCheck.h"
+#include "TRD/TrackletsReferenceCheck.h"
 
 #include <TH1.h>
 #include <TFile.h>
@@ -161,11 +162,25 @@ void TrackletsTFPostProcessing::retrieveObjects(
     checker.beautify(mo, quality);
   }
 
+  // Run the new reference-based checker on the same MOs
+  o2::quality_control_modules::trd::TrackletsReferenceCheck referenceChecker;
+  referenceChecker.setCustomParameters(mCustomParameters);
+  referenceChecker.configure();
+
+  auto referenceQuality = referenceChecker.check(&mMonitorObjects);
+
+  for (auto& [name, mo] : mMonitorObjects) {
+    referenceChecker.beautify(mo, referenceQuality);
+  }
+
   TFile outputFile("Beauti.root", "RECREATE");
 
   // Save overall quality
   TNamed overallQuality("OverallQuality", quality.getName().c_str());
   overallQuality.Write();
+
+  TNamed referenceQualityObject("ReferenceQuality", referenceQuality.getName().c_str());
+  referenceQualityObject.Write();
 
   // Save beautified histograms and canvases
   for (auto& [name, mo] : mMonitorObjects) {
@@ -203,8 +218,8 @@ void TrackletsTFPostProcessing::retrieveObjects(
   //   // qcdb.storeMO(mo);
   // }
   ILOG(Info, Support)
-    << "TrackletsTFCheck finished. Quality = "
-    << quality.getName()
+    << "TrackletsTFCheck quality = " << quality.getName()
+    << ", reference quality = " << referenceQuality.getName()
     << ENDM;
 }
 
